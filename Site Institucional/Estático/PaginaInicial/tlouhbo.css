@@ -4,7 +4,7 @@
     z-index: -1;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(50, 55, 41, 0.3886) 19.79%, rgba(50, 49, 41, 0.5568) 64.58%);
+    background: linear-gradient(180deg, #32372963 19.79%, rgba(50, 49, 41, 0.5568) 64.58%);
 }
 
 .TLOUHBO {
@@ -15,7 +15,7 @@
     height: 100%;
     background-size: 150%;
     background-position: 10% 34%;
-    background-image: url('./assets/1299920.jpg');
+    background-image: url('./assets/1299920_1.webp');
     color: white;
 }
 
@@ -84,6 +84,13 @@
     width: 20vh;
     height: 20vh;
     background: linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, 0.123) 60%);
+}
+
+.blocoEpisodiosGradienteTLOUHBO:hover {
+    animation-name: historiaA;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
 }
 .blocoEpisodiosTLOUHBO {
     display: flex;
@@ -163,14 +170,28 @@
     flex-direction: column;
 }
 
-/* PSN */
-#ondePSNTLOUHBO {
+/* HBO */
+#ondeTLOUHBO {
     display: flex;
     width: 100%;
     height: 30%;
     border-radius: 10px;
     background-color: #731CDB;
     align-items: center;
+    cursor: pointer;
+}
+
+#ondeAnimationHBO{
+    display: flex;
+    opacity: 1;
+    width: 0%;
+    height: 100%;
+    margin-left: auto;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    background: linear-gradient(120deg, #731CDB 52.42%, #FDC706 53.21%);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 #hboicon {

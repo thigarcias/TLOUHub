@@ -58,11 +58,19 @@
     height: 20vh;
     background: linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, 0.082) 60%);
 }
+
+.blocoHistoriaGradiente:hover {
+    animation-name: historiaA;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
 .blocoHistoria {
     display: flex;
     position: absolute;
     z-index: -1;
-    background-image: url(./assets/imagick_convert.php.png);
+    background-image: url(./assets/imagick_convert.php.webp);
     background-size: cover;
     background-position: 40%;
     border-radius: 15px;
@@ -92,11 +100,18 @@
     background: linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, 0.082) 60%);
 }
 
+.blocoPersonagemGradiente:hover {
+    animation-name: historiaA;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
 .blocoPersonagem{
     display: flex;
     position: absolute;
     z-index: -1;
-    background-image: url(./assets/imagick_convert.php.png);
+    background-image: url(./assets/imagick_convert.php.webp);
     background-size: cover;
     background-position: 40%;
     border-radius: 15px;
@@ -119,18 +134,25 @@
     justify-content: center;
     align-items: end;
     top: 86%;
-    margin-left: 29.5%;
+    margin-left: 30%;
     border-radius: 15px;
     width: 20vh;
     height: 20vh;
     background: linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, 0.301) 60%);
 }
 
+.blocoExpansaoGradiente:hover {
+    animation-name: historiaA;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
 .blocoExpansao{
     display: flex;
     position: absolute;
     z-index: -1;
-    background-image: url(./assets/thelastofus-leftbehind.png);
+    background-image: url(./assets/thelastofus-leftbehind.webp);
     background-size: cover;
     background-position: 40%;
     border-radius: 15px;
@@ -215,8 +237,22 @@
     width: 100%;
     height: 20%;
     border-radius: 10px;
-    background-color: black;
+    background: #000000;
     align-items: center;
+    cursor: pointer;
+}
+
+#ondeAnimationSteam{
+    display: flex;
+    opacity: 1;
+    width: 0%;
+    height: 100%;
+    margin-left: auto;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    background: linear-gradient(120deg, #000000 52.42%, #FDC706 53.21%);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 #steamicon {
@@ -240,6 +276,20 @@
     background-color: #0078F2;
     margin-top: 5%;
     align-items: center;
+    cursor: pointer;
+}
+
+#ondeAnimationEpic{
+    display: flex;
+    opacity: 1;
+    width: 0%;
+    height: 100%;
+    margin-left: auto;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    background: linear-gradient(120deg, #0078F2 52.42%, #FDC706 53.21%);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 #epicicon {
@@ -250,6 +300,7 @@
 #epictexto{
     color: white;
     margin-left: 5%;
+    white-space: nowrap;
     font-size: 1vmax;
     font-weight: 900;
 }
@@ -263,7 +314,22 @@
     background-color: #003791;
     margin-top: 5%;
     align-items: center;
+    cursor: pointer;
 }
+
+#ondeAnimationPSN{
+    display: flex;
+    opacity: 1;
+    width: 0%;
+    height: 100%;
+    margin-left: auto;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    background: linear-gradient(120deg, #003791 52.42%, #FDC706 53.21%);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
 
 #psnicon {
     margin-left: 3%;

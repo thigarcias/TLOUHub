@@ -17,25 +17,75 @@
 </head>
 
 <body>
-    <div class="TLOU1Gradiente"></div>
-    <div class="TLOU1"></div>
-    <div class="container">
-        <div class="header">
+
+    <!-- Header Fixa -->
+    <div id='headerinfinitaFundo'>
+        <div class="headerinfinita">
             <span id="logo">TLOU<span id="logo2">Hub</span></span>
             <div class="navbar">
                 <div id="textonavbar">
-                    <span>NOTICIAS</span>
 
-                    <span>JOGOS
-                        <span class="material-symbols-outlined" id="iconNavbar">
+                    <div class="homepage">
+                        <span id="homepagetexto">Home</span>
+                    </div>
+
+                    <div class="noticias">
+                        <span id="noticiastextoInfinito">Notícias</span>
+                    </div>
+
+                    <div class="jogos">
+                        <span id="jogostextoInfinito">Jogos <span class="material-symbols-outlined" id="iconNavbar">
                             arrow_drop_down
                         </span>
-                    </span>
+            
+                    </div>
 
-                    <span>A SÉRIE
-                        <span class="material-symbols-outlined" id="iconNavbar">
+                    <div class="serie">
+                        <span id="serietextoInfinito">Série
+                            <span class="material-symbols-outlined" id="iconNavbar">
+                                arrow_drop_down
+                            </span>
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="TLOU1Gradiente"></div>
+    <div class="TLOU1"></div>
+    <div class="container">
+
+        <!-- Header Normal -->
+        <div id="header">
+            <span id="logo">TLOU<span id="logo2">Hub</span></span>
+            <div class="navbar">
+                <div id="textonavbar">
+
+                    <div class="homepage">
+                        <span id="homepagetexto">Home</span>
+                    </div>
+
+                    <div class="noticias">
+                        <span id="noticiastexto">Notícias</span>
+                    </div>
+
+                    <div class="jogos">
+                        <span id="jogostexto">Jogos <span class="material-symbols-outlined" id="iconNavbar">
                             arrow_drop_down
                         </span>
+            
+                    </div>
+
+                    <div class="serie">
+                        <span id="serietexto">Série
+                            <span class="material-symbols-outlined" id="iconNavbar">
+                                arrow_drop_down
+                            </span>
+                        </span>
+                        
+                    </div>
                     </span>
                 </div>
             </div>
@@ -88,15 +138,18 @@
                     <span id="ondeSteam">
                         <img src="./assets/lgogosteam.png" alt="" id="steamicon">
                         <span id="steamtexto">STEAM</span>
+                        <span id="ondeAnimationSteam"></span>
                     </span>
                     <span id="ondeEpic">
                         <img src="./assets/epic_games_black_logo_icon_147139 (1).png" alt="" id="epicicon">
                         <span id="epictexto">EPIC GAMES</span>
+                        <span id="ondeAnimationEpic"></span>
                     </span>
 
                     <span id="ondePSN">
                         <img src="./assets/logotipo-do-playstation (1).png" alt="" id="psnicon">
                         <span id="psntexto">PLAYSTATION</span>
+                        <span id="ondeAnimationPSN"></span>
                     </span>
                 </div>
             </div>
@@ -177,6 +230,7 @@
                     <span id="ondePSNTLOU2">
                         <img src="./assets/logotipo-do-playstation (1).png" alt="" id="psnicon">
                         <span id="psntexto">PLAYSTATION</span>
+                        <span id="ondeAnimationPSNTLOU2"></span>
                     </span>
                 </div>
             </div>
@@ -226,9 +280,10 @@
         <div class="parteBaixo">
             <div id="ondeJogarTextoTLOUHBO">ONDE ASSISTIR?
                 <div class="ondeJogarBlocosTLOUHBO">
-                    <span id="ondePSNTLOUHBO">
+                    <span id="ondeTLOUHBO">
                         <img src="./assets/5f723fb77d337.png" id="hboicon">
                         <span id="hbotexto">HBO MAX</span>
+                        <span id="ondeAnimationHBO"></span>
                     </span>
                 </div>
             </div>
@@ -238,8 +293,11 @@
 
     <!-- FOOTER-->
     <div class="footer">
-        <span id="footerTexto">Copyright © 2023 - 2023 TLHUB. Todos os direitos reservados. | Termos de uso | Política de privacidade | Definições de cookies</span>
+        <span id="footerTexto">Copyright © 2023 - 2023 TLHUB. Todos os direitos reservados. | Termos de uso | Política
+            de privacidade | Definições de cookies</span>
     </div>
 </body>
 
 </html>
+
+<script type="text/javascript" src="./script.js"></script>
