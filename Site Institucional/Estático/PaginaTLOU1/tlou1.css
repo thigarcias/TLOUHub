@@ -1,0 +1,404 @@
+@import url('//db.onlinewebfonts.com/c/d0a687dd2a0803f486cde808245bd3c5?family=Press+Gothic');
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.TLOU1Gradiente {
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3864) 58.7%, rgba(255, 255, 255, 0) 95.31%);
+}
+
+.TLOU1 {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+    height: 100%;
+    background-size: 122%;
+    background-position: 0% 40%;
+    background-image: url('./assets/wYq1UsVEyQp6dT6cS1omgKiJ.webp');
+}
+
+.container{
+    height: 100vh;
+    width: 80vw;
+    margin-left: 10%;
+}
+
+/* Texto Header Infinita */
+#noticiastextoInfinito{
+    cursor: pointer;
+    color: white;
+}
+
+#jogostextoInfinito{
+    display: flex;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+}
+
+#serietextoInfinito{
+    display: flex;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+}
+
+/* HOMEPAGE */
+.homepage{
+    display: flex;
+    height: 30%;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#homepagetexto{
+    display: flex;
+    color: #ffffff;
+}
+/*NOTICIAS*/
+.noticias{
+    display: flex;
+    height: 30%;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+#noticiastexto{
+    cursor: pointer;
+    color: white;
+}
+
+#noticiaslinha{
+    display: flex;
+    opacity: 0;
+    background-color: #FDC706;
+    width: 0%;
+    height: 10%;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+/* JOGOS */
+.jogos{
+    display: flex;
+    height: 30%;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+#jogostexto{
+    display: flex;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+}
+#jogoslinha{
+    display: flex;
+    opacity: 0;
+    background-color: #FDC706;
+    width: 0%;
+    height: 10%;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+/* Serie */
+.serie{
+    display: flex;
+    height: 30%;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+#serietexto{
+    display: flex;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+}
+
+#iconNavbar {
+    margin-left: -5%;
+    width: 10%;
+    align-items: center;
+    font-size: 18px;
+}
+
+/* TITULO */
+.tituloJogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 28%;
+    height: 35%;
+    width: 100%;
+    align-items: center;
+}
+
+#numeroJogo{
+    display: flex;
+    color: #FDC706;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.4vmax;
+}
+
+#nomeJogo{
+    display: flex;
+    color: white;
+    font-family: "Press Gothic";
+    font-size: 8vmax;
+    margin-top: -0.8%;
+}
+
+#expandirIcon {
+    display: flex;
+    color: white;
+    font-size: 4vmax;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* HISTORIA */
+
+.historiaContainer{
+   display: flex;
+   margin-top: 10%;
+   width: 80vw;
+   height: 55vh;
+}
+
+.blocoHistoria{
+    display: flex;
+    position: absolute;
+    border-radius: 20px;
+    width: 24.5vw;
+    height: 45%;
+    background-size: cover;
+    background-position: 35%;
+    background-image: url(./assets/imagick_convert.php.png);
+}
+
+#blocoHistoriaTexto{
+    display: flex;
+    margin-left: 35%;
+    margin-top: 1%;
+    width: 90%;
+    font-family: 'Space Grotesk';
+    letter-spacing: -1px;
+    flex-direction: column;
+}
+
+#tituloHistoria {
+    display: flex;
+    color: black;
+    font-size: 1.3vmax;
+    font-weight: 900;
+}
+
+#conteudoHistoria1{
+    display: flex;
+    color: #706D6D;
+    font-size: 20px;
+    width: 90%;
+    margin-top: 1%;
+    font-weight: 300;
+    line-height: 33px;
+}
+#conteudoHistoria2{
+    display: flex;
+    color: #706D6D;
+    font-size: 20px;
+    width: 90%;
+    margin-top: 1%;
+    line-height: 33px;
+    font-weight: 300;
+}
+
+/* Parte de Baixo Container*/
+
+.parteBaixoHistoria{
+    display: flex;
+    width: 100%;
+    font-family: 'Space Grotesk';
+    height: 30vh;
+}
+
+/* Conheça Mais */
+.conhecaMais {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    height: 100%;
+}
+
+#tituloConheca{
+    display: flex;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+#ellieConheca{
+    display: flex;
+    background-color: #11141A;
+    margin-top: 2%;
+    border-radius: 5px;
+    height: 25%;
+    width: 100%;
+}
+
+#ellieIcon{
+    display: flex;
+    background-image: url(./assets/ellieicon.jpg);
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+    border-radius: 5px;
+}
+
+#ellieTexto {
+    display: flex;
+    color: #ffffff;
+    font-size: 1.2vmax;
+    font-weight: 900;
+    align-items: center;
+    margin-left: 5%;
+}
+
+#joelConheca{
+    display: flex;
+    background-color: #37372F;
+    margin-top: 5.2%;
+    border-radius: 5px;
+    height: 25%;
+    width: 100%;
+    
+}
+
+#joelIcon {
+    display: flex;
+    background-image: url(./assets/joelicon.jpg);
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+    border-radius: 5px;
+}
+
+#joelTexto {
+    display: flex;
+    color: #ffffff;
+    font-size: 1.2vmax;
+    font-weight: 900;
+    align-items: center;
+    margin-left: 5%;
+}
+/*Cordyceps*/
+
+.conhecaMaisCordyceps{
+    display: flex;
+    flex-direction: column;
+    width: 68%;
+    height: 100%;
+    margin-left: 4.5%;
+}
+
+#tituloCordyceps{
+    display: flex;
+    font-size: 25px;
+    font-weight: 900;
+
+}
+
+#cordycepsCor{
+    color: #FDC706;
+    margin-left: 0.6%;
+}
+
+#cordycepsGradiente{
+    background: linear-gradient(180deg, rgba(214, 155, 14, 0.29) 32.72%, rgba(51, 69, 49, 0.26) 74.79%);
+    position: absolute;
+    margin-top: 2.3%;
+    border-radius: 10px;
+    width: 52.4%;
+    height: 18%;
+}
+#cordycepsConhece{
+    display: flex;
+    width: 100%;
+    height: 60%;
+    margin-top: 1%;
+    background-image: url(./assets/The-Last-of-Us.webp);
+    border-radius: 10px;
+    background-position: 0% 35%;
+    background-size: cover;
+}
+
+/* CRIADORA DO GAME */
+
+.criadora {
+    display: flex;
+    height: 40vh;
+    width: 100%;
+    font-family: "Space Grotesk";
+    flex-direction: column;
+    margin-top: 8%;
+}
+
+#criadoraTitulo{
+    display: flex;
+    font-weight: 900;
+    font-size: 25px;
+    margin-top: 1%;
+}
+
+#criadoraConteudo{
+    display: flex;
+    color: #706D6D;
+    font-size: 20px;
+    margin-top: 1%;
+    font-weight: 300;
+    line-height: 33px;
+    width: 65%;
+}
+
+#criadoraImagem {
+    display: flex;
+    position: absolute;
+    border-radius: 20px;
+    width: 25vw;
+    height: 45%;
+    margin-left: 55%;
+    background-size: 100%;
+    background-position: 50%;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./assets/naughtydoglogo.png);
+}

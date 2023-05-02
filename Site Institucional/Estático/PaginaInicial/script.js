@@ -3,7 +3,7 @@ headerinfinitaFundo.style.display = "none";
 headerinfinitaFundo.style.zIndex = 2;
 
 // Adicione a um ID, no caso a pagina toda 'window', um evento (addEventListener), que no caso é o evento "scroll", uma função()
-
+// Mudança de cor da Header de acordo com os Jogos
 window.addEventListener("scroll", function() {
     var posicaoScroll = window.pageYOffset
 
@@ -27,12 +27,13 @@ window.addEventListener("scroll", function() {
   const noticiastexto = document.getElementById('noticiastexto');
   const noticiastextoInfinito = document.getElementById('noticiastextoInfinito');
   const jogostexto = document.getElementById('jogostexto');
+  const jogostextoInfinito = document.getElementById('jogostextoInfinito');
   const serietexto = document.getElementById('serietexto');
+  const serietextoInfinito = document.getElementById('serietextoInfinito');
 
   noticiastexto.style.color = '#ffffff;';
 // Adicione um evento a um ID do HTML, no caso noticiastexto, a função mouseover que é equivalente ao :hover do CSS, execute a função function() 
   noticiastexto.addEventListener('mouseenter', function(){
-    console.log ("Oiee")
     noticiastexto.style.color = '#ffe70c';
   }),
   noticiastexto.addEventListener('mouseout', function(){
@@ -49,6 +50,26 @@ window.addEventListener("scroll", function() {
   }),
   serietexto.addEventListener('mouseout', function(){
     serietexto.style.color = '#ffffff';
+  });
+
+  /* Home Infinito */
+  noticiastextoInfinito.addEventListener('mouseover', function(){
+    noticiastextoInfinito.style.color = '#ffe70c';
+  }),
+  noticiastextoInfinito.addEventListener('mouseout', function(){
+    noticiastextoInfinito.style.color = '#ffffff';
+  }),
+  jogostextoInfinito.addEventListener("mouseover", function(){
+    jogostextoInfinito.style.color = '#ffe70c';
+  }),
+  jogostextoInfinito.addEventListener('mouseout', function(){
+    jogostextoInfinito.style.color = '#ffffff';
+  }),
+  serietextoInfinito.addEventListener("mouseover", function(){
+    serietextoInfinito.style.color = '#ffe70c';
+  }),
+  serietextoInfinito.addEventListener('mouseout', function(){
+    serietextoInfinito.style.color = '#ffffff';
   });
 
 
