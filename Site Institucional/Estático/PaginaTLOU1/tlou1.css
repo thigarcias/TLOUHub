@@ -171,19 +171,26 @@ body {
     font-weight: 500;
     font-style: normal;
     font-size: 1.4vmax;
+    width: 100%;
     margin-top: 25%;
+    justify-content: center;
 }
 
 #nomeJogo {
     display: flex;
     color: white;
+    width: 100%;
     font-family: "Press Gothic";
     font-size: 8vmax;
     margin-top: -1.5%;
+    justify-content: center;
 }
+
 #expandirIcon {
     display: flex;
     color: white;
+    width: 100%;
+    justify-content: center;
     font-size: 4vmax;
 }
 
