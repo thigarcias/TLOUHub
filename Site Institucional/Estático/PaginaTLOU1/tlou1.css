@@ -4,6 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700;800&display=swap');
+
 
 body {
     height: 100vh;
@@ -34,8 +36,8 @@ body {
 
 .container{
     height: 100vh;
-    width: 80vw;
-    margin-left: 10%;
+    width: 90vw;
+    margin-left: 5%;
 }
 
 /* Texto Header Infinita */
@@ -146,19 +148,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 28%;
-    height: 35%;
+    height: 90%;
     width: 100%;
     align-items: center;
 }
-
 #numeroJogo{
     display: flex;
     color: #FDC706;
-    font-family: 'Space Grotesk';
+    font-family: 'Sora', sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 1.4vmax;
+    margin-top: 25%;
 }
 
 #nomeJogo{
@@ -166,7 +167,7 @@ body {
     color: white;
     font-family: "Press Gothic";
     font-size: 8vmax;
-    margin-top: -0.8%;
+    margin-top: -1.5%;
 }
 
 #expandirIcon {
@@ -190,8 +191,8 @@ body {
 
 .historiaContainer{
    display: flex;
-   margin-top: 10%;
-   width: 80vw;
+   margin-top: 5%;
+   width: 90vw;
    height: 55vh;
 }
 
@@ -199,18 +200,19 @@ body {
     display: flex;
     position: absolute;
     border-radius: 20px;
-    width: 24.5vw;
-    height: 45%;
+    width: 27.5vw;
+    height: 45vh;
     background-size: cover;
     background-position: 35%;
-    background-image: url(./assets/imagick_convert.php.png);
+    background-image: url(./assets/imagick_convert.php.webp);
 }
+
 
 #blocoHistoriaTexto{
     display: flex;
     margin-left: 35%;
     margin-top: 1%;
-    width: 90%;
+    width: 100%;
     font-family: 'Space Grotesk';
     letter-spacing: -1px;
     flex-direction: column;
@@ -220,14 +222,15 @@ body {
     display: flex;
     color: black;
     font-size: 1.3vmax;
-    font-weight: 900;
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
 }
 
 #conteudoHistoria1{
     display: flex;
     color: #706D6D;
-    font-size: 20px;
-    width: 90%;
+    font-size: 1.1vmax;
+    width: 100%;
     margin-top: 1%;
     font-weight: 300;
     line-height: 33px;
@@ -235,8 +238,8 @@ body {
 #conteudoHistoria2{
     display: flex;
     color: #706D6D;
-    font-size: 20px;
-    width: 90%;
+    font-size: 1.1vmax;
+    width: 100%;
     margin-top: 1%;
     line-height: 33px;
     font-weight: 300;
@@ -247,8 +250,8 @@ body {
 .parteBaixoHistoria{
     display: flex;
     width: 100%;
-    font-family: 'Space Grotesk';
     height: 30vh;
+    font-family: 'Space Grotesk';
 }
 
 /* Conheça Mais */
@@ -257,12 +260,14 @@ body {
     flex-direction: column;
     width: 32%;
     height: 100%;
+ 
 }
 
 #tituloConheca{
     display: flex;
-    font-size: 25px;
-    font-weight: 900;
+    font-size: 1.2vmax;
+    font-weight: 800;
+    font-family: 'Sora', sans-serif;
 }
 
 #ellieConheca{
@@ -278,8 +283,8 @@ body {
     display: flex;
     background-image: url(./assets/ellieicon.jpg);
     background-size: cover;
-    height: 70px;
-    width: 70px;
+    height: 7.5vh;
+    width: 3.5vw;
     border-radius: 5px;
 }
 
@@ -306,8 +311,8 @@ body {
     display: flex;
     background-image: url(./assets/joelicon.jpg);
     background-size: cover;
-    height: 70px;
-    width: 70px;
+    height: 7.5vh;
+    width: 3.5vw;
     border-radius: 5px;
 }
 
@@ -331,9 +336,9 @@ body {
 
 #tituloCordyceps{
     display: flex;
-    font-size: 25px;
-    font-weight: 900;
-
+    font-size: 1.2vmax;
+    font-weight: 800;
+    font-family: 'Sora', sans-serif;
 }
 
 #cordycepsCor{
@@ -342,23 +347,28 @@ body {
 }
 
 #cordycepsGradiente{
+    display: flex;
     background: linear-gradient(180deg, rgba(214, 155, 14, 0.29) 32.72%, rgba(51, 69, 49, 0.26) 74.79%);
     position: absolute;
-    margin-top: 2.3%;
+    margin-top: 2%;
     border-radius: 10px;
-    width: 52.4%;
-    height: 18%;
+    width: 58.5%;
+    height: 18.5%;
 }
+
 #cordycepsConhece{
     display: flex;
-    width: 100%;
-    height: 60%;
-    margin-top: 1%;
+    position: absolute;
+    z-index: -1;
+    margin-top: 2%;
+    width: 58.5%;
+    height: 18.5%;
     background-image: url(./assets/The-Last-of-Us.webp);
     border-radius: 10px;
     background-position: 0% 35%;
     background-size: cover;
 }
+
 
 /* CRIADORA DO GAME */
 
@@ -366,22 +376,23 @@ body {
     display: flex;
     height: 40vh;
     width: 100%;
-    font-family: "Space Grotesk";
+    font-family: 'Space Grotesk';
     flex-direction: column;
-    margin-top: 8%;
+    margin-top: 6%;
 }
 
 #criadoraTitulo{
     display: flex;
-    font-weight: 900;
-    font-size: 25px;
+    font-weight: 800;
+    font-family: 'Sora', sans-serif;
+    font-size: 1.2vmax;
     margin-top: 1%;
 }
 
 #criadoraConteudo{
     display: flex;
     color: #706D6D;
-    font-size: 20px;
+    font-size: 1.1vmax;
     margin-top: 1%;
     font-weight: 300;
     line-height: 33px;
@@ -392,9 +403,9 @@ body {
     display: flex;
     position: absolute;
     border-radius: 20px;
-    width: 25vw;
-    height: 45%;
-    margin-left: 55%;
+    width: 27.5vw;
+    height: 45vh;
+    margin-left: 62.5%;
     background-size: 100%;
     background-position: 50%;
     background-color: black;
