@@ -1,21 +1,21 @@
 /* Conteudo Banner TLOU 1*/
-.tituloJogo{
+.tituloJogo {
     display: flex;
     flex-direction: column;
     margin-top: 11.8%;
     width: 30%;
 }
 
-#numeroJogo{
+#numeroJogo {
     display: flex;
     color: #FDC706;
-    font-family: 'Space Grotesk';
+    font-family: 'Sora', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1.4vmax;
 }
 
-#nomeJogo{
+#nomeJogo {
     display: flex;
     color: white;
     font-family: "Press Gothic";
@@ -24,7 +24,7 @@
 
 }
 
-.sobreBloco{
+.sobreBloco {
     display: flex;
     position: absolute;
     background: linear-gradient(89.96deg, rgba(253, 199, 6, 0.25) 18.83%, rgba(253, 199, 6, 0) 84.16%);
@@ -35,7 +35,7 @@
     margin-left: -7%;
 }
 
-#sobreBlocoTexto{
+#sobreBlocoTexto {
     display: flex;
     color: white;
     font-family: 'Space Grotesk';
@@ -46,7 +46,7 @@
 }
 
 /* Blocos Sobrepondo o Banner */
-.blocoHistoriaGradiente{
+.blocoHistoriaGradiente {
     display: flex;
     position: absolute;
     justify-content: center;
@@ -87,7 +87,7 @@
     font-size: 1.15vmax;
 }
 
-.blocoPersonagemGradiente{
+.blocoPersonagemGradiente {
     display: flex;
     position: absolute;
     justify-content: center;
@@ -107,7 +107,7 @@
     cursor: pointer;
 }
 
-.blocoPersonagem{
+.blocoPersonagem {
     display: flex;
     position: absolute;
     z-index: -1;
@@ -128,7 +128,7 @@
     font-size: 1.15vmax;
 }
 
-.blocoExpansaoGradiente{
+.blocoExpansaoGradiente {
     display: flex;
     position: absolute;
     justify-content: center;
@@ -148,7 +148,7 @@
     cursor: pointer;
 }
 
-.blocoExpansao{
+.blocoExpansao {
     display: flex;
     position: absolute;
     z-index: -1;
@@ -169,7 +169,7 @@
     font-size: 1.15vmax;
 }
 
-.containerTLOUinformativo{
+.containerTLOUinformativo {
     display: flex;
     height: 80vh;
     width: 90vw;
@@ -184,6 +184,7 @@
     font-weight: 700;
     font-size: 1.25vmax;
     line-height: 20px;
+    font-family: 'Sora', sans-serif;
     font-style: normal;
 }
 
@@ -213,10 +214,12 @@
     display: flex;
     width: 100%;
 }
+
 #ondeJogarTexto {
     display: flex;
     font-weight: 700;
     flex-direction: column;
+    font-family: 'Sora', sans-serif;
     font-size: 1.25vmax;
     line-height: 20px;
     font-style: normal;
@@ -242,7 +245,7 @@
     cursor: pointer;
 }
 
-#ondeAnimationSteam{
+#ondeAnimationSteam {
     display: flex;
     opacity: 1;
     width: 0%;
@@ -260,7 +263,7 @@
     height: 55%;
 }
 
-#steamtexto{
+#steamtexto {
     color: white;
     margin-left: 5%;
     font-size: 1vmax;
@@ -279,7 +282,7 @@
     cursor: pointer;
 }
 
-#ondeAnimationEpic{
+#ondeAnimationEpic {
     display: flex;
     opacity: 1;
     width: 0%;
@@ -297,7 +300,7 @@
     height: 55%;
 }
 
-#epictexto{
+#epictexto {
     color: white;
     margin-left: 5%;
     white-space: nowrap;
@@ -317,7 +320,7 @@
     cursor: pointer;
 }
 
-#ondeAnimationPSN{
+#ondeAnimationPSN {
     display: flex;
     opacity: 1;
     width: 0%;
@@ -336,7 +339,7 @@
     height: 55%;
 }
 
-#psntexto{
+#psntexto {
     color: white;
     margin-left: 5%;
     font-size: 1vmax;
@@ -344,7 +347,7 @@
 }
 
 /* REQUISITOS */
-.requisitosBloco{
+.requisitosBloco {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -354,22 +357,26 @@
     margin-left: 5%;
 }
 
-#tituloRequisito{
+#tituloRequisito {
     display: flex;
     font-weight: 700;
     font-size: 1.25vmax;
     line-height: 20px;
+    font-family: 'Sora', sans-serif;
     font-style: normal;
 
 }
-.minimos{
+
+.minimos {
     display: inline-flex;
     flex-direction: column;
     width: 100%;
     margin-top: 4%;
 }
+
 #minimoTitulo {
     color: #686262;
+    font-family: 'Sora', sans-serif;
     font-weight: 700;
     font-size: 1vmax;
 }
@@ -382,18 +389,19 @@
 }
 
 
-.recomendados{
+.recomendados {
     display: inline-flex;
     flex-direction: column;
     margin-top: 7.5%;
     width: 30%;
     margin-left: 5%;
-    
+
 }
 
 #recomendadoTitulo {
     display: inline-flex;
     color: #686262;
+    font-family: 'Sora', sans-serif;
     font-weight: 700;
     font-size: 1vmax;
 }

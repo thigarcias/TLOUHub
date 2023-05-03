@@ -1,4 +1,4 @@
-/* TLOU2 */ 
+/* TLOU2 */
 .TLOU2Gradiente {
     display: flex;
     position: absolute;
@@ -20,30 +20,30 @@
     color: white;
 }
 
-.containerTLOU2{
+.containerTLOU2 {
     height: 90vh;
     width: 90vw;
     margin-left: 5%;
     color: white;
 }
 
-.tituloJogoTLOU2{
+.tituloJogoTLOU2 {
     display: flex;
     flex-direction: column;
     margin-top: 17.2%;
     width: 30%;
 }
 
-#numeroJogoTLOU2{
+#numeroJogoTLOU2 {
     display: flex;
     color: #297F00;
-    font-family: 'Space Grotesk';
+    font-family: 'Sora', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1.4vmax;
 }
 
-#nomeJogoTLOU2{
+#nomeJogoTLOU2 {
     display: flex;
     color: white;
     font-family: "Press Gothic";
@@ -52,7 +52,7 @@
 
 }
 
-.sobreBlocoTLOU2{
+.sobreBlocoTLOU2 {
     display: flex;
     position: absolute;
     background: linear-gradient(89.96deg, rgba(41, 253, 6, 0.25) 18.83%, rgba(6, 253, 105, 0) 84.16%);
@@ -63,7 +63,7 @@
     margin-left: -7%;
 }
 
-#sobreBlocoTextoTLOU2{
+#sobreBlocoTextoTLOU2 {
     display: flex;
     color: white;
     font-family: 'Space Grotesk';
@@ -75,7 +75,7 @@
 }
 
 /* Blocos Sobrepondo o Banner */
-.blocoHistoriaGradienteTLOU2{
+.blocoHistoriaGradienteTLOU2 {
     display: flex;
     position: absolute;
     justify-content: center;
@@ -87,6 +87,7 @@
     height: 20vh;
     background: linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, 0.267) 60%);
 }
+
 .blocoHistoriaTLOU2 {
     display: flex;
     position: absolute;
@@ -115,7 +116,7 @@
     font-size: 1.15vmax;
 }
 
-.blocoPersonagemGradienteTLOU2{
+.blocoPersonagemGradienteTLOU2 {
     display: flex;
     position: absolute;
     justify-content: center;
@@ -135,7 +136,7 @@
     cursor: pointer;
 }
 
-.blocoPersonagemTLOU2{
+.blocoPersonagemTLOU2 {
     display: flex;
     position: absolute;
     z-index: -1;
@@ -156,7 +157,7 @@
     font-size: 1.15vmax;
 }
 
-.containerTLOUinformativoTLOU2{
+.containerTLOUinformativoTLOU2 {
     display: flex;
     height: 70vh;
     width: 90vw;
@@ -170,6 +171,7 @@
     font-weight: 700;
     font-size: 1.25vmax;
     line-height: 20px;
+    font-family: 'Sora', sans-serif;
     font-style: normal;
 }
 
@@ -200,6 +202,7 @@
     font-weight: 700;
     flex-direction: column;
     font-size: 1.25vmax;
+    font-family: 'Sora', sans-serif;
     line-height: 20px;
     font-style: normal;
     margin-top: 5%;
@@ -224,7 +227,7 @@
     cursor: pointer;
 }
 
-#ondeAnimationPSNTLOU2{
+#ondeAnimationPSNTLOU2 {
     display: flex;
     opacity: 1;
     width: 0%;
@@ -243,7 +246,7 @@
     height: 55%;
 }
 
-#psntexto{
+#psntexto {
     color: white;
     margin-left: 5%;
     font-size: 1vmax;

@@ -1,12 +1,22 @@
-@import url('//db.onlinewebfonts.com/c/d0a687dd2a0803f486cde808245bd3c5?family=Press+Gothic');
+@font-face {
+    font-family: 'Press Gothic';
+    src: url('../fonts/PressGothic.otf') format('truetype');
+}
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'Sora', sans-serif;
+    src: url('../fonts/Sora-VariableFont_wght.ttf') format('truetype');
+}
+
 
 * {
     -webkit-font-smoothing: antialiased;
 }
+
 body {
     height: 100vh;
     width: 100%;
@@ -34,43 +44,47 @@ body {
     background-image: url('./assets/8879118.webp');
 }
 
-.container{
+.container {
     height: 100vh;
     width: 90vw;
     margin-left: 5%;
 }
+
 /* Texto Header Infinita */
-#noticiastextoInfinito{
+#noticiastextoInfinito {
     cursor: pointer;
     color: white;
 }
 
-#jogostextoInfinito{
+#jogostextoInfinito {
     display: flex;
     cursor: pointer;
     color: white;
     align-items: center;
 }
 
-#serietextoInfinito{
+#serietextoInfinito {
     display: flex;
     cursor: pointer;
     color: white;
     align-items: center;
 }
+
 /* HOMEPAGE */
-.homepage{
+.homepage {
     display: flex;
     height: 30%;
     flex-direction: column;
     justify-content: flex-end;
 }
-#homepagetexto{
+
+#homepagetexto {
     display: flex;
     color: #ffe70c;
 }
+
 /*NOTICIAS*/
-.noticias{
+.noticias {
     display: flex;
     height: 30%;
     flex-direction: column;
@@ -78,12 +92,13 @@ body {
     justify-content: flex-end;
     box-sizing: border-box;
 }
-#noticiastexto{
+
+#noticiastexto {
     cursor: pointer;
     color: white;
 }
 
-#noticiaslinha{
+#noticiaslinha {
     display: flex;
     opacity: 0;
     background-color: #FDC706;
@@ -94,7 +109,7 @@ body {
 }
 
 /* JOGOS */
-.jogos{
+.jogos {
     display: flex;
     height: 30%;
     justify-content: center;
@@ -102,13 +117,15 @@ body {
     justify-content: flex-end;
     box-sizing: border-box;
 }
-#jogostexto{
+
+#jogostexto {
     display: flex;
     cursor: pointer;
     color: white;
     align-items: center;
 }
-#jogoslinha{
+
+#jogoslinha {
     display: flex;
     opacity: 0;
     background-color: #FDC706;
@@ -119,7 +136,7 @@ body {
 }
 
 /* Serie */
-.serie{
+.serie {
     display: flex;
     height: 30%;
     justify-content: center;
@@ -127,7 +144,8 @@ body {
     justify-content: flex-end;
     box-sizing: border-box;
 }
-#serietexto{
+
+#serietexto {
     display: flex;
     cursor: pointer;
     color: white;
@@ -140,7 +158,8 @@ body {
     align-items: center;
     font-size: 18px;
 }
-.footer{
+
+.footer {
     display: flex;
     width: 100%;
     height: 8vh;
@@ -158,26 +177,61 @@ body {
 }
 
 @keyframes historiaA {
-    from {width: 20vh; height: 20vh;}
-    to {width: 20vh; height: 21vh;}
+    from {
+        width: 20vh;
+        height: 20vh;
+    }
+
+    to {
+        width: 20vh;
+        height: 21vh;
+    }
 }
 
 @keyframes navbarON {
-    0% {opacity: 0; width: 0%;}
-    to {opacity: 1; width: 100%;}
+    0% {
+        opacity: 0;
+        width: 0%;
+    }
+
+    to {
+        opacity: 1;
+        width: 100%;
+    }
 }
 
 @keyframes navbarOFF {
-    0% {opacity: 1; width: 100%;}
-    to {opacity: 0; width: 0%;}
+    0% {
+        opacity: 1;
+        width: 100%;
+    }
+
+    to {
+        opacity: 0;
+        width: 0%;
+    }
 }
 
 @keyframes ondeA {
-    0% {opacity: 0; width: 0%;}
-    to {opacity: 1; width: 60%;}
+    0% {
+        opacity: 0;
+        width: 0%;
+    }
+
+    to {
+        opacity: 1;
+        width: 60%;
+    }
 }
 
 @keyframes ondeAReverse {
-    0% {opacity: 1; width: 60%;}
-    to {opacity: 0; width: 0%;}
+    0% {
+        opacity: 1;
+        width: 60%;
+    }
+
+    to {
+        opacity: 0;
+        width: 0%;
+    }
 }

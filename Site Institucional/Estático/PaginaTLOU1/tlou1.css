@@ -6,6 +6,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700;800&display=swap');
 
+@font-face {
+    font-family: 'Press Gothic';
+    src: url('../fonts/PressGothic.otf') format('truetype');
+}
+
 
 body {
     height: 100vh;
@@ -34,26 +39,26 @@ body {
     background-image: url('./assets/wYq1UsVEyQp6dT6cS1omgKiJ.webp');
 }
 
-.container{
+.container {
     height: 100vh;
     width: 90vw;
     margin-left: 5%;
 }
 
 /* Texto Header Infinita */
-#noticiastextoInfinito{
+#noticiastextoInfinito {
     cursor: pointer;
     color: white;
 }
 
-#jogostextoInfinito{
+#jogostextoInfinito {
     display: flex;
     cursor: pointer;
     color: white;
     align-items: center;
 }
 
-#serietextoInfinito{
+#serietextoInfinito {
     display: flex;
     cursor: pointer;
     color: white;
@@ -61,18 +66,20 @@ body {
 }
 
 /* HOMEPAGE */
-.homepage{
+.homepage {
     display: flex;
     height: 30%;
     flex-direction: column;
     justify-content: flex-end;
 }
-#homepagetexto{
+
+#homepagetexto {
     display: flex;
     color: #ffffff;
 }
+
 /*NOTICIAS*/
-.noticias{
+.noticias {
     display: flex;
     height: 30%;
     flex-direction: column;
@@ -80,12 +87,13 @@ body {
     justify-content: flex-end;
     box-sizing: border-box;
 }
-#noticiastexto{
+
+#noticiastexto {
     cursor: pointer;
     color: white;
 }
 
-#noticiaslinha{
+#noticiaslinha {
     display: flex;
     opacity: 0;
     background-color: #FDC706;
@@ -96,7 +104,7 @@ body {
 }
 
 /* JOGOS */
-.jogos{
+.jogos {
     display: flex;
     height: 30%;
     justify-content: center;
@@ -104,13 +112,15 @@ body {
     justify-content: flex-end;
     box-sizing: border-box;
 }
-#jogostexto{
+
+#jogostexto {
     display: flex;
     cursor: pointer;
     color: white;
     align-items: center;
 }
-#jogoslinha{
+
+#jogoslinha {
     display: flex;
     opacity: 0;
     background-color: #FDC706;
@@ -121,7 +131,7 @@ body {
 }
 
 /* Serie */
-.serie{
+.serie {
     display: flex;
     height: 30%;
     justify-content: center;
@@ -129,7 +139,8 @@ body {
     justify-content: flex-end;
     box-sizing: border-box;
 }
-#serietexto{
+
+#serietexto {
     display: flex;
     cursor: pointer;
     color: white;
@@ -144,7 +155,7 @@ body {
 }
 
 /* TITULO */
-.tituloJogo{
+.tituloJogo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -152,7 +163,8 @@ body {
     width: 100%;
     align-items: center;
 }
-#numeroJogo{
+
+#numeroJogo {
     display: flex;
     color: #FDC706;
     font-family: 'Sora', sans-serif;
@@ -162,14 +174,13 @@ body {
     margin-top: 25%;
 }
 
-#nomeJogo{
+#nomeJogo {
     display: flex;
     color: white;
     font-family: "Press Gothic";
     font-size: 8vmax;
     margin-top: -1.5%;
 }
-
 #expandirIcon {
     display: flex;
     color: white;
@@ -189,14 +200,14 @@ body {
 
 /* HISTORIA */
 
-.historiaContainer{
-   display: flex;
-   margin-top: 5%;
-   width: 90vw;
-   height: 55vh;
+.historiaContainer {
+    display: flex;
+    margin-top: 5%;
+    width: 90vw;
+    height: 55vh;
 }
 
-.blocoHistoria{
+.blocoHistoria {
     display: flex;
     position: absolute;
     border-radius: 20px;
@@ -208,7 +219,7 @@ body {
 }
 
 
-#blocoHistoriaTexto{
+#blocoHistoriaTexto {
     display: flex;
     margin-left: 35%;
     margin-top: 1%;
@@ -226,7 +237,7 @@ body {
     font-weight: 800;
 }
 
-#conteudoHistoria1{
+#conteudoHistoria1 {
     display: flex;
     color: #706D6D;
     font-size: 1.1vmax;
@@ -235,7 +246,8 @@ body {
     font-weight: 300;
     line-height: 33px;
 }
-#conteudoHistoria2{
+
+#conteudoHistoria2 {
     display: flex;
     color: #706D6D;
     font-size: 1.1vmax;
@@ -247,7 +259,7 @@ body {
 
 /* Parte de Baixo Container*/
 
-.parteBaixoHistoria{
+.parteBaixoHistoria {
     display: flex;
     width: 100%;
     height: 30vh;
@@ -260,17 +272,17 @@ body {
     flex-direction: column;
     width: 32%;
     height: 100%;
- 
+
 }
 
-#tituloConheca{
+#tituloConheca {
     display: flex;
     font-size: 1.2vmax;
     font-weight: 800;
     font-family: 'Sora', sans-serif;
 }
 
-#ellieConheca{
+#ellieConheca {
     display: flex;
     background-color: #11141A;
     margin-top: 2%;
@@ -279,7 +291,7 @@ body {
     width: 100%;
 }
 
-#ellieIcon{
+#ellieIcon {
     display: flex;
     background-image: url(./assets/ellieicon.jpg);
     background-size: cover;
@@ -297,14 +309,14 @@ body {
     margin-left: 5%;
 }
 
-#joelConheca{
+#joelConheca {
     display: flex;
     background-color: #37372F;
     margin-top: 5.2%;
     border-radius: 5px;
     height: 25%;
     width: 100%;
-    
+
 }
 
 #joelIcon {
@@ -324,9 +336,10 @@ body {
     align-items: center;
     margin-left: 5%;
 }
+
 /*Cordyceps*/
 
-.conhecaMaisCordyceps{
+.conhecaMaisCordyceps {
     display: flex;
     flex-direction: column;
     width: 68%;
@@ -334,19 +347,19 @@ body {
     margin-left: 4.5%;
 }
 
-#tituloCordyceps{
+#tituloCordyceps {
     display: flex;
     font-size: 1.2vmax;
     font-weight: 800;
     font-family: 'Sora', sans-serif;
 }
 
-#cordycepsCor{
+#cordycepsCor {
     color: #FDC706;
     margin-left: 0.6%;
 }
 
-#cordycepsGradiente{
+#cordycepsGradiente {
     display: flex;
     background: linear-gradient(180deg, rgba(214, 155, 14, 0.29) 32.72%, rgba(51, 69, 49, 0.26) 74.79%);
     position: absolute;
@@ -356,7 +369,7 @@ body {
     height: 18.5%;
 }
 
-#cordycepsConhece{
+#cordycepsConhece {
     display: flex;
     position: absolute;
     z-index: -1;
@@ -381,7 +394,7 @@ body {
     margin-top: 6%;
 }
 
-#criadoraTitulo{
+#criadoraTitulo {
     display: flex;
     font-weight: 800;
     font-family: 'Sora', sans-serif;
@@ -389,7 +402,7 @@ body {
     margin-top: 1%;
 }
 
-#criadoraConteudo{
+#criadoraConteudo {
     display: flex;
     color: #706D6D;
     font-size: 1.1vmax;
