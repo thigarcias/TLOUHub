@@ -433,3 +433,25 @@ body {
     align-items: center;
     background-image: url(./assets/naughtydoglogo.png);
 }
+
+/* CARROSEL DE PERSONAGENS */
+.personagensGradiente {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    margin-left: -5%;
+    height: 90vh;
+    margin-top: 10%;
+    background: linear-gradient(180deg, #11141A 7.11%, rgba(17, 20, 26, 0) 100%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.personagensImagem {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    margin-left: -5%;
+    height: 90vh;
+    margin-top: 10%;
+    background-image: url('./assets/the-last-of-us-part-1-remake-ellie-hd-wallpaper-uhdpaper.com-323@1@h.jpg');
+}

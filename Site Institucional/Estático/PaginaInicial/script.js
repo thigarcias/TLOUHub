@@ -90,7 +90,7 @@ noticiastextoInfinito.addEventListener('mouseover', function () {
   });
 
 
-/* Animação dos blocos Onde */
+/* Animação dos blocos Onde + Links*/
 
 const ondeAnimationSteam = document.getElementById('ondeAnimationSteam')
 const ondeAnimationEpic = document.getElementById('ondeAnimationEpic')
@@ -136,7 +136,27 @@ ondeTLOUHBO.addEventListener("mouseover", function () {
   }),
 
   ondeSteam.addEventListener("click", function () {
-    window.location.href = 'https://google.com.br'
+    window.location.href = 'https://store.steampowered.com/app/1888930/The_Last_of_Us_Part_I/'
+  }),
+  ondeEpic.addEventListener("click", function () {
+    window.location.href = 'https://store.epicgames.com/pt-BR/p/the-last-of-us-part-1'
+  }),
+  ondePSN.addEventListener("click", function () {
+    window.location.href = 'https://store.playstation.com/pt-br/concept/10002694'
+  }),
+  ondePSNTLOU2.addEventListener("click", function () {
+    window.location.href = 'https://store.playstation.com/pt-br/product/UP9000-CUSA07820_00-THELASTOFUSPART2'
+  }),
+  ondeTLOUHBO.addEventListener("click", function () {
+    window.location.href = 'https://play.hbomax.com/page/urn:hbo:page:GYyofRQHeuJ6fiQEAAAEy:type:series?source=googleHBOMAX&action=play'
   });
+  
 
+/* LINKS nos blocos TLOU1 */
+
+const HistoriaClick = document.getElementById("HistoriaClick")
+
+HistoriaClick.addEventListener("click", function(){
+  window.location.href = ('../PaginaTLOU1/tlou1.html')
+});
 
