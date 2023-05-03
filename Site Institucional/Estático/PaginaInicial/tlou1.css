@@ -3,17 +3,18 @@
     display: flex;
     flex-direction: column;
     margin-top: 11.8%;
-    width: 30%;
+    width: 40%;
 }
 
 #numeroJogo {
     display: flex;
     color: #FDC706;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1.4vmax;
 }
+
 
 #nomeJogo {
     display: flex;
@@ -44,6 +45,9 @@
     width: 77%;
     margin-left: 15%;
 }
+
+
+
 
 /* Blocos Sobrepondo o Banner */
 .blocoHistoriaGradiente {
@@ -183,11 +187,8 @@
     display: flex;
     font-weight: 700;
     font-size: 1.25vmax;
-    line-height: 20px;
-    font-family: 'Sora', sans-serif;
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
 }
-
 #textoInformativo1 {
     display: flex;
     font-weight: 300;
@@ -206,8 +207,10 @@
     color: #6e6e6e;
     line-height: 30px;
     font-style: normal;
-    margin-top: 2%;
+    margin-top: 1%;
 }
+
+
 
 /* Parte de Baixo */
 .parteBaixo {
@@ -219,7 +222,7 @@
     display: flex;
     font-weight: 700;
     flex-direction: column;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.25vmax;
     line-height: 20px;
     font-style: normal;
@@ -362,7 +365,7 @@
     font-weight: 700;
     font-size: 1.25vmax;
     line-height: 20px;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
 
 }
@@ -376,7 +379,7 @@
 
 #minimoTitulo {
     color: #686262;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 1vmax;
 }
@@ -401,7 +404,7 @@
 #recomendadoTitulo {
     display: inline-flex;
     color: #686262;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 1vmax;
 }

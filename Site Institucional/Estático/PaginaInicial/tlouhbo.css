@@ -30,16 +30,22 @@
     display: flex;
     flex-direction: column;
     margin-top: 17.2%;
-    width: 30%;
+    width: 40%;
 }
 
 #numeroJogoTLOUHBO {
     display: flex;
     color: #608103;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1.4vmax;
+}
+
+@media (max-width:1919px) {
+    #numeroJogoTLOUHBO {
+        font-size: 1.6vmax;
+    }
 }
 
 #nomeJogoTLOUHBO {
@@ -48,6 +54,13 @@
     font-family: "Press Gothic";
     font-size: 4vmax;
     margin-top: -0.8%;
+}
+
+@media (max-width: 1919px) {
+    #nomeJogoTLOUHBO {
+        font-size: 4.6vmax;
+        margin-top: 0%;
+    }
 }
 
 .sobreBlocoTLOUHBO {
@@ -61,6 +74,12 @@
     margin-left: -7%;
 }
 
+@media (max-width: 1919px) {
+    .sobreBlocoTLOUHBO {
+        height: 29%;
+    }
+}
+
 #sobreBlocoTextoTLOUHBO {
     display: flex;
     color: white;
@@ -70,6 +89,12 @@
     width: 77%;
     margin-left: 15%;
     line-height: 30px;
+}
+
+@media (max-width: 1919px) {
+    #sobreBlocoTextoTLOUHBO {
+        width: 87%;
+    }
 }
 
 /* Blocos Sobrepondo o Banner */

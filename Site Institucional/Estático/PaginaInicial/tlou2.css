@@ -31,17 +31,19 @@
     display: flex;
     flex-direction: column;
     margin-top: 17.2%;
-    width: 30%;
+    width: 40%;
 }
 
 #numeroJogoTLOU2 {
     display: flex;
     color: #297F00;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1.4vmax;
 }
+
+
 
 #nomeJogoTLOU2 {
     display: flex;
@@ -63,6 +65,9 @@
     margin-left: -7%;
 }
 
+
+
+
 #sobreBlocoTextoTLOU2 {
     display: flex;
     color: white;
@@ -73,6 +78,7 @@
     margin-left: 15%;
     line-height: 30px;
 }
+
 
 /* Blocos Sobrepondo o Banner */
 .blocoHistoriaGradienteTLOU2 {
@@ -171,7 +177,7 @@
     font-weight: 700;
     font-size: 1.25vmax;
     line-height: 20px;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
 }
 
@@ -202,7 +208,7 @@
     font-weight: 700;
     flex-direction: column;
     font-size: 1.25vmax;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 20px;
     font-style: normal;
     margin-top: 5%;

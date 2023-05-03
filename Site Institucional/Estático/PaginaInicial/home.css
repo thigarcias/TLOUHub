@@ -3,15 +3,18 @@
     src: url('../fonts/PressGothic.otf') format('truetype');
 }
 
-
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap');
-
 @font-face {
-    font-family: 'Sora', sans-serif;
-    src: url('../fonts/Sora-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Space Grotesk';
+    src: url('../fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Work Sans', sans-serif;
+    src: url('../fonts/WorkSans-VariableFont_wght.ttf');
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
     -webkit-font-smoothing: antialiased;
@@ -48,6 +51,71 @@ body {
     height: 100vh;
     width: 90vw;
     margin-left: 5%;
+}
+
+/* Header Fixa */
+#headerinfinitaFundo {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 6.5vh;
+    background-color: #fc9802ee;
+}
+
+.headerinfinita {
+    display: flex;
+    width: 90vw;
+    height: 6.5vh;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+/* Header Normal */
+#header {
+    display: flex;
+    width: 90vw;
+    height: 10vh;
+    align-items: center;
+}
+
+#logo {
+    display: flex;
+    font-family: "Press Gothic";
+    font-size: 32px;
+    color: white;
+    width: 13%;
+}
+
+#logo2 {
+    display: flex;
+    font-family: "Press Gothic";
+    font-size: 32px;
+    color: #FDC706;
+    height: 10%;
+    width: 10%;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-right: 5%;
+}
+
+#textonavbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9vmax;
+    line-height: 19px;
+    letter-spacing: 0px;
+    white-space: nowrap;
+    font-weight: 600;
+    gap: 5%;
 }
 
 /* Texto Header Infinita */
