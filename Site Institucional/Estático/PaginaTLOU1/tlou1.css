@@ -41,7 +41,7 @@ body {
 
 .container {
     height: 100vh;
-    width: 90vw;
+    width: 90%;
     margin-left: 5%;
 }
 
@@ -394,7 +394,7 @@ body {
 
 .criadora {
     display: flex;
-    height: 40vh;
+    height: 55vh;
     width: 100%;
     font-family: 'Space Grotesk';
     flex-direction: column;
@@ -435,23 +435,213 @@ body {
 }
 
 /* CARROSEL DE PERSONAGENS */
-.personagensGradiente {
+/* .personagemContainer{
+    width: 100%;
+    height: 200vh;
+    overflow: hidden;
+}
+.personagens{
+    display: flex;
+    width: 100%;
+    height: 200%;
+    flex-direction: column;
+} */
+
+.ellie {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.ellieGradiente {
     display: flex;
     position: absolute;
     width: 100%;
+    z-index: -1;
     margin-left: -5%;
-    height: 90vh;
-    margin-top: 10%;
+    height: 100%;
     background: linear-gradient(180deg, #11141A 7.11%, rgba(17, 20, 26, 0) 100%);
     transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.personagensImagem {
+.ellieImagem {
+    display: flex;
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    margin-left: -5%;
+    background-position: 100% 80%;
+    height: 100%;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    background-image: url('./assets/the-last-of-us-part-1-remake-ellie-hd-wallpaper-uhdpaper.com-323@1@h.jpg');
+}
+
+.ellieTipo{
+    display: flex;
+    width: 50%;
+    height: 15%;
+    margin-top: 15%;
+    margin-left: -5.6%;
+    background: linear-gradient(89.96deg, rgba(6, 31, 253, 0.1675) 18.83%, rgba(6, 208, 253, 0) 84.16%);
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#ellieTitulo {
+    display: flex;
+    color: #4883E3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1vmax;
+    margin-left: 7%;
+}
+
+#ellieTexto {
+    display: flex;
+    color: white;
+    font-family: "Press Gothic";
+    font-weight: 100;
+    font-size: 4vmax;
+    margin-left: 7%;
+    margin-top: -0.5%;
+    height: 60%;
+}
+
+.ellieDescricao {
+    display: flex;
+    color: white;
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+    margin-top: 1%;
+    font-size: 1.1vmax;
+    width: 41%;
+    margin-left: -2%;
+    flex-direction: column;
+}
+
+#descricao2 {
+    margin-top: 2%;
+}
+
+
+.ellieflechaProximo {
+    display: flex;
+    color: white;
+    position: absolute;
+    margin-top: 25%;
+    width: 100%;
+    margin-left: -5%;
+    justify-content: flex-end;
+}
+
+#personagemProximo{
+    display: flex;
+    font-size: 3vmax;
+    margin-right: 2%;
+}
+
+
+.joel{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.joelGradiente {
     display: flex;
     position: absolute;
     width: 100%;
+    z-index: -1;
     margin-left: -5%;
-    height: 90vh;
-    margin-top: 10%;
-    background-image: url('./assets/the-last-of-us-part-1-remake-ellie-hd-wallpaper-uhdpaper.com-323@1@h.jpg');
+    height: 100%;
+    background: linear-gradient(180deg, rgba(79, 70, 37, 0.26) 7.11%, rgba(26, 25, 17, 0) 100%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.joelImagem {
+    display: flex;
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    margin-left: -5%;
+    background-position: 100% 10%;
+    height: 100%;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    background-image: url('./assets/5458dbb0ac20f48a59f8fc34cecf4e61.jpg');
+}
+
+.joelTipo{
+    display: flex;
+    width: 50%;
+    height: 15%;
+    margin-top: 15%;
+    margin-left: -5.5%;
+    background: linear-gradient(89.96deg, rgba(210, 189, 75, 0.25) 18.83%, rgba(253, 199, 6, 0) 84.16%);
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#joelTitulo {
+    display: flex;
+    color: #E3B848;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1vmax;
+    margin-left: 13%;
+}
+
+#joelTexto {
+    display: flex;
+    color: white;
+    font-family: "Press Gothic";
+    font-size: 4vmax;
+    font-weight: 100;
+    margin-top: -0.5%;
+    margin-left: 13%;
+    height: 60%;
+}
+
+.joelDescricao {
+    display: flex;
+    color: white;
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+    margin-top: 1%;
+    font-size: 1.1vmax;
+    width: 41%;
+    margin-left: 1%;
+    flex-direction: column;
+}
+
+#descricao2 {
+    margin-top: 2%;
+}
+
+
+.joelFlecha{
+    display: flex;
+    color: white;
+    position: absolute;
+    margin-top: 25%;
+    width: 100%;
+    margin-left: -5%;
+    justify-content: flex-end;
+}
+#personagemAnterior{
+    display: flex;
+    font-size: 3vmax;
+    margin-left: 2%;
+    margin-right: auto;
+    font-weight: 100;
+    transform: rotate(-180deg);
+}
+#personagemProximo{
+    display: flex;
+    font-size: 3vmax;
+    margin-right: 2%;
+    font-weight: 100;
 }
