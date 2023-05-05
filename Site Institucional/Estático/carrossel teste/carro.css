@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.carroselpai {
+    position: relative;
+}
+
+.carroseldentro {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.imagem {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 30vh;
+}
+
+.imagem.ativa {
+   display: flex;
+}
+
+#proximaImagem {
+    display: flex;
+    position: absolute;
+    color: red;
+    z-index: 1;
+    left: 20%;
+    cursor: pointer;
+}
+
+#anteriorImagem{
+    display: flex;
+    position: absolute;
+    color: red;
+    transform: rotate(-180deg);
+    z-index: 1;
+    cursor: pointer;
+}
