@@ -45,6 +45,19 @@ body {
     margin-left: 5%;
 }
 
+/* Texto Header Infinita */
+#noticiastextoInfinito {
+    cursor: pointer;
+    color: white;
+}
+
+#jogostextoInfinito {
+    display: flex;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+}
+
 #serietextoInfinito {
     display: flex;
     cursor: pointer;
@@ -63,7 +76,6 @@ body {
 #homepagetexto {
     display: flex;
     color: #ffffff;
-    cursor: pointer;
 }
 
 /*NOTICIAS*/
@@ -761,8 +773,7 @@ body {
 
 #vejaCordycepsGradiente {
     display: flex;
-    background: linear-gradient(180deg, rgba(214, 155, 14, 0.29) 32.72%, rgba(51, 69, 49, 0.26) 74.79%);
-    position: absolute;
+    background: linear-gradient(180deg, rgba(214, 155, 14, 0.29) 32.72%, rgba(51, 69, 49, 0.26) 74.79%);    position: absolute;
     z-index: -1;
     border-radius: 10px;
     width: 80%;
@@ -786,31 +797,8 @@ body {
     width: 80%;
     height: 25%;
     background-size: cover;
-    background-position: 10% 40%;
+    background-position: 10% 50%;
     margin-left: 20%;
     top: 78%;
     background-image: url(./assets/The-Last-of-Us.webp);
-}
-
-
-/* FOOTER */
-
-.footer {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    margin-left: -5%;
-    margin-top: 8%;
-    height: 8vh;
-    background-color: #7A6E44;
-    justify-content: center;
-    align-items: center;
-}
-
-#footerTexto {
-    display: flex;
-    color: white;
-    font-family: 'Space Grotesk';
-    font-size: 0.8vmax;
-    text-align: center;
 }

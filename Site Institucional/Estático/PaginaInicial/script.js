@@ -8,7 +8,7 @@ window.addEventListener("scroll", function () {
   var posicaoScroll = window.pageYOffset;
   var resolucaoAtual = window.innerHeight;
 
-  if (resolucaoAtual < 1080) {
+  if (resolucaoAtual < 900) {
     if (posicaoScroll <= 50) {
       headerinfinitaFundo.style.display = "none"
     }

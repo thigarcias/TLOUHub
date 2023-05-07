@@ -1,21 +1,3 @@
-/* Header Fixa */
-#headerinfinitaFundo {
-    display: none;
-    position: fixed;
-    width: 100vw;
-    height: 6.5vh;
-    background-color: #fc9802ee;
-}
-
-.headerinfinita {
-    display: flex;
-    width: 90vw;
-    height: 6.5vh;
-    align-items: center;
-    justify-content: center;
-    margin-left: 5%;
-}
-
 /* Header Normal */
 #header {
     display: flex;
