@@ -20,6 +20,13 @@ body {
     background-repeat: no-repeat;
     background-image: url(./assets/Vector\ 1.png);
 }
+
+@media (max-width: 1919px){
+    .TLOUVetor{
+        background-position: 1vw 0%;
+    }
+}
+
 .TLOU {
     display: flex;
     position: absolute;
@@ -107,9 +114,15 @@ body {
     margin-top: 6.5%;
 }
 
+@media (max-width: 1919px){
+    .cadastroBloco{
+        margin-top: 5.5%;
+    }
+}
+
 .cadastroTitulo{
     display: flex;
-    color: #5D8357;
+    color: #508348;
     font-size: 1.2vmax;
     font-family: 'Renogare Soft', sans-serif;
     
@@ -131,7 +144,7 @@ body {
 }
 
 #entre{
-    color: #60844B;
+    color: #508348;
     margin-left: 0.5%;
     cursor: pointer;
 }
@@ -143,12 +156,14 @@ body {
     margin-top: 1.5%;
 }
 
+@media ()
+
 #primeiroNome{
     display: flex;
     width: 14%;
     height: 35%;
     font-size: 1vmax;
-    background-color: #efefef75;
+    background-color: #cac9c994;
     border: 0;
     border-radius: 15px;
     font-family: 'MADE Tommy Soft', sans-serif;
@@ -179,7 +194,7 @@ body {
     width: 14%;
     height: 35%;
     font-size: 1vmax;
-    background-color: #efefef75;
+   background-color: #cac9c994;
     border: 0;
     border-radius: 15px;
     font-family: 'MADE Tommy Soft', sans-serif;
@@ -209,7 +224,7 @@ body {
     width: 31.5%;
     height: 6%;
     font-size: 1vmax;
-    background-color: #efefef75;
+    background-color: #cac9c994;
     border: 0;
     border-radius: 15px;
     font-family: 'MADE Tommy Soft', sans-serif;
@@ -221,7 +236,6 @@ body {
 #email:focus{
     outline-color: #60844B;
     font-size: 1vmax;
-    
 }
 
 #terceiro {
@@ -234,12 +248,18 @@ body {
     font-weight: 400;
 }
 
+@media (max-width: 1919px){
+    #terceiro{
+        margin-top: 16%;
+    }
+}
+
 #senha{
     display: flex;
     width: 31.5%;
     height: 6%;
     font-size: 1vmax;
-    background-color: #efefef75;
+   background-color: #cac9c994;
     border: 0;
     border-radius: 15px;
     font-family: 'MADE Tommy Soft', sans-serif;
@@ -262,6 +282,12 @@ body {
     margin-left: 1.4%;
     font-size: 0.7vmax;
     font-weight: 400;
+}
+
+@media (max-width: 1919px){
+    #quarto{
+        margin-top: 21.3%;
+    }
 }
 
 .msgErro{

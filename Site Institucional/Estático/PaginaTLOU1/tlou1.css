@@ -428,8 +428,15 @@ body {
     position: relative;
     width: 100%;
     margin-top: 90%;
-
 }
+
+@media (max-height: 700px){
+    .personagemContainer{
+        margin-top: 85%;
+    }
+}
+
+
 
 .personagens {
     display: flex;

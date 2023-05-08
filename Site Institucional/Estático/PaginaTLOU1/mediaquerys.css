@@ -79,3 +79,12 @@
         font-size: 1.4vmax;
     }
 }
+
+
+@media (max-height: 800px){
+    .criadora{
+        height: 175vh;
+    }
+}
+
+
