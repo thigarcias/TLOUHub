@@ -34,3 +34,11 @@ logintexto.addEventListener("mouseout", function(){
 homepagetexto.addEventListener("click", function(){
     window.location.href = "../PaginaInicial/home.html"
 })
+
+logintexto.addEventListener("click", function(){
+    window.location.href = "../Login/login.html"
+})
+
+entre.addEventListener("click", function(){
+    window.location.href = "../Login/login.html"
+})

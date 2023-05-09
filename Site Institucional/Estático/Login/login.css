@@ -16,9 +16,9 @@ body {
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-position: 10vw 0%;
+    background-position: -60vw 0%;
     background-repeat: no-repeat;
-    background-image: url(./assets/Vector\ 1.png);
+    background-image: url(./assets/vetoratualizado.png);
 }
 
 @media (max-width: 1919px){
@@ -36,7 +36,7 @@ body {
     background-repeat: no-repeat;
     height: 100%;
     background-size: cover;
-    background-position: 35vw 10%;
+    background-position: 0vw 10%;
 }
 
 /* Header Normal */
@@ -93,7 +93,7 @@ body {
     cursor: pointer;
 }
 
-#logintexto{
+#cadastrotexto{
     color: #9b9595cb;
     cursor: pointer;
 }
@@ -124,6 +124,7 @@ body {
     display: flex;
     color: #508348;
     font-size: 1.2vmax;
+    margin-left: 0.2%;
     font-family: 'Renogare Soft', sans-serif;
     
 }
@@ -131,7 +132,8 @@ body {
 .cadastroSubTitulo{
     display: flex;
     font-family: 'Renogare Soft', sans-serif;
-    font-size: 3.1vmax;   
+    font-size: 3.1vmax;  
+    margin-top: -10; 
 }
 
 .jaTem{
@@ -140,6 +142,7 @@ body {
     font-family: 'MADE Tommy Soft', sans-serif;
     color: #858181;
     margin-top: 2%;
+    margin-left: 0.2%;
     font-weight: 400;
 }
 
@@ -147,76 +150,6 @@ body {
     color: #508348;
     margin-left: 0.5%;
     cursor: pointer;
-}
-
-.inputsCima{
-    display: flex;
-    width: 100%;
-    height: 15%;
-    margin-top: 1.5%;
-}
-
-@media ()
-
-#primeiroNome{
-    display: flex;
-    width: 14%;
-    height: 35%;
-    font-size: 1vmax;
-    background-color: #cac9c994;
-    border: 0;
-    border-radius: 15px;
-    font-family: 'MADE Tommy Soft', sans-serif;
-    padding-left: 1.5%;
-    padding-top: 1%;
-    padding-bottom: 0.5%;
-
-}
-
-#primeiroNome:focus{
-    outline-color: #60844B;
-    font-size: 1vmax;
-    
-}
-
-#primeiro{
-    position: absolute;
-    margin-top: 0.55%;
-    font-family: 'MADE Tommy Soft', sans-serif;
-    color: #B5B2B2;
-    margin-left: 1.4%;
-    font-size: 0.7vmax;
-    font-weight: 400;
-}
-
-#sobrenome{
-    display: flex;
-    width: 14%;
-    height: 35%;
-    font-size: 1vmax;
-   background-color: #cac9c994;
-    border: 0;
-    border-radius: 15px;
-    font-family: 'MADE Tommy Soft', sans-serif;
-    padding-left: 1.5%;
-    padding-top: 1%;
-    padding-bottom: 0.5%;
-    margin-left: 2%;
-}
-
-#sobrenome:focus{
-    outline-color: #60844B;
-    font-size: 1vmax;
-}
-
-#segundo {
-    position: absolute;
-    margin-top: 0.55%;
-    font-family: 'MADE Tommy Soft', sans-serif;
-    color: #B5B2B2;
-    margin-left: 18.1%;
-    font-size: 0.7vmax;
-    font-weight: 400;
 }
 
 #email{
@@ -231,6 +164,7 @@ body {
     padding-left: 1.5%;
     padding-top: 1%;
     padding-bottom: 0.5%;
+    margin-top: 2%;
 }
 
 #email:focus{
@@ -240,9 +174,9 @@ body {
 
 #terceiro {
     position: absolute;
-    margin-top: 16.6%;
+    margin-top: 12%;
     font-family: 'MADE Tommy Soft', sans-serif;
-    color: #B5B2B2;
+    color: #a39797;
     margin-left: 1.4%;
     font-size: 0.7vmax;
     font-weight: 400;
@@ -276,9 +210,9 @@ body {
 
 #quarto {
     position: absolute;
-    margin-top: 21.9%;
+    margin-top: 17.4%;
     font-family: 'MADE Tommy Soft', sans-serif;
-    color: #B5B2B2;
+    color: #a39797;
     margin-left: 1.4%;
     font-size: 0.7vmax;
     font-weight: 400;
@@ -306,7 +240,7 @@ body {
     margin-left: 18%;
     height: 10%;
     border-radius: 15px;
-    margin-top: 2%;
+    margin-top: 1%;
     background-color: #448D19;
     cursor: pointer;
 

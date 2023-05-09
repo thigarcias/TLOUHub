@@ -160,3 +160,16 @@ HistoriaClick.addEventListener("click", function(){
   window.location.href = ('../PaginaTLOU1/tlou1.html')
 });
 
+
+
+/* LINK Botão Login/Cadastro*/
+
+const cadastrartexto = document.getElementById("cadastrartexto")
+cadastrartexto.addEventListener("click", function(){
+    window.location.href = "../Cadastro/cadastro.html"
+})
+
+const logintexto = document.getElementById("logintexto")
+logintexto.addEventListener("click", function(){
+    window.location.href = "../Login/login.html"
+})
