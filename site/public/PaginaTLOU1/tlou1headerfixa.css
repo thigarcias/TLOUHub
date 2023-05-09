@@ -1,0 +1,42 @@
+/* Header Fixa */
+#headerinfinitaFundo {
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    height: 6.5vh;
+    background-color: #000000ee;
+}
+
+.headerinfinita {
+    display: flex;
+    width: 90vw;
+    height: 6.5vh;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+}
+/* Texto Header Infinita */
+#homepagetextoInfinito {
+    display: flex;
+    color: #ffffff;
+    cursor: pointer;
+}
+#noticiastextoInfinito {
+    cursor: pointer;
+    color: white;
+}
+
+#jogostextoInfinito {
+    display: flex;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+}
+
+#serietextoInfinito {
+    display: flex;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+}

@@ -1,0 +1,90 @@
+@media (max-width: 1919px) {
+    .TLOU1 {
+        height: 90%;
+    }
+}
+
+@media (max-width: 1919px) {
+    #textonavbar {
+        font-size: 1.2vmax;
+    }
+}
+
+@media (max-width: 1919px) {
+    .tituloJogo {
+        height: 80%;
+    }
+}
+
+@media (max-width: 1919px) {
+    #nomeJogo {
+        margin-top: 0%
+    }
+}
+
+@media (max-width: 1919px) {
+    .blocoHistoria {
+        background-position: 45%;
+    }
+}
+
+@media (max-width: 1919px) {
+    .historiaContainer {
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 1919px) {
+    #tituloHistoria {
+        font-size: 1.6vmax;
+    }
+}
+
+@media (max-width: 1919px) {
+    #conteudoHistoria1 {
+        font-size: 1.4vmax;
+    }
+}
+
+@media (max-width: 1919px) {
+    #conteudoHistoria2 {
+        font-size: 1.4vmax;
+    }
+}
+
+
+
+@media (max-width: 1919px) {
+    #cordycepsGradiente {
+        height: 18%;
+    }
+}
+
+@media (max-width: 1919px) {
+    #cordycepsConhece {
+        height: 18%;
+    }
+}
+
+
+
+@media (max-width: 1919px) {
+    #criadoraTitulo {
+        font-size: 1.6vmax;
+    }
+}
+
+@media (max-width: 1919px) {
+    #criadoraConteudo {
+        font-size: 1.4vmax;
+    }
+}
+
+
+@media (max-height: 800px){
+    .criadora{
+        height: 175vh;
+    }
+}
+
+

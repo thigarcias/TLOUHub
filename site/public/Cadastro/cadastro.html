@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cadastro.css">
+
+    <script src="../js/funcoes.js"></script>
+
+    <title>Cadastro | TLOUHub</title>
+</head>
+<body>
+    <div class="TLOUVetor"></div>
+    <div class="TLOU"></div>
+
+    <!-- Header Normal -->
+    <div id="header">
+        <span id="logo">TLOU<span id="logo2">Hub</span></span>
+        <div class="navbar">
+            <div id="textonavbar">
+
+                <div class="homepage">
+                    <span id="homepagetexto">Home</span>
+                </div>
+
+                <div class="login">
+                    <span id="logintexto">Login</span>
+                </div>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cadastroBloco">
+            <span class="cadastroTitulo">CADASTRE-SE GRATUITAMENTE</span>
+            <span class="cadastroSubTitulo">Crie uma nova conta
+                <span style="color: #5D8357;">.</span>
+            </span>
+            <span class="jaTem">Ja tem cadastro?
+                <span id="entre"">Entre</span>
+            </span>
+
+            <div class="inputsCima">
+
+                <input id="primeiroNome" type="text" placeholder="Primeiro Nome">
+                
+
+                <input id="sobrenome" type="text" placeholder="Sobrenome">
+            </div>
+
+
+            <input id="email" type="text" placeholder="Email">
+
+            
+
+            <input id="senha" type="password" placeholder="Senha">
+
+
+            <input id="confirmarSenha" type="password" placeholder="Confirmar Senha">
+            <span id="msgErro"></span>
+            <span id="criarConta" onclick="cadastrar()">Criar conta</span>
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script src="./cadastro.js">
+</script>

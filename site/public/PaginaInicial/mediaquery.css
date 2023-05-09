@@ -1,0 +1,75 @@
+/* TLOU 1 */
+@media (max-width: 1919px) {
+    #headerinfinitaFundo {
+        height: 7.5vh;
+    }
+
+    .headerinfinita {
+        height: 7.5vh;
+    }
+}
+
+@media (max-width: 1919px) {
+    #textonavbar {
+        font-size: 1.2vmax;
+    }
+}
+
+
+@media (max-width: 1919px) {
+    #numeroJogo {
+        font-size: 1.6vmax;
+    }
+}
+
+@media (max-width: 1919px) {
+    #nomeJogo {
+        font-size: 4.6vmax;
+        margin-top: 0%;
+    }
+}
+
+@media (max-width: 1919px) {
+    #tituloInformativo {
+        font-size: 1.4vmax;
+    }
+}
+
+/* TLOU 2 */
+@media (max-width: 1919px) {
+    #numeroJogoTLOU2 {
+        font-size: 1.6vmax;
+    }
+}
+
+@media (max-width: 1919px) {
+    #nomeJogoTLOU2 {
+        font-size: 4.6vmax;
+        margin-top: 0%;
+    }
+}
+
+@media (max-width: 1919px) {
+    #tituloInformativoTLOU2 {
+        font-size: 1.4vmax;
+    }
+}
+
+@media (max-width: 1919px) {
+    #sobreBlocoTextoTLOU2 {
+        width: 82%;
+    }
+}
+
+@media (max-width: 1919px) {
+    .sobreBlocoTLOU2 {
+        height: 27%;
+    }
+}
+
+/* TLOU HBO */
+@media (max-width: 1919px) {
+    #tituloInformativoTLOUHBO {
+        font-size: 1.4vmax;
+    }
+}

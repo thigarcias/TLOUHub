@@ -1,0 +1,417 @@
+/* Conteudo Banner TLOU 1*/
+.tituloJogo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 11.8%;
+    width: 40%;
+}
+
+#numeroJogo {
+    display: flex;
+    color: #FDC706;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.4vmax;
+}
+
+
+#nomeJogo {
+    display: flex;
+    color: white;
+    font-family: "Press Gothic";
+    font-size: 4vmax;
+    margin-top: -0.8%;
+
+}
+
+.sobreBloco {
+    display: flex;
+    position: absolute;
+    background: linear-gradient(89.96deg, rgba(253, 199, 6, 0.25) 18.83%, rgba(253, 199, 6, 0) 84.16%);
+    align-items: center;
+    width: 46.4%;
+    height: 24%;
+    margin-top: 3.5%;
+    margin-left: -7%;
+}
+
+#sobreBlocoTexto {
+    display: flex;
+    color: white;
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+    font-size: 1.1vmax;
+    width: 77%;
+    margin-left: 15%;
+}
+
+
+
+
+/* Blocos Sobrepondo o Banner */
+.blocoHistoriaGradiente {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: end;
+    top: 86%;
+    margin-left: 5%;
+    border-radius: 15px;
+    width: 20vh;
+    height: 20vh;
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, 0.082) 60%);
+}
+
+.blocoHistoriaGradiente:hover {
+    animation-name: historiaA;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.blocoHistoria {
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    background-image: url(./assets/imagick_convert.php.webp);
+    background-size: cover;
+    background-position: 40%;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+#blocoHistoriaTexto {
+    display: flex;
+    color: white;
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+    margin-bottom: 10%;
+    font-size: 1.15vmax;
+}
+
+.blocoPersonagemGradiente {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: end;
+    top: 86%;
+    margin-left: 17.5%;
+    border-radius: 15px;
+    width: 20vh;
+    height: 20vh;
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, 0.082) 60%);
+}
+
+.blocoPersonagemGradiente:hover {
+    animation-name: historiaA;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.blocoPersonagem {
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    background-image: url(./assets/imagick_convert.php.webp);
+    background-size: cover;
+    background-position: 40%;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+#blocoPersonagemTexto {
+    display: flex;
+    color: white;
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+    margin-bottom: 10%;
+    font-size: 1.15vmax;
+}
+
+.blocoExpansaoGradiente {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: end;
+    top: 86%;
+    margin-left: 30%;
+    border-radius: 15px;
+    width: 20vh;
+    height: 20vh;
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, 0.301) 60%);
+}
+
+.blocoExpansaoGradiente:hover {
+    animation-name: historiaA;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.blocoExpansao {
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    background-image: url(./assets/thelastofus-leftbehind.webp);
+    background-size: cover;
+    background-position: 40%;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+#blocoExpansaoTexto {
+    display: flex;
+    color: white;
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+    margin-bottom: 10%;
+    font-size: 1.15vmax;
+}
+
+.containerTLOUinformativo {
+    display: flex;
+    height: 80vh;
+    width: 90vw;
+    margin-left: 5%;
+    margin-top: 10%;
+    font-family: 'Space Grotesk';
+    flex-direction: column;
+}
+
+#tituloInformativo {
+    display: flex;
+    font-weight: 700;
+    font-size: 1.25vmax;
+    font-family: 'Montserrat', sans-serif;
+}
+#textoInformativo1 {
+    display: flex;
+    font-weight: 300;
+    font-size: 1.1vmax;
+    color: #6e6e6e;
+    line-height: 30px;
+    font-style: normal;
+    margin-top: 2%;
+}
+
+#textoInformativo2 {
+    display: flex;
+    width: 95%;
+    font-weight: 300;
+    font-size: 1.1vmax;
+    color: #6e6e6e;
+    line-height: 30px;
+    font-style: normal;
+    margin-top: 1%;
+}
+
+
+
+/* Parte de Baixo */
+.parteBaixo {
+    display: flex;
+    width: 100%;
+}
+
+#ondeJogarTexto {
+    display: flex;
+    font-weight: 700;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25vmax;
+    line-height: 20px;
+    font-style: normal;
+    margin-top: 5%;
+}
+
+.ondeJogarBlocos {
+    display: flex;
+    width: 20.5vw;
+    height: 30vh;
+    margin-top: 7%;
+    flex-direction: column;
+}
+
+/* Steam */
+#ondeSteam {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    border-radius: 10px;
+    background: #000000;
+    align-items: center;
+    cursor: pointer;
+}
+
+#ondeAnimationSteam {
+    display: flex;
+    opacity: 1;
+    width: 0%;
+    height: 100%;
+    margin-left: auto;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    background: linear-gradient(120deg, #000000 52.42%, #FDC706 53.21%);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#steamicon {
+    margin-left: 3%;
+    height: 55%;
+}
+
+#steamtexto {
+    color: white;
+    margin-left: 5%;
+    font-size: 1vmax;
+    font-weight: 900;
+}
+
+/* Epic Games */
+#ondeEpic {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    border-radius: 10px;
+    background-color: #0078F2;
+    margin-top: 5%;
+    align-items: center;
+    cursor: pointer;
+}
+
+#ondeAnimationEpic {
+    display: flex;
+    opacity: 1;
+    width: 0%;
+    height: 100%;
+    margin-left: auto;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    background: linear-gradient(120deg, #0078F2 52.42%, #FDC706 53.21%);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#epicicon {
+    margin-left: 3%;
+    height: 55%;
+}
+
+#epictexto {
+    color: white;
+    margin-left: 5%;
+    white-space: nowrap;
+    font-size: 1vmax;
+    font-weight: 900;
+}
+
+/* PSN */
+#ondePSN {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    border-radius: 10px;
+    background-color: #003791;
+    margin-top: 5%;
+    align-items: center;
+    cursor: pointer;
+}
+
+#ondeAnimationPSN {
+    display: flex;
+    opacity: 1;
+    width: 0%;
+    height: 100%;
+    margin-left: auto;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    background: linear-gradient(120deg, #003791 52.42%, #FDC706 53.21%);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+#psnicon {
+    margin-left: 3%;
+    height: 55%;
+}
+
+#psntexto {
+    color: white;
+    margin-left: 5%;
+    font-size: 1vmax;
+    font-weight: 900;
+}
+
+/* REQUISITOS */
+.requisitosBloco {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 50vh;
+    width: 32%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+#tituloRequisito {
+    display: flex;
+    font-weight: 700;
+    font-size: 1.25vmax;
+    line-height: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+
+}
+
+.minimos {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4%;
+}
+
+#minimoTitulo {
+    color: #686262;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1vmax;
+}
+
+#minimoConteudo {
+    color: #686262;
+    font-weight: 300;
+    width: 100%;
+    font-size: 1vmax;
+}
+
+
+.recomendados {
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 7.5%;
+    width: 30%;
+    margin-left: 5%;
+
+}
+
+#recomendadoTitulo {
+    display: inline-flex;
+    color: #686262;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1vmax;
+}
+
+#recomendadoConteudo {
+    display: flex;
+    color: #686262;
+    font-weight: 300;
+    font-size: 1vmax;
+}
