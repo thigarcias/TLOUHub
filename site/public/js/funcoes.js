@@ -1,18 +1,21 @@
-// sessão
-function validarSessao() {
-    // aguardar();
+// Eu deixei comentado pq essa função só serve para caso vc deseja ir para um "dashboard", por exemplo
 
-    var email = sessionStorage.EMAIL_USUARIO;
-    var nome = sessionStorage.NOME_USUARIO;
+// function validarSessao() {
 
-    if (email != null && nome != null) {
-        window.location = "../PaginaInicial/home.html";
-        finalizarAguardar();
-    } else {
-        window.location = "../Login/login.html";
-    }
-}
+//     var email = sessionStorage.EMAIL_USUARIO;
+//     var nome = sessionStorage.NOME_USUARIO;
 
+//     if (email != null && nome != null) {
+//         window.location = "../PaginaInicial/home.html";
+//         finalizarAguardar();
+//     } else {
+//         window.location = "../Login/login.html";
+//     }
+// }
+
+// Depois do cadastro ter terminado, ele vem para essa função e ele limpa a sessionStorage, que estava armezando os dados de cadastro que você inseriu na página, após isso ele te joga para  a página de Login
+
+// EU NAO ENTENDI MT BEM PRA QUE ISSO EXISTE KKKKKKKKKKKKKKKKKKKKKKKKK
 function limparSessao() {
     // aguardar();
     sessionStorage.clear();

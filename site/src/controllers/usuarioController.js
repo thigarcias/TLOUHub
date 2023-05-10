@@ -25,6 +25,8 @@ function listar(req, res) {
 }
 
 function entrar(req, res) {
+
+    // Recebe as inputs aqui postas no JS da pagina de Login
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
 
@@ -61,7 +63,8 @@ function entrar(req, res) {
 }
 
 function cadastrar(req, res) {
-    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+
+    // Recebe as inputs aqui postas no JS da pagina de Cadastro
     var nome = req.body.nomeServer;
     var sobrenome = req.body.sobrenomeServer
     var email = req.body.emailServer;

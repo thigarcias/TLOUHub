@@ -61,6 +61,10 @@ function cadastrar() {
     var confirmacaoSenhaVar = confirmarSenha.value;
 
     
+    // Validações de Cadastro
+
+    // msgErro é uma div dentro do meu site que exibe uma mensagem de erro, por padrão é msgErro é display: none
+    // finalizarAguardar() fica no funcoes.js
     if (nomeVar == "" || sobrenomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
         msgErro.style.display = "block"
         msgErro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
@@ -83,6 +87,8 @@ function cadastrar() {
         finalizarAguardar();
         return false;
     }
+
+    // Intervalo para sumir a mensagem de erro em ms, essa função se encontra no final do script
     else {
         setInterval(sumirMensagem, 5000)
     }
@@ -106,6 +112,7 @@ function cadastrar() {
 
         console.log("resposta: ", resposta);
 
+        // Aqui basicamente ele ta enviando uma request pro meu servidor verificando se o insert na tabela foi TRUE
         if (resposta.ok) {
 
             // Mensagem de Errro
@@ -113,10 +120,13 @@ function cadastrar() {
 
             // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
+            // "=>" é uma abreviação para função, aqui basicamente ele após validar o cadastro, ele te redireciona para pagina de login em 500ms
             setTimeout(() => {
                 window.location = "../Login/login.html";
             }, "500")
 
+
+            // Ambas funções estão explicadas lá na funcoes.js
             limparSessao();
             finalizarAguardar();
         } else {
@@ -129,7 +139,7 @@ function cadastrar() {
 
     return false;
 }
-
+// Some a mensagem
 function sumirMensagem() {
     msgErro.style.display = "none"
 }
