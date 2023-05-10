@@ -20,6 +20,8 @@ router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
 
+// Adição de uma nova rota "/verificar" que leva pra função no UsuarioController
+
 router.post("/verificar", function (req, res) {
     usuarioController.verificar(req, res);
 });

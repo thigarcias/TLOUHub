@@ -39,10 +39,14 @@ function entrar(req, res) {
         usuarioModel.entrar(email, senha)
             .then(
                 function (resultado) {
-                    console.log(`\nResultados encontrados: ${resultado.length}`);
-                    console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
+                    if (resultado.length > 0) {
+                        console.log(`\nResultados encontrados: ${resultado.length}`);
+                        console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
                         console.log(resultado);
                         res.json(resultado[0]);
+                    } else {
+                        res.status(204).send("Nenhum resultado encontrado!")
+                    }
                 }
             ).catch(
                 function (erro) {
@@ -65,7 +69,7 @@ function verificar(req, res) {
         usuarioModel.verificar(email)
         .then(function (resultado) {
             console.log (resultado.length)
-            if (resultado.length == 0) {
+            if (resultado.length > 0) {
                 res.status(204).send("O email ja foi cadastrado!")
             } else {
                 res.status(200).json(resultado);

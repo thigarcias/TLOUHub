@@ -93,7 +93,8 @@ function cadastrar() {
         setInterval(sumirMensagem, 5000)
     }
 
-    // Enviando o valor da nova input
+    // FETCH: Nada mais é que uma "requisição feita pelo servidor com base na interação do usuario"
+    // Antes do fetch de cadastro, existe um fetch de verificação, na qual vai até o banco de dados, pega o que você requisitou, no caso o email e retorna se esse valor existe ou não
         fetch("/usuarios/verificar", {
             method: "POST",
             headers: {
@@ -102,12 +103,17 @@ function cadastrar() {
         body: JSON.stringify({
             emailServer: emailVar,
         })
-        }).then(function (resposta) {
+        })
+        .then(function (resposta) {
         console.log("resposta: ", resposta);
+
+        // Se a resposta retornada obtiver o status 204, ele entra dentro do if e exibe a mensagem
         if (resposta.status == 204) {
             msgErro.innerHTML = `O email ja esta cadastrado!`
             setInterval(sumirMensagem, 5000)
         }
+
+        // Caso ele retorne outro valor de status, ele prossegue com o cadastro, inicializando outro fetch
         else {
             fetch("/usuarios/cadastrar", {
                 method: "POST",

@@ -61,24 +61,9 @@ function entrar() {
         setInterval(sumirMensagem, 5000)
     }
 
-    fetch("/usuarios/verificar", {
-        method: "POST",
-        headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-        emailServer: emailVar,
-    })
-    }).then(function (resposta) {
-    console.log("resposta: ", resposta);
-    if (resposta.ok == false) {
-        msgErro.innerHTML = `O email ainda não esta cadastrado!`
-        setInterval(sumirMensagem, 5000)
-    }
-    else {
-        console.log("FORM LOGIN: ", emailVar);
-        console.log("FORM SENHA: ", senhaVar);
-    
+    // FETCH: Nada mais é que uma "requisição feita pelo servidor com base na interação do usuario"
+    // Antes do fetch de cadastro, existe um fetch de verificação, na qual vai até o banco de dados, pega o que você requisitou, no caso o email e retorna se esse valor existe ou não
+
         fetch("/usuarios/autenticar", {
             method: "POST",
             headers: {
@@ -88,7 +73,15 @@ function entrar() {
                 emailServer: emailVar,
                 senhaServer: senhaVar
             })
-        }).then(function (resposta) {
+        })
+
+        .then(function (resposta) {
+
+                    
+        if(resposta.status == 204) {
+            msgErro.innerHTML = `O email ainda nao foi cadastrado!`
+            setInterval(sumirMensagem, 5000)
+      }
             console.log("ESTOU NO THEN DO entrar()!")
     
             if (resposta.ok) {
@@ -127,14 +120,8 @@ function entrar() {
         })
     
         return false;
-    }
-
-})
-.catch(function (resposta) {
-    console.log(`#ERRO: ${resposta}`);
-});
-
     
+
 }
 
 function sumirMensagem() {
