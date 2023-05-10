@@ -94,52 +94,77 @@ function cadastrar() {
     }
 
     // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-        method: "POST",
-        headers: {
+        fetch("/usuarios/verificar", {
+            method: "POST",
+            headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            // crie um atributo que recebe o valor recuperado aqui
-            // Agora vá para o arquivo routes/usuario.js
-            nomeServer: nomeVar,
-            sobrenomeServer: sobrenomeVar,
             emailServer: emailVar,
-            senhaServer: senhaVar,
-            confirmarSenhaServer: confirmacaoSenhaVar
         })
-    }).then(function (resposta) {
-
+        }).then(function (resposta) {
         console.log("resposta: ", resposta);
-
-        // Aqui basicamente ele ta enviando uma request pro meu servidor verificando se o insert na tabela foi TRUE
-        if (resposta.ok) {
-
-            // Mensagem de Errro
-            // cardErro.style.display = "block";
-
-            // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-            // "=>" é uma abreviação para função, aqui basicamente ele após validar o cadastro, ele te redireciona para pagina de login em 500ms
-            setTimeout(() => {
-                window.location = "../Login/login.html";
-            }, "500")
-
-
-            // Ambas funções estão explicadas lá na funcoes.js
-            limparSessao();
-            finalizarAguardar();
-        } else {
-            throw ("Houve um erro ao tentar realizar o cadastro!");
+        if (resposta.status == 204) {
+            msgErro.innerHTML = `O email ja esta cadastrado!`
+            setInterval(sumirMensagem, 5000)
         }
-    }).catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        // finalizarAguardar();
-    });
+        else {
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    nomeServer: nomeVar,
+                    sobrenomeServer: sobrenomeVar,
+                    emailServer: emailVar,
+                    senhaServer: senhaVar,
+                    confirmarSenhaServer: confirmacaoSenhaVar
+                })
+            }).then(function (resposta) {
+                
+                console.log("resposta: ", resposta);
+                
+                // Aqui basicamente ele ta enviando uma request pro meu servidor verificando se o insert na tabela foi TRUE
+                if (resposta.ok) {
+                    
+                    // Mensagem de Errro
+                    // cardErro.style.display = "block";
+                    
+                    // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                    
+                    // "=>" é uma abreviação para função, aqui basicamente ele após validar o cadastro, ele te redireciona para pagina de login em 500ms
+                    setTimeout(() => {
+                        window.location = "../Login/login.html";
+                    }, "500")
+                    
+                    
+                    // Ambas funções estão explicadas lá na funcoes.js
+                    limparSessao();
+                    finalizarAguardar();
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                // finalizarAguardar();
+            });
+            //     }
+            // })
+            
+            return false;
+        }
 
-    return false;
-}
+    })
+    .catch(function (erro) {
+        console.log(`O email ja tem cadastro: ${erro}`);
+    });
+    
+      } 
+    
 // Some a mensagem
 function sumirMensagem() {
-    msgErro.style.display = "none"
+    msgErro.innerHTML = ''
 }

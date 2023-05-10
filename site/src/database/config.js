@@ -25,6 +25,10 @@ var mySqlConfig = {
     password: "sptech",
 };
 
+
+
+
+
 function executar(instrucao) {
     // VERIFICA A VARIÁVEL DE AMBIENTE SETADA EM app.js
     if (process.env.AMBIENTE_PROCESSO == "producao") {
@@ -58,6 +62,8 @@ function executar(instrucao) {
                 return ("ERRO NO MySQL WORKBENCH (Local): ", erro.sqlMessage);
             });
         });
+
+        
     } else {
         return new Promise(function (resolve, reject) {
             console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");

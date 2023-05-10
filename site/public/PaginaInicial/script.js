@@ -173,3 +173,11 @@ const logintexto = document.getElementById("logintexto")
 logintexto.addEventListener("click", function(){
     window.location.href = "../Login/login.html"
 })
+
+
+
+/* BOTAO PARA DESLOGAR */
+const conta_botao = document.getElementById("conta_botao")
+conta_botao.addEventListener("click", function(){
+  limparSessao()
+})

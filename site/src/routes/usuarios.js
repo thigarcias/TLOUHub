@@ -20,4 +20,7 @@ router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
 
+router.post("/verificar", function (req, res) {
+    usuarioController.verificar(req, res);
+});
 module.exports = router;

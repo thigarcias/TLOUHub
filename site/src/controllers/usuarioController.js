@@ -41,15 +41,8 @@ function entrar(req, res) {
                 function (resultado) {
                     console.log(`\nResultados encontrados: ${resultado.length}`);
                     console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
-
-                    if (resultado.length == 1) {
                         console.log(resultado);
                         res.json(resultado[0]);
-                    } else if (resultado.length == 0) {
-                        res.status(403).send("Email e/ou senha inválido(s)");
-                    } else {
-                        res.status(403).send("Mais de um usuário com o mesmo login e senha!");
-                    }
                 }
             ).catch(
                 function (erro) {
@@ -60,6 +53,31 @@ function entrar(req, res) {
             );
     }
 
+}
+
+function verificar(req, res) {
+    var email = req.body.emailServer;
+    if (email == undefined) {
+        res.status(400).send("Seu email está undefined!");
+    }
+    else{
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.verificar(email)
+        .then(function (resultado) {
+            console.log (resultado.length)
+            if (resultado.length == 0) {
+                res.status(204).send("O email ja foi cadastrado!")
+            } else {
+                res.status(200).json(resultado);
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+    }
 }
 
 function cadastrar(req, res) {
@@ -105,6 +123,7 @@ function cadastrar(req, res) {
 
 module.exports = {
     entrar,
+    verificar,
     cadastrar,
     listar,
     testar

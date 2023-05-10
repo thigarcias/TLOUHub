@@ -221,7 +221,7 @@ body {
 
 /* Faça Login */
 .login {
-    display: flex;
+    display: none;
     height: 30%;
     width: 7%;
     justify-content: center;
@@ -241,7 +241,7 @@ body {
 
 /* Cadastro */
 .cadastrar{
-    display: flex;
+    display: none;
     height: 30%;
     width: 9%;
     justify-content: center;
@@ -268,6 +268,26 @@ body {
     margin-top: -4%;
     cursor: pointer;
 
+}
+
+/* QUANDO ESTIVER LOGADO: */
+.conta {
+    display: flex;
+    height: 30%;
+    width: 7%;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #FDC706;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+}
+#contatexto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 300;
 }
 
 #iconNavbar {

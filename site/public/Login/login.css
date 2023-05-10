@@ -230,7 +230,7 @@ body {
     }
 }
 
-.msgErro{
+#msgErro{
     display: flex;
     font-family: 'MADE Tommy Soft', sans-serif;
     font-size: 0.8vmax;
