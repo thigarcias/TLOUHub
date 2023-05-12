@@ -132,6 +132,7 @@ body {
 #homepagetexto {
     display: flex;
     color: #493B33;
+    cursor: pointer;
 }
 
 /*NOTICIAS*/
@@ -145,7 +146,8 @@ body {
 
 #noticiastexto {
     cursor: pointer;
-    color: 493B33;
+    color: #493B33;
+    cursor: pointer;
 }
 
 #noticiaslinha {
@@ -172,6 +174,7 @@ body {
     cursor: pointer;
     color: #493B33;
     align-items: center;
+    cursor: pointer;
 }
 
 #jogoslinha {
@@ -199,6 +202,7 @@ body {
     cursor: pointer;
     color: #493B33;
     align-items: center;
+    cursor: pointer;
 }
 
 /* Faça Login */
@@ -285,6 +289,7 @@ body {
     width: 67.5%;
     height: 90%;
     margin-top: 2%;
+    flex-direction: column;
 }
 
 #imagemNoticia {
@@ -305,10 +310,28 @@ body {
     z-index: -1;
     position: absolute;
     border-radius: 15px;
-    background: linear-gradient(180deg, rgba(26, 46, 80, 0.47) 32.72%, rgba(23, 29, 36, 0.17) 74.79%);
+    background: linear-gradient(180deg, rgba(26, 46, 80, 0.47) 48.72%, rgba(31, 69, 150, 0.616) 100%);
     opacity: 0.79;
 }
 
+#imagemNoticiaTopico{
+    display: flex;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 3%;
+    margin-top: 4%;
+}
+
+#imagemNoticiaTitulo{
+    display: flex;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    width: 90%;
+    font-size: 2.4vmax;
+    font-weight: 700;
+    margin-top: 52%;
+    margin-left: 3%;
+}
 
 .noticiaDireita {
     display: flex;
@@ -323,6 +346,7 @@ body {
     display: flex;
     width: 100%;
     height: 50%;
+    flex-direction: column;
 }
 
 .noticiaBaixo {
@@ -330,6 +354,7 @@ body {
     width: 100%;
     height: 50%;
     margin-top: 2%;
+    flex-direction: column;
 }
 
 #imagemNoticia2 {
@@ -356,6 +381,25 @@ body {
     opacity: 0.79;
 }
 
+#imagemNoticia2Topico{
+    display: flex;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 5%;
+    margin-top: 8%;
+}
+
+#imagemNoticia2Titulo{
+    display: flex;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    width: 90%;
+    font-size: 1.8vmax;
+    font-weight: 700;
+    margin-top: 31%;
+    margin-left: 5%;
+}
+
 #imagemNoticia3 {
     display: flex;
     position: absolute;
@@ -380,16 +424,48 @@ body {
     opacity: 0.79;
 }
 
+#imagemNoticia3Topico{
+    display: flex;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 5%;
+    margin-top: 8%;
+}
+
+#imagemNoticia3Titulo{
+    display: flex;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    width: 90%;
+    font-size: 1.8vmax;
+    font-weight: 700;
+    margin-top: 31%;
+    margin-left: 5%;
+}
+
+
 /* NOTICIA SELECIONADA */
+
+#imagemNoticiaSelecionadaGradiente{
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(171.66deg, rgba(252, 152, 2, 0.541) 22.24%, rgba(0, 0, 0, 0.219) 59.19%);
+
+}
 .noticiaSelecionada {
     display: flex;
     width: 100%;
+    position: relative;
+    z-index: -2;
     height: 65%;
     margin-top: 5%;
     border-radius: 10px;
     background-size: cover;
-    background-position: 30% 10%;
-    background-image: url(./assets/Diretor-chorou-com-sucesso-de-The-Last-of-Us-2-este-é-um-jogo-da-Naughty-Dog...webp);
+    background-position: 30% 20%;
+    background-image: url(./assets/8879118.webp);
 }
 
 .inicioNoticia {
@@ -415,7 +491,7 @@ body {
     display: flex;
     color: black;
     margin-top: 1%;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 1.3vmax;
     font-family: 'Open Sans', sans-serif;
 }
@@ -468,4 +544,23 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2vmax;
     margin-top: 2%;
+}
+
+.footer {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    margin-left: -5%;
+    height: 8vh;
+    background-color: #493B33;
+    justify-content: center;
+    align-items: center;
+}
+
+#footerTexto {
+    display: flex;
+    color: white;
+    font-family: 'Space Grotesk';
+    font-size: 0.9vmax;
+    text-align: center;
 }
