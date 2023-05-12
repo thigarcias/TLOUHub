@@ -46,7 +46,9 @@ const jogostexto = document.getElementById("jogostexto")
 const serietexto = document.getElementById("serietexto")
 var elemento = '';
 
-
+homepagetexto.addEventListener("click", function () {
+    window.location.href = "../PaginaInicial/home.html"
+}),
     homepagetexto.addEventListener("mouseover", function () {
         homepagetexto.style.color = "#ffe70c"
     }),
@@ -74,32 +76,32 @@ var elemento = '';
         serietexto.style.color = '#ffffff';
     });
 
-    
 
-    /* Home Infinito */
-    homepagetextoInfinito.addEventListener("mouseover", function () {
-        homepagetextoInfinito.style.color = "#ffe70c"
-    }),
+
+/* Home Infinito */
+homepagetextoInfinito.addEventListener("mouseover", function () {
+    homepagetextoInfinito.style.color = "#ffe70c"
+}),
 
     homepagetextoInfinito.addEventListener("mouseout", function () {
         homepagetextoInfinito.style.color = "#ffffff"
     }),
 
-noticiastextoInfinito.addEventListener('mouseover', function () {
-    noticiastextoInfinito.style.color = '#ffe70c';
-  }),
+    noticiastextoInfinito.addEventListener('mouseover', function () {
+        noticiastextoInfinito.style.color = '#ffe70c';
+    }),
     noticiastextoInfinito.addEventListener('mouseout', function () {
-      noticiastextoInfinito.style.color = '#ffffff';
+        noticiastextoInfinito.style.color = '#ffffff';
     }),
     jogostextoInfinito.addEventListener("mouseover", function () {
-      jogostextoInfinito.style.color = '#ffe70c';
+        jogostextoInfinito.style.color = '#ffe70c';
     }),
     jogostextoInfinito.addEventListener('mouseout', function () {
-      jogostextoInfinito.style.color = '#ffffff';
+        jogostextoInfinito.style.color = '#ffffff';
     }),
     serietextoInfinito.addEventListener("mouseover", function () {
-      serietextoInfinito.style.color = '#ffe70c';
+        serietextoInfinito.style.color = '#ffe70c';
     }),
     serietextoInfinito.addEventListener('mouseout', function () {
-      serietextoInfinito.style.color = '#ffffff';
+        serietextoInfinito.style.color = '#ffffff';
     });

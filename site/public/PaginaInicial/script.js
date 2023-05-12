@@ -53,6 +53,9 @@ noticiastexto.style.color = '#ffffff;';
 noticiastexto.addEventListener('mouseenter', function () {
   noticiastexto.style.color = '#ffe70c';
 }),
+  noticiastexto.addEventListener("click", function () {
+    window.location = "../Noticias/noticia.html"
+  }),
   noticiastexto.addEventListener('mouseout', function () {
     noticiastexto.style.color = '#ffffff';
   }),
@@ -150,13 +153,13 @@ ondeTLOUHBO.addEventListener("mouseover", function () {
   ondeTLOUHBO.addEventListener("click", function () {
     window.location.href = 'https://play.hbomax.com/page/urn:hbo:page:GYyofRQHeuJ6fiQEAAAEy:type:series?source=googleHBOMAX&action=play'
   });
-  
+
 
 /* LINKS nos blocos TLOU1 */
 
 const HistoriaClick = document.getElementById("HistoriaClick")
 
-HistoriaClick.addEventListener("click", function(){
+HistoriaClick.addEventListener("click", function () {
   window.location.href = ('../PaginaTLOU1/tlou1.html')
 });
 
@@ -165,19 +168,19 @@ HistoriaClick.addEventListener("click", function(){
 /* LINK Botão Login/Cadastro*/
 
 const cadastrartexto = document.getElementById("cadastrartexto")
-cadastrartexto.addEventListener("click", function(){
-    window.location.href = "../Cadastro/cadastro.html"
+cadastrartexto.addEventListener("click", function () {
+  window.location.href = "../Cadastro/cadastro.html"
 })
 
 const logintexto = document.getElementById("logintexto")
-logintexto.addEventListener("click", function(){
-    window.location.href = "../Login/login.html"
+logintexto.addEventListener("click", function () {
+  window.location.href = "../Login/login.html"
 })
 
 
 
 /* BOTAO PARA DESLOGAR */
 const conta_botao = document.getElementById("conta_botao")
-conta_botao.addEventListener("click", function(){
+conta_botao.addEventListener("click", function () {
   limparSessao()
 })
