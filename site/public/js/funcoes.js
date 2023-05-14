@@ -20,6 +20,25 @@ function validarSessao() {
     }
 }
 
+function validarSessaoNoticia(){
+    var email = sessionStorage.EMAIL_USUARIO;
+    var nome = sessionStorage.NOME_USUARIO;
+    const blurAutenticacao = document.getElementById("blurAutenticacao")
+    const 
+
+    if (email == null && nome == null) {
+        login_botao.style.display = "flex"
+        cadastro_botao.style.display = "flex"
+        conta_botao.style.display = "none"
+
+
+    } else {
+        login_botao.style.display = "none"
+        cadastro_botao.style.display = "none"
+        conta_botao.style.display = "flex"
+    }
+}
+
 // Depois do cadastro ter terminado, ele vem para essa função e ele limpa a sessionStorage, que estava armezando os dados de cadastro que você inseriu na página, após isso ele te joga para  a página de Login
 
 function limparSessao() {
