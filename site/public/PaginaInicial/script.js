@@ -58,7 +58,7 @@ irCima.addEventListener("click", function(){
   });
 })
 
-/* Animação navbar */
+/* Animação navbar HOVER*/
 const noticiastexto = document.getElementById('noticiastexto');
 const noticiastextoInfinito = document.getElementById('noticiastextoInfinito');
 const jogostexto = document.getElementById('jogostexto');
@@ -80,12 +80,6 @@ noticiastexto.addEventListener('mouseenter', function () {
   }),
   noticiastexto.addEventListener('mouseout', function () {
     noticiastexto.style.color = '#ffffff';
-  }),
-  jogostexto.addEventListener("mouseover", function () {
-    jogostexto.style.color = '#ffe70c';
-  }),
-  jogostexto.addEventListener('mouseout', function () {
-    jogostexto.style.color = '#ffffff';
   }),
   serietexto.addEventListener("mouseover", function () {
     serietexto.style.color = '#ffe70c';
@@ -252,3 +246,14 @@ trailer3.addEventListener("click", function(){
   window.location.href = "https://www.youtube.com/watch?v=IpjRuuFEPMk"
 })
 
+/* MENU FLUTUANTE JOGOS */
+const menuflutuanteJogos = document.getElementById("menuflutuanteJogos")
+
+jogostexto.addEventListener("mouseover", function () {
+  jogostexto.style.color = '#ffe70c';
+  menuflutuanteJogos.style.display = "flex"
+}),
+jogostexto.addEventListener('mouseout', function () {
+  jogostexto.style.color = '#ffffff';
+  menuflutuanteJogos.style.display = "none"
+});
