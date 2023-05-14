@@ -24,18 +24,22 @@ function validarSessaoNoticia(){
     var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
     const blurAutenticacao = document.getElementById("blurAutenticacao")
-    const 
+    const blurTexto = document.getElementById("blurTexto")
+    const blurCadeado = document.getElementById("blurCadeado")
+    const blurCadastro = document.getElementById("blurCadastro")
+
 
     if (email == null && nome == null) {
-        login_botao.style.display = "flex"
-        cadastro_botao.style.display = "flex"
-        conta_botao.style.display = "none"
-
+        blurAutenticacao.style.display = "flex"
+        blurTexto.style.display = "flex"
+        blurCadeado.style.display = "flex"
+        blurCadastro.style.display = "flex"
 
     } else {
-        login_botao.style.display = "none"
-        cadastro_botao.style.display = "none"
-        conta_botao.style.display = "flex"
+        blurAutenticacao.style.display = "none"
+        blurTexto.style.display = "none"
+        blurCadeado.style.display = "none"
+        blurCadastro.style.display = "none"
     }
 }
 
@@ -46,7 +50,7 @@ function limparSessao() {
     sessionStorage.clear();
     // finalizarAguardar();
     setInterval ((function (){
-        window.location = "../Login/login.html";
+        window.location = "../PaginaInicial/home.html";
     }), 1000);
 
 }

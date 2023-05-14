@@ -79,6 +79,30 @@
     line-height: 30px;
 }
 
+#trailer2 {
+    display: flex;
+    position: absolute;
+    left: 35.5%;
+    top: 238%;
+    width: 10%;
+    height: 10%;
+    align-items: center;
+    cursor: pointer;
+}
+
+#playIcon2 {
+    color: white;
+    font-size: 2.5vmax;
+    font-weight: 200;
+}
+
+#trailerTexto2{
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    font-size: 0.7vmax;
+    font-weight: 400;
+    width: 20%;
+}
 
 /* Blocos Sobrepondo o Banner */
 .blocoHistoriaGradienteTLOU2 {

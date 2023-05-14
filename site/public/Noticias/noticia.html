@@ -13,7 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
-<body>
+<body onload="validarSessaoNoticia()">
     <div id="blurAutenticacao"></div>
     <span id="blurTexto">CADASTRE-SE PARA ACESSAR ESSE CONTÉUDO</span>
     <span class="material-symbols-outlined" id="blurCadeado">lock</span>
@@ -73,7 +73,7 @@
         </div>
 
         <div class="noticiasTodas">
-            <div class="noticiaEsquerda">
+            <div class="noticiaEsquerda" id="noticia1">
                 <span id="imagemNoticiaGradiente"></span>
                 <span id="imagemNoticia"></span>
                 <span id="imagemNoticiaTopico">Atualizações</span>
@@ -82,7 +82,7 @@
             </div>
 
             <div class="noticiaDireita">
-                <div class="noticiaCima">
+                <div class="noticiaCima" id="noticia2">
                     <span id="imagemNoticia2Gradiente"></span>
                     <span id="imagemNoticia2"></span>
                     <span id="imagemNoticia2Topico">Atualizações</span>
@@ -100,8 +100,7 @@
             </div>
         </div>
 
-        <div class="noticiaSelecionada">
-            <span id="imagemNoticiaSelecionadaGradiente"></span>
+        <div class="noticiaSelecionada" id="noticiaPrincipal">
             <span id="imagemNoticiaSelecionada"></span>
         </div>
 

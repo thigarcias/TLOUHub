@@ -65,10 +65,31 @@ body {
 .headerinfinita {
     display: flex;
     width: 90vw;
-    height: 6.5vh;
+    height: 7.5vh;
     align-items: center;
     justify-content: center;
     margin-left: 5%;
+}
+
+#textonavbarInfinito{
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 100%;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9vmax;
+    line-height: 19px;
+    letter-spacing: 0px;
+    white-space: nowrap;
+    font-weight: 600;
+    gap: 5%;
+
+}
+@media (max-width: 1919px) {
+    #textonavbarInfinito {
+        font-size: 1.2vmax;
+    }
 }
 
 /* Header Normal */
@@ -100,14 +121,13 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    margin-right: 5%;
     align-items: center;
 }
 
 #textonavbar {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 87%;
     height: 100%;
     justify-content: center;
     font-family: 'Space Grotesk', sans-serif;
@@ -220,16 +240,23 @@ body {
 }
 
 /* Faça Login */
+.logincadastro{
+    display: flex;
+    width: 15%;
+    height: 100%;
+    align-items: center;
+}
 .login {
     display: none;
     height: 30%;
-    width: 7%;
+    width: 50%;
     justify-content: center;
     box-sizing: border-box;
     border-radius: 5px;
     background-color: #FDC706;
     font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
+    
 }
 #logintexto {
     display: flex;
@@ -243,7 +270,7 @@ body {
 .cadastrar{
     display: none;
     height: 30%;
-    width: 9%;
+    width: 60%;
     justify-content: center;
     box-sizing: border-box;
     font-family: 'Space Grotesk', sans-serif;
@@ -274,7 +301,7 @@ body {
 .conta {
     display: flex;
     height: 30%;
-    width: 7%;
+    width: 50%;
     justify-content: center;
     box-sizing: border-box;
     border-radius: 5px;
@@ -312,6 +339,26 @@ body {
     font-family: 'Space Grotesk';
     font-size: 0.8vmax;
     text-align: center;
+}
+
+#irCima{
+    display: none;
+    position: fixed;
+    z-index: 2;
+    width: 3%;
+    height: 6%;
+    top: 85%;
+    left: 94%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: #7A6E44;
+    cursor: pointer;
+}
+
+#irCimaIcon {
+    color: white;
+    font-size: 1.7vmax;
 }
 
 @keyframes historiaA {

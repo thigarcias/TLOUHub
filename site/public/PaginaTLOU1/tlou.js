@@ -17,38 +17,73 @@ personagemAnterior.addEventListener("click", function () {
 })
 
 
+/* HEADER FIXA E IR CIMA */
+const irCima = document.getElementById("irCima")
 const headerinfinitaFundo = document.getElementById("headerinfinitaFundo")
 window.addEventListener("scroll", function () {
     var posicaoScroll = window.pageYOffset
     var resolucaoAtual = window.innerHeight
 
     if (resolucaoAtual < 900) {
-        if (posicaoScroll < 50) {
+        if (posicaoScroll <= 100) {
             headerinfinitaFundo.style.display = "none"
         } else {
             headerinfinitaFundo.style.display = "flex"
         }
-    }
 
-    else {
-        if (posicaoScroll < 100) {
+        if (posicaoScroll <= 400){
+            irCima.style.display = "none"
+          } else {
+            irCima.style.display = "flex"
+          }
+        
+    } else {
+        if (posicaoScroll <= 100) {
             headerinfinitaFundo.style.display = "none"
         } else {
             headerinfinitaFundo.style.display = "flex"
         }
+
+        if (posicaoScroll <= 400){
+            irCima.style.display = "none"
+          } else {
+            irCima.style.display = "flex"
+          }
     }
 })
+
+/* Botão Ir para cima */
+irCima.addEventListener("click", function(){
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  })
 
 
 const homepagetexto = document.getElementById("homepagetexto")
 const noticiastexto = document.getElementById("noticiastexto")
 const jogostexto = document.getElementById("jogostexto")
 const serietexto = document.getElementById("serietexto")
-var elemento = '';
+const homepagetextoInfinito = document.getElementById("homepagetextoInfinito")
+const noticiastextoInfinito = document.getElementById("noticiastextoInfinito")
 
 homepagetexto.addEventListener("click", function () {
     window.location.href = "../PaginaInicial/home.html"
 }),
+
+homepagetextoInfinito.addEventListener("click", function(){
+    window.location = "../PaginaInicial/home.html"
+})
+
+noticiastexto.addEventListener("click", function(){
+    window.location = "../Noticias/noticia.html"
+})
+noticiastextoInfinito.addEventListener("click", function(){
+    window.location = "../Noticias/noticia.html"
+})
+
+
     homepagetexto.addEventListener("mouseover", function () {
         homepagetexto.style.color = "#ffe70c"
     }),

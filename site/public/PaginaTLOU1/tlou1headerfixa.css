@@ -1,6 +1,6 @@
 /* Header Fixa */
 #headerinfinitaFundo {
-    display: flex;
+    display: none;
     position: fixed;
     z-index: 2;
     width: 100vw;

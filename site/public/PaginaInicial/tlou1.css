@@ -46,8 +46,30 @@
     margin-left: 15%;
 }
 
+#trailer {
+    display: flex;
+    position: absolute;
+    left: 35%;
+    top: 37.5%;
+    width: 10%;
+    height: 10%;
+    align-items: center;
+    cursor: pointer;
+}
 
+#playIcon {
+    color: white;
+    font-size: 2.5vmax;
+    font-weight: 200;
+}
 
+#trailerTexto{
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    font-size: 0.7vmax;
+    font-weight: 400;
+    width: 20%;
+}
 
 /* Blocos Sobrepondo o Banner */
 .blocoHistoriaGradiente {
@@ -115,7 +137,7 @@
     display: flex;
     position: absolute;
     z-index: -1;
-    background-image: url(./assets/imagick_convert.php.webp);
+    background-image: url(./assets/the-last-of-us-part-1-remake-ellie-hd-wallpaper-uhdpaper.com-323@1@h.jpg);
     background-size: cover;
     background-position: 40%;
     border-radius: 15px;
@@ -189,6 +211,7 @@
     font-size: 1.25vmax;
     font-family: 'Montserrat', sans-serif;
 }
+
 #textoInformativo1 {
     display: flex;
     font-weight: 300;

@@ -1,13 +1,16 @@
 const headerinfinitaFundo = document.getElementById("headerinfinitaFundo")
 headerinfinitaFundo.style.display = "none";
 headerinfinitaFundo.style.zIndex = 2;
+const irCima = document.getElementById("irCima")
+
+
 
 // Adicione a um ID, no caso a pagina toda 'window', um evento (addEventListener), que no caso é o evento "scroll", uma função()
 // Mudança de cor da Header de acordo com os Jogos
 window.addEventListener("scroll", function () {
   var posicaoScroll = window.pageYOffset;
   var resolucaoAtual = window.innerHeight;
-
+ 
   if (resolucaoAtual < 900) {
     if (posicaoScroll <= 50) {
       headerinfinitaFundo.style.display = "none"
@@ -15,6 +18,11 @@ window.addEventListener("scroll", function () {
     else if (posicaoScroll <= 1200) {
       headerinfinitaFundo.style.display = "flex";
       headerinfinitaFundo.style.backgroundColor = '#fc9802ee';
+      if (posicaoScroll <= 800){
+        irCima.style.display = "none"
+      } else {
+        irCima.style.display = "flex"
+      }
     } else if (posicaoScroll <= 2500) {
       headerinfinitaFundo.style.display = "flex";
       headerinfinitaFundo.style.backgroundColor = '#055a18ee';
@@ -22,6 +30,7 @@ window.addEventListener("scroll", function () {
       headerinfinitaFundo.style.display = "flex";
       headerinfinitaFundo.style.backgroundColor = '#323729f8';
     }
+
   } else {
     // verifique se o usuário chegou à posição desejada da página
     if (posicaoScroll <= 100) {
@@ -38,7 +47,16 @@ window.addEventListener("scroll", function () {
       headerinfinitaFundo.style.backgroundColor = '#323729f8';
     }
   }
+
 });
+
+/* Botão Ir para cima */
+irCima.addEventListener("click", function(){
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+})
 
 /* Animação navbar */
 const noticiastexto = document.getElementById('noticiastexto');
@@ -47,6 +65,10 @@ const jogostexto = document.getElementById('jogostexto');
 const jogostextoInfinito = document.getElementById('jogostextoInfinito');
 const serietexto = document.getElementById('serietexto');
 const serietextoInfinito = document.getElementById('serietextoInfinito');
+
+noticiastextoInfinito.addEventListener("click", function(){
+  window.location = "../Noticias/noticia.html"
+})
 
 noticiastexto.style.color = '#ffffff;';
 // Adicione um evento a um ID do HTML, no caso noticiastexto, a função mouseover que é equivalente ao :hover do CSS, execute a função function() 
@@ -158,10 +180,17 @@ ondeTLOUHBO.addEventListener("mouseover", function () {
 /* LINKS nos blocos TLOU1 */
 
 const HistoriaClick = document.getElementById("HistoriaClick")
+const PersonagemClick = document.getElementById("PersonagemClick")
 
 HistoriaClick.addEventListener("click", function () {
   window.location.href = ('../PaginaTLOU1/tlou1.html')
 });
+
+PersonagemClick.addEventListener("click", function(){
+  window.location.href = "../PaginaTLOU1/tlou1.html#personagensCarrosel"
+})
+
+
 
 
 
@@ -184,3 +213,42 @@ const conta_botao = document.getElementById("conta_botao")
 conta_botao.addEventListener("click", function () {
   limparSessao()
 })
+
+/* TRAILER TLOU 1 */
+const trailer = document.getElementById("trailer")
+const trailer2 = document.getElementById("trailer2")
+const trailer3 = document.getElementById("trailer3")
+const playIcon = document.getElementById("playIcon")
+const playIcon2 = document.getElementById("playIcon2")
+const playIcon3 = document.getElementById("playIcon3")
+
+trailer.addEventListener("mouseover", function(){
+  playIcon.style.color = "#ffe70c"
+})
+trailer.addEventListener("mouseout", function(){
+  playIcon.style.color = "#ffffff"
+})
+trailer.addEventListener("click", function(){
+  window.location.href = "https://www.youtube.com/watch?v=NRZ9kL3F2Po"
+})
+
+trailer2.addEventListener("mouseover", function(){
+  playIcon2.style.color = "#297F00"
+})
+trailer2.addEventListener("mouseout", function(){
+  playIcon2.style.color = "#ffffff"
+})
+trailer2.addEventListener("click", function(){
+  window.location.href = "https://www.youtube.com/watch?v=W2Wnvvj33Wo"
+})
+
+trailer3.addEventListener("mouseover", function(){
+  playIcon3.style.color = "#608103"
+})
+trailer3.addEventListener("mouseout", function(){
+  playIcon3.style.color = "#ffffff"
+})
+trailer3.addEventListener("click", function(){
+  window.location.href = "https://www.youtube.com/watch?v=IpjRuuFEPMk"
+})
+

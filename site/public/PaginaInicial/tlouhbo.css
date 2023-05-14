@@ -97,6 +97,31 @@
     }
 }
 
+#trailer3 {
+    display: flex;
+    position: absolute;
+    left: 32%;
+    top: 430.5%;
+    width: 10%;
+    height: 10%;
+    align-items: center;
+    cursor: pointer;
+}
+
+#playIcon3 {
+    color: white;
+    font-size: 2.5vmax;
+    font-weight: 200;
+}
+
+#trailerTexto3{
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    font-size: 0.7vmax;
+    font-weight: 400;
+    width: 20%;
+}
+
 /* Blocos Sobrepondo o Banner */
 .blocoEpisodiosGradienteTLOUHBO {
     display: flex;
