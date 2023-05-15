@@ -39,6 +39,12 @@ window.addEventListener("scroll", function () {
     else if (posicaoScroll <= 1800) {
       headerinfinitaFundo.style.display = "flex";
       headerinfinitaFundo.style.backgroundColor = '#fc9802ee';
+
+      if (posicaoScroll <= 800){
+        irCima.style.display = "none"
+      } else {
+        irCima.style.display = "flex"
+      }
     } else if (posicaoScroll <= 3400) {
       headerinfinitaFundo.style.display = "flex";
       headerinfinitaFundo.style.backgroundColor = '#055a18ee';
@@ -246,14 +252,17 @@ trailer3.addEventListener("click", function(){
   window.location.href = "https://www.youtube.com/watch?v=IpjRuuFEPMk"
 })
 
+
 /* MENU FLUTUANTE JOGOS */
 const menuflutuanteJogos = document.getElementById("menuflutuanteJogos")
+// var resolucaoAtual = window.innerHeight;
 
 jogostexto.addEventListener("mouseover", function () {
   jogostexto.style.color = '#ffe70c';
   menuflutuanteJogos.style.display = "flex"
-}),
+})
+
 jogostexto.addEventListener('mouseout', function () {
   jogostexto.style.color = '#ffffff';
   menuflutuanteJogos.style.display = "none"
-});
+})

@@ -100,12 +100,19 @@
 #trailer3 {
     display: flex;
     position: absolute;
-    left: 32%;
-    top: 430.5%;
+    left: 28.5%;
+    top: 427.5%;
     width: 10%;
     height: 10%;
     align-items: center;
     cursor: pointer;
+}
+
+@media (max-width: 1919px) {
+    #trailer {
+        left: 32%;
+        top: 430.5%;
+    }
 }
 
 #playIcon3 {
@@ -114,7 +121,7 @@
     font-weight: 200;
 }
 
-#trailerTexto3{
+#trailerTexto3 {
     font-family: 'Space Grotesk', sans-serif;
     color: white;
     font-size: 0.7vmax;

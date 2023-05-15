@@ -51,14 +51,22 @@ body {
 #menuflutuanteJogos {
     display: none;
     position: absolute;
-    width: 15%;
-    height: 20%;
+    width: 14%;
+    height: 15%;
     background-color: #FDC706;
     left: 50.5%;
     top: 8%;
     border-radius: 6px;
     flex-direction: column;
 }
+
+@media (max-width: 1919px){
+    #menuflutuanteJogos{
+        width: 15%;
+        height: 20%;
+    }
+}
+
 
 .menuItens {
     display: flex;
@@ -84,9 +92,15 @@ body {
 #menuTLOU1Texto {
     display: flex;
     color: white;
-    font-size: 1vmax;
+    font-size: 0.9vmax;
     margin-left: 5%;
     font-weight: 500;
+}
+
+@media (max-width: 1919px){
+    #menuTLOU1Texto{
+        font-size: 1vmax;
+    }
 }
 
 .menuTLOU2{
@@ -102,9 +116,15 @@ body {
 #menuTLOU2Texto {
     display: flex;
     color: white;
-    font-size: 1vmax;
+    font-size: 0.9vmax;
     margin-left: 5%;
     font-weight: 500;
+}
+
+@media (max-width: 1919px){
+    #menuTLOU2Texto{
+        font-size: 1vmax;
+    }
 }
 
 .menuLinha {
@@ -139,10 +159,17 @@ body {
 #menuTLOULBTexto{
     display: flex;
     color: white;
-    font-size: 1vmax;
+    font-size: 0.9vmax;
     margin-left: 5%;
     font-weight: 500;
 }
+
+@media (max-width: 1919px){
+    #menuTLOULBTexto{
+        font-size: 1vmax;
+    }
+}
+
 
 
 
@@ -330,7 +357,6 @@ body {
     height: 30%;
     justify-content: center;
     flex-direction: column;
-    justify-content: flex-end;
     box-sizing: border-box;
 }
 

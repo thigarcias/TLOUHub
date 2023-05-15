@@ -82,12 +82,19 @@
 #trailer2 {
     display: flex;
     position: absolute;
-    left: 35.5%;
-    top: 238%;
+    left: 32%;
+    top: 235.5%;
     width: 10%;
     height: 10%;
     align-items: center;
     cursor: pointer;
+}
+
+@media (max-width: 1919px){
+    #trailer{
+        left: 35.5%;
+        top: 238%;
+    }
 }
 
 #playIcon2 {
