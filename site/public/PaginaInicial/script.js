@@ -10,7 +10,7 @@ const irCima = document.getElementById("irCima")
 window.addEventListener("scroll", function () {
   var posicaoScroll = window.pageYOffset;
   var resolucaoAtual = window.innerHeight;
- 
+
   if (resolucaoAtual < 900) {
     if (posicaoScroll <= 50) {
       headerinfinitaFundo.style.display = "none"
@@ -18,7 +18,7 @@ window.addEventListener("scroll", function () {
     else if (posicaoScroll <= 1200) {
       headerinfinitaFundo.style.display = "flex";
       headerinfinitaFundo.style.backgroundColor = '#fc9802ee';
-      if (posicaoScroll <= 800){
+      if (posicaoScroll <= 800) {
         irCima.style.display = "none"
       } else {
         irCima.style.display = "flex"
@@ -40,7 +40,7 @@ window.addEventListener("scroll", function () {
       headerinfinitaFundo.style.display = "flex";
       headerinfinitaFundo.style.backgroundColor = '#fc9802ee';
 
-      if (posicaoScroll <= 800){
+      if (posicaoScroll <= 800) {
         irCima.style.display = "none"
       } else {
         irCima.style.display = "flex"
@@ -57,7 +57,7 @@ window.addEventListener("scroll", function () {
 });
 
 /* Botão Ir para cima */
-irCima.addEventListener("click", function(){
+irCima.addEventListener("click", function () {
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
@@ -72,7 +72,7 @@ const jogostextoInfinito = document.getElementById('jogostextoInfinito');
 const serietexto = document.getElementById('serietexto');
 const serietextoInfinito = document.getElementById('serietextoInfinito');
 
-noticiastextoInfinito.addEventListener("click", function(){
+noticiastextoInfinito.addEventListener("click", function () {
   window.location = "../Noticias/noticia.html"
 })
 
@@ -186,7 +186,7 @@ HistoriaClick.addEventListener("click", function () {
   window.location.href = ('../PaginaTLOU1/tlou1.html')
 });
 
-PersonagemClick.addEventListener("click", function(){
+PersonagemClick.addEventListener("click", function () {
   window.location.href = "../PaginaTLOU1/tlou1.html#personagensCarrosel"
 })
 
@@ -222,33 +222,33 @@ const playIcon = document.getElementById("playIcon")
 const playIcon2 = document.getElementById("playIcon2")
 const playIcon3 = document.getElementById("playIcon3")
 
-trailer.addEventListener("mouseover", function(){
+trailer.addEventListener("mouseover", function () {
   playIcon.style.color = "#ffe70c"
 })
-trailer.addEventListener("mouseout", function(){
+trailer.addEventListener("mouseout", function () {
   playIcon.style.color = "#ffffff"
 })
-trailer.addEventListener("click", function(){
+trailer.addEventListener("click", function () {
   window.location.href = "https://www.youtube.com/watch?v=NRZ9kL3F2Po"
 })
 
-trailer2.addEventListener("mouseover", function(){
+trailer2.addEventListener("mouseover", function () {
   playIcon2.style.color = "#297F00"
 })
-trailer2.addEventListener("mouseout", function(){
+trailer2.addEventListener("mouseout", function () {
   playIcon2.style.color = "#ffffff"
 })
-trailer2.addEventListener("click", function(){
+trailer2.addEventListener("click", function () {
   window.location.href = "https://www.youtube.com/watch?v=W2Wnvvj33Wo"
 })
 
-trailer3.addEventListener("mouseover", function(){
+trailer3.addEventListener("mouseover", function () {
   playIcon3.style.color = "#608103"
 })
-trailer3.addEventListener("mouseout", function(){
+trailer3.addEventListener("mouseout", function () {
   playIcon3.style.color = "#ffffff"
 })
-trailer3.addEventListener("click", function(){
+trailer3.addEventListener("click", function () {
   window.location.href = "https://www.youtube.com/watch?v=IpjRuuFEPMk"
 })
 
@@ -256,13 +256,21 @@ trailer3.addEventListener("click", function(){
 /* MENU FLUTUANTE JOGOS */
 const menuflutuanteJogos = document.getElementById("menuflutuanteJogos")
 // var resolucaoAtual = window.innerHeight;
+var jogos = document.querySelectorAll(".jogos")
+for (let elementos = 0; elementos < 2; elementos++) {
+  jogos[elementos].addEventListener("mouseenter", function () {
+    jogos[elementos].querySelector("#jogostexto").style.color = "#ffe70c"
+    menuflutuanteJogos.style.display = "flex"
+  })
 
-jogostexto.addEventListener("mouseover", function () {
-  jogostexto.style.color = '#ffe70c';
-  menuflutuanteJogos.style.display = "flex"
-})
+  jogos[elementos].addEventListener('mouseleave', function () {
+    jogos[elementos].querySelector("#jogostexto").style.color = "#ffffff"
+    menuflutuanteJogos.style.display = "none"
+  })
+}
 
-jogostexto.addEventListener('mouseout', function () {
-  jogostexto.style.color = '#ffffff';
-  menuflutuanteJogos.style.display = "none"
+
+const menuTLOU1 = document.querySelectorAll(".menuTLOU1")
+menuTLOU1[0].addEventListener("click", function () {
+  window.location = "../PaginaTLOU1/tlou1.html"
 })

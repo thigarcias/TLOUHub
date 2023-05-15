@@ -31,12 +31,12 @@ window.addEventListener("scroll", function () {
             headerinfinitaFundo.style.display = "flex"
         }
 
-        if (posicaoScroll <= 400){
+        if (posicaoScroll <= 400) {
             irCima.style.display = "none"
-          } else {
+        } else {
             irCima.style.display = "flex"
-          }
-        
+        }
+
     } else {
         if (posicaoScroll <= 100) {
             headerinfinitaFundo.style.display = "none"
@@ -44,21 +44,21 @@ window.addEventListener("scroll", function () {
             headerinfinitaFundo.style.display = "flex"
         }
 
-        if (posicaoScroll <= 400){
+        if (posicaoScroll <= 400) {
             irCima.style.display = "none"
-          } else {
+        } else {
             irCima.style.display = "flex"
-          }
+        }
     }
 })
 
 /* Botão Ir para cima */
-irCima.addEventListener("click", function(){
+irCima.addEventListener("click", function () {
     window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+        top: 0,
+        behavior: 'smooth'
     });
-  })
+})
 
 
 const homepagetexto = document.getElementById("homepagetexto")
@@ -72,21 +72,21 @@ homepagetexto.addEventListener("click", function () {
     window.location.href = "../PaginaInicial/home.html"
 }),
 
-homepagetextoInfinito.addEventListener("click", function(){
-    window.location = "../PaginaInicial/home.html"
-})
+    homepagetextoInfinito.addEventListener("click", function () {
+        window.location = "../PaginaInicial/home.html"
+    })
 
-noticiastexto.addEventListener("click", function(){
+noticiastexto.addEventListener("click", function () {
     window.location = "../Noticias/noticia.html"
 })
-noticiastextoInfinito.addEventListener("click", function(){
+noticiastextoInfinito.addEventListener("click", function () {
     window.location = "../Noticias/noticia.html"
 })
 
 
-    homepagetexto.addEventListener("mouseover", function () {
-        homepagetexto.style.color = "#ffe70c"
-    }),
+homepagetexto.addEventListener("mouseover", function () {
+    homepagetexto.style.color = "#ffe70c"
+}),
 
     homepagetexto.addEventListener("mouseout", function () {
         homepagetexto.style.color = "#ffffff"
@@ -140,3 +140,26 @@ homepagetextoInfinito.addEventListener("mouseover", function () {
     serietextoInfinito.addEventListener('mouseout', function () {
         serietextoInfinito.style.color = '#ffffff';
     });
+
+
+/* MENU FLUTUANTE JOGOS */
+const menuflutuanteJogos = document.getElementById("menuflutuanteJogos")
+// var resolucaoAtual = window.innerHeight;
+var jogos = document.querySelectorAll(".jogos")
+for (let elementos = 0; elementos < 2; elementos++) {
+    jogos[elementos].addEventListener("mouseenter", function () {
+        jogos[elementos].querySelector("#jogostexto").style.color = "#ffe70c"
+        menuflutuanteJogos.style.display = "flex"
+    })
+
+    jogos[elementos].addEventListener('mouseleave', function () {
+        jogos[elementos].querySelector("#jogostexto").style.color = "#ffffff"
+        menuflutuanteJogos.style.display = "none"
+    })
+}
+
+
+const menuTLOU1 = document.querySelectorAll(".menuTLOU1")
+menuTLOU1[0].addEventListener("click", function () {
+    window.location = "../PaginaTLOU1/tlou1.html"
+})

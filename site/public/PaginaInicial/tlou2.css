@@ -90,10 +90,10 @@
     cursor: pointer;
 }
 
-@media (max-width: 1919px){
-    #trailer{
+@media (max-width: 1919px) {
+    #trailer2 {
         left: 35.5%;
-        top: 238%;
+        top: 234.5%;
     }
 }
 
@@ -103,7 +103,7 @@
     font-weight: 200;
 }
 
-#trailerTexto2{
+#trailerTexto2 {
     font-family: 'Space Grotesk', sans-serif;
     color: white;
     font-size: 0.7vmax;
