@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./tlou1headerfixa.css">
     <link rel="stylesheet" href="tlou1header.css">
     <link rel="stylesheet" href="mediaquerys.css">
+    <link rel="stylesheet" href="../js/funcoes.js">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,0" />
     <link rel="stylesheet"
@@ -33,7 +35,7 @@
                     </div>
 
                     <div class="jogos">
-                        <span id="jogostextoInfinito">Jogos <span class="material-symbols-outlined" id="iconNavbar">
+                        <span id="jogostexto">Jogos <span class="material-symbols-outlined" id="iconNavbar">
                                 arrow_drop_down
                             </span>
 
@@ -172,8 +174,8 @@
             <span id="criadoraImagem"></span>
         </div>
 
-        <div class="vocesabia">
-            <div class="textos">
+        <div class="quiz">
+            <!-- <div class="textos">
                 <span id="vocesabiaTitulo">VOCÊ SABIA QUE:</span>
                 <span id="vocesabiaTexto">A aparência de Joel, um dos protagonistas do jogo, foi inspirada no ator
                     escocês Gerard Butler. O diretor criativo do jogo, Neil Druckmann, disse que Butler tinha a
@@ -197,7 +199,34 @@
 
                 <span id="vejaCordycepsGradiente">CORDYCEPS</span>
                 <span id="vejaCordycepsImagem"></span>
+            </div> -->
+            <span id="parteCimaQuiz">
+                <span id="tituloQuiz">QUIZ TLOU</span>
+                <span id="botaoGeral">VER PERSONAGENS FAVORITOS</span>
+            </span>
+            <div class="conteudoQuiz" id="conteudoDoQuiz">
+                <span id="perguntaQuiz">QUAL SEU PERSONAGEM FAVORITO DE THE LAST OF US 1?</span>
+                <span class="opcaoQuiz">
+                    <span class="opcaoTexto">ELLIE WILLIAMS</span> 
+                </span>
+                <span class="opcaoQuiz">
+                    <span class="opcaoTexto">JOEL MILLER</span> 
+                </span>
+                <span class="opcaoQuiz">
+                    <span class="opcaoTexto">TESS SERVOPOULOS</span> 
+                </span>
+                <span class="opcaoQuiz">
+                    <span class="opcaoTexto">RILEY ABEL</span> 
+                </span>
             </div>
+            <span id="blocoQuiz">
+                <canvas id="ellieGrafico"></canvas>
+                <canvas id="joelGrafico"></canvas>
+                <canvas id="tessGrafico"></canvas>
+                <canvas id="rileyGrafico"></canvas>
+                <canvas id="todosGrafico"></canvas>
+            </span>
+           
         </div>
 
         <!-- FOOTER-->
@@ -279,3 +308,5 @@
 </html>
 
 <script type="text/javascript" src="./tlou.js"></script>
+<script src="./chart.js"></script>
+<script src="./quiz.js"></script>

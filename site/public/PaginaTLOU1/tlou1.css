@@ -6,6 +6,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700;800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 @font-face {
     font-family: 'Press Gothic';
     src: url('../fonts/PressGothic.otf') format('truetype');
@@ -60,7 +62,7 @@ body {
     height: 15%;
     background-color: #FDC706;
     left: 50.5%;
-    top: 8%;
+    top: 6.5%;
     border-radius: 6px;
     flex-direction: column;
 }
@@ -70,6 +72,7 @@ body {
     #menuflutuanteJogos {
         width: 15%;
         height: 20%;
+        top: 8%;
     }
 }
 
@@ -243,7 +246,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 30px;
-    background-color: #7A6E44;
+    background-color: #354534;
     cursor: pointer;
 }
 
@@ -251,14 +254,6 @@ body {
     color: white;
     font-size: 1.7vmax;
 }
-
-
-
-
-
-
-
-
 
 
 /* HISTORIA */
@@ -704,170 +699,125 @@ body {
 
 
 /* VOCE SABIA */
-.vocesabia {
+.quiz {
     display: flex;
     width: 100%;
-    height: 60%;
-}
-
-#vocesabiaTitulo {
-    display: flex;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.25vmax;
-    line-height: 20px;
-    font-style: normal;
-    margin-top: 8%;
-}
-
-.textos {
-    display: flex;
+    height: 75%;
+    background-color: #537042;
+    margin-top: 10%;
+    border-radius: 15px;
     flex-direction: column;
-    width: 50%;
-
+    align-items: center;
+    box-sizing: border-box;
 }
 
-#vocesabiaTexto {
+#parteCimaQuiz{
     display: flex;
-    color: #706D6D;
-    font-size: 1.1vmax;
-    margin-top: 3%;
-    font-weight: 300;
-    line-height: 28px;
     width: 100%;
-    font-family: 'Space Grotesk';
 }
 
-#vocesabiaTexto2 {
+#tituloQuiz{
     display: flex;
-    color: #706D6D;
-    font-size: 1.1vmax;
-    font-weight: 300;
-    line-height: 28px;
+    color: white;
     width: 100%;
-    font-family: 'Space Grotesk';
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.5vmax;
+    text-align: center;
+    margin-top: 0.5%;
+    justify-content: center;
+    
 }
 
-.blocosVeja {
-    display: flex;
-    width: 50%;
-    position: relative;
+#botaoGeral{
+   display: none;
+   position: absolute;
+   z-index: 1s;
+   width: 15%;
+   height: 4%;
+   margin-top: 0.35%;
+   margin-left: 73%;
+   border-radius: 10px;
+   background-color: #67a046;
+   align-items: center;
+   justify-content: center;
+   font-weight: 700;
+   font-size: 0.7vmax;
+   color: white;
+   font-family: 'Roboto', sans-serif;
+   cursor: pointer;
+}
+
+#blocoQuiz{
+    display: none;
+    background-color: #354534;
+    width: 100%;
     height: 90%;
+    margin-top: 0.5%;
+}
+#ellieGrafico{
+  display: none;
+}
+
+#joelGrafico {
+    display: none;
+}
+
+#tessGrafico {
+    display: none;
+}
+
+#rileyGrafico {
+    display: none;
+}
+
+#todosGrafico {
+    display: none;
+}
+
+.conteudoQuiz {
+    display: flex;
+    width: 100%;
+    height: 85%;
+    background-color: #354534;
+    margin-top: 0.5%;
     flex-direction: column;
-}
-
-#vejaTitulo {
-    display: flex;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.25vmax;
-    line-height: 20px;
-    font-style: normal;
-    margin-top: 8%;
-    margin-left: 20%;
-}
-
-#vejaTLOU2Gradiente {
-    display: flex;
-    background: linear-gradient(175.61deg, rgba(43, 51, 20, 0.377) 26.22%, rgba(43, 37, 32, 0.58) 56.98%);
-    position: absolute;
-    z-index: -1;
-    border-radius: 10px;
-    width: 80%;
-    height: 25%;
-    margin-left: 20%;
-    top: 22%;
-
-    color: white;
-    font-family: 'Space Grotesk';
     align-items: center;
-    justify-content: center;
-    font-size: 1.3vmax;
-    font-weight: 700;
-
 }
 
-#vejaTLOU2Imagem {
-    display: flex;
-    border-radius: 10px;
-    z-index: -2;
-    position: absolute;
-    width: 80%;
-    height: 25%;
-    background-size: cover;
-    background-position: 10% 55%;
-    margin-left: 20%;
-    top: 22%;
-    background-image: url(./assets/thumb-1920-1065466.webp);
-}
-
-#vejaTLOULBGradiente {
-    display: flex;
-    background: linear-gradient(180deg, rgba(26, 46, 80, 0.47) 32.72%, rgba(23, 29, 36, 0.17) 74.79%);
-    position: absolute;
-    z-index: -1;
-    border-radius: 10px;
-    width: 80%;
-    height: 25%;
-    margin-left: 20%;
-    top: 50%;
-
+#perguntaQuiz {
     color: white;
-    font-family: 'Space Grotesk';
-    align-items: center;
-    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    margin-top: 1%;
     font-size: 1.3vmax;
-    font-weight: 700;
 }
 
-#vejaTLOULBImagem {
+.opcaoQuiz{
     display: flex;
-    border-radius: 10px;
-    z-index: -2;
-    position: absolute;
-    width: 80%;
-    height: 25%;
-    background-size: cover;
-    background-position: 10% 50%;
-    margin-left: 20%;
-    top: 50%;
-    background-image: url(./assets/thelastofus-leftbehind.webp);
+    background-color: #537363;
+    width: 60%;
+    height: 15%;
+    margin-top: 2%;
+    border-radius: 15px;
+    align-items: center;
+    cursor: pointer;
+ 
+}
+.opcaoQuiz:hover{
+    background-color: #60844B;
 }
 
-#vejaCordycepsGradiente {
-    display: flex;
-    background: linear-gradient(180deg, rgba(214, 155, 14, 0.29) 32.72%, rgba(51, 69, 49, 0.26) 74.79%);
-    position: absolute;
-    z-index: -1;
-    border-radius: 10px;
-    width: 80%;
-    height: 25%;
-    margin-left: 20%;
-    top: 78%;
 
+.opcaoTexto{
     color: white;
-    font-family: 'Space Grotesk';
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3vmax;
-    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1vmax;
+    font-weight: 400;
+    margin-left: 10%;
 }
-
-#vejaCordycepsImagem {
-    display: flex;
-    border-radius: 10px;
-    z-index: -2;
-    position: absolute;
-    width: 80%;
-    height: 25%;
-    background-size: cover;
-    background-position: 10% 40%;
-    margin-left: 20%;
-    top: 78%;
-    background-image: url(./assets/The-Last-of-Us.webp);
-}
-
-
 /* FOOTER */
 
 .footer {
@@ -877,7 +827,7 @@ body {
     margin-left: -5%;
     margin-top: 8%;
     height: 8vh;
-    background-color: #7A6E44;
+    background-color: #354534;
     justify-content: center;
     align-items: center;
 }

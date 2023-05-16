@@ -98,12 +98,6 @@ homepagetexto.addEventListener("mouseover", function () {
     noticiastexto.addEventListener('mouseout', function () {
         noticiastexto.style.color = '#ffffff';
     }),
-    jogostexto.addEventListener("mouseover", function () {
-        jogostexto.style.color = '#ffe70c';
-    }),
-    jogostexto.addEventListener('mouseout', function () {
-        jogostexto.style.color = '#ffffff';
-    }),
     serietexto.addEventListener("mouseover", function () {
         serietexto.style.color = '#ffe70c';
     }),
@@ -128,12 +122,6 @@ homepagetextoInfinito.addEventListener("mouseover", function () {
     noticiastextoInfinito.addEventListener('mouseout', function () {
         noticiastextoInfinito.style.color = '#ffffff';
     }),
-    jogostextoInfinito.addEventListener("mouseover", function () {
-        jogostextoInfinito.style.color = '#ffe70c';
-    }),
-    jogostextoInfinito.addEventListener('mouseout', function () {
-        jogostextoInfinito.style.color = '#ffffff';
-    }),
     serietextoInfinito.addEventListener("mouseover", function () {
         serietextoInfinito.style.color = '#ffe70c';
     }),
@@ -144,7 +132,6 @@ homepagetextoInfinito.addEventListener("mouseover", function () {
 
 /* MENU FLUTUANTE JOGOS */
 const menuflutuanteJogos = document.getElementById("menuflutuanteJogos")
-// var resolucaoAtual = window.innerHeight;
 var jogos = document.querySelectorAll(".jogos")
 for (let elementos = 0; elementos < 2; elementos++) {
     jogos[elementos].addEventListener("mouseenter", function () {

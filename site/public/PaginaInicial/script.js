@@ -72,9 +72,6 @@ const jogostextoInfinito = document.getElementById('jogostextoInfinito');
 const serietexto = document.getElementById('serietexto');
 const serietextoInfinito = document.getElementById('serietextoInfinito');
 
-noticiastextoInfinito.addEventListener("click", function () {
-  window.location = "../Noticias/noticia.html"
-})
 
 noticiastexto.style.color = '#ffffff;';
 // Adicione um evento a um ID do HTML, no caso noticiastexto, a função mouseover que é equivalente ao :hover do CSS, execute a função function() 
@@ -100,12 +97,6 @@ noticiastextoInfinito.addEventListener('mouseover', function () {
 }),
   noticiastextoInfinito.addEventListener('mouseout', function () {
     noticiastextoInfinito.style.color = '#ffffff';
-  }),
-  jogostextoInfinito.addEventListener("mouseover", function () {
-    jogostextoInfinito.style.color = '#ffe70c';
-  }),
-  jogostextoInfinito.addEventListener('mouseout', function () {
-    jogostextoInfinito.style.color = '#ffffff';
   }),
   serietextoInfinito.addEventListener("mouseover", function () {
     serietextoInfinito.style.color = '#ffe70c';
@@ -257,13 +248,14 @@ trailer3.addEventListener("click", function () {
 const menuflutuanteJogos = document.getElementById("menuflutuanteJogos")
 // var resolucaoAtual = window.innerHeight;
 var jogos = document.querySelectorAll(".jogos")
+
 for (let elementos = 0; elementos < 2; elementos++) {
-  jogos[elementos].addEventListener("mouseenter", function () {
+    jogos[elementos].addEventListener("mouseenter", function () {
     jogos[elementos].querySelector("#jogostexto").style.color = "#ffe70c"
     menuflutuanteJogos.style.display = "flex"
   })
 
-  jogos[elementos].addEventListener('mouseleave', function () {
+    jogos[elementos].addEventListener('mouseleave', function () {
     jogos[elementos].querySelector("#jogostexto").style.color = "#ffffff"
     menuflutuanteJogos.style.display = "none"
   })
