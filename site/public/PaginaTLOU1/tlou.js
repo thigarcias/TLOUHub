@@ -27,8 +27,12 @@ window.addEventListener("scroll", function () {
     if (resolucaoAtual < 900) {
         if (posicaoScroll <= 100) {
             headerinfinitaFundo.style.display = "none"
+            menuflutuanteJogos.style.top = "6.5%"
+            menuflutuanteJogos.style.zIndex = ""
         } else {
             headerinfinitaFundo.style.display = "flex"
+            menuflutuanteJogos.style.top = "5%"
+            menuflutuanteJogos.style.zIndex = "2"
         }
 
         if (posicaoScroll <= 400) {
@@ -40,8 +44,12 @@ window.addEventListener("scroll", function () {
     } else {
         if (posicaoScroll <= 100) {
             headerinfinitaFundo.style.display = "none"
+            menuflutuanteJogos.style.top = "6.5%"
+            menuflutuanteJogos.style.zIndex = ""
         } else {
             headerinfinitaFundo.style.display = "flex"
+            menuflutuanteJogos.style.top = "5%"
+            menuflutuanteJogos.style.zIndex = "2"
         }
 
         if (posicaoScroll <= 400) {
@@ -62,7 +70,7 @@ irCima.addEventListener("click", function () {
 
 
 const homepagetexto = document.getElementById("homepagetexto")
-const noticiastexto = document.getElementById("noticiastexto")
+// const noticiastexto = document.getElementById("noticiastexto")
 const jogostexto = document.getElementById("jogostexto")
 const serietexto = document.getElementById("serietexto")
 const homepagetextoInfinito = document.getElementById("homepagetextoInfinito")
@@ -76,12 +84,12 @@ homepagetexto.addEventListener("click", function () {
         window.location = "../PaginaInicial/home.html"
     })
 
-noticiastexto.addEventListener("click", function () {
-    window.location = "../Noticias/noticia.html"
-})
-noticiastextoInfinito.addEventListener("click", function () {
-    window.location = "../Noticias/noticia.html"
-})
+// noticiastexto.addEventListener("click", function () {
+//     window.location = "../Noticias/noticia.html"
+// })
+// noticiastextoInfinito.addEventListener("click", function () {
+//     window.location = "../Noticias/noticia.html"
+// })
 
 
 homepagetexto.addEventListener("mouseover", function () {
@@ -92,18 +100,22 @@ homepagetexto.addEventListener("mouseover", function () {
         homepagetexto.style.color = "#ffffff"
     }),
 
-    noticiastexto.addEventListener('mouseenter', function () {
-        noticiastexto.style.color = '#ffe70c';
-    }),
-    noticiastexto.addEventListener('mouseout', function () {
-        noticiastexto.style.color = '#ffffff';
-    }),
+    // noticiastexto.addEventListener('mouseenter', function () {
+    //     noticiastexto.style.color = '#ffe70c';
+    // }),
+    // noticiastexto.addEventListener('mouseout', function () {
+    //     noticiastexto.style.color = '#ffffff';
+    // }),
     serietexto.addEventListener("mouseover", function () {
         serietexto.style.color = '#ffe70c';
     }),
     serietexto.addEventListener('mouseout', function () {
         serietexto.style.color = '#ffffff';
     });
+
+    serietexto.addEventListener("click", function () {
+        window.location = "../PaginaTLOUHBO/hbo.html"
+    })
 
 
 
@@ -116,12 +128,12 @@ homepagetextoInfinito.addEventListener("mouseover", function () {
         homepagetextoInfinito.style.color = "#ffffff"
     }),
 
-    noticiastextoInfinito.addEventListener('mouseover', function () {
-        noticiastextoInfinito.style.color = '#ffe70c';
-    }),
-    noticiastextoInfinito.addEventListener('mouseout', function () {
-        noticiastextoInfinito.style.color = '#ffffff';
-    }),
+    // noticiastextoInfinito.addEventListener('mouseover', function () {
+    //     noticiastextoInfinito.style.color = '#ffe70c';
+    // }),
+    // noticiastextoInfinito.addEventListener('mouseout', function () {
+    //     noticiastextoInfinito.style.color = '#ffffff';
+    // }),
     serietextoInfinito.addEventListener("mouseover", function () {
         serietextoInfinito.style.color = '#ffe70c';
     }),
@@ -149,4 +161,30 @@ for (let elementos = 0; elementos < 2; elementos++) {
 const menuTLOU1 = document.querySelectorAll(".menuTLOU1")
 menuTLOU1[0].addEventListener("click", function () {
     window.location = "../PaginaTLOU1/tlou1.html"
+})
+
+// Botão entre do BLUR 
+const blurBotao = document.getElementById("blurBotao")
+blurBotao.addEventListener("click", function () {
+    window.location = "../Login/login.html"
+})
+
+/* LINK Botão Login/Cadastro*/
+
+const cadastrartexto = document.getElementById("cadastrartexto")
+cadastrartexto.addEventListener("click", function () {
+    window.location.href = "../Cadastro/cadastro.html"
+})
+
+const logintexto = document.getElementById("logintexto")
+logintexto.addEventListener("click", function () {
+    window.location.href = "../Login/login.html"
+})
+
+
+
+/* BOTAO PARA DESLOGAR */
+const conta_botao = document.getElementById("conta_botao")
+conta_botao.addEventListener("click", function () {
+    limparSessao()
 })

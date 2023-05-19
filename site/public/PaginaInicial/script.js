@@ -2,7 +2,7 @@ const headerinfinitaFundo = document.getElementById("headerinfinitaFundo")
 headerinfinitaFundo.style.display = "none";
 headerinfinitaFundo.style.zIndex = 2;
 const irCima = document.getElementById("irCima")
-
+const menuflutuanteJogos = document.getElementById("menuflutuanteJogos")
 
 
 // Adicione a um ID, no caso a pagina toda 'window', um evento (addEventListener), que no caso é o evento "scroll", uma função()
@@ -14,10 +14,14 @@ window.addEventListener("scroll", function () {
   if (resolucaoAtual < 900) {
     if (posicaoScroll <= 50) {
       headerinfinitaFundo.style.display = "none"
+      menuflutuanteJogos.style.top = "6.5%"
+      menuflutuanteJogos.style.zIndex = ""
     }
     else if (posicaoScroll <= 1200) {
       headerinfinitaFundo.style.display = "flex";
       headerinfinitaFundo.style.backgroundColor = '#fc9802ee';
+      menuflutuanteJogos.style.top = "5%"
+      menuflutuanteJogos.style.zIndex = "2"
       if (posicaoScroll <= 800) {
         irCima.style.display = "none"
       } else {
@@ -35,9 +39,13 @@ window.addEventListener("scroll", function () {
     // verifique se o usuário chegou à posição desejada da página
     if (posicaoScroll <= 100) {
       headerinfinitaFundo.style.display = "none"
+      menuflutuanteJogos.style.top = "6.5%"
+      menuflutuanteJogos.style.zIndex = ""
     }
     else if (posicaoScroll <= 1800) {
       headerinfinitaFundo.style.display = "flex";
+      menuflutuanteJogos.style.top = "5%"
+      menuflutuanteJogos.style.zIndex = "2"
       headerinfinitaFundo.style.backgroundColor = '#fc9802ee';
 
       if (posicaoScroll <= 800) {
@@ -73,17 +81,18 @@ const serietexto = document.getElementById('serietexto');
 const serietextoInfinito = document.getElementById('serietextoInfinito');
 
 
-noticiastexto.style.color = '#ffffff;';
-// Adicione um evento a um ID do HTML, no caso noticiastexto, a função mouseover que é equivalente ao :hover do CSS, execute a função function() 
-noticiastexto.addEventListener('mouseenter', function () {
-  noticiastexto.style.color = '#ffe70c';
-}),
-  noticiastexto.addEventListener("click", function () {
-    window.location = "../Noticias/noticia.html"
-  }),
-  noticiastexto.addEventListener('mouseout', function () {
-    noticiastexto.style.color = '#ffffff';
-  }),
+// noticiastexto.style.color = '#ffffff;';
+// // Adicione um evento a um ID do HTML, no caso noticiastexto, a função mouseover que é equivalente ao :hover do CSS, execute a função function() 
+// noticiastexto.addEventListener('mouseenter', function () {
+//   noticiastexto.style.color = '#ffe70c';
+// }),
+//   noticiastexto.addEventListener("click", function () {
+//     window.location = "../Noticias/noticia.html"
+//   }),
+//   noticiastexto.addEventListener('mouseout', function () {
+//     noticiastexto.style.color = '#ffffff';
+//   }),
+
   serietexto.addEventListener("mouseover", function () {
     serietexto.style.color = '#ffe70c';
   }),
@@ -92,18 +101,24 @@ noticiastexto.addEventListener('mouseenter', function () {
   });
 
 /* Home Infinito */
-noticiastextoInfinito.addEventListener('mouseover', function () {
-  noticiastextoInfinito.style.color = '#ffe70c';
-}),
-  noticiastextoInfinito.addEventListener('mouseout', function () {
-    noticiastextoInfinito.style.color = '#ffffff';
-  }),
+// noticiastextoInfinito.addEventListener('mouseover', function () {
+//   noticiastextoInfinito.style.color = '#ffe70c';
+// }),
+//   noticiastextoInfinito.addEventListener('mouseout', function () {
+//     noticiastextoInfinito.style.color = '#ffffff';
+//   }),
   serietextoInfinito.addEventListener("mouseover", function () {
     serietextoInfinito.style.color = '#ffe70c';
   }),
   serietextoInfinito.addEventListener('mouseout', function () {
     serietextoInfinito.style.color = '#ffffff';
   });
+
+  serietexto.addEventListener("click", function () {
+    window.location = "../PaginaTLOUHBO/hbo.html"
+  })
+
+
 
 
 /* Animação dos blocos Onde + Links*/
@@ -245,7 +260,7 @@ trailer3.addEventListener("click", function () {
 
 
 /* MENU FLUTUANTE JOGOS */
-const menuflutuanteJogos = document.getElementById("menuflutuanteJogos")
+
 // var resolucaoAtual = window.innerHeight;
 var jogos = document.querySelectorAll(".jogos")
 

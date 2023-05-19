@@ -357,6 +357,7 @@ body {
     z-index: -2;
     width: 60%;
     height: 90.5%;
+    background-size: cover;
     border-radius: 15px;
     background-image: url(./assets/thelastofus-leftbehind.webp);
     background-position: 45%;

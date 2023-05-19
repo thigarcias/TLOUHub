@@ -179,4 +179,61 @@ for (let x = 0; x < episodioConteudo.length; x++){
 }
 
 
+// NAVBAR links
+const homepagetexto = document.getElementById('homepagetexto');
+const noticiastexto = document.getElementById('noticiastexto');
+const jogostexto = document.getElementById('jogostexto');
+const serietexto = document.getElementById('serietexto');
 
+homepagetexto.addEventListener("click", function () {
+    window.location = "../PaginaInicial/home.html"
+  })
+
+noticiastexto.addEventListener("click", function () {
+    window.location = "../Noticias/noticia.html"
+  })
+
+  serietexto.addEventListener("click", function () {
+    window.location = "../PaginaTLOUHBO/hbo.html"
+  })
+
+
+// Ir para Cima botão 
+const irCima = document.getElementById("irCima")
+
+window.addEventListener("scroll", function () {
+    var posicaoScroll = window.pageYOffset;
+
+    if (posicaoScroll <= 500) {
+        irCima.style.display = "none"
+      } else {
+        irCima.style.display = "flex"
+      }
+})
+
+irCima.addEventListener("click", function () {
+    window.scrollTo({
+      top: '0%',
+      behavior: 'smooth'
+    });
+  })
+
+
+/* LINK Botão Login/Cadastro*/
+
+const cadastrartexto = document.getElementById("cadastrartexto")
+cadastrartexto.addEventListener("click", function () {
+  window.location.href = "../Cadastro/cadastro.html"
+})
+
+const logintexto = document.getElementById("logintexto")
+logintexto.addEventListener("click", function () {
+  window.location.href = "../Login/login.html"
+})
+
+
+/* BOTAO PARA DESLOGAR */
+const conta_botao = document.getElementById("conta_botao")
+conta_botao.addEventListener("click", function () {
+  limparSessao()
+})

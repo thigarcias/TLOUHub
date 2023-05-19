@@ -89,6 +89,7 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
+    margin-left: 7%;
     height: 100%;
     justify-content: center;
     font-family: 'Space Grotesk', sans-serif;
@@ -114,6 +115,10 @@ body {
     cursor: pointer;
 }
 
+#homepagetexto:hover{
+    color: #ffe70c;
+}
+
 /*NOTICIAS*/
 .noticias {
     display: flex;
@@ -129,15 +134,11 @@ body {
     cursor: pointer;
 }
 
-#noticiaslinha {
-    display: flex;
-    opacity: 0;
-    background-color: #FDC706;
-    width: 0%;
-    height: 10%;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+#noticiastexto:hover{
+    color: #ffe70c;
 }
+
+
 
 /* JOGOS */
 .jogos {
@@ -156,14 +157,8 @@ body {
     cursor: pointer;
 }
 
-#jogoslinha {
-    display: flex;
-    opacity: 0;
-    background-color: #FDC706;
-    width: 0%;
-    height: 10%;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+#jogostexto:hover{
+    color: #ffe70c;
 }
 
 /* Serie */
@@ -172,7 +167,6 @@ body {
     height: 30%;
     justify-content: center;
     flex-direction: column;
-    justify-content: flex-end;
     box-sizing: border-box;
 }
 
@@ -184,6 +178,11 @@ body {
     cursor: pointer;
 }
 
+#serietexto:hover{
+    color: #ffe70c;
+}
+
+
 /* Faça Login */
 .login {
     display: none;
@@ -192,7 +191,7 @@ body {
     justify-content: center;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #FDC706;
+    background-color: #61892F;
     font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
 }
@@ -220,7 +219,7 @@ body {
 
 #naoTem {
     display: flex;
-    color: #FDC706;
+    color: #61892F;
     font-size: 0.5vmax;
     justify-content: center;
     font-weight: 500;
@@ -563,6 +562,26 @@ body {
     margin-left: 3%;
     font-size: 1vmax;
     line-height: 35px;
+}
+
+#irCima {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    width: 3%;
+    height: 6%;
+    top: 85%;
+    left: 94%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: #354534;
+    cursor: pointer;
+}
+
+#irCimaIcon {
+    color: white;
+    font-size: 1.7vmax;
 }
 
 .footer {

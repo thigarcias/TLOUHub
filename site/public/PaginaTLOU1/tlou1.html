@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./tlou1headerfixa.css">
     <link rel="stylesheet" href="tlou1header.css">
     <link rel="stylesheet" href="mediaquerys.css">
-    <link rel="stylesheet" href="../js/funcoes.js">
+    <script src="../js/funcoes.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,0" />
@@ -18,7 +18,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
-<body>
+<body onload="validarSessaoTLOU1()">
     <!-- Header Fixa -->
     <div id='headerinfinitaFundo'>
         <div class="headerinfinita">
@@ -30,9 +30,9 @@
                         <span id="homepagetextoInfinito">Home</span>
                     </div>
 
-                    <div class="noticias">
+                    <!-- <div class="noticias">
                         <span id="noticiastextoInfinito">Notícias</span>
-                    </div>
+                    </div> -->
 
                     <div class="jogos">
                         <span id="jogostexto">Jogos <span class="material-symbols-outlined" id="iconNavbar">
@@ -42,11 +42,7 @@
                     </div>
 
                     <div class="serie">
-                        <span id="serietextoInfinito">Série
-                            <span class="material-symbols-outlined" id="iconNavbar">
-                                arrow_drop_down
-                            </span>
-                        </span>
+                        <span id="serietextoInfinito">Série</span>
 
                     </div>
                 </div>
@@ -68,9 +64,9 @@
                         <span id="homepagetexto">Home</span>
                     </div>
 
-                    <div class="noticias">
+                    <!-- <div class="noticias">
                         <span id="noticiastexto">Notícias</span>
-                    </div>
+                    </div> -->
 
                     <div class="jogos">
                         <span id="jogostexto">Jogos <span class="material-symbols-outlined" id="iconNavbar">
@@ -93,16 +89,29 @@
                     </div>
 
                     <div class="serie">
-                        <span id="serietexto">Série
-                            <span class="material-symbols-outlined" id="iconNavbar">
-                                arrow_drop_down
-                            </span>
-                        </span>
+                        <span id="serietexto">Série</span>
 
                     </div>
-                    </span>
                 </div>
+
+                <div class="logincadastro">
+
+                    <div class="login" id="login_botao">
+                        <span id="logintexto">Entrar</span>
+                    </div>
+
+                    <div class="cadastrar" id="cadastro_botao">
+                        <span id="naoTem">NÃO TEM CONTA?</span>
+                        <span id="cadastrartexto">CADASTRE-SE</span>
+                    </div>
+
+                    <div class="conta" id="conta_botao">
+                        <span id="contatexto">Sair</span>
+                    </div>
+                </div>
+                
             </div>
+            
         </div>
 
 
@@ -175,35 +184,14 @@
         </div>
 
         <div class="quiz">
-            <!-- <div class="textos">
-                <span id="vocesabiaTitulo">VOCÊ SABIA QUE:</span>
-                <span id="vocesabiaTexto">A aparência de Joel, um dos protagonistas do jogo, foi inspirada no ator
-                    escocês Gerard Butler. O diretor criativo do jogo, Neil Druckmann, disse que Butler tinha a
-                    aparência bruta e masculina que eles procuravam para o personagem. Além disso, a atriz Eliot Page
-                    também foi uma das inspirações para a criação de Ellie, a outra protagonista do jogo, mas mais
-                    tarde, a personagem foi redesenhada para evitar semelhanças com Page.</span>
-                <span id="vocesabiaTexto2">A aparência de Joel, um dos protagonistas do jogo, foi inspirada no ator
-                    escocês Gerard Butler. O diretor criativo do jogo, Neil Druckmann, disse que Butler tinha a
-                    aparência bruta e masculina que eles procuravam para o personagem. Além disso, a atriz Eliot Page
-                    também foi uma das inspirações para a criação de Ellie, a outra protagonista do jogo, mas mais
-                    tarde, a personagem foi redesenhada para evitar semelhanças com Page.</span>
-            </div>
-            <div class="blocosVeja">
-                <span id="vejaTitulo">VEJA TAMBÉM SOBRE:</span>
-
-                <span id="vejaTLOU2Gradiente">THE LAST OF US PART II</span>
-                <span id="vejaTLOU2Imagem"></span>
-
-                <span id="vejaTLOULBGradiente">THE LAST OF US LEFT BEHIND</span>
-                <span id="vejaTLOULBImagem"></span>
-
-                <span id="vejaCordycepsGradiente">CORDYCEPS</span>
-                <span id="vejaCordycepsImagem"></span>
-            </div> -->
             <span id="parteCimaQuiz">
                 <span id="tituloQuiz">QUIZ TLOU</span>
                 <span id="botaoGeral">VER PERSONAGENS FAVORITOS</span>
             </span>
+            <div class="blurQuiz">
+                <span id="blurAviso">PARA ACESSAR O QUIZ SOBRE TLOU</span>
+                <span id="blurBotao">ENTRE</span>
+            </div>
             <div class="conteudoQuiz" id="conteudoDoQuiz">
                 <span id="perguntaQuiz">QUAL SEU PERSONAGEM FAVORITO DE THE LAST OF US 1?</span>
                 <span class="opcaoQuiz">
