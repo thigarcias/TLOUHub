@@ -1,0 +1,585 @@
+@font-face {
+    font-family: 'Press Gothic';
+    src: url('../fonts/PressGothic.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Work Sans', sans-serif;
+    src: url('../fonts/WorkSans-VariableFont_wght.ttf');
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.TLOUGradiente {
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #32372963 19.79%, rgba(50, 49, 41, 0.5568) 64.58%);}
+
+.TLOU {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+    height: 100%;
+    background-size: cover;
+    background-position: 0% 20%;
+    background-image: url('./assets/1299920_1\ \(1\).webp');
+}
+
+.container {
+    height: 100vh;
+    width: 90vw;
+    margin-left: 5%;
+}
+
+/* Header Normal */
+#header {
+    display: flex;
+    width: 90vw;
+    height: 10vh;
+    align-items: center;
+}
+
+#logo {
+    display: flex;
+    font-family: "Press Gothic";
+    font-size: 32px;
+    color: white;
+    width: 13%;
+}
+
+#logo2 {
+    display: flex;
+    font-family: "Press Gothic";
+    font-size: 32px;
+    color: #61892F;
+    height: 10%;
+    width: 10%;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-right: 5%;
+    align-items: center;
+}
+
+#textonavbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9vmax;
+    line-height: 19px;
+    letter-spacing: 0px;
+    white-space: nowrap;
+    font-weight: 600;
+    gap: 5%;
+}
+
+/* HOMEPAGE */
+.homepage {
+    display: flex;
+    height: 30%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#homepagetexto {
+    display: flex;
+    color: white;
+    cursor: pointer;
+}
+
+/*NOTICIAS*/
+.noticias {
+    display: flex;
+    height: 30%;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#noticiastexto {
+    cursor: pointer;
+    color: white;
+    cursor: pointer;
+}
+
+#noticiaslinha {
+    display: flex;
+    opacity: 0;
+    background-color: #FDC706;
+    width: 0%;
+    height: 10%;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+/* JOGOS */
+.jogos {
+    display: flex;
+    height: 30%;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+#jogostexto {
+    display: flex;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+}
+
+#jogoslinha {
+    display: flex;
+    opacity: 0;
+    background-color: #FDC706;
+    width: 0%;
+    height: 10%;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+/* Serie */
+.serie {
+    display: flex;
+    height: 30%;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+#serietexto {
+    display: flex;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Faça Login */
+.login {
+    display: none;
+    height: 30%;
+    width: 7%;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #FDC706;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+}
+
+#logintexto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 300;
+}
+
+/* Cadastro */
+.cadastrar {
+    display: none;
+    height: 30%;
+    width: 9%;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1%;
+}
+
+#naoTem {
+    display: flex;
+    color: #FDC706;
+    font-size: 0.5vmax;
+    justify-content: center;
+    font-weight: 500;
+}
+
+#cadastrartexto {
+    display: flex;
+    color: white;
+    font-size: 0.8vmax;
+    font-weight: 700;
+    margin-top: -4%;
+    cursor: pointer;
+
+}
+
+/* QUANDO ESTIVER LOGADO: */
+.conta {
+    display: flex;
+    height: 30%;
+    width: 7%;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #493B33;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+}
+
+#contatexto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 300;
+}
+
+
+/* TITULO */
+.tituloJogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90%;
+    width: 100%;
+    align-items: center;
+}
+
+#numeroJogo {
+    display: flex;
+    color: white;
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2vmax;
+    width: 100%;
+    margin-top: 25%;
+    justify-content: center;
+}
+
+#nomeJogo {
+    display: flex;
+    color: white;
+    width: 100%;
+    font-family: "Press Gothic";
+    font-size: 8vmax;
+    margin-top: -1.5%;
+    justify-content: center;
+}
+
+#expandirIcon {
+    display: flex;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    font-size: 4vmax;
+}
+
+/* ELENCO */
+.elenco{
+    display: flex;
+    background-color: #222629;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#tituloElenco{
+    display: flex;
+    color: #899763;
+    width: 100%;
+    justify-content: center;
+    font-size: 1.4vmax;
+    font-weight: 700;
+    margin-top: 3%;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.cimaElenco{
+    display: flex;
+    width: 100%;
+    height: 35%;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.integranteElenco{
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 19%;
+    border-radius: 15px;
+}
+
+#elencoImagem{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    background-image: url(./assets/pedropascal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+
+#elencoAtor {
+    color: white;
+    z-index: 2;
+    font-family: 'Space Grotesk';
+    font-size: 1.5vmax;
+    font-weight: 900;
+    margin-top: 75%;
+    margin-left: 5%;
+}
+
+#elencoNome {
+    color: #899763;
+    z-index: 2;
+    margin-left: 5%;
+    font-family: 'Space Grotesk';
+}
+.elencoGradiente{
+    position: absolute;
+    width: 100%;
+    border-radius: 15px;
+    z-index: 2;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 43.75%, rgba(0, 0, 0, 0.54) 85.42%);
+}
+
+
+.baixoElenco{
+    display: flex;
+    width: 100%;
+    height: 35%;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+
+.episodios{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    flex-direction: column;
+    background-color: #31373C;
+    position: relative;
+}
+
+#episodioTitulo{
+    display: flex;
+    color: #899763;
+    width: 90%;
+    font-size: 1.4vmax;
+    font-weight: 700;
+    margin-top: 3%;
+    margin-left: 8.5%;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.episodioContainer{
+    position: relative;
+    max-width: 85%;
+    display: flex;
+    min-height: 60%;
+    margin-top: 1%;
+    margin-left: 7%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+#episodioVoltar{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    color: white;
+    font-size: 1.8vmax;
+    cursor: pointer;
+    top: 50%;
+    left: 5%;
+}
+
+#episodioVoltar:hover{
+    color: #899763;
+}
+
+#episodioProceder{
+    display: flex;
+    left: 93%;
+    top: 50%;
+    position: absolute;
+    align-items: center;
+    color: white;
+    font-size: 1.8vmax;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+#episodioProceder:hover{
+    color: #899763;
+}
+
+.episodioConteudo{
+    display: flex;
+    position: relative;
+    z-index: 2;
+    height: 95%;
+    min-width: 17%;
+    margin-left: 2%;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: height 0.25s ease;
+}
+
+.episodioConteudo:hover{
+    height: 98%
+}
+
+#episodioGradiente{
+    position: absolute;
+    width: 100%;
+    border-radius: 15px;
+    z-index: 2;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 43.75%, rgba(0, 0, 0, 0.54) 85.42%);
+}
+
+#episodioImagem{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    background-image: url(./assets/last-of-us-review-episode-1-1920x1024.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 45%;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+#episodioQual{
+    display: flex;
+    color: white;
+    z-index: 2;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2vmax;
+    margin-top: 78%;
+    flex-direction: row-reverse;
+    margin-right: 10%;
+    font-weight: 200;
+}
+
+.jsonEpisodios{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 65%;
+    background-color: #222629
+}
+
+#linha1 {
+    display: flex;
+    position: absolute;
+    left: 93%;
+    top: 30%;
+    width: 8%;
+    height: 0.5%;
+    transform: rotate(90deg);
+    background: linear-gradient(90deg, #86C232 50.69%, #474B4F 52%);
+}
+#linha2 {
+    display: flex;
+    position: absolute;
+    left: 3%;
+    top: 95%;
+    width: 8%;
+    height: 0.5%;
+    background: linear-gradient(90deg, #86C232 50.69%, #474B4F 52%);
+}
+
+
+#jsonEpisodiosImagem{
+    display: flex;
+    height: 75%;
+    margin-left: 3%;
+    width: 40%;
+    background-image: url(./assets/last-of-us-review-episode-1-1920x1024.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 45%;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+#jsonEpisodiosTextos{
+    display: flex;
+    margin-top: 5%;
+    height: 75%;
+    width: 50%;
+    flex-direction: column;
+}
+
+#jsonEpisodioTitulo{
+    display: flex;
+    color: #899763;
+    width: 90%;
+    font-size: 2.8vmax;
+    font-weight: 700;
+    margin-left: 3%;
+    margin-top: 2%;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+#jsonEpisodioResumo{
+    display: flex;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+    width: 100%;
+    margin-left: 3%;
+    font-size: 1vmax;
+    line-height: 35px;
+}
+
+.footer {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 8vh;
+    background-color: #354534;
+    justify-content: center;
+    align-items: center;
+}
+
+#footerTexto {
+    display: flex;
+    color: white;
+    font-family: 'Space Grotesk';
+    font-size: 0.9vmax;
+    text-align: center;
+}

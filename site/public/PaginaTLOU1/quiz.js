@@ -1,5 +1,5 @@
 /* QUIZ */
-ellieResposta = {
+ellie = {
     pergunta: 'VOCÊ ESCOLHEU A ELLIE, POIS:',
     opcao1: 'ELA É DETERMINADA',
     opcao2: 'ELA É CORAJOSA',
@@ -10,7 +10,7 @@ ellieResposta = {
     implacavel: 0,
     carinhosa: 0
 }
-joelResposta = {
+joel = {
     pergunta: 'VOCÊ ESCOLHEU O JOEL, POIS:',
     opcao1: 'ELE É PROTETOR',
     opcao2: 'ELE TEM CARISMA',
@@ -22,7 +22,7 @@ joelResposta = {
     carinhosa: 0
 }
 
-tessResposta = {
+tess = {
     pergunta: 'VOCÊ ESCOLHEU A TESS, POIS:',
     opcao1: 'ELA É INTELIGENTE',
     opcao2: 'ELA É LEAL',
@@ -34,7 +34,7 @@ tessResposta = {
     carinhosa: 0
 }
 
-rileyResposta = {
+riley = {
     pergunta: 'VOCÊ ESCOLHEU A RILEY, POIS:',
     opcao1: 'ELA É AVENTUREIRA',
     opcao2: 'ELA TEM CARISMA',
@@ -58,6 +58,7 @@ const tessGrafico = document.getElementById("tessGrafico")
 const rileyGrafico = document.getElementById("rileyGrafico")
 const todosGrafico = document.getElementById("todosGrafico")
 let etapaAtual = 0;
+let personagemFavorito = 0
 
 function atualizarOpcoes(opcao) {
     quiz[0].querySelector('#perguntaQuiz').innerHTML = `${opcao.pergunta}`
@@ -68,703 +69,466 @@ function atualizarOpcoes(opcao) {
 }
 
 opcaoQuiz[0].addEventListener("click", function () {
-    if (etapaAtual == 'ellie') {
-        ellieResposta.destemida++
-        enviarEllie(function () {
+    if (personagemFavorito == 'ellie') {
+        ellie.destemida++
+        enviarDados(function () {
             setTimeout(function () {
-               exibirEllie(function () {
-                  setTimeout(function () {
-                     blocoQuiz.style.display = "flex";
-                     botaoGeral.style.display = 'flex'
-                     conteudoDoQuiz.style.display = 'none';
-                     ellieGrafico.style.display = 'flex';
-                     joelGrafico.style.display = 'none';
-                     tessGrafico.style.display = 'none';
-                     rileyGrafico.style.display = 'none';
-                     todosGrafico.style.display = 'none';
-                    
-                  }, 500);
-               });
+                exibirDados(function () {
+                    setTimeout(function () {
+                        blocoQuiz.style.display = "flex";
+                        botaoGeral.style.display = 'flex'
+                        conteudoDoQuiz.style.display = 'none';
+                        ellieGrafico.style.display = 'flex';
+                        joelGrafico.style.display = 'none';
+                        tessGrafico.style.display = 'none';
+                        rileyGrafico.style.display = 'none';
+                        todosGrafico.style.display = 'none';
+                    }, 500);
+                });
             }, 500);
-         });
-    } else if (etapaAtual == 'joel'){
-        joelResposta.destemida++
-         enviarJoel(function () {
+        });
+    } else if (personagemFavorito == 'joel') {
+        joel.destemida++
+        enviarDados(function () {
             setTimeout(function () {
-               exibirJoel(function () {
-                  setTimeout(function () {
-                     blocoQuiz.style.display = "flex";
-                     botaoGeral.style.display = 'flex'
-                     conteudoDoQuiz.style.display = 'none';
-                     ellieGrafico.style.display = 'none';
-                     joelGrafico.style.display = 'flex';
-                     tessGrafico.style.display = 'none';
-                     rileyGrafico.style.display = 'none';
-                     todosGrafico.style.display = 'none';
-                  }, 500);
-               });
+                exibirDados(function () {
+                    setTimeout(function () {
+                        blocoQuiz.style.display = "flex";
+                        botaoGeral.style.display = 'flex'
+                        conteudoDoQuiz.style.display = 'none';
+                        ellieGrafico.style.display = 'none';
+                        joelGrafico.style.display = 'flex';
+                        tessGrafico.style.display = 'none';
+                        rileyGrafico.style.display = 'none';
+                        todosGrafico.style.display = 'none';
+                    }, 500);
+                });
             }, 500);
-         });
+        });
 
-    } else if (etapaAtual == 'tess'){
-        tessResposta.destemida++
-        enviarTess(function () {
+    } else if (personagemFavorito == 'tess') {
+        tess.destemida++
+        enviarDados(function () {
             setTimeout(function () {
-               exibirTess(function () {
-                  setTimeout(function () {
-                     blocoQuiz.style.display = "flex";
-                     botaoGeral.style.display = 'flex'
-                     conteudoDoQuiz.style.display = 'none';
-                     ellieGrafico.style.display = 'none';
-                     joelGrafico.style.display = 'none';
-                     tessGrafico.style.display = 'flex';
-                     rileyGrafico.style.display = 'none';
-                     todosGrafico.style.display = 'none';
-                  }, 500);
-               });
+                exibirDados(function () {
+                    setTimeout(function () {
+                        blocoQuiz.style.display = "flex";
+                        botaoGeral.style.display = 'flex'
+                        conteudoDoQuiz.style.display = 'none';
+                        ellieGrafico.style.display = 'none';
+                        joelGrafico.style.display = 'none';
+                        tessGrafico.style.display = 'flex';
+                        rileyGrafico.style.display = 'none';
+                        todosGrafico.style.display = 'none';
+                    }, 500);
+                });
             }, 500);
-         });
-    } else if (etapaAtual == 'riley'){
-        rileyResposta.destemida++
-        enviarRiley(function () {
+        });
+    } else if (personagemFavorito == 'riley') {
+        riley.destemida++
+        enviarDados(function () {
             setTimeout(function () {
-               exibirRiley(function () {
-                  setTimeout(function () {
-                     blocoQuiz.style.display = "flex";
-                     botaoGeral.style.display = 'flex'
-                     conteudoDoQuiz.style.display = 'none';
-                     ellieGrafico.style.display = 'none';
-                     joelGrafico.style.display = 'none';
-                     tessGrafico.style.display = 'none';
-                     rileyGrafico.style.display = 'flex';
-                     todosGrafico.style.display = 'none';
-                  }, 500);
-               });
+                exibirDados(function () {
+                    setTimeout(function () {
+                        blocoQuiz.style.display = "flex";
+                        botaoGeral.style.display = 'flex'
+                        conteudoDoQuiz.style.display = 'none';
+                        ellieGrafico.style.display = 'none';
+                        joelGrafico.style.display = 'none';
+                        tessGrafico.style.display = 'none';
+                        rileyGrafico.style.display = 'flex';
+                        todosGrafico.style.display = 'none';
+                    }, 500);
+                });
             }, 500);
-         });
+        });
     } else {
-        atualizarOpcoes(ellieResposta)
-        etapaAtual = 'ellie'
+        atualizarOpcoes(ellie)
+        etapaAtual = ellie
+        personagemFavorito = 'ellie'
     }
 }),
 
-opcaoQuiz[1].addEventListener("click", function () {
-        if (etapaAtual == 'ellie') {
-            ellieResposta.carisma++
-            enviarEllie(function () {
+    opcaoQuiz[1].addEventListener("click", function () {
+        if (personagemFavorito == 'ellie') {
+            ellie.carisma++
+            enviarDados(function () {
                 setTimeout(function () {
-                   exibirEllie(function () {
-                      setTimeout(function () {
-                         blocoQuiz.style.display = "flex";
-                         botaoGeral.style.display = 'flex'
-                         conteudoDoQuiz.style.display = 'none';
-                         ellieGrafico.style.display = 'flex';
-                         joelGrafico.style.display = 'none';
-                         tessGrafico.style.display = 'none';
-                         rileyGrafico.style.display = 'none';
-                         todosGrafico.style.display = 'none';
-                      }, 500);
-                   });
+                    exibirDados(function () {
+                        setTimeout(function () {
+                            blocoQuiz.style.display = "flex";
+                            botaoGeral.style.display = 'flex'
+                            conteudoDoQuiz.style.display = 'none';
+                            ellieGrafico.style.display = 'flex';
+                            joelGrafico.style.display = 'none';
+                            tessGrafico.style.display = 'none';
+                            rileyGrafico.style.display = 'none';
+                            todosGrafico.style.display = 'none';
+                        }, 500);
+                    });
                 }, 500);
-             });
+            });
 
 
-        } else if (etapaAtual == 'joel'){
-            joelResposta.carisma++
-            enviarJoel(function () {
+        } else if (personagemFavorito == 'joel') {
+            joel.carisma++
+            enviarDados(function () {
                 setTimeout(function () {
-                   exibirJoel(function () {
-                      setTimeout(function () {
-                         blocoQuiz.style.display = "flex";
-                         botaoGeral.style.display = 'flex'
-                         conteudoDoQuiz.style.display = 'none';
-                         ellieGrafico.style.display = 'none';
-                         joelGrafico.style.display = 'flex';
-                         tessGrafico.style.display = 'none';
-                         rileyGrafico.style.display = 'none';
-                         todosGrafico.style.display = 'none';
-                      }, 500);
-                   });
+                    exibirDados(function () {
+                        setTimeout(function () {
+                            blocoQuiz.style.display = "flex";
+                            botaoGeral.style.display = 'flex'
+                            conteudoDoQuiz.style.display = 'none';
+                            ellieGrafico.style.display = 'none';
+                            joelGrafico.style.display = 'flex';
+                            tessGrafico.style.display = 'none';
+                            rileyGrafico.style.display = 'none';
+                            todosGrafico.style.display = 'none';
+                        }, 500);
+                    });
                 }, 500);
-             });
+            });
 
-        } else if (etapaAtual == 'tess'){
-            tessResposta.carisma++
-            enviarTess(function () {
+        } else if (personagemFavorito == 'tess') {
+            tess.carisma++
+            enviarDados(function () {
                 setTimeout(function () {
-                   exibirTess(function () {
-                      setTimeout(function () {
-                         blocoQuiz.style.display = "flex";
-                         botaoGeral.style.display = 'flex'
-                         conteudoDoQuiz.style.display = 'none';
-                         ellieGrafico.style.display = 'none';
-                         joelGrafico.style.display = 'none';
-                         tessGrafico.style.display = 'flex';
-                         rileyGrafico.style.display = 'none';
-                         todosGrafico.style.display = 'none';
-                      }, 500);
-                   });
+                    exibirDados(function () {
+                        setTimeout(function () {
+                            blocoQuiz.style.display = "flex";
+                            botaoGeral.style.display = 'flex'
+                            conteudoDoQuiz.style.display = 'none';
+                            ellieGrafico.style.display = 'none';
+                            joelGrafico.style.display = 'none';
+                            tessGrafico.style.display = 'flex';
+                            rileyGrafico.style.display = 'none';
+                            todosGrafico.style.display = 'none';
+                        }, 500);
+                    });
                 }, 500);
-             });
-        } else if (etapaAtual == 'riley'){
-            rileyResposta.carisma++
-            enviarRiley(function () {
+            });
+        } else if (personagemFavorito == 'riley') {
+            riley.carisma++
+            enviarDados(function () {
                 setTimeout(function () {
-                   exibirRiley(function () {
-                      setTimeout(function () {
-                         blocoQuiz.style.display = "flex";
-                         botaoGeral.style.display = 'flex'
-                         conteudoDoQuiz.style.display = 'none';
-                         ellieGrafico.style.display = 'none';
-                         joelGrafico.style.display = 'none';
-                         tessGrafico.style.display = 'none';
-                         rileyGrafico.style.display = 'flex';
-                         todosGrafico.style.display = 'none';
-                      }, 500);
-                   });
+                    exibirDados(function () {
+                        setTimeout(function () {
+                            blocoQuiz.style.display = "flex";
+                            botaoGeral.style.display = 'flex'
+                            conteudoDoQuiz.style.display = 'none';
+                            ellieGrafico.style.display = 'none';
+                            joelGrafico.style.display = 'none';
+                            tessGrafico.style.display = 'none';
+                            rileyGrafico.style.display = 'flex';
+                            todosGrafico.style.display = 'none';
+                        }, 500);
+                    });
                 }, 500);
-             });
+            });
 
-        }  
+        }
         else {
-            atualizarOpcoes(joelResposta)
-            etapaAtual = 'joel'
+            atualizarOpcoes(joel)
+            etapaAtual = joel
+            personagemFavorito = 'joel'
         }
     }),
 
-opcaoQuiz[2].addEventListener("click", function () {
-        if (etapaAtual == 'ellie') {
-            ellieResposta.implacavel++
-            enviarEllie(function () {
+    opcaoQuiz[2].addEventListener("click", function () {
+        if (personagemFavorito == 'ellie') {
+            ellie.implacavel++
+            enviarDados(function () {
                 setTimeout(function () {
-                   exibirEllie(function () {
-                      setTimeout(function () {
-                         blocoQuiz.style.display = "flex";
-                         botaoGeral.style.display = 'flex'
-                         conteudoDoQuiz.style.display = 'none';
-                         ellieGrafico.style.display = 'flex';
-                         joelGrafico.style.display = 'none';
-                         tessGrafico.style.display = 'none';
-                         rileyGrafico.style.display = 'none';
-                         todosGrafico.style.display = 'none';
-                      }, 500);
-                   });
+                    exibirDados(function () {
+                        setTimeout(function () {
+                            blocoQuiz.style.display = "flex";
+                            botaoGeral.style.display = 'flex'
+                            conteudoDoQuiz.style.display = 'none';
+                            ellieGrafico.style.display = 'flex';
+                            joelGrafico.style.display = 'none';
+                            tessGrafico.style.display = 'none';
+                            rileyGrafico.style.display = 'none';
+                            todosGrafico.style.display = 'none';
+                        }, 500);
+                    });
                 }, 500);
-             });
+            });
 
-        } else if (etapaAtual == 'joel'){
-            joelResposta.implacavel++
-            enviarJoel(function () {
+        } else if (personagemFavorito == 'joel') {
+            joel.implacavel++
+            enviarDados(function () {
                 setTimeout(function () {
-                   exibirJoel(function () {
-                      setTimeout(function () {
-                         blocoQuiz.style.display = "flex";
-                         botaoGeral.style.display = 'flex'
-                         conteudoDoQuiz.style.display = 'none';
-                         ellieGrafico.style.display = 'none';
-                         joelGrafico.style.display = 'flex';
-                         tessGrafico.style.display = 'none';
-                         rileyGrafico.style.display = 'none';
-                         todosGrafico.style.display = 'none';
-                      }, 500);
-                   });
+                    exibirDados(function () {
+                        setTimeout(function () {
+                            blocoQuiz.style.display = "flex";
+                            botaoGeral.style.display = 'flex'
+                            conteudoDoQuiz.style.display = 'none';
+                            ellieGrafico.style.display = 'none';
+                            joelGrafico.style.display = 'flex';
+                            tessGrafico.style.display = 'none';
+                            rileyGrafico.style.display = 'none';
+                            todosGrafico.style.display = 'none';
+                        }, 500);
+                    });
                 }, 500);
-             });
+            });
 
-        } else if (etapaAtual == 'tess'){
-            tessResposta.implacavel++
-            enviarTess(function () {
+        } else if (personagemFavorito == 'tess') {
+            tess.implacavel++
+            enviarDados(function () {
                 setTimeout(function () {
-                   exibirTess(function () {
-                      setTimeout(function () {
-                         blocoQuiz.style.display = "flex";
-                         botaoGeral.style.display = 'flex'
-                         conteudoDoQuiz.style.display = 'none';
-                         ellieGrafico.style.display = 'none';
-                         joelGrafico.style.display = 'none';
-                         tessGrafico.style.display = 'flex';
-                         rileyGrafico.style.display = 'none';
-                         todosGrafico.style.display = 'none';
-                      }, 500);
-                   });
+                    exibirDados(function () {
+                        setTimeout(function () {
+                            blocoQuiz.style.display = "flex";
+                            botaoGeral.style.display = 'flex'
+                            conteudoDoQuiz.style.display = 'none';
+                            ellieGrafico.style.display = 'none';
+                            joelGrafico.style.display = 'none';
+                            tessGrafico.style.display = 'flex';
+                            rileyGrafico.style.display = 'none';
+                            todosGrafico.style.display = 'none';
+                        }, 500);
+                    });
                 }, 500);
-             });
-        } else if (etapaAtual == 'riley'){
-            rileyResposta.implacavel++
-           enviarRiley(function () {
-            setTimeout(function () {
-               exibirRiley(function () {
-                  setTimeout(function () {
-                     blocoQuiz.style.display = "flex";
-                     botaoGeral.style.display = 'flex'
-                     conteudoDoQuiz.style.display = 'none';
-                     ellieGrafico.style.display = 'none';
-                     joelGrafico.style.display = 'none';
-                     tessGrafico.style.display = 'none';
-                     rileyGrafico.style.display = 'flex';
-                     todosGrafico.style.display = 'none';
-                  }, 500);
-               });
-            }, 500);
-         });
+            });
+        } else if (personagemFavorito == 'riley') {
+            riley.implacavel++
+            enviarDados(function () {
+                setTimeout(function () {
+                    exibirDados(function () {
+                        setTimeout(function () {
+                            blocoQuiz.style.display = "flex";
+                            botaoGeral.style.display = 'flex'
+                            conteudoDoQuiz.style.display = 'none';
+                            ellieGrafico.style.display = 'none';
+                            joelGrafico.style.display = 'none';
+                            tessGrafico.style.display = 'none';
+                            rileyGrafico.style.display = 'flex';
+                            todosGrafico.style.display = 'none';
+                        }, 500);
+                    });
+                }, 500);
+            });
         } else {
-                atualizarOpcoes(tessResposta)
-                etapaAtual = 'tess'
-            }
+            atualizarOpcoes(tess)
+            etapaAtual = tess
+            personagemFavorito = 'tess'
+        }
     }),
 
-opcaoQuiz[3].addEventListener("click", function () {
-        if (etapaAtual == 'ellie') {
-            ellieResposta.carinhosa++
-            enviarEllie(function () {
-            setTimeout(function () {
-               exibirEllie(function () {
-                  setTimeout(function () {
-                     blocoQuiz.style.display = "flex";
-                     botaoGeral.style.display = 'flex'
-                     conteudoDoQuiz.style.display = 'none';
-                     ellieGrafico.style.display = 'flex';
-                     joelGrafico.style.display = 'none';
-                     tessGrafico.style.display = 'none';
-                     rileyGrafico.style.display = 'none';
-                     todosGrafico.style.display = 'none';
-                  }, 500);
-               });
-            }, 500);
-         });
+    opcaoQuiz[3].addEventListener("click", function () {
+        if (personagemFavorito == 'ellie') {
+            ellie.carinhosa++
+            enviarDados(function () {
+                setTimeout(function () {
+                    exibirDados(function () {
+                        setTimeout(function () {
+                            blocoQuiz.style.display = "flex";
+                            botaoGeral.style.display = 'flex'
+                            conteudoDoQuiz.style.display = 'none';
+                            ellieGrafico.style.display = 'flex';
+                            joelGrafico.style.display = 'none';
+                            tessGrafico.style.display = 'none';
+                            rileyGrafico.style.display = 'none';
+                            todosGrafico.style.display = 'none';
+                        }, 500);
+                    });
+                }, 500);
+            });
 
-        } else if (etapaAtual == 'joel'){
-            joelResposta.carinhosa++
-            enviarJoel(function () {
+        } else if (personagemFavorito == 'joel') {
+            joel.carinhosa++
+            enviarDados(function () {
                 setTimeout(function () {
-                   exibirJoel(function () {
-                      setTimeout(function () {
-                         blocoQuiz.style.display = "flex";
-                         botaoGeral.style.display = 'flex'
-                         conteudoDoQuiz.style.display = 'none';
-                         ellieGrafico.style.display = 'none';
-                         joelGrafico.style.display = 'flex';
-                         tessGrafico.style.display = 'none';
-                         rileyGrafico.style.display = 'none';
-                         todosGrafico.style.display = 'none';
-                      }, 500);
-                   });
+                    exibirDados(function () {
+                        setTimeout(function () {
+                            blocoQuiz.style.display = "flex";
+                            botaoGeral.style.display = 'flex'
+                            conteudoDoQuiz.style.display = 'none';
+                            ellieGrafico.style.display = 'none';
+                            joelGrafico.style.display = 'flex';
+                            tessGrafico.style.display = 'none';
+                            rileyGrafico.style.display = 'none';
+                            todosGrafico.style.display = 'none';
+                        }, 500);
+                    });
                 }, 500);
-             });
+            });
 
-        } else if (etapaAtual == 'tess'){
-            tessResposta.carinhosa++
-            enviarTess(function () {
+        } else if (personagemFavorito == 'tess') {
+            tess.carinhosa++
+            enviarDados(function () {
                 setTimeout(function () {
-                   exibirTess(function () {
-                      setTimeout(function () {
-                         blocoQuiz.style.display = "flex";
-                         botaoGeral.style.display = 'flex';
-                         conteudoDoQuiz.style.display = 'none';
-                         ellieGrafico.style.display = 'none';
-                         joelGrafico.style.display = 'none';
-                         tessGrafico.style.display = 'flex';
-                         rileyGrafico.style.display = 'none';
-                         todosGrafico.style.display = 'none';
-                      }, 500);
-                   });
+                    exibirDados(function () {
+                        setTimeout(function () {
+                            blocoQuiz.style.display = "flex";
+                            botaoGeral.style.display = 'flex';
+                            conteudoDoQuiz.style.display = 'none';
+                            ellieGrafico.style.display = 'none';
+                            joelGrafico.style.display = 'none';
+                            tessGrafico.style.display = 'flex';
+                            rileyGrafico.style.display = 'none';
+                            todosGrafico.style.display = 'none';
+                        }, 500);
+                    });
                 }, 500);
-             });
-        } else if (etapaAtual == 'riley'){
-            rileyResposta.carinhosa++
-            enviarRiley(function () {
+            });
+        } else if (personagemFavorito == 'riley') {
+            riley.carinhosa++
+            enviarDados(function () {
                 setTimeout(function () {
-                   exibirRiley(function () {
-                      setTimeout(function () {
-                         blocoQuiz.style.display = "flex";
-                         botaoGeral.style.display = 'flex';
-                         conteudoDoQuiz.style.display = 'none';
-                         ellieGrafico.style.display = 'none';
-                         joelGrafico.style.display = 'none';
-                         tessGrafico.style.display = 'none';
-                         rileyGrafico.style.display = 'flex';
-                         todosGrafico.style.display = 'none';
-                      }, 500);
-                   });
+                    exibirDados(function () {
+                        setTimeout(function () {
+                            blocoQuiz.style.display = "flex";
+                            botaoGeral.style.display = 'flex';
+                            conteudoDoQuiz.style.display = 'none';
+                            ellieGrafico.style.display = 'none';
+                            joelGrafico.style.display = 'none';
+                            tessGrafico.style.display = 'none';
+                            rileyGrafico.style.display = 'flex';
+                            todosGrafico.style.display = 'none';
+                        }, 500);
+                    });
                 }, 500);
-             });
-        } else{
-                atualizarOpcoes(rileyResposta)
-                etapaAtual = 'riley'
-            }
+            });
+        } else {
+            atualizarOpcoes(riley)
+            etapaAtual = riley
+            personagemFavorito = 'riley'
+        }
     });
 
 
-botaoGeral.addEventListener("click", function(){
-           receberTudo(function () {
-              setTimeout(function () {
-                 blocoQuiz.style.display = "flex";
-                 botaoGeral.style.display = 'none';
-                 conteudoDoQuiz.style.display = 'none';
-                 ellieGrafico.style.display = 'none';
-                 joelGrafico.style.display = 'none';
-                 tessGrafico.style.display = 'none';
-                 rileyGrafico.style.display = 'none';
-                 todosGrafico.style.display = 'flex';
-                 grafico_tudo1.update()
-              }, 1000);
-           });
+botaoGeral.addEventListener("click", function () {
+    receberTudo(function () {
+        setTimeout(function () {
+            blocoQuiz.style.display = "flex";
+            botaoGeral.style.display = 'none';
+            conteudoDoQuiz.style.display = 'none';
+            ellieGrafico.style.display = 'none';
+            joelGrafico.style.display = 'none';
+            tessGrafico.style.display = 'none';
+            rileyGrafico.style.display = 'none';
+            todosGrafico.style.display = 'flex';
+            grafico_tudo1.update()
+        }, 1000);
+    });
 })
-    
 
-// Fetch da ELLIE
-function enviarEllie (callback){
-    fetch("/usuarios/ellie", {
+
+// Fetch para Enviar Dados
+function enviarDados(callback) {
+    fetch("/usuarios/enviarDados", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            opcao1Server: ellieResposta.destemida,
-            opcao2Server: ellieResposta.carisma,
-            opcao3Server: ellieResposta.implacavel,
-            opcao4Server: ellieResposta.carinhosa,
-            idServer: sessionStorage.ID_USUARIO
+            opcao1Server: etapaAtual["destemida"],
+            opcao2Server: etapaAtual["carisma"],
+            opcao3Server: etapaAtual["implacavel"],
+            opcao4Server: etapaAtual["carinhosa"],
+            idServer: sessionStorage.ID_USUARIO,
+            personagemFavoritoServer: personagemFavorito
         })
     })
 
-    .then(function (resposta) {         
-        console.log("ESTOU NO THEN DO Ellie()!")
+        .then(function (resposta) {
+            console.log("ESTOU NO THEN DO Ellie()!")
 
-        if (resposta.ok) {
-            console.log(resposta);
+            if (resposta.ok) {
+                console.log(resposta);
 
-            resposta.json().then(json => {
-                console.log(json);
-                console.log(JSON.stringify(json));
-
-
-            });
-
-        } else {
-
-            console.log("Houve um erro ao tentar enviar o grafico dados!");
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
 
 
+                });
 
-            resposta.text().then(texto => {
-                console.error(texto);
-            });
-        }
+            } else {
 
-    }).catch(function (erro) {
-        console.log(erro);
-    })
+                console.log("Houve um erro ao tentar enviar o grafico dados!");
+
+
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
     callback()
     return false;
 }
 
-// Fetch da ELLIE (exibir)
-function exibirEllie (callback){
-    fetch("/usuarios/exibirEllie", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-
-    .then(function (resposta) {         
-        console.log("ESTOU NO THEN DO Ellie()!")
-
-        if (resposta.ok) {
-            console.log(resposta);
-
-            resposta.json().then(json => {
-                console.log(json);
-                console.log(JSON.stringify(json));
-                ellieVetor[0] = json[0].Opcao1
-                ellieVetor[1] = json[0].Opcao2
-                ellieVetor[2] = json[0].Opcao3
-                ellieVetor[3] = json[0].Opcao4
-            });
-
-        } else {
-
-            console.log("Houve um erro ao tentar enviar o grafico dados!");
-
-
-
-            resposta.text().then(texto => {
-                console.error(texto);
-            });
-        }
-
-    }).catch(function (erro) {
-        console.log(erro);
-    })
-    callback()
-    return false;
-}
-
-// FETCH DO JOEL
-function enviarJoel (callback){
-    fetch("/usuarios/joel", {
+// Fetch para Exibir Dados
+function exibirDados(callback) {
+    fetch("/usuarios/exibirDados", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            opcao1Server: joelResposta.destemida,
-            opcao2Server: joelResposta.carisma,
-            opcao3Server: joelResposta.implacavel,
-            opcao4Server: joelResposta.carinhosa,
-            idServer: sessionStorage.ID_USUARIO
+            personagemFavoritoServer: personagemFavorito
         })
     })
 
-    .then(function (resposta) {         
-        console.log("ESTOU NO THEN DO Ellie()!")
+        .then(function (resposta) {
+            console.log("ESTOU NO THEN DO Ellie()!")
 
-        if (resposta.ok) {
-            console.log(resposta);
+            if (resposta.ok) {
+                console.log(resposta);
 
-            resposta.json().then(json => {
-                console.log(json);
-                console.log(JSON.stringify(json));
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
 
-            });
+                    if (personagemFavorito == "ellie") {
+                        ellieVetor[0] = json[0].Opcao1
+                        ellieVetor[1] = json[0].Opcao2
+                        ellieVetor[2] = json[0].Opcao3
+                        ellieVetor[3] = json[0].Opcao4
+                    } else if (personagemFavorito == "joel") {
+                        joelVetor[0] = json[0].Opcao1
+                        joelVetor[1] = json[0].Opcao2
+                        joelVetor[2] = json[0].Opcao3
+                        joelVetor[3] = json[0].Opcao4
+                    } else if (personagemFavorito == "tess") {
+                        tessVetor[0] = json[0].Opcao1
+                        tessVetor[1] = json[0].Opcao2
+                        tessVetor[2] = json[0].Opcao3
+                        tessVetor[3] = json[0].Opcao4
+                    } else if (personagemFavorito == "riley") {
+                        rileyVetor[0] = json[0].Opcao1
+                        rileyVetor[1] = json[0].Opcao2
+                        rileyVetor[2] = json[0].Opcao3
+                        rileyVetor[3] = json[0].Opcao4
+                    }
+                });
 
-        } else {
+            } else {
 
-            console.log("Houve um erro ao tentar enviar o grafico dados!");
-
-
-
-            resposta.text().then(texto => {
-                console.error(texto);
-            });
-        }
-
-    }).catch(function (erro) {
-        console.log(erro);
-    })
-    callback()
-    return false;
-}
-// Fetch da ELLIE (exibir)
-function exibirJoel (callback){
-    fetch("/usuarios/exibirJoel", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-
-    .then(function (resposta) {         
-        console.log("ESTOU NO THEN DO Ellie()!")
-
-        if (resposta.ok) {
-            console.log(resposta);
-
-            resposta.json().then(json => {
-                console.log(json);
-                console.log(JSON.stringify(json));
-                joelVetor[0] = json[0].Opcao1
-                joelVetor[1] = json[0].Opcao2
-                joelVetor[2] = json[0].Opcao3
-                joelVetor[3] = json[0].Opcao4
-            });
-
-        } else {
-
-            console.log("Houve um erro ao tentar enviar o grafico dados!");
+                console.log("Houve um erro ao tentar enviar o grafico dados!");
 
 
 
-            resposta.text().then(texto => {
-                console.error(texto);
-            });
-        }
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
 
-    }).catch(function (erro) {
-        console.log(erro);
-    })
-    callback()
-    return false;
-}
-
-// FETCH DA TESS
-function enviarTess (callback){
-    fetch("/usuarios/tess", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            opcao1Server: tessResposta.destemida,
-            opcao2Server: tessResposta.carisma,
-            opcao3Server: tessResposta.implacavel,
-            opcao4Server: tessResposta.carinhosa,
-            idServer: sessionStorage.ID_USUARIO
+        }).catch(function (erro) {
+            console.log(erro);
         })
-    })
-
-    .then(function (resposta) {         
-        console.log("ESTOU NO THEN DO Ellie()!")
-
-        if (resposta.ok) {
-            console.log(resposta);
-
-            resposta.json().then(json => {
-                console.log(json);
-                console.log(JSON.stringify(json));
-
-            });
-
-        } else {
-
-            console.log("Houve um erro ao tentar enviar o grafico dados!");
-
-
-
-            resposta.text().then(texto => {
-                console.error(texto);
-            });
-        }
-
-    }).catch(function (erro) {
-        console.log(erro);
-    })
-    callback()
-    return false;
-   
-}
-
-function exibirTess (callback){
-    fetch("/usuarios/exibirTess", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-
-    .then(function (resposta) {         
-        console.log("ESTOU NO THEN DO Ellie()!")
-
-        if (resposta.ok) {
-            console.log(resposta);
-
-            resposta.json().then(json => {
-                console.log(json);
-                console.log(JSON.stringify(json));
-                tessVetor[0] = json[0].Opcao1
-                tessVetor[1] = json[0].Opcao2
-                tessVetor[2] = json[0].Opcao3
-                tessVetor[3] = json[0].Opcao4
-            });
-
-        } else {
-
-            console.log("Houve um erro ao tentar enviar o grafico dados!");
-
-
-
-            resposta.text().then(texto => {
-                console.error(texto);
-            });
-        }
-
-    }).catch(function (erro) {
-        console.log(erro);
-    })
-    callback()
-    return false;
-}
-
-// FETCH DA RILEY
-function enviarRiley (callback){
-    fetch("/usuarios/riley", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            opcao1Server: rileyResposta.destemida,
-            opcao2Server: rileyResposta.carisma,
-            opcao3Server: rileyResposta.implacavel,
-            opcao4Server: rileyResposta.carinhosa,
-            idServer: sessionStorage.ID_USUARIO
-        })
-    })
-
-    .then(function (resposta) {         
-        console.log("ESTOU NO THEN DO Ellie()!")
-
-        if (resposta.ok) {
-            console.log(resposta);
-
-            resposta.json().then(json => {
-                console.log(json);
-                console.log(JSON.stringify(json));
-
-            });
-
-        } else {
-
-            console.log("Houve um erro ao tentar enviar o grafico dados!");
-
-
-
-            resposta.text().then(texto => {
-                console.error(texto);
-            });
-        }
-
-    }).catch(function (erro) {
-        console.log(erro);
-    })
-    callback()
-    return false;
-}
-
-function exibirRiley (callback){
-    fetch("/usuarios/exibirRiley", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-
-    .then(function (resposta) {         
-        console.log("ESTOU NO THEN DO Ellie()!")
-
-        if (resposta.ok) {
-            console.log(resposta);
-
-            resposta.json().then(json => {
-                console.log(json);
-                console.log(JSON.stringify(json));
-              rileyVetor[0] = json[0].Opcao1
-              rileyVetor[1] = json[0].Opcao2
-              rileyVetor[2] = json[0].Opcao3
-              rileyVetor[3] = json[0].Opcao4
-            });
-
-        } else {
-
-            console.log("Houve um erro ao tentar enviar o grafico dados!");
-
-
-
-            resposta.text().then(texto => {
-                console.error(texto);
-            });
-        }
-
-    }).catch(function (erro) {
-        console.log(erro);
-    })
     callback()
     return false;
 }
 
 // FETCH da Votação Geral
-function receberTudo (callback){
+function receberTudo(callback) {
     fetch("/usuarios/receberTudo", {
         method: "POST",
         headers: {
@@ -772,35 +536,298 @@ function receberTudo (callback){
         }
     })
 
-    .then(function (resposta) {         
-        console.log("ESTOU NO THEN DO Ellie()!")
+        .then(function (resposta) {
+            console.log("ESTOU NO THEN DO Ellie()!")
 
-        if (resposta.ok) {
-            console.log(resposta);
+            if (resposta.ok) {
+                console.log(resposta);
 
-            resposta.json().then(json => {
-                console.log(json);
-                console.log(JSON.stringify(json));
-              todosVetor[0] = json[0].Ellie
-              todosVetor[1] = json[0].Joel
-              todosVetor[2] = json[0].Tess
-              todosVetor[3] = json[0].Riley
-            });
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    todosVetor[0] = json[0].Ellie
+                    todosVetor[1] = json[0].Joel
+                    todosVetor[2] = json[0].Tess
+                    todosVetor[3] = json[0].Riley
+                });
 
-        } else {
+            } else {
 
-            console.log("Houve um erro ao tentar enviar o grafico dados!");
+                console.log("Houve um erro ao tentar enviar o grafico dados!");
 
 
 
-            resposta.text().then(texto => {
-                console.error(texto);
-            });
-        }
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
 
-    }).catch(function (erro) {
-        console.log(erro);
-    })
+        }).catch(function (erro) {
+            console.log(erro);
+        })
     callback()
     return false;
 }
+
+// // FETCH DO JOEL
+// function enviarJoel(callback) {
+//     fetch("/usuarios/joel", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify({
+//             opcao1Server: joelResposta.destemida,
+//             opcao2Server: joelResposta.carisma,
+//             opcao3Server: joelResposta.implacavel,
+//             opcao4Server: joelResposta.carinhosa,
+//             idServer: sessionStorage.ID_USUARIO
+//         })
+//     })
+
+//         .then(function (resposta) {
+//             console.log("ESTOU NO THEN DO Ellie()!")
+
+//             if (resposta.ok) {
+//                 console.log(resposta);
+
+//                 resposta.json().then(json => {
+//                     console.log(json);
+//                     console.log(JSON.stringify(json));
+
+//                 });
+
+//             } else {
+
+//                 console.log("Houve um erro ao tentar enviar o grafico dados!");
+
+
+
+//                 resposta.text().then(texto => {
+//                     console.error(texto);
+//                 });
+//             }
+
+//         }).catch(function (erro) {
+//             console.log(erro);
+//         })
+//     callback()
+//     return false;
+// }
+// // Fetch da ELLIE (exibir)
+// function exibirJoel(callback) {
+//     fetch("/usuarios/exibirJoel", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         }
+//     })
+
+//         .then(function (resposta) {
+//             console.log("ESTOU NO THEN DO Ellie()!")
+
+//             if (resposta.ok) {
+//                 console.log(resposta);
+
+//                 resposta.json().then(json => {
+//                     console.log(json);
+//                     console.log(JSON.stringify(json));
+//                     joelVetor[0] = json[0].Opcao1
+//                     joelVetor[1] = json[0].Opcao2
+//                     joelVetor[2] = json[0].Opcao3
+//                     joelVetor[3] = json[0].Opcao4
+//                 });
+
+//             } else {
+
+//                 console.log("Houve um erro ao tentar enviar o grafico dados!");
+
+
+
+//                 resposta.text().then(texto => {
+//                     console.error(texto);
+//                 });
+//             }
+
+//         }).catch(function (erro) {
+//             console.log(erro);
+//         })
+//     callback()
+//     return false;
+// }
+
+// // FETCH DA TESS
+// function enviarTess(callback) {
+//     fetch("/usuarios/tess", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify({
+//             opcao1Server: tessResposta.destemida,
+//             opcao2Server: tessResposta.carisma,
+//             opcao3Server: tessResposta.implacavel,
+//             opcao4Server: tessResposta.carinhosa,
+//             idServer: sessionStorage.ID_USUARIO
+//         })
+//     })
+
+//         .then(function (resposta) {
+//             console.log("ESTOU NO THEN DO Ellie()!")
+
+//             if (resposta.ok) {
+//                 console.log(resposta);
+
+//                 resposta.json().then(json => {
+//                     console.log(json);
+//                     console.log(JSON.stringify(json));
+
+//                 });
+
+//             } else {
+
+//                 console.log("Houve um erro ao tentar enviar o grafico dados!");
+
+
+
+//                 resposta.text().then(texto => {
+//                     console.error(texto);
+//                 });
+//             }
+
+//         }).catch(function (erro) {
+//             console.log(erro);
+//         })
+//     callback()
+//     return false;
+
+// }
+
+// function exibirTess(callback) {
+//     fetch("/usuarios/exibirTess", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         }
+//     })
+
+//         .then(function (resposta) {
+//             console.log("ESTOU NO THEN DO Ellie()!")
+
+//             if (resposta.ok) {
+//                 console.log(resposta);
+
+//                 resposta.json().then(json => {
+//                     console.log(json);
+//                     console.log(JSON.stringify(json));
+//                     tessVetor[0] = json[0].Opcao1
+//                     tessVetor[1] = json[0].Opcao2
+//                     tessVetor[2] = json[0].Opcao3
+//                     tessVetor[3] = json[0].Opcao4
+//                 });
+
+//             } else {
+
+//                 console.log("Houve um erro ao tentar enviar o grafico dados!");
+
+
+
+//                 resposta.text().then(texto => {
+//                     console.error(texto);
+//                 });
+//             }
+
+//         }).catch(function (erro) {
+//             console.log(erro);
+//         })
+//     callback()
+//     return false;
+// }
+
+// // FETCH DA RILEY
+// function enviarRiley(callback) {
+//     fetch("/usuarios/riley", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify({
+//             opcao1Server: rileyResposta.destemida,
+//             opcao2Server: rileyResposta.carisma,
+//             opcao3Server: rileyResposta.implacavel,
+//             opcao4Server: rileyResposta.carinhosa,
+//             idServer: sessionStorage.ID_USUARIO
+//         })
+//     })
+
+//         .then(function (resposta) {
+//             console.log("ESTOU NO THEN DO Ellie()!")
+
+//             if (resposta.ok) {
+//                 console.log(resposta);
+
+//                 resposta.json().then(json => {
+//                     console.log(json);
+//                     console.log(JSON.stringify(json));
+
+//                 });
+
+//             } else {
+
+//                 console.log("Houve um erro ao tentar enviar o grafico dados!");
+
+
+
+//                 resposta.text().then(texto => {
+//                     console.error(texto);
+//                 });
+//             }
+
+//         }).catch(function (erro) {
+//             console.log(erro);
+//         })
+//     callback()
+//     return false;
+// }
+
+// function exibirRiley(callback) {
+//     fetch("/usuarios/exibirRiley", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         }
+//     })
+
+//         .then(function (resposta) {
+//             console.log("ESTOU NO THEN DO Ellie()!")
+
+//             if (resposta.ok) {
+//                 console.log(resposta);
+
+//                 resposta.json().then(json => {
+//                     console.log(json);
+//                     console.log(JSON.stringify(json));
+//                     rileyVetor[0] = json[0].Opcao1
+//                     rileyVetor[1] = json[0].Opcao2
+//                     rileyVetor[2] = json[0].Opcao3
+//                     rileyVetor[3] = json[0].Opcao4
+//                 });
+
+//             } else {
+
+//                 console.log("Houve um erro ao tentar enviar o grafico dados!");
+
+
+
+//                 resposta.text().then(texto => {
+//                     console.error(texto);
+//                 });
+//             }
+
+//         }).catch(function (erro) {
+//             console.log(erro);
+//         })
+//     callback()
+//     return false;
+// }
+

@@ -41,96 +41,95 @@ function verificar(email) {
     return database.executar(verificacao);
 }
 
-function ellie (opcao1, opcao2, opcao3, opcao4, id){
-    var ellieBD = `
-    INSERT INTO ellieGrafico (opcao1, opcao2, opcao3, opcao4, fkUsuario) VALUES ('${opcao1}', '${opcao2}', '${opcao3}', '${opcao4}', '${id}');
+function enviarDados (opcao1, opcao2, opcao3, opcao4, id, personagemFavorito){
+    var instrucao = `
+    INSERT INTO respostasGrafico (personagemFavorito, opcao1, opcao2, opcao3, opcao4, fkUsuario) VALUES ('${personagemFavorito}', '${opcao1}', '${opcao2}', '${opcao3}', '${opcao4}', '${id}');
     `;
-    console.log("Executando a instrução SQL: \n" + ellieBD);
-    return database.executar(ellieBD);
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
 }
 
-function exibirEllie (){
-    var ellieBD = `
+function exibirDados (personagemFavorito){
+    var instrucao = `
     select 
-    (select count(opcao1) from ellieGrafico where opcao1 = 1) as Opcao1,
-    (select count(opcao2) from ellieGrafico where opcao2 = 1) as Opcao2,
-    (select count(opcao3) from ellieGrafico where opcao3 = 1) as Opcao3,
-    (select count(opcao4) from ellieGrafico where opcao4 = 1) as Opcao4;
-    `;
-    console.log("Executando a instrução SQL: \n" + ellieBD);
-    return database.executar(ellieBD);
+    (select count(opcao1) from respostasGrafico where opcao1 = 1 and personagemFavorito = '${personagemFavorito}') as Opcao1,
+    (select count(opcao2) from respostasGrafico where opcao2 = 1 and personagemFavorito = '${personagemFavorito}') as Opcao2,
+    (select count(opcao3) from respostasGrafico where opcao3 = 1 and personagemFavorito = '${personagemFavorito}') as Opcao3,
+    (select count(opcao4) from respostasGrafico where opcao4 = 1 and personagemFavorito = '${personagemFavorito}') as Opcao4;`
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
 }
 
-function joel (opcao1, opcao2, opcao3, opcao4, id){
-    var joelBD = `
-    INSERT INTO joelGrafico (opcao1, opcao2, opcao3, opcao4, fkUsuario) VALUES ('${opcao1}', '${opcao2}', '${opcao3}', '${opcao4}', '${id}');
-    `;
-    console.log("Executando a instrução SQL: \n" + joelBD);
-    return database.executar(joelBD);
-}
+// function joel (opcao1, opcao2, opcao3, opcao4, id){
+//     var joelBD = `
+//     INSERT INTO joelGrafico (opcao1, opcao2, opcao3, opcao4, fkUsuario) VALUES ('${opcao1}', '${opcao2}', '${opcao3}', '${opcao4}', '${id}');
+//     `;
+//     console.log("Executando a instrução SQL: \n" + joelBD);
+//     return database.executar(joelBD);
+// }
 
-function exibirJoel (){
-    var joelBD = `
-    select 
-    (select count(opcao1) from joelGrafico where opcao1 = 1) as Opcao1,
-    (select count(opcao2) from joelGrafico where opcao2 = 1) as Opcao2,
-    (select count(opcao3) from joelGrafico where opcao3 = 1) as Opcao3,
-    (select count(opcao4) from joelGrafico where opcao4 = 1) as Opcao4;
-    `;
-    console.log("Executando a instrução SQL: \n" + joelBD);
-    return database.executar(joelBD);
-}
+// function exibirJoel (){
+//     var joelBD = `
+//     select 
+//     (select count(opcao1) from joelGrafico where opcao1 = 1) as Opcao1,
+//     (select count(opcao2) from joelGrafico where opcao2 = 1) as Opcao2,
+//     (select count(opcao3) from joelGrafico where opcao3 = 1) as Opcao3,
+//     (select count(opcao4) from joelGrafico where opcao4 = 1) as Opcao4;
+//     `;
+//     console.log("Executando a instrução SQL: \n" + joelBD);
+//     return database.executar(joelBD);
+// }
 
-function tess (opcao1, opcao2, opcao3, opcao4, id){
-    var tessBD = `
-    INSERT INTO tessGrafico (opcao1, opcao2, opcao3, opcao4, fkUsuario) VALUES ('${opcao1}', '${opcao2}', '${opcao3}', '${opcao4}', '${id}');
-    `;
-    console.log("Executando a instrução SQL: \n" + tessBD);
-    return database.executar(tessBD);
-}
+// function tess (opcao1, opcao2, opcao3, opcao4, id){
+//     var tessBD = `
+//     INSERT INTO tessGrafico (opcao1, opcao2, opcao3, opcao4, fkUsuario) VALUES ('${opcao1}', '${opcao2}', '${opcao3}', '${opcao4}', '${id}');
+//     `;
+//     console.log("Executando a instrução SQL: \n" + tessBD);
+//     return database.executar(tessBD);
+// }
 
-function exibirTess (){
-    var tessBD = `
-    select 
-    (select count(opcao1) from tessGrafico where opcao1 = 1) as Opcao1,
-    (select count(opcao2) from tessGrafico where opcao2 = 1) as Opcao2,
-    (select count(opcao3) from tessGrafico where opcao3 = 1) as Opcao3,
-    (select count(opcao4) from tessGrafico where opcao4 = 1) as Opcao4;
-    `;
-    console.log("Executando a instrução SQL: \n" + tessBD);
-    return database.executar(tessBD);
-}
+// function exibirTess (){
+//     var tessBD = `
+//     select 
+//     (select count(opcao1) from tessGrafico where opcao1 = 1) as Opcao1,
+//     (select count(opcao2) from tessGrafico where opcao2 = 1) as Opcao2,
+//     (select count(opcao3) from tessGrafico where opcao3 = 1) as Opcao3,
+//     (select count(opcao4) from tessGrafico where opcao4 = 1) as Opcao4;
+//     `;
+//     console.log("Executando a instrução SQL: \n" + tessBD);
+//     return database.executar(tessBD);
+// }
 
-function riley (opcao1, opcao2, opcao3, opcao4, id){
-    var rileyBD = `
-    INSERT INTO rileyGrafico (opcao1, opcao2, opcao3, opcao4, fkUsuario) VALUES ('${opcao1}', '${opcao2}', '${opcao3}', '${opcao4}', '${id}');
-    `;
-    console.log("Executando a instrução SQL: \n" + rileyBD);
-    return database.executar(rileyBD);
-}
+// function riley (opcao1, opcao2, opcao3, opcao4, id){
+//     var rileyBD = `
+//     INSERT INTO rileyGrafico (opcao1, opcao2, opcao3, opcao4, fkUsuario) VALUES ('${opcao1}', '${opcao2}', '${opcao3}', '${opcao4}', '${id}');
+//     `;
+//     console.log("Executando a instrução SQL: \n" + rileyBD);
+//     return database.executar(rileyBD);
+// }
 
-function exibirRiley (){
-    var rileyBD = `
-    select 
-    (select count(opcao1) from rileyGrafico where opcao1 = 1) as Opcao1,
-    (select count(opcao2) from rileyGrafico where opcao2 = 1) as Opcao2,
-    (select count(opcao3) from rileyGrafico where opcao3 = 1) as Opcao3,
-    (select count(opcao4) from rileyGrafico where opcao4 = 1) as Opcao4;
-    `;
-    console.log("Executando a instrução SQL: \n" + rileyBD);
-    return database.executar(rileyBD);
-}
+// function exibirRiley (){
+//     var rileyBD = `
+//     select 
+//     (select count(opcao1) from rileyGrafico where opcao1 = 1) as Opcao1,
+//     (select count(opcao2) from rileyGrafico where opcao2 = 1) as Opcao2,
+//     (select count(opcao3) from rileyGrafico where opcao3 = 1) as Opcao3,
+//     (select count(opcao4) from rileyGrafico where opcao4 = 1) as Opcao4;
+//     `;
+//     console.log("Executando a instrução SQL: \n" + rileyBD);
+//     return database.executar(rileyBD);
+// }
 
 function receberTudo (){
-    var tudoBD = `
+    var instrucao = `
     select
-    (select count(*) from ellieGrafico) as Ellie,
-    (select count(*) from joelGrafico) as Joel,
-    (select count(*) from tessGrafico) as Tess,
-    (select count(*) from rileyGrafico) as Riley;
+    (select count(*) from respostasGrafico where personagemFavorito = 'ellie') as Ellie,
+    (select count(*) from respostasGrafico where personagemFavorito = 'joel') as Joel,
+    (select count(*) from respostasGrafico where personagemFavorito = 'tess') as Tess,
+    (select count(*) from respostasGrafico where personagemFavorito = 'riley') as Riley;
     `;
-    console.log("Executando a instrução SQL: \n" + tudoBD);
-    return database.executar(tudoBD);
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
 }
 
 module.exports = {
@@ -138,13 +137,7 @@ module.exports = {
     cadastrar,
     listar,
     verificar,
-    ellie,
-    exibirEllie,
-    joel,
-    exibirJoel,
-    tess,
-    exibirTess,
-    riley,
-    exibirRiley,
+    enviarDados,
+    exibirDados,
     receberTudo
 };

@@ -125,18 +125,19 @@ function cadastrar(req, res) {
     }
 }
 
-function ellie (req, res){
+function enviarDados (req, res){
     var opcao1 = req.body.opcao1Server;
     var opcao2 = req.body.opcao2Server;
     var opcao3 = req.body.opcao3Server;
     var opcao4 = req.body.opcao4Server;
     var id = req.body.idServer;
-    if (opcao1 == undefined && opcao2 == undefined && opcao3 == undefined && opcao4 == undefined && id == undefined) {        
+    var personagemFavorito = req.body.personagemFavoritoServer
+    if (opcao1 == undefined && opcao2 == undefined && opcao3 == undefined && opcao4 == undefined && id == undefined && personagemFavorito == undefined) {        
         res.status(400).send("Suas opções estão undefined!");
     }
     else{
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.ellie(opcao1, opcao2, opcao3, opcao4, id)
+        usuarioModel.enviarDados(opcao1, opcao2, opcao3, opcao4, id, personagemFavorito)
         .then(
             function (resultado) {
                 res.json(resultado);
@@ -154,8 +155,9 @@ function ellie (req, res){
     }
 }
 
-function exibirEllie (req, res){
-        usuarioModel.exibirEllie()
+function exibirDados (req, res){
+    var personagemFavorito = req.body.personagemFavoritoServer
+        usuarioModel.exibirDados(personagemFavorito)
         .then(
             function (resultado) {
                 res.json(resultado);
@@ -172,146 +174,146 @@ function exibirEllie (req, res){
         );
 }
 
-function exibirJoel (req, res){
-    usuarioModel.exibirJoel()
-    .then(
-        function (resultado) {
-            res.json(resultado);
-        }
-    ).catch(
-        function (erro) {
-            console.log(erro);
-            console.log(
-                "\nHouve um erro ao realizar o cadastro! Erro: ",
-                erro.sqlMessage
-            );
-            res.status(500).json(erro.sqlMessage);
-        }
-    );
-}
+// function exibirJoel (req, res){
+//     usuarioModel.exibirJoel()
+//     .then(
+//         function (resultado) {
+//             res.json(resultado);
+//         }
+//     ).catch(
+//         function (erro) {
+//             console.log(erro);
+//             console.log(
+//                 "\nHouve um erro ao realizar o cadastro! Erro: ",
+//                 erro.sqlMessage
+//             );
+//             res.status(500).json(erro.sqlMessage);
+//         }
+//     );
+// }
 
-function joel (req, res){
-    var opcao1 = req.body.opcao1Server;
-    var opcao2 = req.body.opcao2Server;
-    var opcao3 = req.body.opcao3Server;
-    var opcao4 = req.body.opcao4Server;
-    var id = req.body.idServer;
-    if (opcao1 == undefined && opcao2 == undefined && opcao3 == undefined && opcao4 == undefined && id == undefined) {        
-        res.status(400).send("Suas opções estão undefined!");
-    }
-    else{
-        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.joel(opcao1, opcao2, opcao3, opcao4, id)
-        .then(
-            function (resultado) {
-                res.json(resultado);
-            }
-        ).catch(
-            function (erro) {
-                console.log(erro);
-                console.log(
-                    "\nHouve um erro ao realizar o cadastro! Erro: ",
-                    erro.sqlMessage
-                );
-                res.status(500).json(erro.sqlMessage);
-            }
-        );
-    }
-}
+// function joel (req, res){
+//     var opcao1 = req.body.opcao1Server;
+//     var opcao2 = req.body.opcao2Server;
+//     var opcao3 = req.body.opcao3Server;
+//     var opcao4 = req.body.opcao4Server;
+//     var id = req.body.idServer;
+//     if (opcao1 == undefined && opcao2 == undefined && opcao3 == undefined && opcao4 == undefined && id == undefined) {        
+//         res.status(400).send("Suas opções estão undefined!");
+//     }
+//     else{
+//         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+//         usuarioModel.joel(opcao1, opcao2, opcao3, opcao4, id)
+//         .then(
+//             function (resultado) {
+//                 res.json(resultado);
+//             }
+//         ).catch(
+//             function (erro) {
+//                 console.log(erro);
+//                 console.log(
+//                     "\nHouve um erro ao realizar o cadastro! Erro: ",
+//                     erro.sqlMessage
+//                 );
+//                 res.status(500).json(erro.sqlMessage);
+//             }
+//         );
+//     }
+// }
 
-function tess (req, res){
-    var opcao1 = req.body.opcao1Server;
-    var opcao2 = req.body.opcao2Server;
-    var opcao3 = req.body.opcao3Server;
-    var opcao4 = req.body.opcao4Server;
-    var id = req.body.idServer;
-    if (opcao1 == undefined && opcao2 == undefined && opcao3 == undefined && opcao4 == undefined && id == undefined) {
-        res.status(400).send("Suas opções estão undefined!");
-    }
-    else{
-        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.tess(opcao1, opcao2, opcao3, opcao4, id)
-        .then(
-            function (resultado) {
-                res.json(resultado);
-            }
-        ).catch(
-            function (erro) {
-                console.log(erro);
-                console.log(
-                    "\nHouve um erro ao realizar o cadastro! Erro: ",
-                    erro.sqlMessage
-                );
-                res.status(500).json(erro.sqlMessage);
-            }
-        );
-    }
-}
+// function tess (req, res){
+//     var opcao1 = req.body.opcao1Server;
+//     var opcao2 = req.body.opcao2Server;
+//     var opcao3 = req.body.opcao3Server;
+//     var opcao4 = req.body.opcao4Server;
+//     var id = req.body.idServer;
+//     if (opcao1 == undefined && opcao2 == undefined && opcao3 == undefined && opcao4 == undefined && id == undefined) {
+//         res.status(400).send("Suas opções estão undefined!");
+//     }
+//     else{
+//         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+//         usuarioModel.tess(opcao1, opcao2, opcao3, opcao4, id)
+//         .then(
+//             function (resultado) {
+//                 res.json(resultado);
+//             }
+//         ).catch(
+//             function (erro) {
+//                 console.log(erro);
+//                 console.log(
+//                     "\nHouve um erro ao realizar o cadastro! Erro: ",
+//                     erro.sqlMessage
+//                 );
+//                 res.status(500).json(erro.sqlMessage);
+//             }
+//         );
+//     }
+// }
 
-function exibirTess (req, res){
-    usuarioModel.exibirTess()
-    .then(
-        function (resultado) {
-            res.json(resultado);
-        }
-    ).catch(
-        function (erro) {
-            console.log(erro);
-            console.log(
-                "\nHouve um erro ao realizar o cadastro! Erro: ",
-                erro.sqlMessage
-            );
-            res.status(500).json(erro.sqlMessage);
-        }
-    );
-}
+// function exibirTess (req, res){
+//     usuarioModel.exibirTess()
+//     .then(
+//         function (resultado) {
+//             res.json(resultado);
+//         }
+//     ).catch(
+//         function (erro) {
+//             console.log(erro);
+//             console.log(
+//                 "\nHouve um erro ao realizar o cadastro! Erro: ",
+//                 erro.sqlMessage
+//             );
+//             res.status(500).json(erro.sqlMessage);
+//         }
+//     );
+// }
 
-function riley (req, res){
-    var opcao1 = req.body.opcao1Server;
-    var opcao2 = req.body.opcao2Server;
-    var opcao3 = req.body.opcao3Server;
-    var opcao4 = req.body.opcao4Server;
-    var id = req.body.idServer;
-    if (opcao1 == undefined && opcao2 == undefined && opcao3 == undefined && opcao4 == undefined && id == undefined) {
-        res.status(400).send("Suas opções estão undefined!");
-    }
-    else{
-        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.riley(opcao1, opcao2, opcao3, opcao4, id)
-        .then(
-            function (resultado) {
-                res.json(resultado);
-            }
-        ).catch(
-            function (erro) {
-                console.log(erro);
-                console.log(
-                    "\nHouve um erro ao realizar o cadastro! Erro: ",
-                    erro.sqlMessage
-                );
-                res.status(500).json(erro.sqlMessage);
-            }
-        );
-    }
-}
+// function riley (req, res){
+//     var opcao1 = req.body.opcao1Server;
+//     var opcao2 = req.body.opcao2Server;
+//     var opcao3 = req.body.opcao3Server;
+//     var opcao4 = req.body.opcao4Server;
+//     var id = req.body.idServer;
+//     if (opcao1 == undefined && opcao2 == undefined && opcao3 == undefined && opcao4 == undefined && id == undefined) {
+//         res.status(400).send("Suas opções estão undefined!");
+//     }
+//     else{
+//         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+//         usuarioModel.riley(opcao1, opcao2, opcao3, opcao4, id)
+//         .then(
+//             function (resultado) {
+//                 res.json(resultado);
+//             }
+//         ).catch(
+//             function (erro) {
+//                 console.log(erro);
+//                 console.log(
+//                     "\nHouve um erro ao realizar o cadastro! Erro: ",
+//                     erro.sqlMessage
+//                 );
+//                 res.status(500).json(erro.sqlMessage);
+//             }
+//         );
+//     }
+// }
 
-function exibirRiley (req, res){
-    usuarioModel.exibirRiley()
-    .then(
-        function (resultado) {
-            res.json(resultado);
-        }
-    ).catch(
-        function (erro) {
-            console.log(erro);
-            console.log(
-                "\nHouve um erro ao realizar o cadastro! Erro: ",
-                erro.sqlMessage
-            );
-            res.status(500).json(erro.sqlMessage);
-        }
-    );
-}
+// function exibirRiley (req, res){
+//     usuarioModel.exibirRiley()
+//     .then(
+//         function (resultado) {
+//             res.json(resultado);
+//         }
+//     ).catch(
+//         function (erro) {
+//             console.log(erro);
+//             console.log(
+//                 "\nHouve um erro ao realizar o cadastro! Erro: ",
+//                 erro.sqlMessage
+//             );
+//             res.status(500).json(erro.sqlMessage);
+//         }
+//     );
+// }
 
 function receberTudo (req, res){
     usuarioModel.receberTudo()
@@ -337,13 +339,7 @@ module.exports = {
     cadastrar,
     listar,
     testar,
-    ellie,
-    exibirEllie,
-    joel,
-    exibirJoel,
-    tess,
-    exibirTess,
-    riley,
-    exibirRiley,
+    enviarDados,
+    exibirDados,
     receberTudo
 }

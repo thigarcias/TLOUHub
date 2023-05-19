@@ -19,18 +19,20 @@ CREATE TABLE usuario (
     
 );
 
-CREATE TABLE ellieGrafico (
+CREATE TABLE respostasGrafico (
 	id INT PRIMARY KEY AUTO_INCREMENT,
+    personagemFavorito VARCHAR(50) NOT NULL, 
 	opcao1 VARCHAR(50),
 	opcao2 VARCHAR(50),
 	opcao3 VARCHAR(50),
 	opcao4 VARCHAR(50),
     fkUsuario int,
-    constraint fkUsuario foreign key (fkUsuario) references usuario(id),
-    constraint chkEllie1 check (opcao1 in(0,1)),
-    constraint chkEllie2 check (opcao2 in(0,1)),
-    constraint chkEllie3 check (opcao3 in(0,1)),
-    constraint chkEllie4 check (opcao4 in(0,1))
+    CONSTRAINT fkUsuario foreign key (fkUsuario) references usuario(id),
+	CONSTRAINT chkPersonagem CHECK (personagemFavorito IN ('ellie', 'joel', 'tess', 'riley')),
+    CONSTRAINT chkOpcao1 CHECK (opcao1 IN (0, 1)),
+	CONSTRAINT chkOpcao2 CHECK (opcao2 IN (0, 1)),
+	CONSTRAINT chkOpcao3 CHECK (opcao3 IN (0, 1)),
+	CONSTRAINT chkOpcao4 CHECK (opcao4 IN (0, 1))
     );
 
 CREATE TABLE joelGrafico (
@@ -77,7 +79,7 @@ CREATE TABLE rileyGrafico (
     );
 
 select * from usuario;
-select * from ellieGrafico;
+select * from respostasGrafico;
 
 select
 (select count(*) from ellieGrafico) as Ellie,
@@ -86,10 +88,10 @@ select
 (select count(*) from rileyGrafico) as Riley;
 
 select 
-(select count(opcao1) from ellieGrafico where opcao1 = 1) as Opcao1,
-(select count(opcao2) from ellieGrafico where opcao2 = 1) as Opcao2,
-(select count(opcao3) from ellieGrafico where opcao3 = 1) as Opcao3,
-(select count(opcao4) from ellieGrafico where opcao4 = 1) as Opcao4;
+(select count(opcao1) from respostasGrafico where opcao1 = 1 and personagemFavorito = 'ellie') as Opcao1,
+(select count(opcao2) from respostasGrafico where opcao2 = 1 and personagemFavorito = 'ellie') as Opcao2,
+(select count(opcao3) from respostasGrafico where opcao3 = 1 and personagemFavorito = 'ellie') as Opcao3,
+(select count(opcao4) from respostasGrafico where opcao4 = 1 and personagemFavorito = 'ellie') as Opcao4;
 
 
 select 
