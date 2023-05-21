@@ -21,6 +21,27 @@ body {
 
 }
 
+#irCima {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    width: 3%;
+    height: 6%;
+    top: 85%;
+    left: 94%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: #354534;
+    cursor: pointer;
+}
+
+#irCimaIcon {
+    color: white;
+    font-size: 1.7vmax;
+}
+
+
 .TLOUGradiente {
     display: flex;
     position: absolute;
@@ -41,9 +62,54 @@ body {
 }
 
 .container {
-    height: 100vh;
+    display: flex;
+    height: 170vh;
     width: 90vw;
     margin-left: 5%;
+
+}
+
+/* Header Fixa */
+#headerinfinitaFundo {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    height: 6.5vh;
+    background-color: #000000ee;
+}
+
+.headerinfinita {
+    display: flex;
+    width: 90vw;
+    height: 6.5vh;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+}
+/* Texto Header Infinita */
+#homepagetextoInfinito {
+    display: flex;
+    color: #ffffff;
+    cursor: pointer;
+}
+#noticiastextoInfinito {
+    cursor: pointer;
+    color: white;
+}
+
+#jogostextoInfinito {
+    display: flex;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+}
+
+#serietextoInfinito {
+    display: flex;
+    cursor: pointer;
+    color: white;
+    align-items: center;
 }
 
 /* Header Normal */
@@ -66,7 +132,7 @@ body {
     display: flex;
     font-family: "Press Gothic";
     font-size: 32px;
-    color: #61892F;
+    color: #FDC706;
     height: 10%;
     width: 10%;
 }
@@ -113,27 +179,6 @@ body {
     color: #ffe70c;
 }
 
-/*NOTICIAS*/
-.noticias {
-    display: flex;
-    height: 30%;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
-}
-
-#noticiastexto {
-    cursor: pointer;
-    color: white;
-    cursor: pointer;
-}
-
-#noticiastexto:hover {
-    color: #ffe70c;
-}
-
-
-
 /* JOGOS */
 .jogos {
     display: flex;
@@ -153,6 +198,145 @@ body {
 
 #jogostexto:hover {
     color: #ffe70c;
+}
+
+/* Menu Flutuante Jogos */
+#menuflutuanteJogos {
+    display: none;
+    position: fixed;
+    width: 14%;
+    height: 15%;
+    background-color: #FDC706;
+    left: 47%;
+    top: 6.5%;
+    border-radius: 6px;
+    flex-direction: column;
+}
+
+
+@media (max-width: 1919px) {
+    #menuflutuanteJogos {
+        width: 15%;
+        height: 20%;
+        top: 8%;
+    }
+}
+
+
+.menuItens {
+    display: flex;
+    color: white;
+    font-size: 1vmax;
+    font-weight: 500;
+    margin-top: 6%;
+    margin-left: 5%;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.menuTLOU1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 33%;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    border-bottom: 3px solid white;
+    cursor: pointer;
+}
+
+.menuTLOU1:hover {
+    background-color: #f7b500;
+}
+
+#menuTLOU1Texto {
+    display: flex;
+    color: white;
+    font-size: 0.9vmax;
+    margin-left: 5%;
+    font-weight: 500;
+}
+
+@media (max-width: 1919px) {
+    #menuTLOU1Texto {
+        font-size: 1vmax;
+    }
+}
+
+.menuTLOU2 {
+    display: flex;
+    width: 100%;
+    height: 33%;
+    align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+    border-bottom: 3px solid white;
+    cursor: pointer;
+}
+
+.menuTLOU2:hover {
+    background-color: #f7b500;
+}
+
+#menuTLOU2Texto {
+    display: flex;
+    color: white;
+    font-size: 0.9vmax;
+    margin-left: 5%;
+    font-weight: 500;
+}
+
+@media (max-width: 1919px) {
+    #menuTLOU2Texto {
+        font-size: 1vmax;
+    }
+}
+
+.menuLinha {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 2%;
+    top: 35%;
+}
+
+
+.menuLinha2 {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 2%;
+    top: 70%;
+}
+
+.menuTLOULB {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 33%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+}
+
+.menuTLOULB:hover {
+    background-color: #f7b500;
+}
+
+#menuTLOULBTexto {
+    display: flex;
+    color: white;
+    font-size: 0.9vmax;
+    margin-left: 5%;
+    font-weight: 500;
+}
+
+@media (max-width: 1919px) {
+    #menuTLOULBTexto {
+        font-size: 1vmax;
+    }
 }
 
 /* Serie */
@@ -185,7 +369,7 @@ body {
     justify-content: center;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #61892F;
+    background-color: #FDC706A6;
     font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
 }
@@ -213,7 +397,7 @@ body {
 
 #naoTem {
     display: flex;
-    color: #61892F;
+    color: #FDC706A6;
     font-size: 0.5vmax;
     justify-content: center;
     font-weight: 500;
@@ -237,7 +421,7 @@ body {
     justify-content: center;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #493B33;
+    background-color: #FDC706A6;
     font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
 }
@@ -408,4 +592,240 @@ body {
     font-weight: 400;
     font-size: 1.2vmax;
     margin-right: 2%;
+}
+
+/* O PORQUE DE UMA EXPANSAO */
+.pqExpansao{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    margin-top: 12%;
+} 
+
+#expansaoTextos{
+    display: flex;
+    width: 60%;
+    height: 90%;
+    flex-direction: column;
+}
+
+#expansaoTitulo{
+    display: flex;
+    color: black;
+    font-family: 'Sora', sans-serif;
+    font-weight: 900;
+    font-size: 1.2vmax;
+}
+
+#expansaoConteudo{
+    display: flex;
+    color: #706D6D;
+    font-weight: 300;
+    font-size: 1vmax;
+    font-family: 'Space Grotesk';
+    margin-top: 2%;
+    line-height: 36px;
+}
+
+#expansaoImagem{
+    display: flex;
+    position: relative;
+    width: 35%;
+    height: 90%;
+    background-size: cover;
+    margin-left: 5%;
+    border-radius: 15px;
+    background-image: url(./assets/ff.jpg);
+}
+
+/* CARROSSEL */
+.carrossel{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.carrosselPersonagem{
+    display: flex;
+    height: 100%;
+    min-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./assets/ellieinvertido.png);
+    flex-direction: column;
+}
+#episodioProceder{
+    display: flex;
+    position: absolute;
+    color: white;
+    font-size: 1.8vmax;
+    top: 50%;
+    left: 95%;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+#episodioVoltar{
+    display: flex;
+    position: absolute;
+    color: white;
+    font-size: 1.8vmax;
+    top: 50%;
+    left: 102%;
+    cursor: pointer;
+}
+
+.personagemTipo {
+    display: flex;
+    width: 50%;
+    height: 15%;
+    margin-top: 15%;
+    background: linear-gradient(89.96deg, rgba(6, 31, 253, 0.1675) 18.83%, rgba(6, 208, 253, 0) 84.16%);
+    justify-content: center;
+    flex-direction: column;
+}
+
+#personagemTitulo {
+    display: flex;
+    color: #4883E3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-left: 8%;
+    font-size: 1vmax;
+
+}
+
+#personagemTexto{
+    display: flex;
+    color: white;
+    font-family: "Press Gothic";
+    font-weight: 100;
+    font-size: 4vmax;
+    height: 60%;
+    margin-left: 8%;
+}
+
+.personagemDescricao {
+    display: flex;
+    color: white;
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+    margin-top: 1%;
+    font-size: 1.1vmax;
+    margin-left: 4%;
+    width: 41%;
+    flex-direction: column;
+}
+
+/* VOCE SABIA */
+.vocesabia{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    margin-top: 8%;
+}
+
+.voceTexto{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+}
+
+#voceTitulo{
+    display: flex;
+    color: black;
+    font-family: 'Sora', sans-serif;
+    font-size: 1.2vmax;
+    font-weight: 900;
+}
+
+#voceConteudo{
+    display: flex;
+    color: #706D6D;
+    font-family: 'Space Grotesk';
+    font-size: 1vmax;
+    line-height: 36px;
+    margin-top: 2%;
+}
+
+.saibaMais{
+    display: flex;
+    width: 45%;
+    margin-left: 5%;
+    height: 100%;
+    flex-direction: column;
+}
+
+#saibaMaisTitulo{
+    display: flex;
+    color: black;
+    font-family: 'Sora', sans-serif;
+    font-size: 1.2vmax;
+    font-weight: 900;
+}
+
+.saibaConteudo{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    margin-top: 2%;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+#saibaGradiente {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(30, 107, 47, 0.29) 32.72%, rgba(51, 69, 49, 0.26) 74.79%);
+}
+
+#saibaTexto{
+    display: flex;
+    color: white;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    font-weight: 900;
+    font-size: 1.3vmax;
+    font-family: 'Space Grotesk';
+    justify-content: center;
+}
+#saibaImagem{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 15px;
+    background-position-y: 50%;
+    background-image: url(./assets/thumb-1920-1065466.webp);
+}
+
+.footer {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 8vh;
+    background-color: #354534;
+    justify-content: center;
+    align-items: center;
+}
+
+#footerTexto {
+    display: flex;
+    color: white;
+    font-family: 'Space Grotesk';
+    font-size: 0.9vmax;
+    text-align: center;
 }

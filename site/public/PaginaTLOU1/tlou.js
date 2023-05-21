@@ -1,19 +1,58 @@
-var carroselItems = document.querySelectorAll(".slide")
-var carroselIndex = 0;
+// CONTAINER
+const container = document.querySelectorAll(".container")
+container[2].style.height = "50vh"
 
-function slideAtual(n) {
-    carroselItems[carroselIndex].classList.remove("ativa");
-    carroselIndex = (carroselIndex + n) % carroselItems.length
-    carroselItems[carroselIndex].classList.add("ativa")
+// CARROSSEL
+var personagens = [
+    ellie = {
+        nome: `ELLIE WILLIAMS`,
+        url: `url('./assets/ellieinvertido.png')`,
+        gradiente: `linear-gradient(89.96deg, rgba(6, 31, 253, 0.1675) 18.83%, rgba(6, 208, 253, 0) 84.16%)`,
+        corTexto: `#4883E3`,
+        conteudo: `Ellie Williams é uma das personagens principais da franquia de jogos
+        eletrônicos "The Last of Us", desenvolvida pela Naughty Dog. Ela é introduzida no primeiro
+        jogo como uma adolescente de 14 anos que vive em um mundo pós-apocalíptico onde a maioria da
+        população foi transformada em zumbis canibais conhecidos como infectados.
+         Ellie é uma personagem complexa e interessante, com uma história de vida
+        difícil. Ela é inteligente, corajosa e astuta, e se mostra capaz de sobreviver em um mundo
+        extremamente perigoso. Durante o jogo, ela e Joel, o outro personagem principal, desenvolvem
+        um forte vínculo emocional, enfrentando juntos diversos desafios e perigos.`,
+    },
+    joel = {
+        nome: `JOEL MILLER`,
+        url: `url('./assets/joelinvertido.png')`,
+        gradiente: `linear-gradient(89.96deg, rgba(210, 189, 75, 0.25) 18.83%, rgba(253, 199, 6, 0) 84.16%)`,
+        corTexto: `#E3B848`,
+        conteudo: `Joel é um homem de meia-idade que já passou por muitas dificuldades e perdas na vida, o que o tornou desconfiado e cínico em relação aos outros. Ele é contratado para levar Ellie, uma adolescente que pode ser a chave para a cura da pandemia, para um grupo de resistência conhecido como os Vagalumes.
+        Ao longo do jogo, Joel e Ellie criam um forte vínculo emocional, apesar das diferenças de idade e personalidade. Eles enfrentam juntos diversos desafios, incluindo confrontos com humanos hostis e infectados perigosos. Durante sua jornada, Joel revela seu passado sombrio e os eventos traumáticos que o levaram a ser quem é.`,
+    }
+]
+const carrossel = document.querySelectorAll(".carrossel")
+const carrosselPersonagem = carrossel[0].querySelectorAll(".carrosselPersonagem")
+const episodioVoltar = document.getElementById("episodioVoltar")
+const episodioProceder = document.getElementById("episodioProceder")
+const personagemDescricao = document.querySelectorAll(".personagemDescricao")
+
+
+for (var i = 1; i < carrosselPersonagem.length; i++) {
+    const personagemTexto = carrosselPersonagem[i].querySelector("#personagemTexto")
+    const personagemTipo = carrosselPersonagem[i].querySelector(".personagemTipo")
+    const personagemTitulo = carrosselPersonagem[i].querySelector("#personagemTitulo")
+    const personagemConteudo = personagemDescricao[i].querySelector("#personagemConteudo")
+
+    carrosselPersonagem[i].style.backgroundImage = personagens[i].url
+    personagemTexto.innerHTML = personagens[i].nome
+    personagemTipo.style.background = personagens[i].gradiente
+    personagemTitulo.style.color = personagens[i].corTexto
+    personagemConteudo.innerHTML = personagens[i].conteudo
 }
 
-const personagemProximo = document.getElementById("personagemProximo")
-const personagemAnterior = document.getElementById("personagemAnterior")
-personagemProximo.addEventListener("click", function () {
-    slideAtual(1);
+episodioProceder.addEventListener("click", function () {
+    carrossel[0].scrollLeft += 2500
 })
-personagemAnterior.addEventListener("click", function () {
-    slideAtual(-1)
+
+episodioVoltar.addEventListener("click", function () {
+    carrossel[0].scrollLeft -= 2500
 })
 
 
@@ -113,9 +152,9 @@ homepagetexto.addEventListener("mouseover", function () {
         serietexto.style.color = '#ffffff';
     });
 
-    serietexto.addEventListener("click", function () {
-        window.location = "../PaginaTLOUHBO/hbo.html"
-    })
+serietexto.addEventListener("click", function () {
+    window.location = "../PaginaTLOUHBO/hbo.html"
+})
 
 
 
@@ -161,6 +200,11 @@ for (let elementos = 0; elementos < 2; elementos++) {
 const menuTLOU1 = document.querySelectorAll(".menuTLOU1")
 menuTLOU1[0].addEventListener("click", function () {
     window.location = "../PaginaTLOU1/tlou1.html"
+})
+
+const menuTLOULB = document.querySelectorAll(".menuTLOULB")
+menuTLOULB[0].addEventListener("click", function () {
+    window.location = "../PaginaTLOULB/left.html"
 })
 
 // Botão entre do BLUR 

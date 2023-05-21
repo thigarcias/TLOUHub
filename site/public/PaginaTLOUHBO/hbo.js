@@ -181,16 +181,11 @@ for (let x = 0; x < episodioConteudo.length; x++){
 
 // NAVBAR links
 const homepagetexto = document.getElementById('homepagetexto');
-const noticiastexto = document.getElementById('noticiastexto');
 const jogostexto = document.getElementById('jogostexto');
 const serietexto = document.getElementById('serietexto');
 
 homepagetexto.addEventListener("click", function () {
     window.location = "../PaginaInicial/home.html"
-  })
-
-noticiastexto.addEventListener("click", function () {
-    window.location = "../Noticias/noticia.html"
   })
 
   serietexto.addEventListener("click", function () {
@@ -236,4 +231,28 @@ logintexto.addEventListener("click", function () {
 const conta_botao = document.getElementById("conta_botao")
 conta_botao.addEventListener("click", function () {
   limparSessao()
+})
+
+/* MENU FLUTUANTE JOGOS */
+const menuflutuanteJogos = document.getElementById("menuflutuanteJogos")
+var jogos = document.querySelectorAll(".jogos")
+    jogos[0].addEventListener("mouseenter", function () {
+        jogos[0].querySelector("#jogostexto").style.color = "#ffe70c"
+        menuflutuanteJogos.style.display = "flex"
+    })
+
+    jogos[0].addEventListener('mouseleave', function () {
+        jogos[0].querySelector("#jogostexto").style.color = "#ffffff"
+        menuflutuanteJogos.style.display = "none"
+    })
+
+
+const menuTLOU1 = document.querySelectorAll(".menuTLOU1")
+menuTLOU1[0].addEventListener("click", function () {
+    window.location = "../PaginaTLOU1/tlou1.html"
+})
+
+const menuTLOULB = document.querySelectorAll(".menuTLOULB")
+menuTLOULB[0].addEventListener("click", function(){
+    window.location = "../PaginaTLOULB/left.html"
 })

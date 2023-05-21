@@ -8,15 +8,17 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Document</title>
     <link rel="stylesheet" href="left.css">
+    <script src="../js/funcoes.js"></script>
 </head>
-<body>
+<body onload="validarSessao()">
     <div class="TLOUGradiente"></div>
     <div class="TLOU"></div>
     <div class="container">
 
-        <!-- <div id="irCima">
+        <div id="irCima">
             <span class="material-symbols-outlined" id="irCimaIcon">arrow_upward</span>
-        </div> -->
+        </div>
+
     <!-- Header Normal -->
     <div id="header">
         <span id="logo">TLOU<span id="logo2">Hub</span></span>
@@ -26,16 +28,28 @@
                     <span id="homepagetexto">Home</span>
                 </div>
 
-                <div class="noticias">
-                    <span id="noticiastexto">Notícias</span>
-                </div>
-
                 <div class="jogos">
                     <span id="jogostexto">Jogos<span class="material-symbols-outlined" id="iconNavbar">
                             arrow_drop_down
                         </span>
                     </span>
+
+                      <!-- Menu Flutuante Jogos-->
+                <div id="menuflutuanteJogos">
+                    <span class="menuTLOU1">
+                        <span id="menuTLOU1Texto">The Last of Us: Part I</span>
+                    </span>
+                    <span class="menuTLOU2">
+                        <span id="menuTLOU2Texto">The Last of Us: Part II</span>
+                    </span>
+                    <span class="menuTLOULB">
+                        <span id="menuTLOULBTexto">The Last of Us: Left Behind</span>
+                    </span>
+
                 </div>
+                </div>
+
+              
 
                 <div class="serie">
                     <span id="serietexto">Série</span>
@@ -106,9 +120,92 @@
             
         </div>
 
-        <div class="pqExpansao"></div>
+        <div class="pqExpansao">
+            <span id="expansaoTextos">
+                <span id="expansaoTitulo">O PORQUÊ DE UMA EXPANSÃO?</span>
+                <span id="expansaoConteudo">Uma das principais razões para a criação da DLC The Last of Us Left Behind foi a popularidade da personagem Ellie entre os jogadores. Os desenvolvedores da Naughty Dog queriam explorar mais a fundo a história de Ellie e aprofundar sua personalidade, oferecendo uma experiência mais completa e emocionante.
+                    Além disso, a equipe de desenvolvimento queria expandir ainda mais o universo de The Last of Us e dar aos jogadores mais oportunidades de mergulhar nesse mundo pós-apocalíptico. A DLC também permitiu que a Naughty Dog experimentasse com novos elementos de jogabilidade, tornando a experiência de jogo ainda mais interessante e envolvente.
+                    Outra razão para a criação da DLC foi oferecer aos jogadores mais conteúdo para jogar e prolongar a vida útil do jogo. A The Last of Us foi um grande sucesso e a Naughty Dog queria continuar a cativar os jogadores com novas histórias e aventuras dentro do universo da franquia.</span>
+            </span>
+
+            <span id="expansaoImagem"></span>
+        </div>
+    </div>
+
+    <div class="carrossel">
+        <span class="material-symbols-outlined" id="episodioVoltar">arrow_back_ios</span>
+        <span class="material-symbols-outlined" id="episodioProceder">arrow_back_ios</span>
+        <div class="carrosselPersonagem">
+            <div class="personagemTipo">
+                <span id="personagemTitulo">PROTAGONISTA</span>
+                <span id="personagemTexto">ELLIE WILLIAMS</span>
+            </div>
+
+            <div class="personagemDescricao">
+                <span id="descricao1">Ellie Williams é uma das personagens principais da franquia de jogos
+                    eletrônicos "The Last of Us", desenvolvida pela Naughty Dog. Ela é introduzida no primeiro
+                    jogo como uma adolescente de 14 anos que vive em um mundo pós-apocalíptico onde a maioria da
+                    população foi transformada em zumbis canibais conhecidos como infectados.</span>
+                <span id="descricao2"> Ellie é uma personagem complexa e interessante, com uma história de vida
+                    difícil. Ela é inteligente, corajosa e astuta, e se mostra capaz de sobreviver em um mundo
+                    extremamente perigoso. Durante o jogo, ela e Joel, o outro personagem principal, desenvolvem
+                    um forte vínculo emocional, enfrentando juntos diversos desafios e perigos.</span>
+            </div>
+        </div>
+        <div class="carrosselPersonagem">
+            <div class="personagemTipo">
+                <span id="personagemTitulo">PROTAGONISTA</span>
+                <span id="personagemTexto">ELLIE WILLIAMS</span>
+            </div>
+
+            <div class="personagemDescricao">
+                <span id="descricao1">Ellie Williams é uma das personagens principais da franquia de jogos
+                    eletrônicos "The Last of Us", desenvolvida pela Naughty Dog. Ela é introduzida no primeiro
+                    jogo como uma adolescente de 14 anos que vive em um mundo pós-apocalíptico onde a maioria da
+                    população foi transformada em zumbis canibais conhecidos como infectados.</span>
+                <span id="descricao2"> Ellie é uma personagem complexa e interessante, com uma história de vida
+                    difícil. Ela é inteligente, corajosa e astuta, e se mostra capaz de sobreviver em um mundo
+                    extremamente perigoso. Durante o jogo, ela e Joel, o outro personagem principal, desenvolvem
+                    um forte vínculo emocional, enfrentando juntos diversos desafios e perigos.</span>
+            </div>
+        </div>
     </div>
     
+
+    <div class="vocesabia">
+        <div class="container">
+            <div class="voceTexto">
+                <span id="voceTitulo">VOCÊ SABIA QUE:</span>
+                <span id="voceConteudo">The Last of Us: Left Behind foi o primeiro conteúdo de história adicional (DLC) criado pela Naughty Dog. O DLC foi lançado em 2014 e serviu como uma prequela para o jogo original, seguindo a história de Ellie antes dos eventos principais do jogo. Uma das características mais marcantes do Left Behind é que ele permite que os jogadores alternem entre dois períodos diferentes da vida de Ellie: sua amizade com Riley, antes da infecção, e um momento em que ela está sozinha em um shopping center após os eventos do jogo principal. O DLC também adicionou novas mecânicas de jogo, como a capacidade de se esconder em meio a multidões de infectados, o que adicionou uma nova camada de estratégia e tensão ao jogo.</span>
+            </div>
+
+            <div class="saibaMais">
+                <span id="saibaMaisTitulo">SAIBA MAIS SOBRE:</span>
+                <div class="saibaConteudo">
+                    <span id="saibaGradiente">
+                        <span id="saibaTexto">THE LAST OF US: PART II</span>
+                    </span>
+                    <span id="saibaImagem"></span>
+                </div>
+
+                <div class="saibaConteudo">
+                    <span id="saibaGradiente">
+                        <span id="saibaTexto">THE LAST OF US: PART II</span>
+                    </span>
+                    <span id="saibaImagem"></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+   <!-- FOOTER-->
+   <div class="footer">
+    <span id="footerTexto">Copyright © 2023 - 2023 TLHUB. Todos os direitos reservados. | Termos de uso |
+        Política
+        de privacidade | Definições de cookies</span>
+</div>
+
 </body>
 </html>
 <script src="./left.js"></script>

@@ -187,6 +187,8 @@ ondeTLOUHBO.addEventListener("mouseover", function () {
 
 const HistoriaClick = document.getElementById("HistoriaClick")
 const PersonagemClick = document.getElementById("PersonagemClick")
+const ExpansaoClick = document.getElementById("ExpansaoClick")
+const episodioClick = document.getElementById("episodioClick")
 
 HistoriaClick.addEventListener("click", function () {
   window.location.href = ('../PaginaTLOU1/tlou1.html')
@@ -194,6 +196,14 @@ HistoriaClick.addEventListener("click", function () {
 
 PersonagemClick.addEventListener("click", function () {
   window.location.href = "../PaginaTLOU1/tlou1.html#personagensCarrosel"
+})
+
+ExpansaoClick.addEventListener("click", function(){
+  window.location.href = "../PaginaTLOULB/left.html"
+})
+
+episodioClick.addEventListener("click", function(){
+  window.location.href = "../PaginaTLOUHBO/hbo.html#episodiosTodos"
 })
 
 
@@ -280,4 +290,9 @@ for (let elementos = 0; elementos < 2; elementos++) {
 const menuTLOU1 = document.querySelectorAll(".menuTLOU1")
 menuTLOU1[0].addEventListener("click", function () {
   window.location = "../PaginaTLOU1/tlou1.html"
+})
+
+const menuTLOULB = document.querySelectorAll(".menuTLOULB")
+menuTLOULB[0].addEventListener("click", function(){
+    window.location = "../PaginaTLOULB/left.html"
 })

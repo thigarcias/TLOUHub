@@ -45,6 +45,8 @@ body {
     height: 100vh;
     width: 90%;
     margin-left: 5%;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 #serietextoInfinito {
@@ -299,7 +301,7 @@ body {
     display: flex;
     color: #706D6D;
     font-size: 1.1vmax;
-    width: 100%;
+    width: 50%;
     margin-top: 1%;
     font-weight: 300;
     line-height: 33px;
@@ -309,7 +311,7 @@ body {
     display: flex;
     color: #706D6D;
     font-size: 1.1vmax;
-    width: 100%;
+    width: 50%;
     margin-top: 1%;
     line-height: 33px;
     font-weight: 300;
@@ -320,6 +322,7 @@ body {
 .parteBaixoHistoria {
     display: flex;
     width: 100%;
+    margin-top: 20%;
     height: 30vh;
     font-family: 'Space Grotesk';
 }
@@ -447,10 +450,11 @@ body {
     display: flex;
     margin-bottom: 5%;
     width: 100%;
-    height: 170.5vh;
+    height: 50%;
     font-family: 'Space Grotesk';
     flex-direction: column;
     margin-top: 6%;
+    position: relative;
 }
 
 #criadoraTitulo {
@@ -478,6 +482,7 @@ body {
     width: 27.5vw;
     height: 45vh;
     margin-left: 62.5%;
+    top: 0%;
     background-size: 100%;
     background-position: 50%;
     background-color: black;
@@ -486,63 +491,48 @@ body {
     background-image: url(./assets/naughtydoglogo.png);
 }
 
-/* CARROSEL DE PERSONAGENS */
-.personagemContainer {
+/* CARROSSEL */
+.carrossel{
     position: relative;
-    width: 100%;
-    margin-top: 90%;
-}
-
-@media (max-height: 700px) {
-    .personagemContainer {
-        margin-top: 85%;
-    }
-}
-
-
-
-.personagens {
     display: flex;
-    position: absolute;
     width: 100%;
-    flex-direction: column;
-}
-
-.slide {
-    display: none;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
-}
-
-.slide.ativa {
-    display: flex;
-}
-
-.ellieGradiente {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
     height: 100%;
-    background: linear-gradient(180deg, #11141A 7.11%, rgba(17, 20, 26, 0) 100%);
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+    margin-top: 10%;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
-.ellieImagem {
+.carrosselPersonagem{
     display: flex;
-    position: absolute;
-    z-index: -2;
-    width: 100%;
-    background-position: 50% 40%;
     height: 100%;
+    min-width: 100%;
     background-size: cover;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-    background-image: url('./assets/the-last-of-us-part-1-remake-ellie-hd-wallpaper-uhdpaper.com-323@1@h.jpg');
+    background-repeat: no-repeat;
+    background-image: url(./assets/ellieinvertido.png);
+    flex-direction: column;
+}
+#episodioProceder{
+    display: flex;
+    position: absolute;
+    color: white;
+    font-size: 1.8vmax;
+    top: 50%;
+    left: 95%;
+    transform: rotate(180deg);
+    cursor: pointer;
 }
 
-.ellieTipo {
+#episodioVoltar{
+    display: flex;
+    position: absolute;
+    color: white;
+    font-size: 1.8vmax;
+    top: 50%;
+    left: 102%;
+    cursor: pointer;
+}
+
+.personagemTipo {
     display: flex;
     width: 50%;
     height: 15%;
@@ -550,10 +540,9 @@ body {
     background: linear-gradient(89.96deg, rgba(6, 31, 253, 0.1675) 18.83%, rgba(6, 208, 253, 0) 84.16%);
     justify-content: center;
     flex-direction: column;
-
 }
 
-#ellieTitulo {
+#personagemTitulo {
     display: flex;
     color: #4883E3;
     font-family: 'Montserrat', sans-serif;
@@ -563,7 +552,7 @@ body {
 
 }
 
-#ellieTexto2 {
+#personagemTexto{
     display: flex;
     color: white;
     font-family: "Press Gothic";
@@ -573,128 +562,21 @@ body {
     margin-left: 8%;
 }
 
-.ellieDescricao {
+.personagemDescricao {
     display: flex;
-    color: white;
-    font-family: 'Space Grotesk';
-    font-weight: 300;
     margin-top: 1%;
-    font-size: 1.1vmax;
     margin-left: 4%;
     width: 41%;
     flex-direction: column;
 }
 
-#descricao2 {
-    margin-top: 2%;
-}
-
-
-.ellieflechaProximo {
-    display: flex;
-    color: white;
-    position: absolute;
-    margin-top: 25%;
-    width: 100%;
-    margin-left: -5%;
-    justify-content: flex-end;
-}
-
-#personagemProximo {
-    display: flex;
-    font-size: 3vmax;
-    margin-right: 0%;
-    font-weight: 100;
-    cursor: pointer;
-}
-
-
-.joelGradiente {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(79, 70, 37, 0.26) 7.11%, rgba(26, 25, 17, 0) 100%);
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-}
-
-.joelImagem {
-    display: flex;
-    position: absolute;
-    z-index: -2;
-    width: 100%;
-    background-position: 35% 10%;
-    height: 100%;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-    background-image: url('./assets/5458dbb0ac20f48a59f8fc34cecf4e61.jpg');
-}
-
-.joelTipo {
-    display: flex;
-    width: 50%;
-    height: 15%;
-    margin-top: 15%;
-    background: linear-gradient(89.96deg, rgba(210, 189, 75, 0.25) 18.83%, rgba(253, 199, 6, 0) 84.16%);
-    justify-content: center;
-    flex-direction: column;
-
-}
-
-#joelTitulo {
-    display: flex;
-    color: #E3B848;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 1vmax;
-    margin-left: 13%;
-}
-
-#joelTexto2 {
-    display: flex;
-    color: white;
-    font-family: "Press Gothic";
-    font-size: 4vmax;
-    font-weight: 100;
-    margin-left: 13%;
-    height: 60%;
-}
-
-.joelDescricao {
+#personagemConteudo{
     display: flex;
     color: white;
     font-family: 'Space Grotesk';
     font-weight: 300;
-    margin-top: 1%;
     font-size: 1.1vmax;
-    width: 41%;
-    margin-left: 6.5%;
-    flex-direction: column;
-}
-
-#descricao2 {
-    margin-top: 2%;
-}
-
-
-.joelFlecha {
-    display: flex;
-    color: white;
-    position: absolute;
-    margin-top: 25%;
-    width: 100%;
-    margin-left: -5%;
-    justify-content: flex-end;
-}
-
-#personagemAnterior {
-    display: flex;
-    font-size: 3vmax;
-    margin-left: 7%;
-    margin-right: auto;
-    font-weight: 100;
-    transform: rotate(-180deg);
-    cursor: pointer;
+    line-height: 32px;
 }
 
 

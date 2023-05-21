@@ -161,6 +161,145 @@ body {
     color: #ffe70c;
 }
 
+/* Menu Flutuante Jogos */
+#menuflutuanteJogos {
+    display: none;
+    position: fixed;
+    width: 14%;
+    height: 15%;
+    background-color: #FDC706;
+    left: 47%;
+    top: 6.5%;
+    border-radius: 6px;
+    flex-direction: column;
+}
+
+
+@media (max-width: 1919px) {
+    #menuflutuanteJogos {
+        width: 15%;
+        height: 20%;
+        top: 8%;
+    }
+}
+
+
+.menuItens {
+    display: flex;
+    color: white;
+    font-size: 1vmax;
+    font-weight: 500;
+    margin-top: 6%;
+    margin-left: 5%;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.menuTLOU1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 33%;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    border-bottom: 3px solid white;
+    cursor: pointer;
+}
+
+.menuTLOU1:hover {
+    background-color: #f7b500;
+}
+
+#menuTLOU1Texto {
+    display: flex;
+    color: white;
+    font-size: 0.9vmax;
+    margin-left: 5%;
+    font-weight: 500;
+}
+
+@media (max-width: 1919px) {
+    #menuTLOU1Texto {
+        font-size: 1vmax;
+    }
+}
+
+.menuTLOU2 {
+    display: flex;
+    width: 100%;
+    height: 33%;
+    align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+    border-bottom: 3px solid white;
+    cursor: pointer;
+}
+
+.menuTLOU2:hover {
+    background-color: #f7b500;
+}
+
+#menuTLOU2Texto {
+    display: flex;
+    color: white;
+    font-size: 0.9vmax;
+    margin-left: 5%;
+    font-weight: 500;
+}
+
+@media (max-width: 1919px) {
+    #menuTLOU2Texto {
+        font-size: 1vmax;
+    }
+}
+
+.menuLinha {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 2%;
+    top: 35%;
+}
+
+
+.menuLinha2 {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 2%;
+    top: 70%;
+}
+
+.menuTLOULB {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 33%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+}
+
+.menuTLOULB:hover {
+    background-color: #f7b500;
+}
+
+#menuTLOULBTexto {
+    display: flex;
+    color: white;
+    font-size: 0.9vmax;
+    margin-left: 5%;
+    font-weight: 500;
+}
+
+@media (max-width: 1919px) {
+    #menuTLOULBTexto {
+        font-size: 1vmax;
+    }
+}
+
 /* Serie */
 .serie {
     display: flex;
