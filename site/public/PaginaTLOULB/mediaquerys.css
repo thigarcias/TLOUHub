@@ -1,0 +1,36 @@
+@media (max-width: 1919px) {
+    #textonavbar {
+        font-size: 1.2vmax;
+    }
+}
+
+@media (max-width: 1919px){
+    .historiaImagem{
+        height: 55vh;
+    }
+}
+
+@media (max-width: 1919px){
+    #historiaSobre{
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 1919px){
+    #expansaoConteudo{
+        line-height: 30px;
+    }
+}
+
+
+@media (max-width: 1919px){
+    .pqExpansao{
+        margin-top: 8%;
+    }
+}
+
+@media (max-width: 1919px){
+    .carrossel{
+        margin-top: 6%;
+    }
+}

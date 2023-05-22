@@ -52,6 +52,12 @@
     }
 }
 
+@media (max-width: 1919px) {
+    .parteBaixoHistoria{
+        margin-top: 5%;
+    }
+}
+
 
 
 @media (max-width: 1919px) {
@@ -66,7 +72,11 @@
     }
 }
 
-
+@media (max-width: 1919px){
+    .criadora{
+        height: 65%;
+    }
+}
 
 @media (max-width: 1919px) {
     #criadoraTitulo {
@@ -80,11 +90,21 @@
     }
 }
 
+@media (max-width: 1919px){
+    .carrossel{
+        height: 120%;
+    }
+}
 
-@media (max-height: 800px){
-    .criadora{
-        height: 175vh;
+@media (max-width: 1919px){
+    #personagemConteudo{
+        line-height: 28px;
     }
 }
 
 
+@media (max-width: 1919px){
+    .quiz{
+        height: 100%;
+    }
+}

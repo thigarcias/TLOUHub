@@ -14,10 +14,19 @@ conhecaTexto.innerHTML = `RILEY ABEL`
 
 // Containers
 const container = document.querySelectorAll(".container")
-container[0].style.height = "100vh"
-container[0].style.flexDirection = "column"
-container[1].style.flexDirection = "column"
-container[2].style.height = "80vh"
+let resolucaoAtual = window.innerHeight
+if (resolucaoAtual < 900) {
+  container[0].style.height = "100vh"
+  container[0].style.flexDirection = "column"
+  container[1].style.height = "185vh"
+  container[1].style.flexDirection = "column"
+  container[2].style.height = "80vh"
+} else {
+  container[0].style.height = "100vh"
+  container[0].style.flexDirection = "column"
+  container[1].style.flexDirection = "column"
+  container[2].style.height = "80vh"
+}
 
 // Carrossel
 const carrossel = document.querySelectorAll(".carrossel")
@@ -125,10 +134,11 @@ menuTLOULB[0].addEventListener("click", function(){
     window.location = "../PaginaTLOULB/left.html"
 })
 
+// LINK homepage
 const homepagetexto = document.getElementById("homepagetexto")
 
 homepagetexto.addEventListener("click", function () {
     window.location.href = "../PaginaInicial/home.html"
-}),s
+})
 
 
