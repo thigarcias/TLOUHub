@@ -1,7 +1,19 @@
 // CONTAINER
+var resolucaoAtual = window.innerHeight
 const container = document.querySelectorAll(".container")
+<<<<<<< HEAD
 container[2].style.height = "50vh"
 container[1].style.marginTop = "5%"
+=======
+
+if (resolucaoAtual < 900){
+    container[1].style.height = "105vh"
+    container[1].style.marginTop = "5%"
+    container[2].style.height = "75vh"
+} else {
+    container[2].style.height = "50vh"
+}
+>>>>>>> 4487a7cdcbdeb0f673aee263647e0ac32107e789
 
 // CARROSSEL
 var personagens = [

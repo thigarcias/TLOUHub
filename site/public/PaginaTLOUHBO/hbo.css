@@ -493,6 +493,8 @@ body {
     margin-left: 5%;
 }
 
+
+
 #elencoNome {
     color: #899763;
     z-index: 2;
@@ -638,6 +640,7 @@ body {
     height: 65%;
     background-color: #222629
 }
+
 
 #linha1 {
     display: flex;

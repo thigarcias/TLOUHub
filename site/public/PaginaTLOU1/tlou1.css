@@ -42,7 +42,7 @@ body {
 }
 
 .container {
-    height: 100vh;
+    height: 90vh;
     width: 90%;
     margin-left: 5%;
     flex-direction: column;
@@ -327,6 +327,8 @@ body {
     font-family: 'Space Grotesk';
 }
 
+
+
 /* Conheça Mais */
 .conhecaMais {
     display: flex;
@@ -491,6 +493,12 @@ body {
     background-image: url(./assets/naughtydoglogo.png);
 }
 
+@media (max-width: 1919px){
+    #criadoraImagem{
+        height: 60vh;
+    }
+}
+
 /* CARROSSEL */
 .carrossel{
     position: relative;
@@ -501,6 +509,8 @@ body {
     overflow: hidden;
     scroll-behavior: smooth;
 }
+
+
 
 .carrosselPersonagem{
     display: flex;
@@ -549,7 +559,6 @@ body {
     font-weight: 600;
     margin-left: 8%;
     font-size: 1vmax;
-
 }
 
 #personagemTexto{
@@ -578,6 +587,7 @@ body {
     font-size: 1.1vmax;
     line-height: 32px;
 }
+
 
 
 /* VOCE SABIA */

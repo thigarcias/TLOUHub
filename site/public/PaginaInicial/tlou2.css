@@ -125,6 +125,12 @@
     background: linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, 0.267) 60%);
 }
 
+@media (max-width: 1919px){
+    .blocoHistoriaGradienteTLOU2{
+        top: 292%
+    }
+}
+
 .blocoHistoriaTLOU2 {
     display: flex;
     position: absolute;
@@ -164,6 +170,12 @@
     width: 20vh;
     height: 20vh;
     background: linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, 0.082) 60%);
+}
+
+@media (max-width: 1919px){
+    .blocoPersonagemGradienteTLOU2{
+        top: 292%
+    }
 }
 
 .blocoPersonagemGradienteTLOU2:hover {

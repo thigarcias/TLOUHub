@@ -523,6 +523,7 @@ body {
     font-family: 'Space Grotesk';
 }
 
+
 /* Conheça Mais */
 .conhecaMais {
     display: flex;
@@ -603,6 +604,7 @@ body {
     margin-top: 12%;
 } 
 
+
 #expansaoTextos{
     display: flex;
     width: 60%;
@@ -628,6 +630,8 @@ body {
     line-height: 36px;
 }
 
+
+
 #expansaoImagem{
     display: flex;
     position: relative;
@@ -649,6 +653,7 @@ body {
     overflow: hidden;
     scroll-behavior: smooth;
 }
+
 
 .carrosselPersonagem{
     display: flex;
