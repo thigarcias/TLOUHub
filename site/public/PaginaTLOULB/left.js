@@ -115,15 +115,6 @@ logintexto.addEventListener("click", function () {
   window.location.href = "../Login/login.html"
 })
 
-
-/* BOTAO PARA DESLOGAR */
-const conta_botao = document.getElementById("conta_botao")
-conta_botao.addEventListener("click", function () {
-  limparSessao()
-})
-
-
-
 /* MENU FLUTUANTE JOGOS */
 const menuflutuanteJogos = document.getElementById("menuflutuanteJogos")
 var jogos = document.querySelectorAll(".jogos")
@@ -148,12 +139,8 @@ menuTLOULB[0].addEventListener("click", function(){
     window.location = "../PaginaTLOULB/left.html"
 })
 
-<<<<<<< HEAD
 
 // Links navbar
-=======
-// LINK homepage
->>>>>>> 4487a7cdcbdeb0f673aee263647e0ac32107e789
 const homepagetexto = document.getElementById("homepagetexto")
 
 homepagetexto.addEventListener("click", function () {
@@ -164,4 +151,36 @@ const serietexto = document.getElementById("serietexto")
 
 serietexto.addEventListener("click", function () {
   window.location = "../PaginaTLOUHBO/hbo.html"
+})
+
+
+
+// USUARIO
+const idUsuario = document.querySelectorAll(".idUsuario")
+const idUsuarioTexto = document.getElementById("idUsuarioTexto")
+const iconUsuario = document.getElementById("iconUsuario")
+const menuflutuante = document.querySelectorAll(".menuflutuante")
+idUsuarioTexto.addEventListener("mouseenter", function(){
+  idUsuarioTexto.style.color = '#FDC706'
+  iconUsuario.style.color = '#FDC706'
+})
+
+idUsuarioTexto.addEventListener("mouseleave", function(){
+  idUsuarioTexto.style.color = 'white'
+  iconUsuario.style.color = 'white'
+})
+
+idUsuario[0].addEventListener("click", function(){
+  if (menuflutuante[0].style.display == "" || menuflutuante[0].style.display == "none"){
+    menuflutuante[0].style.display = 'flex'
+  } else {
+    menuflutuante[0].style.display = 'none'
+  }
+})
+
+
+/* BOTAO PARA DESLOGAR */
+const deslogar = document.getElementById("deslogar")
+deslogar.addEventListener("click", function () {
+  limparSessao()
 })

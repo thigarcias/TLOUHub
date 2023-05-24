@@ -268,13 +268,15 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
+    margin-right: 5%;
     align-items: center;
 }
 
 #textonavbar {
     display: flex;
     align-items: center;
-    width: 87%;
+    width: 100%;
+    margin-left: 7%;
     height: 100%;
     justify-content: center;
     font-family: 'Space Grotesk', sans-serif;
@@ -286,73 +288,28 @@ body {
     gap: 5%;
 }
 
-/* Texto Header Infinita */
-#noticiastextoInfinito {
-    cursor: pointer;
-    color: white;
-}
-
-#jogostextoInfinito {
-    display: flex;
-    cursor: pointer;
-    color: white;
-    align-items: center;
-}
-
-#serietextoInfinito {
-    display: flex;
-    cursor: pointer;
-    color: white;
-    align-items: center;
-}
-
 /* HOMEPAGE */
 .homepage {
     display: flex;
     height: 30%;
     flex-direction: column;
     justify-content: center;
-    cursor: pointer;
 }
 
 #homepagetexto {
     display: flex;
     color: white;
+    cursor: pointer;
 }
-
 
 #homepagetexto:hover {
-    color: #FDC706;
-}
-
-/*NOTICIAS*/
-.noticias {
-    display: flex;
-    height: 30%;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
-}
-
-#noticiastexto {
-    cursor: pointer;
-    color: white;
-}
-
-#noticiaslinha {
-    display: flex;
-    opacity: 0;
-    background-color: #FDC706;
-    width: 0%;
-    height: 10%;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+    color: #ffe70c;
 }
 
 /* JOGOS */
 .jogos {
     display: flex;
-    height: 100%;
+    height: 30%;
     justify-content: center;
     flex-direction: column;
     box-sizing: border-box;
@@ -363,16 +320,150 @@ body {
     cursor: pointer;
     color: white;
     align-items: center;
+    cursor: pointer;
 }
 
-#jogoslinha {
-    display: flex;
-    opacity: 0;
+#jogostexto:hover {
+    color: #ffe70c;
+}
+
+/* Menu Flutuante Jogos */
+#menuflutuanteJogos {
+    display: none;
+    position: fixed;
+    width: 14%;
+    height: 15%;
     background-color: #FDC706;
-    width: 0%;
-    height: 10%;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+    left: 47%;
+    top: 6.5%;
+    border-radius: 6px;
+    flex-direction: column;
+}
+
+
+@media (max-width: 1919px) {
+    #menuflutuanteJogos {
+        width: 15%;
+        height: 20%;
+        top: 8%;
+    }
+}
+
+
+.menuItens {
+    display: flex;
+    color: white;
+    font-size: 1vmax;
+    font-weight: 500;
+    margin-top: 6%;
+    margin-left: 5%;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.menuTLOU1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 33%;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    border-bottom: 3px solid white;
+    cursor: pointer;
+}
+
+.menuTLOU1:hover {
+    background-color: #f7b500;
+}
+
+#menuTLOU1Texto {
+    display: flex;
+    color: white;
+    font-size: 0.9vmax;
+    margin-left: 5%;
+    font-weight: 500;
+}
+
+@media (max-width: 1919px) {
+    #menuTLOU1Texto {
+        font-size: 1vmax;
+    }
+}
+
+.menuTLOU2 {
+    display: flex;
+    width: 100%;
+    height: 33%;
+    align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+    border-bottom: 3px solid white;
+    cursor: pointer;
+}
+
+.menuTLOU2:hover {
+    background-color: #f7b500;
+}
+
+#menuTLOU2Texto {
+    display: flex;
+    color: white;
+    font-size: 0.9vmax;
+    margin-left: 5%;
+    font-weight: 500;
+}
+
+@media (max-width: 1919px) {
+    #menuTLOU2Texto {
+        font-size: 1vmax;
+    }
+}
+
+.menuLinha {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 2%;
+    top: 35%;
+}
+
+
+.menuLinha2 {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 2%;
+    top: 70%;
+}
+
+.menuTLOULB {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 33%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+}
+
+.menuTLOULB:hover {
+    background-color: #f7b500;
+}
+
+#menuTLOULBTexto {
+    display: flex;
+    color: white;
+    font-size: 0.9vmax;
+    margin-left: 5%;
+    font-weight: 500;
+}
+
+@media (max-width: 1919px) {
+    #menuTLOULBTexto {
+        font-size: 1vmax;
+    }
 }
 
 /* Serie */
@@ -389,27 +480,25 @@ body {
     cursor: pointer;
     color: white;
     align-items: center;
+    cursor: pointer;
 }
+
+#serietexto:hover {
+    color: #ffe70c;
+}
+
 
 /* Faça Login */
-.logincadastro {
-    display: flex;
-    width: 15%;
-    height: 100%;
-    align-items: center;
-}
-
 .login {
     display: none;
     height: 30%;
-    width: 50%;
+    width: 7%;
     justify-content: center;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #FDC706;
+    background-color: #FDC706A6;
     font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
-
 }
 
 #logintexto {
@@ -424,7 +513,7 @@ body {
 .cadastrar {
     display: none;
     height: 30%;
-    width: 60%;
+    width: 9%;
     justify-content: center;
     box-sizing: border-box;
     font-family: 'Space Grotesk', sans-serif;
@@ -435,7 +524,7 @@ body {
 
 #naoTem {
     display: flex;
-    color: #FDC706;
+    color: #FDC706A6;
     font-size: 0.5vmax;
     justify-content: center;
     font-weight: 500;
@@ -452,24 +541,25 @@ body {
 }
 
 /* QUANDO ESTIVER LOGADO: */
-.conta {
-    display: flex;
-    height: 30%;
-    width: 50%;
+.idUsuario{
+    display: none;
+    height: 40%;
+    width: 10%;
+    align-items: center;
     justify-content: center;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background-color: #FDC706;
-    font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
 }
 
-#contatexto {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#idUsuarioTexto{
+    font-size: 1.2vmax;
+    font-family: 'Space Grotesk', sans-serif;
     color: white;
-    font-weight: 300;
+}
+
+
+#iconUsuario{
+    color: white;
+    cursor: pointer;
 }
 
 #iconNavbar {

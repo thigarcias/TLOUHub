@@ -9,13 +9,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="left.css">
     <link rel="stylesheet" href="mediaquerys.css">
+    <link rel="stylesheet" href="./menuflutuante.css">
     <script src="../js/funcoes.js"></script>
 </head>
 <body onload="validarSessao()">
     <div class="TLOUGradiente"></div>
     <div class="TLOU"></div>
-    <div class="container">
 
+    <!-- MENU FLUTUANTE-->
+    <div class="menuflutuante">
+        <span class="blocomenuflu"></span>
+        <span class="contaLogin">CONTA</span>
+        <span class="nomeconta">Museu Ipiranga</span>
+        <span class="contaemail">museudoipiranga@ipiranga.com</span>
+        <span class="gerenciarconta">Gerenciar conta</span>
+        <span class="contalinha"></span>
+        <span class="contalogout" id="deslogar">Fazer Logout</span>
+    </div>
+
+
+    <div class="container">
+        <!-- IR CIMA -->
         <div id="irCima">
             <span class="material-symbols-outlined" id="irCimaIcon">arrow_upward</span>
         </div>
@@ -68,8 +82,10 @@
                 <span id="cadastrartexto">CADASTRE-SE</span>
             </div>
 
-            <div class="conta" id="conta_botao">
-                <span id="contatexto">Sair</span>
+
+            <div class="idUsuario">
+                <span id="idUsuarioTexto">id_usuario</span>
+                <span class="material-symbols-outlined" id="iconUsuario">arrow_drop_down</span>
             </div>
         </div>
     </div>

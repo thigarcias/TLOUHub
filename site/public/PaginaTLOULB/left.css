@@ -414,6 +414,26 @@ body {
 }
 
 /* QUANDO ESTIVER LOGADO: */
+.idUsuario{
+    display: none;
+    height: 40%;
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#idUsuarioTexto{
+    font-size: 1.2vmax;
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+}
+
+
+#iconUsuario{
+    color: white;
+    cursor: pointer;
+}
 .conta {
     display: flex;
     height: 30%;
@@ -421,9 +441,10 @@ body {
     justify-content: center;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #FDC706A6;
+    background-color: #fdc706;
     font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
+    margin-left: 1%;
 }
 
 #contatexto {

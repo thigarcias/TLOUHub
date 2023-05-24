@@ -229,13 +229,6 @@ logintexto.addEventListener("click", function () {
 })
 
 
-
-/* BOTAO PARA DESLOGAR */
-const conta_botao = document.getElementById("conta_botao")
-conta_botao.addEventListener("click", function () {
-  limparSessao()
-})
-
 /* TRAILER TLOU 1 */
 const trailer = document.getElementById("trailer")
 const trailer2 = document.getElementById("trailer2")
@@ -301,4 +294,36 @@ menuTLOU1[0].addEventListener("click", function () {
 const menuTLOULB = document.querySelectorAll(".menuTLOULB")
 menuTLOULB[0].addEventListener("click", function(){
     window.location = "../PaginaTLOULB/left.html"
+})
+
+
+
+// USUARIO
+const idUsuario = document.querySelectorAll(".idUsuario")
+const idUsuarioTexto = document.getElementById("idUsuarioTexto")
+const iconUsuario = document.getElementById("iconUsuario")
+const menuflutuante = document.querySelectorAll(".menuflutuante")
+idUsuarioTexto.addEventListener("mouseenter", function(){
+  idUsuarioTexto.style.color = '#FDC706'
+  iconUsuario.style.color = '#FDC706'
+})
+
+idUsuarioTexto.addEventListener("mouseleave", function(){
+  idUsuarioTexto.style.color = 'white'
+  iconUsuario.style.color = 'white'
+})
+
+idUsuario[0].addEventListener("click", function(){
+  if (menuflutuante[0].style.display == "" || menuflutuante[0].style.display == "none"){
+    menuflutuante[0].style.display = 'flex'
+  } else {
+    menuflutuante[0].style.display = 'none'
+  }
+})
+
+
+/* BOTAO PARA DESLOGAR */
+const deslogar = document.getElementById("deslogar")
+deslogar.addEventListener("click", function () {
+  limparSessao()
 })

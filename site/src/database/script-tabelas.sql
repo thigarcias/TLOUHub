@@ -81,11 +81,6 @@ CREATE TABLE rileyGrafico (
 select * from usuario;
 select * from respostasGrafico;
 
-select
-(select count(*) from ellieGrafico) as Ellie,
-(select count(*) from joelGrafico) as Joel,
-(select count(*) from tessGrafico) as Tess,
-(select count(*) from rileyGrafico) as Riley;
 
 select 
 (select count(opcao1) from respostasGrafico where opcao1 = 1 and personagemFavorito = 'ellie') as Opcao1,
@@ -93,26 +88,3 @@ select
 (select count(opcao3) from respostasGrafico where opcao3 = 1 and personagemFavorito = 'ellie') as Opcao3,
 (select count(opcao4) from respostasGrafico where opcao4 = 1 and personagemFavorito = 'ellie') as Opcao4;
 
-
-select 
-(select count(opcao1) from joelGrafico where opcao1 = 1) as Opcao1,
-(select count(opcao2) from joelGrafico where opcao2 = 1) as Opcao2,
-(select count(opcao3) from joelGrafico where opcao3 = 1) as Opcao3,
-(select count(opcao4) from joelGrafico where opcao4 = 1) as Opcao4;
-
-
-select 
-(select count(opcao1) from tessGrafico where opcao1 = 1) as Opcao1,
-(select count(opcao2) from tessGrafico where opcao2 = 1) as Opcao2,
-(select count(opcao3) from tessGrafico where opcao3 = 1) as Opcao3,
-(select count(opcao4) from tessGrafico where opcao4 = 1) as Opcao4;
-
-select 
-    (select count(opcao1) from rileyGrafico where opcao1 = 1) as Opcao1,
-    (select count(opcao2) from rileyGrafico where opcao2 = 1) as Opcao2,
-    (select count(opcao3) from rileyGrafico where opcao3 = 1) as Opcao3,
-    (select count(opcao4) from rileyGrafico where opcao4 = 1) as Opcao4;
-    
-select * from joelGrafico;
-select * from tessGrafico;
-select * from rileyGrafico;
