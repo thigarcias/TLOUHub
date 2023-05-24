@@ -4,6 +4,8 @@ headerinfinitaFundo.style.zIndex = 2;
 const irCima = document.getElementById("irCima")
 const menuflutuanteJogos = document.getElementById("menuflutuanteJogos")
 
+const scrollbarThumb = document.querySelector('body::-webkit-scrollbar-thumb');
+
 
 // Adicione a um ID, no caso a pagina toda 'window', um evento (addEventListener), que no caso é o evento "scroll", uma função()
 // Mudança de cor da Header de acordo com os Jogos
@@ -20,8 +22,10 @@ window.addEventListener("scroll", function () {
     else if (posicaoScroll <= 1200) {
       headerinfinitaFundo.style.display = "flex";
       headerinfinitaFundo.style.backgroundColor = '#fc9802ee';
+      scrollbarThumb.style.backgroundColor = '#fc9802ee';
       menuflutuanteJogos.style.top = "5%"
       menuflutuanteJogos.style.zIndex = "2"
+
       if (posicaoScroll <= 800) {
         irCima.style.display = "none"
       } else {
@@ -30,9 +34,11 @@ window.addEventListener("scroll", function () {
     } else if (posicaoScroll <= 2500) {
       headerinfinitaFundo.style.display = "flex";
       headerinfinitaFundo.style.backgroundColor = '#055a18ee';
+      scrollbarThumb.style.backgroundColor = '#055a18ee';
     } else if (posicaoScroll >= 2500) {
       headerinfinitaFundo.style.display = "flex";
       headerinfinitaFundo.style.backgroundColor = '#323729f8';
+      scrollbarThumb.style.backgroundColor = '#323729f8';
     }
 
   } else {

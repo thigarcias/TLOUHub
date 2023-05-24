@@ -11,7 +11,6 @@ conhecaPersonagem.style.backgroundImage = `url('./assets/Part_I_Riley_infobox.we
 conhecaLinha.style.backgroundColor = "#3E3725"
 conhecaTexto.innerHTML = `RILEY ABEL`
 
-
 // Containers
 const container = document.querySelectorAll(".container")
 container[0].style.height = "100vh"
@@ -34,6 +33,21 @@ episodioProceder.addEventListener("click", function(){
 episodioVoltar.addEventListener("click", function(){
     carrossel[0].scrollLeft -= 2500
 })
+
+
+
+// Link dos Conheça
+conhecaConteudo[0].addEventListener("click", function(){
+  carrossel[0].scrollIntoView({behavior: 'smooth'})
+})
+
+conhecaConteudo[1].addEventListener("click", function(){
+  carrossel[0].scrollIntoView({behavior: 'smooth'})
+  setTimeout(function(){
+    carrossel[0].scrollLeft += 2500
+  }, 1000)
+})
+
 
 const personagemTexto = carrosselPersonagem[1].querySelector("#personagemTexto")
 const descricao1 = carrosselPersonagem[1].querySelector('#descricao1')
@@ -125,10 +139,16 @@ menuTLOULB[0].addEventListener("click", function(){
     window.location = "../PaginaTLOULB/left.html"
 })
 
+
+// Links navbar
 const homepagetexto = document.getElementById("homepagetexto")
 
 homepagetexto.addEventListener("click", function () {
     window.location.href = "../PaginaInicial/home.html"
-}),s
+})
 
+const serietexto = document.getElementById("serietexto")
 
+serietexto.addEventListener("click", function () {
+  window.location = "../PaginaTLOUHBO/hbo.html"
+})

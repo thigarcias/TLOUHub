@@ -1,6 +1,7 @@
 // CONTAINER
 const container = document.querySelectorAll(".container")
 container[2].style.height = "50vh"
+container[1].style.marginTop = "5%"
 
 // CARROSSEL
 var personagens = [

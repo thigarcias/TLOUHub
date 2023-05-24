@@ -707,7 +707,6 @@ body {
     display: flex;
     position: absolute;
     width: 100%;
-    margin-left: -5%;
     margin-top: 8%;
     height: 8vh;
     background-color: #354534;
