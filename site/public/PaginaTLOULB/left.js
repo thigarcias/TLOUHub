@@ -117,6 +117,8 @@ logintexto.addEventListener("click", function () {
 
 /* MENU FLUTUANTE JOGOS */
 const menuflutuanteJogos = document.getElementById("menuflutuanteJogos")
+menuflutuanteJogos.style.top = "6.2%"
+menuflutuanteJogos.style.zIndex = ""
 var jogos = document.querySelectorAll(".jogos")
     jogos[0].addEventListener("mouseenter", function () {
         jogos[0].querySelector("#jogostexto").style.color = "#ffe70c"

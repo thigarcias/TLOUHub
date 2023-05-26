@@ -66,7 +66,7 @@ window.addEventListener("scroll", function () {
     var resolucaoAtual = window.innerHeight
 
     if (resolucaoAtual < 900) {
-        if (posicaoScroll <= 100) {
+        if (posicaoScroll <= 50) {
             headerinfinitaFundo.style.display = "none"
             menuflutuanteJogos.style.top = "6.5%"
             menuflutuanteJogos.style.zIndex = ""
