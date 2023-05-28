@@ -2,7 +2,7 @@
 var resolucaoAtual = window.innerHeight
 const container = document.querySelectorAll(".container")
 container[2].style.height = "50vh"
-container[1].style.marginTop = "5%"
+container[1].style.marginTop = "7%"
 
 // CARROSSEL
 var personagens = [
@@ -229,8 +229,32 @@ logintexto.addEventListener("click", function () {
 
 
 
+// USUARIO
+const idUsuario = document.querySelectorAll(".idUsuario")
+const idUsuarioTexto = document.getElementById("idUsuarioTexto")
+const iconUsuario = document.getElementById("iconUsuario")
+const menuflutuante = document.querySelectorAll(".menuflutuante")
+idUsuarioTexto.addEventListener("mouseenter", function(){
+  idUsuarioTexto.style.color = '#FDC706'
+  iconUsuario.style.color = '#FDC706'
+})
+
+idUsuarioTexto.addEventListener("mouseleave", function(){
+  idUsuarioTexto.style.color = 'white'
+  iconUsuario.style.color = 'white'
+})
+
+idUsuario[0].addEventListener("click", function(){
+  if (menuflutuante[0].style.display == "" || menuflutuante[0].style.display == "none"){
+    menuflutuante[0].style.display = 'flex'
+  } else {
+    menuflutuante[0].style.display = 'none'
+  }
+})
+
+
 /* BOTAO PARA DESLOGAR */
-const conta_botao = document.getElementById("conta_botao")
-conta_botao.addEventListener("click", function () {
-    limparSessao()
+const deslogar = document.getElementById("deslogar")
+deslogar.addEventListener("click", function () {
+  limparSessao()
 })

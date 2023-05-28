@@ -88,3 +88,9 @@ select
 (select count(opcao3) from respostasGrafico where opcao3 = 1 and personagemFavorito = 'ellie') as Opcao3,
 (select count(opcao4) from respostasGrafico where opcao4 = 1 and personagemFavorito = 'ellie') as Opcao4;
 
+ select
+    (select count(*) from respostasGrafico where personagemFavorito = 'ellie') as Ellie,
+    (select count(*) from respostasGrafico where personagemFavorito = 'joel') as Joel,
+    (select count(*) from respostasGrafico where personagemFavorito = 'tess') as Tess,
+    (select count(*) from respostasGrafico where personagemFavorito = 'riley') as Riley;
+update usuario set email = 'emailatual' where id = idusuario;
