@@ -91,6 +91,27 @@ function jaRespondeu(id) {
     return database.executar(instrucao);
 }
 
+function verificarCurtida (idUsuario){
+    var instrucao = `
+    select * from rankingEP where fkUsuario = ${idUsuario};`
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+function enviarCurtida(curtidaEP1, curtidaEP2, curtidaEP3, curtidaEP4, curtidaEP5, curtidaEP6, curtidaEP7, curtidaEP8, curtidaEP9, id) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", curtidaEP1, curtidaEP2, curtidaEP3, curtidaEP4, curtidaEP5, curtidaEP6, curtidaEP7, curtidaEP8, curtidaEP9, id);
+
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO rankingEP (ep1, ep2, ep3, ep4, ep5, ep6, ep7, ep8, ep9, fkUsuario) VALUES ('${curtidaEP1}', '${curtidaEP2}', '${curtidaEP3}', '${curtidaEP4}', '${curtidaEP5}', '${curtidaEP6}', '${curtidaEP7}', '${curtidaEP8}', '${curtidaEP9}', ${id});
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
 module.exports = {
     entrar,
     cadastrar,
@@ -100,5 +121,7 @@ module.exports = {
     exibirDados,
     receberTudo,
     atualizarDados,
-    jaRespondeu
+    jaRespondeu,
+    verificarCurtida,
+    enviarCurtida
 };

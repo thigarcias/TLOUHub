@@ -250,6 +250,62 @@ function jaRespondeu(req, res) {
 
 }
 
+function verificarCurtida (req, res){
+    var idUsuario = req.body.idUsuario
+        usuarioModel.verificarCurtida(idUsuario)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+
+function enviarCurtida(req, res) {
+    // Recebe as inputs aqui postas no JS da pagina de Cadastro
+    var curtidaEP1 = req.body.curtidaEP1Server;
+    var curtidaEP2 = req.body.curtidaEP2Server;
+    var curtidaEP3 = req.body.curtidaEP3Server;
+    var curtidaEP4 = req.body.curtidaEP4Server;
+    var curtidaEP5 = req.body.curtidaEP5Server;
+    var curtidaEP6 = req.body.curtidaEP6Server;
+    var curtidaEP7 = req.body.curtidaEP7Server;
+    var curtidaEP8 = req.body.curtidaEP8Server;
+    var curtidaEP9 = req.body.curtidaEP9Server;
+    var id = req.body.idServer;
+    // Faça as validações dos valores
+    if (curtidaEP1 == undefined || curtidaEP2 == undefined || curtidaEP3 == undefined || curtidaEP4 == undefined || curtidaEP5 == undefined || curtidaEP6 == undefined || curtidaEP7 == undefined || curtidaEP8 == undefined || curtidaEP9 == undefined || id == undefined)  {
+        res.status(400).send("Suas curtidas está undefined!");
+    }else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.enviarCurtida(curtidaEP1, curtidaEP2, curtidaEP3, curtidaEP4, curtidaEP5, curtidaEP6, curtidaEP7, curtidaEP8, curtidaEP9, id)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
     entrar,
     verificar,
@@ -260,5 +316,7 @@ module.exports = {
     exibirDados,
     receberTudo,
     atualizarDados,
-    jaRespondeu
+    jaRespondeu,
+    verificarCurtida,
+    enviarCurtida
 }

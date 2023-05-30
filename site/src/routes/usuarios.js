@@ -46,5 +46,13 @@ router.post("/jaRespondeu", function (req, res) {
     usuarioController.jaRespondeu(req, res);
 });
 
+router.post("/verificarCurtida", function (req, res) {
+    usuarioController.verificarCurtida(req, res);
+});
+
+router.post("/enviarCurtida", function (req, res) {
+    usuarioController.enviarCurtida(req, res);
+});
+
 
 module.exports = router;

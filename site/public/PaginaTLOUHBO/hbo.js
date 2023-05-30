@@ -1,3 +1,112 @@
+window.onload = verificarCurtida()
+// NAVBAR links
+
+const homepagetexto = document.getElementById('homepagetexto');
+const jogostexto = document.getElementById('jogostexto');
+const serietexto = document.getElementById('serietexto');
+
+homepagetexto.addEventListener("click", function () {
+    window.location = "../PaginaInicial/home.html"
+  })
+
+  serietexto.addEventListener("click", function () {
+    window.location = "../PaginaTLOUHBO/hbo.html"
+  })
+
+
+// Ir para Cima botão 
+const irCima = document.getElementById("irCima")
+
+window.addEventListener("scroll", function () {
+    var posicaoScroll = window.pageYOffset;
+
+    if (posicaoScroll <= 500) {
+        irCima.style.display = "none"
+      } else {
+        irCima.style.display = "flex"
+      }
+})
+
+irCima.addEventListener("click", function () {
+    window.scrollTo({
+      top: '0%',
+      behavior: 'smooth'
+    });
+  })
+
+
+/* LINK Botão Login/Cadastro*/
+
+const cadastrartexto = document.getElementById("cadastrartexto")
+cadastrartexto.addEventListener("click", function () {
+  window.location.href = "../Cadastro/cadastro.html"
+})
+
+const logintexto = document.getElementById("logintexto")
+logintexto.addEventListener("click", function () {
+  window.location.href = "../Login/login.html"
+})
+
+
+// USUARIO
+const idUsuario = document.querySelectorAll(".idUsuario")
+const idUsuarioTexto = document.getElementById("idUsuarioTexto")
+const iconUsuario = document.getElementById("iconUsuario")
+const menuflutuante = document.querySelectorAll(".menuflutuante")
+idUsuarioTexto.addEventListener("mouseenter", function(){
+  idUsuarioTexto.style.color = '#FDC706'
+  iconUsuario.style.color = '#FDC706'
+})
+
+idUsuarioTexto.addEventListener("mouseleave", function(){
+  idUsuarioTexto.style.color = 'white'
+  iconUsuario.style.color = 'white'
+})
+
+idUsuario[0].addEventListener("click", function(){
+  if (menuflutuante[0].style.display == "" || menuflutuante[0].style.display == "none"){
+    menuflutuante[0].style.display = 'flex'
+  } else {
+    menuflutuante[0].style.display = 'none'
+  }
+})
+
+
+/* BOTAO PARA DESLOGAR */
+const deslogar = document.getElementById("deslogar")
+deslogar.addEventListener("click", function () {
+  limparSessao()
+})
+
+
+/* MENU FLUTUANTE JOGOS */
+const menuflutuanteJogos = document.getElementById("menuflutuanteJogos")
+var jogos = document.querySelectorAll(".jogos")
+    jogos[0].addEventListener("mouseenter", function () {
+        jogos[0].querySelector("#jogostexto").style.color = "#ffe70c"
+        menuflutuanteJogos.style.display = "flex"
+    })
+
+    jogos[0].addEventListener('mouseleave', function () {
+        jogos[0].querySelector("#jogostexto").style.color = "#ffffff"
+        menuflutuanteJogos.style.display = "none"
+    })
+
+
+const menuTLOU1 = document.querySelectorAll(".menuTLOU1")
+menuTLOU1[0].addEventListener("click", function () {
+    window.location = "../PaginaTLOU1/tlou1.html"
+})
+
+const menuTLOULB = document.querySelectorAll(".menuTLOULB")
+menuTLOULB[0].addEventListener("click", function(){
+    window.location = "../PaginaTLOULB/left.html"
+})
+
+
+
+
+
 /* ELENCO */
 const elenco = document.querySelectorAll('.integranteElenco')
 // Bella Ramsey
@@ -175,109 +284,230 @@ for (let x = 0; x < episodioConteudo.length; x++){
         jsonEpisodiosImagem.style.backgroundImage = urls[x]
         jsonEpisodioTitulo.innerHTML = jsonEPS[x].titulo
         jsonEpisodioResumo.innerHTML = jsonEPS[x].resumo
+        
+        if (listaCurtidas[0].ep1 == 1){
+          curtidaIcon.style.color = red
+        } else if (listaCurtidas[0].ep2 == 1){
+          curtidaIcon.style.color = red
+        } else if (listaCurtidas[0].ep3 == 1){
+          curtidaIcon.style.color = red
+        } else if (listaCurtidas[0].ep2 == 1){
+          curtidaIcon.style.color = red
+        }
     })
 }
 
+/* CURTIDA */
 
-// NAVBAR links
-const homepagetexto = document.getElementById('homepagetexto');
-const jogostexto = document.getElementById('jogostexto');
-const serietexto = document.getElementById('serietexto');
-
-homepagetexto.addEventListener("click", function () {
-    window.location = "../PaginaInicial/home.html"
-  })
-
-  serietexto.addEventListener("click", function () {
-    window.location = "../PaginaTLOUHBO/hbo.html"
-  })
-
-
-// Ir para Cima botão 
-const irCima = document.getElementById("irCima")
-
-window.addEventListener("scroll", function () {
-    var posicaoScroll = window.pageYOffset;
-
-    if (posicaoScroll <= 500) {
-        irCima.style.display = "none"
-      } else {
-        irCima.style.display = "flex"
-      }
-})
-
-irCima.addEventListener("click", function () {
-    window.scrollTo({
-      top: '0%',
-      behavior: 'smooth'
-    });
-  })
-
-
-/* LINK Botão Login/Cadastro*/
-
-const cadastrartexto = document.getElementById("cadastrartexto")
-cadastrartexto.addEventListener("click", function () {
-  window.location.href = "../Cadastro/cadastro.html"
-})
-
-const logintexto = document.getElementById("logintexto")
-logintexto.addEventListener("click", function () {
-  window.location.href = "../Login/login.html"
-})
-
-
-// USUARIO
-const idUsuario = document.querySelectorAll(".idUsuario")
-const idUsuarioTexto = document.getElementById("idUsuarioTexto")
-const iconUsuario = document.getElementById("iconUsuario")
-const menuflutuante = document.querySelectorAll(".menuflutuante")
-idUsuarioTexto.addEventListener("mouseenter", function(){
-  idUsuarioTexto.style.color = '#FDC706'
-  iconUsuario.style.color = '#FDC706'
-})
-
-idUsuarioTexto.addEventListener("mouseleave", function(){
-  idUsuarioTexto.style.color = 'white'
-  iconUsuario.style.color = 'white'
-})
-
-idUsuario[0].addEventListener("click", function(){
-  if (menuflutuante[0].style.display == "" || menuflutuante[0].style.display == "none"){
-    menuflutuante[0].style.display = 'flex'
-  } else {
-    menuflutuante[0].style.display = 'none'
+let listaCurtidas =[
+  {
+    ep1: 0,
+    ep2: 0,
+    ep3: 0,
+    ep4: 0,
+    ep5: 0,
+    ep6: 0,
+    ep7: 0,
+    ep8: 0,
+    ep9: 0,
   }
-})
+]
 
+const curtidaIcon = document.getElementById("curtidaIcon")
+curtidaIcon.addEventListener("click", function() {
+      if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 1') {
+        if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep1 === 0) {
+        curtidaIcon.style.color = "red";
+        alert("Você curtiu o episódio 1!");
+        listaCurtidas[0].ep1++;
+      } else {
+        curtidaIcon.style.color = "white";
+        alert("Você descurtiu o episódio 1");
+        listaCurtidas[0].ep1--;
+      }
+    } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 2') {
+      if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep2 === 0) {
+        curtidaIcon.style.color = "red";
+        alert("Você curtiu o episódio 2!");
+        listaCurtidas[0].ep2++;
+      } else {
+        curtidaIcon.style.color = "white";
+        alert("Você descurtiu o episódio 2");
+        listaCurtidas[0].ep2--;
+      }
+    } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 3') {
+      if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep3 === 0) {
+        curtidaIcon.style.color = "red";
+        alert("Você curtiu o episódio 3!");
+        listaCurtidas[0].ep3++;
+      } else {
+        curtidaIcon.style.color = "white";
+        alert("Você descurtiu o episódio 3");
+        listaCurtidas[0].ep3--;
+      }
+    } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 4') {
+      if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep4 === 0) {
+        curtidaIcon.style.color = "red";
+        alert("Você curtiu o episódio 4!");
+        listaCurtidas[0].ep4++;
+      } else {
+        curtidaIcon.style.color = "white";
+        alert("Você descurtiu o episódio 4");
+        listaCurtidas[0].ep4--;
+      }
+    } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 5') {
+      if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep5 === 0) {
+        curtidaIcon.style.color = "red";
+        alert("Você curtiu o episódio 5!");
+        listaCurtidas[0].ep5++;
+      } else {
+        curtidaIcon.style.color = "white";
+        alert("Você descurtiu o episódio 5");
+        listaCurtidas[0].ep5--;
+      }
+    } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 6') {
+      if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep6 === 0) {
+        curtidaIcon.style.color = "red";
+        alert("Você curtiu o episódio 6!");
+        listaCurtidas[0].ep6++;
+      } else {
+        curtidaIcon.style.color = "white";
+        alert("Você descurtiu o episódio 6");
+        listaCurtidas[0].ep6--;
+      }
+    } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 7') {
+      if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep7 === 0) {
+        curtidaIcon.style.color = "red";
+        alert("Você curtiu o episódio 7!");
+        listaCurtidas[0].ep7++;
+      } else {
+        curtidaIcon.style.color = "white";
+        alert("Você descurtiu o episódio 7");
+        listaCurtidas[0].ep7--;
+      }
+    } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 8') {
+      if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep8 === 0) {
+        curtidaIcon.style.color = "red";
+        alert("Você curtiu o episódio 8!");
+        listaCurtidas[0].ep8++;
+      } else {
+        curtidaIcon.style.color = "white";
+        alert("Você descurtiu o episódio 8");
+        listaCurtidas[0].ep8--;
+      }
+    } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 9') {
+      if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep9 === 0) {
+        curtidaIcon.style.color = "red";
+        alert("Você curtiu o episódio 9!");
+        listaCurtidas[0].ep9++;
+      } else {
+        curtidaIcon.style.color = "white";
+        alert("Você descurtiu o episódio 9");
+        listaCurtidas[0].ep9--;
+      }
+    }
+});
 
-/* BOTAO PARA DESLOGAR */
-const deslogar = document.getElementById("deslogar")
-deslogar.addEventListener("click", function () {
-  limparSessao()
-})
-
-
-/* MENU FLUTUANTE JOGOS */
-const menuflutuanteJogos = document.getElementById("menuflutuanteJogos")
-var jogos = document.querySelectorAll(".jogos")
-    jogos[0].addEventListener("mouseenter", function () {
-        jogos[0].querySelector("#jogostexto").style.color = "#ffe70c"
-        menuflutuanteJogos.style.display = "flex"
+// vai rodar no inicio da pagina
+function verificarCurtida(){
+    fetch("/usuarios/verificarCurtida", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        idUsuario: sessionStorage.ID_USUARIO
+        })
     })
 
-    jogos[0].addEventListener('mouseleave', function () {
-        jogos[0].querySelector("#jogostexto").style.color = "#ffffff"
-        menuflutuanteJogos.style.display = "none"
-    })
+        .then(function (resposta) {
+            console.log("ESTOU NO THEN DO Ellie()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    if (json.length >= 0) {
+                      listaCurtidas[0].ep1 = json[0].ep1
+                      listaCurtidas[0].ep2 = json[0].ep2
+                      listaCurtidas[0].ep3 = json[0].ep3
+                      listaCurtidas[0].ep4 = json[0].ep4
+                      listaCurtidas[0].ep5 = json[0].ep5
+                      listaCurtidas[0].ep6 = json[0].ep6
+                      listaCurtidas[0].ep7 = json[0].ep7
+                      listaCurtidas[0].ep8 = json[0].ep8
+                      listaCurtidas[0].ep9 = json[0].ep9
+                      if (listaCurtidas[0].ep1 == 1 || listaCurtidas[0].ep2 == 1 || listaCurtidas[0].ep3 == 1 || listaCurtidas[0].ep4 == 1 || listaCurtidas[0].ep5 == 1 || listaCurtidas[0].ep6 == 1 || listaCurtidas[0].ep7 == 1 || listaCurtidas[0].ep8 == 1 || listaCurtidas[0].ep9 == 1){
+                        curtidaIcon.style.color = "red";
+                      }
+                    }
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar enviar o grafico dados!");
 
 
-const menuTLOU1 = document.querySelectorAll(".menuTLOU1")
-menuTLOU1[0].addEventListener("click", function () {
-    window.location = "../PaginaTLOU1/tlou1.html"
-})
 
-const menuTLOULB = document.querySelectorAll(".menuTLOULB")
-menuTLOULB[0].addEventListener("click", function(){
-    window.location = "../PaginaTLOULB/left.html"
-})
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+    return false;
+}
+
+
+function enviarCurtida() {
+  fetch("/usuarios/enviarCurtida", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+          curtidaEP1Server: listaCurtidas[0].ep1,
+          curtidaEP2Server: listaCurtidas[0].ep2,
+          curtidaEP3Server: listaCurtidas[0].ep3,
+          curtidaEP4Server: listaCurtidas[0].ep4,
+          curtidaEP5Server: listaCurtidas[0].ep5,
+          curtidaEP6Server: listaCurtidas[0].ep6,
+          curtidaEP7Server: listaCurtidas[0].ep7,
+          curtidaEP8Server: listaCurtidas[0].ep8,
+          curtidaEP9Server: listaCurtidas[0].ep9,
+          idServer: sessionStorage.ID_USUARIO,
+      })
+  })
+
+      .then(function (resposta) {
+          console.log("ESTOU NO THEN DO Ellie()!")
+
+          if (resposta.ok) {
+              console.log(resposta);
+
+              resposta.json().then(json => {
+                  console.log(json);
+                  console.log(JSON.stringify(json));
+              });
+
+          } else {
+
+              console.log("Houve um erro ao tentar enviar o grafico dados!");
+
+
+
+              resposta.text().then(texto => {
+                  console.error(texto);
+              });
+          }
+
+      }).catch(function (erro) {
+          console.log(erro);
+      })
+  return false;
+}

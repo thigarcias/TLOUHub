@@ -35,52 +35,33 @@ CREATE TABLE respostasGrafico (
 	CONSTRAINT chkOpcao4 CHECK (opcao4 IN (0, 1))
     );
 
-CREATE TABLE joelGrafico (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	opcao1 VARCHAR(50),
-	opcao2 VARCHAR(50),
-	opcao3 VARCHAR(50),
-	opcao4 VARCHAR(50),
+CREATE TABLE rankingEP (
+	idRank INT PRIMARY KEY auto_increment,
+    ep1 INT,
+    ep2 INT,
+    ep3 INT,
+    ep4 INT,
+    ep5 INT,
+    ep6 INT,
+    ep7 INT,
+    ep8 INT,
+    ep9 INT,
     fkUsuario int,
-    constraint fkUsuarioJoel foreign key (fkUsuario) references usuario(id),
-    constraint chkJoel1 check (opcao1 in(0,1)),
-    constraint chkJoel2 check (opcao2 in(0,1)),
-    constraint chkJoel3 check (opcao3 in(0,1)),
-    constraint chkJoel4 check (opcao4 in(0,1))
-    );
-    
-CREATE TABLE tessGrafico (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	opcao1 VARCHAR(50),
-	opcao2 VARCHAR(50),
-	opcao3 VARCHAR(50),
-	opcao4 VARCHAR(50),
-    fkUsuario int,
-    constraint fkUsuarioTess foreign key (fkUsuario) references usuario(id),
-	constraint chkTess1 check (opcao1 in(0,1)),
-    constraint chkTess2 check (opcao2 in(0,1)),
-    constraint chkTess3 check (opcao3 in(0,1)),
-    constraint chkTess4 check (opcao4 in(0,1))
-    );
-    
-    
-CREATE TABLE rileyGrafico (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	opcao1 VARCHAR(50),
-	opcao2 VARCHAR(50),
-	opcao3 VARCHAR(50),
-	opcao4 VARCHAR(50),
-    fkUsuario int,
-    constraint fkUsuarioRiley foreign key (fkUsuario) references usuario(id),
-    constraint chkRiley1 check (opcao1 in(0,1)),
-    constraint chkRiley2 check (opcao2 in(0,1)),
-    constraint chkRiley3 check (opcao3 in(0,1)),
-    constraint chkRiley4 check (opcao4 in(0,1))
+    CONSTRAINT fkUsuarioRanking foreign key (fkUsuario) references usuario(id),
+	CONSTRAINT ep1 CHECK (ep1 IN (0, 1)),
+	CONSTRAINT ep2 CHECK (ep2 IN (0, 1)),
+	CONSTRAINT ep3 CHECK (ep3 IN (0, 1)),
+	CONSTRAINT ep4 CHECK (ep4 IN (0, 1)),
+	CONSTRAINT ep5 CHECK (ep5 IN (0, 1)),
+	CONSTRAINT ep6 CHECK (ep6 IN (0, 1)),
+	CONSTRAINT ep7 CHECK (ep7 IN (0, 1)),
+	CONSTRAINT ep8 CHECK (ep8 IN (0, 1)),
+	CONSTRAINT ep9 CHECK (ep9 IN (0, 1))
     );
 
+select * from rankingEP where fkUsuario = 1;
 select * from usuario;
 select * from respostasGrafico;
-
 
 select 
 (select count(opcao1) from respostasGrafico where opcao1 = 1 and personagemFavorito = 'ellie') as Opcao1,
