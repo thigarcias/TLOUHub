@@ -322,13 +322,13 @@ body {
 
 /* Faça Login */
 .login {
-    display: none;
+    display: flex;
     height: 30%;
     width: 7%;
     justify-content: center;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #61892F;
+    background-color: #FDC706A6;
     font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
 }
@@ -343,7 +343,7 @@ body {
 
 /* Cadastro */
 .cadastrar {
-    display: none;
+    display: flexx;
     height: 30%;
     width: 9%;
     justify-content: center;
@@ -356,7 +356,7 @@ body {
 
 #naoTem {
     display: flex;
-    color: #61892F;
+    color: #FDC706A6;
     font-size: 0.5vmax;
     justify-content: center;
     font-weight: 500;

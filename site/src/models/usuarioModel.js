@@ -12,7 +12,7 @@ function listar() {
 function entrar(email, senha) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
     var instrucao = `
-        SELECT * FROM usuario WHERE email = '${email}' AND senha = '${senha}';
+        SELECT * FROM usuario WHERE email = '${email}' AND senha = sha2('${senha}', 256);
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -25,7 +25,7 @@ function cadastrar(nome, sobrenome, email, senha) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        INSERT INTO usuario (nome, sobrenome, email, senha) VALUES ('${nome}', '${sobrenome}', '${email}', '${senha}');
+        INSERT INTO usuario (nome, sobrenome, email, senha) VALUES ('${nome}', '${sobrenome}', '${email}', sha2('${senha}', 256));
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -99,14 +99,20 @@ function verificarCurtida (idUsuario){
 }
 
 
-function enviarCurtida(curtidaEP1, curtidaEP2, curtidaEP3, curtidaEP4, curtidaEP5, curtidaEP6, curtidaEP7, curtidaEP8, curtidaEP9, id) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", curtidaEP1, curtidaEP2, curtidaEP3, curtidaEP4, curtidaEP5, curtidaEP6, curtidaEP7, curtidaEP8, curtidaEP9, id);
+function enviarCurtida(curtidaEP1, curtidaEP2, curtidaEP3, curtidaEP4, curtidaEP5, curtidaEP6, curtidaEP7, curtidaEP8, curtidaEP9, id, jacurtiu) {
+    console.log(jacurtiu)
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", curtidaEP1, curtidaEP2, curtidaEP3, curtidaEP4, curtidaEP5, curtidaEP6, curtidaEP7, curtidaEP8, curtidaEP9, id, jacurtiu);
 
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
-    var instrucao = `
-        INSERT INTO rankingEP (ep1, ep2, ep3, ep4, ep5, ep6, ep7, ep8, ep9, fkUsuario) VALUES ('${curtidaEP1}', '${curtidaEP2}', '${curtidaEP3}', '${curtidaEP4}', '${curtidaEP5}', '${curtidaEP6}', '${curtidaEP7}', '${curtidaEP8}', '${curtidaEP9}', ${id});
-    `;
+    if (jacurtiu == false){
+        var instrucao = `
+            INSERT INTO rankingEP (ep1, ep2, ep3, ep4, ep5, ep6, ep7, ep8, ep9, fkUsuario) VALUES ('${curtidaEP1}', '${curtidaEP2}', '${curtidaEP3}', '${curtidaEP4}', '${curtidaEP5}', '${curtidaEP6}', '${curtidaEP7}', '${curtidaEP8}', '${curtidaEP9}', ${id});
+        `;
+    } else {
+        var instrucao = `
+            UPDATE rankingEP SET ep1 = ${curtidaEP1}, ep2 = ${curtidaEP2}, ep3 = ${curtidaEP3}, ep4 = ${curtidaEP4}, ep5 = ${curtidaEP5}, ep6 = ${curtidaEP6}, ep7 = ${curtidaEP7}, ep8 = ${curtidaEP8}, ep9 = ${curtidaEP9} WHERE fkUsuario = ${id};`
+    }
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }

@@ -5,7 +5,6 @@
 /*
 comandos para mysql - banco local - ambiente de desenvolvimento
 */
-
 CREATE DATABASE tlouhub;
 
 USE tlouhub;
@@ -15,9 +14,10 @@ CREATE TABLE usuario (
 	nome VARCHAR(50),
     sobrenome VARCHAR(50),
 	email VARCHAR(50),
-	senha VARCHAR(50)
+	senha VARCHAR(200)
     
 );
+
 
 CREATE TABLE respostasGrafico (
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -60,9 +60,9 @@ CREATE TABLE rankingEP (
     );
 
 select * from rankingEP where fkUsuario = 1;
+truncate table rankingEP;
 select * from usuario;
 select * from respostasGrafico;
-
 select 
 (select count(opcao1) from respostasGrafico where opcao1 = 1 and personagemFavorito = 'ellie') as Opcao1,
 (select count(opcao2) from respostasGrafico where opcao2 = 1 and personagemFavorito = 'ellie') as Opcao2,
