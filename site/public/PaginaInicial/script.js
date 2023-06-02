@@ -82,18 +82,6 @@ const serietexto = document.getElementById('serietexto');
 const serietextoInfinito = document.getElementById('serietextoInfinito');
 
 
-// noticiastexto.style.color = '#ffffff;';
-// // Adicione um evento a um ID do HTML, no caso noticiastexto, a função mouseover que é equivalente ao :hover do CSS, execute a função function() 
-// noticiastexto.addEventListener('mouseenter', function () {
-//   noticiastexto.style.color = '#ffe70c';
-// }),
-//   noticiastexto.addEventListener("click", function () {
-//     window.location = "../Noticias/noticia.html"
-//   }),
-//   noticiastexto.addEventListener('mouseout', function () {
-//     noticiastexto.style.color = '#ffffff';
-//   }),
-
   serietexto.addEventListener("mouseover", function () {
     serietexto.style.color = '#ffe70c';
   }),
@@ -102,12 +90,6 @@ const serietextoInfinito = document.getElementById('serietextoInfinito');
   });
 
 /* Home Infinito */
-// noticiastextoInfinito.addEventListener('mouseover', function () {
-//   noticiastextoInfinito.style.color = '#ffe70c';
-// }),
-//   noticiastextoInfinito.addEventListener('mouseout', function () {
-//     noticiastextoInfinito.style.color = '#ffffff';
-//   }),
   serietextoInfinito.addEventListener("mouseover", function () {
     serietextoInfinito.style.color = '#ffe70c';
   }),
@@ -115,10 +97,13 @@ const serietextoInfinito = document.getElementById('serietextoInfinito');
     serietextoInfinito.style.color = '#ffffff';
   });
 
-  serietexto.addEventListener("click", function () {
+  serietextoInfinito.addEventListener("click", function () {
     window.location = "../PaginaTLOUHBO/hbo.html"
   })
 
+  serietexto .addEventListener("click", function () {
+    window.location = "../PaginaTLOUHBO/hbo.html"
+  })
 
 
 

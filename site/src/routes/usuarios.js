@@ -54,5 +54,13 @@ router.post("/enviarCurtida", function (req, res) {
     usuarioController.enviarCurtida(req, res);
 });
 
+router.post("/verificarSenha", function (req, res) {
+    usuarioController.verificarSenha(req, res);
+});
+
+router.post("/atualizarEmailSenha", function (req, res) {
+    usuarioController.atualizarEmailSenha(req, res);
+});
+
 
 module.exports = router;

@@ -72,10 +72,9 @@ function receberTudo (){
     return database.executar(instrucao);
 }
 
-function atualizarDados(email, nome, sobrenome, id) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, nome, sobrenome, id)
+function atualizarDados(nome, sobrenome, id) {
     var instrucao = `
-    UPDATE usuario SET email = '${email}', nome = '${nome}', sobrenome = '${sobrenome}' WHERE id = ${id}; ;
+    UPDATE usuario SET nome = '${nome}', sobrenome = '${sobrenome}' WHERE id = ${id}; ;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -117,6 +116,22 @@ function enviarCurtida(curtidaEP1, curtidaEP2, curtidaEP3, curtidaEP4, curtidaEP
     return database.executar(instrucao);
 }
 
+function verificarSenha (senha, id){
+    var instrucao = `
+    select * from usuario where senha = sha2('${senha}', 256) AND id = ${id};`
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function atualizarEmailSenha(email, senha, id) {
+    var instrucao = `
+    UPDATE usuario SET email = '${email}', senha = sha2('${senha}', 256) WHERE id = ${id}; ;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
 
 module.exports = {
     entrar,
@@ -129,5 +144,7 @@ module.exports = {
     atualizarDados,
     jaRespondeu,
     verificarCurtida,
-    enviarCurtida
+    enviarCurtida,
+    verificarSenha,
+    atualizarEmailSenha
 };

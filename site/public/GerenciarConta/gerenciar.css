@@ -90,6 +90,12 @@ body {
     align-items: center;
 }
 
+@media (max-width: 1919px){
+    #IPtexto{
+        font-size:2.7vmax
+    }
+}
+
 #IPtextoAviso {
     display: flex;
     color: white;
@@ -103,6 +109,12 @@ body {
     line-height: 20px;
     align-items: center;
 
+}
+
+@media (max-width: 1919px){
+    #IPtextoAviso{
+        font-size:1vmax
+    }
 }
 
 .IPparteDireita {
@@ -131,6 +143,13 @@ body {
     margin-left: 1%;
 }
 
+@media (max-width: 1919px){
+    #enderecoEmailTexto{
+        font-size: 0.9vmax
+    }
+}
+
+
 #i_sobrenome {
     display: flex;
     color: white;
@@ -141,6 +160,13 @@ body {
     background-color: #dad9d88f;
     border: 1px solid #448D19;
     border-radius: 6px;
+}
+
+@media (max-width: 1919px){
+    #i_sobrenome{
+        height: 4vh;
+        font-size: 0.9vmax;
+    }
 }
 
 #i_sobrenome:focus {
@@ -172,6 +198,11 @@ body {
     margin-left: 2%;
 }
 
+@media (max-width: 1919px){
+    #nomeTexto{
+        font-size: 0.9vmax
+    }
+}
 
 #i_nome {
     display: flex;
@@ -184,6 +215,15 @@ body {
     border: 1px solid #448D19;
     border-radius: 6px;
 }
+
+
+@media (max-width: 1919px){
+    #i_nome{
+        height: 4vh;
+        font-size: 0.9vmax;
+    }
+}
+
 
 #i_nome:focus {
     background-color: white;
@@ -307,6 +347,15 @@ body {
     margin-bottom: 2%;
 }
 
+@media (max-width: 1919px){
+    #i_emailatual{
+        height: 4vh;
+        font-size: 0.9vmax;
+    }
+}
+
+
+
 #i_emailatual:focus {
     background-color: white;
     color: #2E2109;
@@ -334,6 +383,14 @@ body {
     border: 1px solid #448D19;
     border-radius: 6px;
 }
+
+@media (max-width: 1919px){
+    #i_emailnovo{
+        height: 4vh;
+        font-size: 0.9vmax;
+    }
+}
+
 
 #i_emailnovo:focus {
     background-color: white;
@@ -408,6 +465,14 @@ body {
     margin-bottom: 2%;
 }
 
+@media (max-width: 1919px){
+    #i_senhaatual{
+        height: 4vh;
+        font-size: 0.9vmax;
+    }
+}
+
+
 #i_senhaatual:focus {
     background-color: white;
     color: #2E2109;
@@ -436,6 +501,14 @@ body {
     margin-bottom: 2%;
 }
 
+@media (max-width: 1919px){
+    #i_senhanova{
+        height: 4vh;
+        font-size: 0.9vmax;
+    }
+}
+
+
 #i_senhanova:focus {
     background-color: white;
     color: #2E2109;
@@ -463,6 +536,13 @@ body {
     border: 1px solid #448D19;
     border-radius: 6px;
     margin-bottom: 2%;
+}
+
+@media (max-width: 1919px){
+    #i_senhanovaconfirmar{
+        height: 4vh;
+        font-size: 0.9vmax;
+    }
 }
 
 #i_senhanovaconfirmar:focus {
@@ -494,4 +574,15 @@ body {
     background-color:white;
     color: #448D19;
     border: 1px solid white;
+}
+
+#msgErro{
+    display: flex;
+    font-family: 'MADE Tommy Soft', sans-serif;
+    font-size: 0.8vmax;
+    color: red;
+    margin-left: 0.5%;
+    width: 90%;
+    height: 5%;
+    margin-top: 0.5%;
 }

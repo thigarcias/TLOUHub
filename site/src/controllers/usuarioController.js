@@ -196,13 +196,12 @@ function atualizarDados(req, res) {
     // Recebe as inputs aqui postas no JS da pagina de Login
     var nome = req.body.nomeServer
     var sobrenome = req.body.sobrenomeServer
-    var email = req.body.emailServer;
     var id = req.body.idServer
-    if (email == undefined || nome == undefined || sobrenome == undefined || id == undefined) {
+    if (nome == undefined || sobrenome == undefined || id == undefined) {
         res.status(400).send("Seus dados estão indefinido!");
     } else {
         
-        usuarioModel.atualizarDados(email, nome, sobrenome, id)
+        usuarioModel.atualizarDados(nome, sobrenome, id)
             .then(
                 function (resultado) {
                         console.log(`\nResultados encontrados: ${resultado.length}`);
@@ -307,6 +306,54 @@ function enviarCurtida(req, res) {
     }
 }
 
+function verificarSenha (req, res){
+    var senha = req.body.senha
+    var id = req.body.idServer
+        usuarioModel.verificarSenha(senha, id)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+function atualizarEmailSenha(req, res) {
+    // Recebe as inputs aqui postas no JS da pagina de Login
+    var email = req.body.emailServer
+    var senha = req.body.senhaNovaServer
+    var id = req.body.idServer
+    if (email == undefined || senha == undefined || id == undefined) {
+        res.status(400).send("Seus dados estão indefinido!");
+    } else {
+        
+        usuarioModel.atualizarEmailSenha(email, senha, id)
+            .then(
+                function (resultado) {
+                        console.log(`\nResultados encontrados: ${resultado.length}`);
+                        console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
+                        console.log(resultado);
+                        res.json(resultado[0]);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+
+}
+
 module.exports = {
     entrar,
     verificar,
@@ -319,5 +366,7 @@ module.exports = {
     atualizarDados,
     jaRespondeu,
     verificarCurtida,
-    enviarCurtida
+    enviarCurtida,
+    verificarSenha,
+    atualizarEmailSenha
 }
