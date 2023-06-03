@@ -4,6 +4,13 @@ email.value = "thiagogarcia526@gmail.com"
 senha.value = "12345678"
 confirmarSenha.value = '12345678'
 
+window.addEventListener("keyup", capturarTecla)
+function capturarTecla(event) {
+      if (event.key === "Enter") {
+        cadastrar();
+      }
+}
+
 const criarConta = document.getElementById("criarConta")
 const homepagetexto = document.getElementById("homepagetexto")
 const logintexto = document.getElementById("logintexto")

@@ -15,9 +15,17 @@ CREATE TABLE usuario (
     sobrenome VARCHAR(50),
 	email VARCHAR(50),
 	senha VARCHAR(200)
-    
 );
 
+insert into usuario values
+(null, 'Vitor', 'Maciel', 'vitormaciel@gmail.com', sha2('12345678', 256)),
+(null, 'Fernando', 'Brandao', 'fernandobrandao@gmail.com', sha2('12345678', 256)),
+(null, 'Lucas', 'Faria', 'lucasfaria@gmail.com', sha2('12345678', 256)),
+(null, 'Gabriella', 'Roman', 'gabriellaroman@gmail.com', sha2('12345678', 256)),
+(null, 'Gustavo', 'Alcantara', 'gustavo@gmail.com', sha2('12345678', 256)),
+(null, 'Douglas', 'Queiroz', 'douglasqueiroz@gmail.com', sha2('12345678', 256)),
+(null, 'Matheus', 'Santiago', 'matheus@gmail.com', sha2('12345678', 256)),
+(null, 'Marcela', 'Alves', 'marcelaalves@gmail.com', sha2('12345678', 256));
 
 CREATE TABLE respostasGrafico (
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -34,6 +42,15 @@ CREATE TABLE respostasGrafico (
 	CONSTRAINT chkOpcao3 CHECK (opcao3 IN (0, 1)),
 	CONSTRAINT chkOpcao4 CHECK (opcao4 IN (0, 1))
     );
+insert into respostasGrafico values
+	(null, 'ellie', 1, 0, 0, 0, 1),
+	(null, 'ellie', 0, 1, 0, 0, 2),
+	(null, 'joel', 1, 0, 0, 0, 3),
+	(null, 'tess', 0, 0, 0, 1, 4),
+	(null, 'riley', 1, 0, 0, 0, 5),
+	(null, 'ellie', 0, 1, 0, 0, 6),
+	(null, 'ellie', 1, 0, 0, 0, 7),
+	(null, 'joel', 1, 0, 0, 0, 8);
 
 CREATE TABLE rankingEP (
 	idRank INT PRIMARY KEY auto_increment,
@@ -58,11 +75,23 @@ CREATE TABLE rankingEP (
 	CONSTRAINT ep8 CHECK (ep8 IN (0, 1)),
 	CONSTRAINT ep9 CHECK (ep9 IN (0, 1))
     );
-
+select * from rankingEP;
 select * from rankingEP where fkUsuario = 1;
 truncate table rankingEP;
 select * from usuario;
 select * from respostasGrafico;
+
+select
+(select count(ep1) from rankingEP where ep1 = 1) as EP1,
+(select count(ep2) from rankingEP where ep2 = 1) as EP2,
+(select count(ep3) from rankingEP where ep3 = 1) as EP3,
+(select count(ep4) from rankingEP where ep4 = 1) as EP4,
+(select count(ep5) from rankingEP where ep5 = 1) as EP5,
+(select count(ep6) from rankingEP where ep6 = 1) as EP6,
+(select count(ep7) from rankingEP where ep7 = 1) as EP7,
+(select count(ep8) from rankingEP where ep8 = 1) as EP8,
+(select count(ep9) from rankingEP where ep9 = 1) as EP9;
+
 select 
 (select count(opcao1) from respostasGrafico where opcao1 = 1 and personagemFavorito = 'ellie') as Opcao1,
 (select count(opcao2) from respostasGrafico where opcao2 = 1 and personagemFavorito = 'ellie') as Opcao2,

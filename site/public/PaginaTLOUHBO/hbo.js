@@ -764,3 +764,56 @@ function enviarCurtida() {
 
 
 }
+
+
+// RANKING DE CURTIDAS
+var listaRanking = []
+const textoPosicao = document.querySelectorAll("#textoPosicao")
+textoPosicao[0].innerHTML = `oi`
+textoPosicao[1].innerHTML = `oi`
+
+
+
+function ranking(){
+  fetch("/usuarios/ranking", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    // body: JSON.stringify({
+    //   idUsuarioServer: sessionStorage.ID_USUARIO
+    // })
+  })
+    .then(function (resposta) {
+      console.log("ESTOU NO THEN DO Ellie()!")
+
+      if (resposta.ok) {
+        console.log(resposta);
+
+        resposta.json().then(json => {
+          console.log(json);
+          console.log(JSON.stringify(json));
+
+          listaRanking[0] = json[0].EP1
+          listaRanking[1] = json[0].EP2
+          listaRanking[2] = json[0].EP3
+          listaRanking[3] = json[0].EP4
+          listaRanking[4] = json[0].EP5
+          listaRanking[5] = json[0].EP6
+          listaRanking[6] = json[0].EP7
+          listaRanking[7] = json[0].EP8
+          listaRanking[8] = json[0].EP9
+
+        });
+      } else {
+        console.log("Houve um erro ao tentar enviar o grafico dados!");
+        resposta.text().then(texto => {
+          console.error(texto);
+        });
+      }
+    }).catch(function (erro) {
+      console.log(erro);
+    })
+  return false;
+}
+

@@ -131,6 +131,22 @@ function atualizarEmailSenha(email, senha, id) {
     return database.executar(instrucao);
 }
 
+function ranking (){
+    var instrucao = `
+    select
+    (select count(ep1) from rankingEP where ep1 = 1) as EP1,
+    (select count(ep2) from rankingEP where ep2 = 1) as EP2,
+    (select count(ep3) from rankingEP where ep3 = 1) as EP3,
+    (select count(ep4) from rankingEP where ep4 = 1) as EP4,
+    (select count(ep5) from rankingEP where ep5 = 1) as EP5,
+    (select count(ep6) from rankingEP where ep6 = 1) as EP6,
+    (select count(ep7) from rankingEP where ep7 = 1) as EP7,
+    (select count(ep8) from rankingEP where ep8 = 1) as EP8,
+    (select count(ep9) from rankingEP where ep9 = 1) as EP9;`
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 
 
 module.exports = {
@@ -146,5 +162,6 @@ module.exports = {
     verificarCurtida,
     enviarCurtida,
     verificarSenha,
-    atualizarEmailSenha
+    atualizarEmailSenha,
+    ranking
 };

@@ -62,5 +62,9 @@ router.post("/atualizarEmailSenha", function (req, res) {
     usuarioController.atualizarEmailSenha(req, res);
 });
 
+router.post("/ranking", function (req, res) {
+    usuarioController.ranking(req, res);
+});
+
 
 module.exports = router;
