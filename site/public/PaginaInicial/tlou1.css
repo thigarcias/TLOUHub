@@ -94,7 +94,7 @@
 
 .blocoHistoriaGradiente:hover {
     animation-name: historiaA;
-    animation-duration: 1s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
     cursor: pointer;
 }
@@ -135,7 +135,7 @@
 
 .blocoPersonagemGradiente:hover {
     animation-name: historiaA;
-    animation-duration: 1s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
     cursor: pointer;
 }
@@ -176,7 +176,7 @@
 
 .blocoExpansaoGradiente:hover {
     animation-name: historiaA;
-    animation-duration: 1s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
     cursor: pointer;
 }
@@ -287,7 +287,7 @@
     border-top-right-radius: 9px;
     border-bottom-right-radius: 9px;
     background: linear-gradient(120deg, #000000 52.42%, #FDC706 53.21%);
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
 
@@ -324,7 +324,7 @@
     border-top-right-radius: 9px;
     border-bottom-right-radius: 9px;
     background: linear-gradient(120deg, #0078F2 52.42%, #FDC706 53.21%);
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
 
@@ -362,7 +362,7 @@
     border-top-right-radius: 9px;
     border-bottom-right-radius: 9px;
     background: linear-gradient(120deg, #003791 52.42%, #FDC706 53.21%);
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
 

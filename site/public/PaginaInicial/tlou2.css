@@ -148,7 +148,7 @@
 
 .blocoHistoriaGradienteTLOU2:hover {
     animation-name: historiaA;
-    animation-duration: 1s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
     cursor: pointer;
 }
@@ -182,7 +182,7 @@
 
 .blocoPersonagemGradienteTLOU2:hover {
     animation-name: historiaA;
-    animation-duration: 1s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
     cursor: pointer;
 }
@@ -288,7 +288,7 @@
     border-top-right-radius: 9px;
     border-bottom-right-radius: 9px;
     background: linear-gradient(120deg, #003791 52.42%, #FDC706 53.21%);
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
 
