@@ -7,9 +7,10 @@ const conhecaTexto = conhecaConteudo[1].querySelector("#conhecaTexto")
 
 conhecaConteudo[1].style.marginLeft = '6%'
 conhecaGradiente.style.background = 'linear-gradient(180deg, rgba(86, 82, 50, 0.34) 7.11%, rgba(43, 46, 33, 0.27) 100%);'
-conhecaPersonagem.style.backgroundImage = `url('./assets/Part_I_Riley_infobox.webp')`
+conhecaPersonagem.style.backgroundPositionY = '20%'
+conhecaPersonagem.style.backgroundImage = `url('./assets/abbtyyyy.jpg')`
 conhecaLinha.style.backgroundColor = "#3E3725"
-conhecaTexto.innerHTML = `RILEY ABEL`
+conhecaTexto.innerHTML = `ABBY ANDERSON`
 
 // Containers
 const container = document.querySelectorAll(".container")
@@ -30,7 +31,7 @@ if (resolucaoAtual < 900) {
 // Carrossel
 const carrossel = document.querySelectorAll(".carrossel")
 const carrosselPersonagem = document.querySelectorAll(".carrosselPersonagem")
-carrosselPersonagem[1].style.backgroundImage = `url('./assets/bnbd.png')`
+carrosselPersonagem[1].style.backgroundImage = `url('./assets/pxfuel.png')`
 
 const episodioVoltar = document.getElementById("episodioVoltar")
 const episodioProceder = document.getElementById("episodioProceder")
@@ -61,11 +62,13 @@ const descricao2 = carrosselPersonagem[1].querySelector('#descricao1')
 const personagemTipo = carrosselPersonagem[1].querySelector(".personagemTipo")
 const personagemTitulo = carrosselPersonagem[1].querySelector("#personagemTitulo")
 
-personagemTitulo.style.color = `#48E3D1`
-personagemTexto.innerHTML = `RILEY ABEL`
-descricao1.innerHTML = `Riley Abel é uma personagem importante em The Last of Us, aparecendo no DLC The Last of Us: Left Behind. Ela é amiga de infância de Ellie e, no início do jogo, as duas estão separadas depois de uma briga.`
-descricao2.innerHTML = `Durante os eventos de Left Behind, Ellie descobre que Riley ainda está viva e está esperando por ela em um shopping center abandonado. As duas passam as últimas horas juntas, explorando o shopping center e relembrando as memórias que tiveram juntas.`
-personagemTipo.style.background = `linear-gradient(89.96deg, rgba(66, 119, 106, 0.25) 18.83%, rgba(6, 253, 208, 0) 84.16%)`
+personagemTitulo.style.color = `#E3B848`
+personagemTexto.innerHTML = `ABBY ANDERSON`
+descricao1.innerHTML = `Abby, uma das personagens principais de The Last of Us Part 2, é uma figura complexa e intrigante. Ela desempenha um papel fundamental na história e oferece uma perspectiva única aos jogadores.
+Abby é apresentada como uma sobrevivente habilidosa e determinada. Ela é uma mulher forte, com uma presença física impressionante, fruto de seu treinamento e dedicação à sobrevivência nesse mundo pós-apocalíptico.
+`
+descricao2.innerHTML = `A jornada de Abby se entrelaça com a de Ellie, e o jogo permite que os jogadores controlem e conheçam profundamente essa personagem. Ao jogar com Abby, os jogadores têm a oportunidade de compreender suas motivações, experiências e visões de mundo.`
+personagemTipo.style.background = `linear-gradient(89.96deg, rgba(210, 189, 75, 0.25) 18.83%, rgba(253, 199, 6, 0) 84.16%)`
 
 
 
@@ -78,6 +81,10 @@ const saibaGradiente = saibaConteudo[1].querySelector("#saibaGradiente")
 saibaTexto.innerHTML = `THE LAST OF US: PART I`
 saibaImagem.style.backgroundImage = `url(./assets/wYq1UsVEyQp6dT6cS1omgKiJ.webp)`
 saibaGradiente.style.background = 'linear-gradient(180deg, rgba(0, 0, 0, 0.3864) 58.7%, rgba(255, 255, 255, 0) 95.31%)'
+
+saibaConteudo[0].addEventListener('click', function(){
+  window.location = '../PaginaTLOUHBO/hbo.html'
+})
 
 saibaConteudo[1].addEventListener('click', function(){
   window.location = '../PaginaTLOU1/tlou1.html'
@@ -140,13 +147,6 @@ const menuTLOULB = document.querySelectorAll(".menuTLOULB")
 menuTLOULB[0].addEventListener("click", function(){
     window.location = "../PaginaTLOULB/left.html"
 })
-
-const menuTLOU2 = document.querySelectorAll(".menuTLOU2")
-menuTLOU2[0].addEventListener("click", function () {
-  window.location = "../PaginaTLOU2/tlou2.html"
-})
-
-
 
 
 // Links navbar

@@ -276,6 +276,12 @@ menuTLOULB[0].addEventListener("click", function(){
     window.location = "../PaginaTLOULB/left.html"
 })
 
+const menuTLOU2 = document.querySelectorAll(".menuTLOU2")
+menuTLOU2[0].addEventListener("click", function () {
+  window.location = "../PaginaTLOU2/tlou2.html"
+})
+
+
 
 
 // USUARIO

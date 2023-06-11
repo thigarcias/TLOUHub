@@ -32,28 +32,6 @@ function validarSessao() {
     }
 }
 
-// function validarSessaoNoticia(){
-//     var email = sessionStorage.EMAIL_USUARIO;
-//     var nome = sessionStorage.NOME_USUARIO;
-//     const blurAutenticacao = document.getElementById("blurAutenticacao")
-//     const blurTexto = document.getElementById("blurTexto")
-//     const blurCadeado = document.getElementById("blurCadeado")
-//     const blurCadastro = document.getElementById("blurCadastro")
-
-
-//     if (email == null && nome == null) {
-//         blurAutenticacao.style.display = "flex"
-//         blurTexto.style.display = "flex"
-//         blurCadeado.style.display = "flex"
-//         blurCadastro.style.display = "flex"
-
-//     } else {
-//         blurAutenticacao.style.display = "none"
-//         blurTexto.style.display = "none"
-//         blurCadeado.style.display = "none"
-//         blurCadastro.style.display = "none"
-//     }
-// }
 
 function validarSessaoTLOU1(){
     var email = sessionStorage.EMAIL_USUARIO;
@@ -91,42 +69,6 @@ function validarSessaoTLOU1(){
     receberTudo()
 }
 
-
-function jaRespondeu(){
-    var idVar = sessionStorage.ID_USUARIO
-
-    fetch("/usuarios/jaRespondeu", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            idServer: idVar
-        })
-    }).then(function (resposta){
-        if (resposta.status == 200){
-            blocoQuiz.style.display = "flex";
-            botaoGeral.style.display = 'none';
-            conteudoDoQuiz.style.display = 'none';
-            ellieGrafico.style.display = 'none';
-            joelGrafico.style.display = 'none';
-            tessGrafico.style.display = 'none';
-            rileyGrafico.style.display = 'none';
-            todosGrafico.style.display = 'flex';
-            grafico_tudo1.update()
-        }
-        else {
-            blocoQuiz.style.display = "none";
-            botaoGeral.style.display = 'none';
-            conteudoDoQuiz.style.display = 'flex';
-            ellieGrafico.style.display = 'none';
-            joelGrafico.style.display = 'none';
-            tessGrafico.style.display = 'none';
-            rileyGrafico.style.display = 'none';
-            todosGrafico.style.display = 'none';
-        }
-    })
-}
 // Depois do cadastro ter terminado, ele vem para essa função e ele limpa a sessionStorage, que estava armezando os dados de cadastro que você inseriu na página, após isso ele te joga para  a página de Login
 
 function limparSessao() {
@@ -149,3 +91,4 @@ function finalizarAguardar(texto) {
         msgErro.innerHTML = texto;
     }
 }
+

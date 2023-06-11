@@ -8,6 +8,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+@import url('https://fonts.cdnfonts.com/css/montserrat-ace');
+
 @font-face {
     font-family: 'Press Gothic';
     src: url('../fonts/PressGothic.otf') format('truetype');
@@ -352,6 +354,7 @@ body {
     border-radius: 5px;
     height: 25%;
     width: 100%;
+    cursor: pointer;
 }
 
 #ellieIcon {
@@ -379,7 +382,7 @@ body {
     border-radius: 5px;
     height: 25%;
     width: 100%;
-
+    cursor: pointer;
 }
 
 #joelIcon {
@@ -424,12 +427,13 @@ body {
 
 #cordycepsGradiente {
     display: flex;
-    background: linear-gradient(180deg, rgba(214, 155, 14, 0.29) 32.72%, rgba(51, 69, 49, 0.26) 74.79%);
+    background: linear-gradient(180deg, rgba(68, 66, 60, 0.29) 32.72%, rgba(51, 69, 49, 0.26) 74.79%);
     position: absolute;
     margin-top: 2%;
     border-radius: 10px;
     width: 58.5%;
     height: 18.5%;
+    cursor: pointer;
 }
 
 #cordycepsConhece {
@@ -439,9 +443,9 @@ body {
     margin-top: 2%;
     width: 58.5%;
     height: 18.5%;
-    background-image: url(./assets/The-Last-of-Us.webp);
+    background-image: url(./assets/2013-07-12-detonado-the-last-of-us.webp);
     border-radius: 10px;
-    background-position: 0% 35%;
+    background-position-y: 20%;
     background-size: cover;
 }
 
@@ -450,13 +454,14 @@ body {
 
 .criadora {
     display: flex;
-    margin-bottom: 5%;
     width: 100%;
     height: 50%;
     font-family: 'Space Grotesk';
     flex-direction: column;
     margin-top: 6%;
     position: relative;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 #criadoraTitulo {
@@ -484,7 +489,7 @@ body {
     width: 27.5vw;
     height: 45vh;
     margin-left: 62.5%;
-    top: 0%;
+    top: 10%;
     background-size: 100%;
     background-position: 50%;
     background-color: black;
@@ -505,7 +510,7 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    margin-top: 10%;
+    margin-top: 5%;
     overflow: hidden;
     scroll-behavior: smooth;
 }
@@ -597,7 +602,6 @@ body {
     height: 75%;
     background-color: #537042;
     margin-top: 10%;
-    border-radius: 15px;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
@@ -738,7 +742,6 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 15px;
     background: rgba(182, 182, 182, 0.41);
     backdrop-filter: blur(5px);
     flex-direction: column;

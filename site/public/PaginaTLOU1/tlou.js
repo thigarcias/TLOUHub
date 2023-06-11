@@ -8,6 +8,7 @@ container[1].style.marginTop = "7%"
 var personagens = [
     ellie = {
         nome: `ELLIE WILLIAMS`,
+        papel: `PROTAGONISTA`,
         url: `url('./assets/ellieinvertido.png')`,
         gradiente: `linear-gradient(89.96deg, rgba(6, 31, 253, 0.1675) 18.83%, rgba(6, 208, 253, 0) 84.16%)`,
         corTexto: `#4883E3`,
@@ -22,21 +23,31 @@ var personagens = [
     },
     joel = {
         nome: `JOEL MILLER`,
+        papel: `PROTAGONISTA`,
         url: `url('./assets/joelinvertido.png')`,
         gradiente: `linear-gradient(89.96deg, rgba(210, 189, 75, 0.25) 18.83%, rgba(253, 199, 6, 0) 84.16%)`,
         corTexto: `#E3B848`,
+        conteudo: `Joel é um homem de meia-idade que já passou por muitas dificuldades e perdas na vida, o que o tornou desconfiado e cínico em relação aos outros. Ele é contratado para levar Ellie, uma adolescente que pode ser a chave para a cura da pandemia, para um grupo de resistência conhecido como os Vagalumes.
+        Ao longo do jogo, Joel e Ellie criam um forte vínculo emocional, apesar das diferenças de idade e personalidade. Eles enfrentam juntos diversos desafios, incluindo confrontos com humanos hostis e infectados perigosos. Durante sua jornada, Joel revela seu passado sombrio e os eventos traumáticos que o levaram a ser quem é.`,
+    },
+    tess = {
+        nome: `TESS SERVOPOULOS`,
+        papel: `COADJUVANTE`,
+        url: `url('./assets/tess.jpg')`,
+        gradiente: `linear-gradient(89.96deg, rgba(103, 153, 79, 0.25) 18.83%, rgba(70, 253, 6, 0) 84.16%)`,
+        corTexto: `#3E9E42`,
         conteudo: `Joel é um homem de meia-idade que já passou por muitas dificuldades e perdas na vida, o que o tornou desconfiado e cínico em relação aos outros. Ele é contratado para levar Ellie, uma adolescente que pode ser a chave para a cura da pandemia, para um grupo de resistência conhecido como os Vagalumes.
         Ao longo do jogo, Joel e Ellie criam um forte vínculo emocional, apesar das diferenças de idade e personalidade. Eles enfrentam juntos diversos desafios, incluindo confrontos com humanos hostis e infectados perigosos. Durante sua jornada, Joel revela seu passado sombrio e os eventos traumáticos que o levaram a ser quem é.`,
     }
 ]
 const carrossel = document.querySelectorAll(".carrossel")
 const carrosselPersonagem = carrossel[0].querySelectorAll(".carrosselPersonagem")
-const episodioVoltar = document.getElementById("episodioVoltar")
-const episodioProceder = document.getElementById("episodioProceder")
+const episodioVoltar = document.querySelectorAll("#episodioVoltar")
+const episodioProceder = document.querySelectorAll("#episodioProceder")
 const personagemDescricao = document.querySelectorAll(".personagemDescricao")
 
 
-for (var i = 1; i < carrosselPersonagem.length; i++) {
+for (var i = 0; i < carrosselPersonagem.length; i++) {
     const personagemTexto = carrosselPersonagem[i].querySelector("#personagemTexto")
     const personagemTipo = carrosselPersonagem[i].querySelector(".personagemTipo")
     const personagemTitulo = carrosselPersonagem[i].querySelector("#personagemTitulo")
@@ -46,17 +57,31 @@ for (var i = 1; i < carrosselPersonagem.length; i++) {
     personagemTexto.innerHTML = personagens[i].nome
     personagemTipo.style.background = personagens[i].gradiente
     personagemTitulo.style.color = personagens[i].corTexto
+    personagemTitulo.innerHTML = personagens[i].papel
     personagemConteudo.innerHTML = personagens[i].conteudo
 }
 
-episodioProceder.addEventListener("click", function () {
-    carrossel[0].scrollLeft += 2500
+// AVANÇAR ELLIE
+episodioProceder[0].addEventListener("click", function () {
+        carrosselPersonagem[1].scrollIntoView({ behavior: 'smooth' })
 })
 
-episodioVoltar.addEventListener("click", function () {
-    carrossel[0].scrollLeft -= 2500
+// AVANÇAR JOEL
+episodioProceder[1].style.left ='195%'
+episodioProceder[1].addEventListener("click", function () {
+    carrosselPersonagem[2].scrollIntoView({ behavior: 'smooth' })
 })
 
+// VOLTAR JOEL
+episodioVoltar[0].addEventListener("click", function () {
+    carrosselPersonagem[0].scrollIntoView({ behavior: 'smooth' })
+})
+
+// VOLTAR TESS
+episodioVoltar[1].style.left ='201%'
+episodioVoltar[1].addEventListener("click", function () {
+    carrosselPersonagem[1].scrollIntoView({ behavior: 'smooth' })
+})
 
 /* HEADER FIXA E IR CIMA */
 const irCima = document.getElementById("irCima")
@@ -181,6 +206,9 @@ homepagetextoInfinito.addEventListener("mouseover", function () {
     serietextoInfinito.addEventListener('mouseout', function () {
         serietextoInfinito.style.color = '#ffffff';
     });
+    serietextoInfinito.addEventListener("click", function(){
+        window.location = '../PaginaTLOUHBO/hbo.html'
+    })
 
 
 /* MENU FLUTUANTE JOGOS */
@@ -209,6 +237,12 @@ menuTLOULB[0].addEventListener("click", function () {
     window.location = "../PaginaTLOULB/left.html"
 })
 
+const menuTLOU2 = document.querySelectorAll(".menuTLOU2")
+menuTLOU2[0].addEventListener("click", function () {
+  window.location = "../PaginaTLOU2/tlou2.html"
+})
+
+
 // Botão entre do BLUR 
 const blurBotao = document.getElementById("blurBotao")
 blurBotao.addEventListener("click", function () {
@@ -234,27 +268,48 @@ const idUsuario = document.querySelectorAll(".idUsuario")
 const idUsuarioTexto = document.getElementById("idUsuarioTexto")
 const iconUsuario = document.getElementById("iconUsuario")
 const menuflutuante = document.querySelectorAll(".menuflutuante")
-idUsuarioTexto.addEventListener("mouseenter", function(){
-  idUsuarioTexto.style.color = '#FDC706'
-  iconUsuario.style.color = '#FDC706'
+idUsuarioTexto.addEventListener("mouseenter", function () {
+    idUsuarioTexto.style.color = '#FDC706'
+    iconUsuario.style.color = '#FDC706'
 })
 
-idUsuarioTexto.addEventListener("mouseleave", function(){
-  idUsuarioTexto.style.color = 'white'
-  iconUsuario.style.color = 'white'
+idUsuarioTexto.addEventListener("mouseleave", function () {
+    idUsuarioTexto.style.color = 'white'
+    iconUsuario.style.color = 'white'
 })
 
-idUsuario[0].addEventListener("click", function(){
-  if (menuflutuante[0].style.display == "" || menuflutuante[0].style.display == "none"){
-    menuflutuante[0].style.display = 'flex'
-  } else {
-    menuflutuante[0].style.display = 'none'
-  }
+idUsuario[0].addEventListener("click", function () {
+    if (menuflutuante[0].style.display == "" || menuflutuante[0].style.display == "none") {
+        menuflutuante[0].style.display = 'flex'
+    } else {
+        menuflutuante[0].style.display = 'none'
+    }
 })
 
 
 /* BOTAO PARA DESLOGAR */
 const deslogar = document.getElementById("deslogar")
 deslogar.addEventListener("click", function () {
-  limparSessao()
+    limparSessao()
+})
+
+// BOTAO IR PARA PESQUISA
+const cordycepsGradiente = document.getElementById("cordycepsGradiente")
+cordycepsGradiente.addEventListener("click", function () {
+    quiz[0].scrollIntoView({ behavior: "smooth" })
+})
+
+
+// BOTAO JOEL E ELLIE
+const ellieConheca = document.getElementById("ellieConheca")
+const joelConheca = document.getElementById("joelConheca")
+
+ellieConheca.addEventListener("click", function () {
+    {
+        carrosselPersonagem[0].scrollIntoView({ behavior: 'smooth' })
+    }
+})
+
+joelConheca.addEventListener("click", function () {
+    carrosselPersonagem[1].scrollIntoView({ behavior: 'smooth' })
 })

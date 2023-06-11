@@ -2,6 +2,7 @@
 
 window.onload = verificarCurtida()
 window.onload = validarSessao()
+window.onload = ranking()
 // NAVBAR links
 
 const homepagetexto = document.getElementById('homepagetexto');
@@ -106,7 +107,10 @@ menuTLOULB[0].addEventListener("click", function () {
   window.location = "../PaginaTLOULB/left.html"
 })
 
-
+const menuTLOU2 = document.querySelectorAll(".menuTLOU2")
+menuTLOU2[0].addEventListener("click", function () {
+  window.location = "../PaginaTLOU2/tlou2.html"
+})
 
 
 
@@ -359,6 +363,7 @@ curtidaIcon.addEventListener("click", function () {
       listaCurtidas[0].ep7 = 0;
       listaCurtidas[0].ep8 = 0;
       listaCurtidas[0].ep9 = 0;
+
     }
 
     enviarCurtida()
@@ -587,7 +592,7 @@ curtidaIcon.addEventListener("click", function () {
     }
     enviarCurtida()
   }
-  
+  setTimeout(ranking, 1000)
 });
 
 // vai rodar no inicio da pagina
@@ -646,7 +651,7 @@ function verificarCurtida() {
             else {
               curtidaIcon.style.color = 'white'
             }
-            
+
           }
 
         });
@@ -767,14 +772,8 @@ function enviarCurtida() {
 
 
 // RANKING DE CURTIDAS
-var listaRanking = []
-const textoPosicao = document.querySelectorAll("#textoPosicao")
-textoPosicao[0].innerHTML = `oi`
-textoPosicao[1].innerHTML = `oi`
-
-
-
-function ranking(){
+var rankingVetor = []
+function ranking() {
   fetch("/usuarios/ranking", {
     method: "POST",
     headers: {
@@ -794,15 +793,17 @@ function ranking(){
           console.log(json);
           console.log(JSON.stringify(json));
 
-          listaRanking[0] = json[0].EP1
-          listaRanking[1] = json[0].EP2
-          listaRanking[2] = json[0].EP3
-          listaRanking[3] = json[0].EP4
-          listaRanking[4] = json[0].EP5
-          listaRanking[5] = json[0].EP6
-          listaRanking[6] = json[0].EP7
-          listaRanking[7] = json[0].EP8
-          listaRanking[8] = json[0].EP9
+          rankingVetor[0] = json[0].EP1
+          rankingVetor[1] = json[0].EP2
+          rankingVetor[2] = json[0].EP3
+          rankingVetor[3] = json[0].EP4
+          rankingVetor[4] = json[0].EP5
+          rankingVetor[5] = json[0].EP6
+          rankingVetor[6] = json[0].EP7
+          rankingVetor[7] = json[0].EP8
+          rankingVetor[8] = json[0].EP9
+
+          grafico_rank1.update()
 
         });
       } else {
@@ -817,3 +818,79 @@ function ranking(){
   return false;
 }
 
+
+
+// GRAFICO DO RANKING BONITO LINDO
+
+const labels_linha = [
+  'EP 1',
+  'EP 2',
+  'EP 3',
+  'EP 4',
+  'EP 5',
+  'EP 6',
+  'EP 7',
+  'EP 8',
+  'EP 9'
+];
+
+// GRÁFICO ELLIE 
+const rank = document.getElementById('grafico_ranking');
+// A CONSTANTE ABAIXO RECEBERÁ FUTURAMENTE OS VALORES DO ARDUÍNO, ATUALMENTE SÃO VALORES MANUAIS PARA DEMOSNTRAÇÃO.
+const data_rank = {
+  labels: labels_linha,
+  datasets: [{
+      label: 'CURTIDAS',
+      data: rankingVetor,
+      backgroundColor: '#4d0000',
+      borderColor: '#cc0000',
+      borderWidth: 2
+  }
+  ]
+};
+
+const rank_config = {
+  type: 'bar',
+  data: data_rank,
+  options: {
+      maintainAspectRatio: false,
+      
+      scales: {
+          y: {
+              ticks: {
+                  beginAtZero: true,
+                  color: 'white',
+                  font: {
+                      size: 18,
+                      family: 'Montserrat Ace',
+                      weight: 500
+                  }
+              },
+          },
+          x: {
+              ticks: {
+                  color: 'white',
+                  font: {
+                      size: 18,
+                      family: 'Montserrat Ace',
+                      weight: 500
+                  }
+              }
+          }
+      },
+      plugins: {
+  legend: {
+              labels: {
+                  color:'white',
+                  font: {
+                      size: 18,
+                      family: 'Montserrat Ace',
+                      weight: 500
+                  }
+              }
+          }
+      }
+  }
+};
+
+const grafico_rank1 = new Chart(rank, rank_config);

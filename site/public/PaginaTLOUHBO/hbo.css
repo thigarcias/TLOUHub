@@ -1,3 +1,6 @@
+
+@import url('https://fonts.cdnfonts.com/css/montserrat-ace');
+
 @font-face {
     font-family: 'Press Gothic';
     src: url('../fonts/PressGothic.otf') format('truetype');
@@ -13,8 +16,6 @@
     src: url('../fonts/WorkSans-VariableFont_wght.ttf');
 
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
@@ -328,7 +329,7 @@ body {
     justify-content: center;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #FDC706A6;
+    background-color: #61892F;
     font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
 }
@@ -356,7 +357,7 @@ body {
 
 #naoTem {
     display: flex;
-    color: #FDC706A6;
+    color: #61892F;
     font-size: 0.5vmax;
     justify-content: center;
     font-weight: 500;

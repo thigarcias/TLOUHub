@@ -75,6 +75,17 @@ CREATE TABLE rankingEP (
 	CONSTRAINT ep8 CHECK (ep8 IN (0, 1)),
 	CONSTRAINT ep9 CHECK (ep9 IN (0, 1))
     );
+    
+insert into rankingEP values
+	(null, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1),
+	(null, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2),
+	(null, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3),
+	(null, 0, 0, 1, 0, 0, 0, 0, 0, 0, 4),
+	(null, 0, 0, 0, 0, 1, 0, 0, 0, 0, 5),
+	(null, 0, 0, 0, 0, 0, 0, 0, 1, 0, 6),
+	(null, 0, 0, 0, 0, 1, 0, 0, 0, 0, 7),
+	(null, 0, 0, 0, 1, 0, 0, 0, 0, 0, 8);
+    
 select * from rankingEP;
 select * from rankingEP where fkUsuario = 1;
 truncate table rankingEP;

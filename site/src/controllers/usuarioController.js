@@ -233,7 +233,7 @@ function jaRespondeu(req, res) {
             .then(
                 function (resultado) {
                     if (resultado.length > 0) {
-                        res.status(200).send("O quiz ja foi respondido!")
+                        res.json(resultado);
                     } else {
                         res.status(204).send("Nenhum resultado encontrado!")
                     }

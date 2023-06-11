@@ -58,7 +58,7 @@ body {
     z-index: -2;
     height: 100%;
     background-size: cover;
-    background-image: url('./assets/wp10353322-the-last-of-us-left-behind-wallpapers.jpg');
+    background-image: url('./assets/tlou2.webp');
 }
 
 .container {
@@ -367,7 +367,7 @@ body {
     justify-content: center;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #FDC706;
+    background-color: #9cd160a6;
     font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
 }
@@ -395,7 +395,7 @@ body {
 
 #naoTem {
     display: flex;
-    color: #FDC706;
+    color: #9cd160a6;
     font-size: 0.5vmax;
     justify-content: center;
     font-weight: 500;
@@ -511,8 +511,8 @@ body {
     height: 45vh;
     margin-top: 1%;
     background-size: cover;
-    background-position: 35%;
-    background-image: url(./assets/thelastofus-leftbehind.webp);
+    background-position-x: 45%;
+    background-image: url(./assets/The-Last-Of-Us-2-Team-Ellie-vs-Abby-Game-Awards-2020-Vote.webp);
 }
 
 .historiaTexto{
@@ -590,8 +590,8 @@ body {
     height: 100%;
     border-radius: 15px;
     background-size: cover;
-    background-position-y: 40%;
-    background-image: url(./assets/maxresdefault.jpg);
+    background-position-y: 70%;
+    background-image: url(./assets/the-last-of-us-part-2-ellie-1060x596.jpg);
 }
 
 #conhecaLinha{
@@ -659,7 +659,8 @@ body {
     background-size: cover;
     margin-left: 5%;
     border-radius: 15px;
-    background-image: url(./assets/ff.jpg);
+    background-position-x: 23%;
+    background-image: url(./assets/Final-alternativo-sombrio-entre-Ellie-e-Abby-EXCLUIDO-de-The-Last-of-Us-Part-2.jpg);
 }
 
 /* CARROSSEL */
@@ -680,8 +681,9 @@ body {
     min-width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(./assets/ellieinvertido.png);
+    background-image: url(./assets/ellieeeee.png);
     flex-direction: column;
+    
 }
 #episodioProceder{
     display: flex;
@@ -709,14 +711,14 @@ body {
     width: 50%;
     height: 15%;
     margin-top: 15%;
-    background: linear-gradient(89.96deg, rgba(6, 31, 253, 0.1675) 18.83%, rgba(6, 208, 253, 0) 84.16%);
+    background: linear-gradient(89.96deg, rgba(144, 253, 6, 0.1675) 18.83%, rgba(85, 253, 6, 0) 84.16%);
     justify-content: center;
     flex-direction: column;
 }
 
 #personagemTitulo {
     display: flex;
-    color: #4883E3;
+    color: #61AC5A;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     margin-left: 8%;
@@ -811,7 +813,7 @@ body {
     height: 100%;
     border-radius: 15px;
     z-index: 1;
-    background: linear-gradient(180deg, rgba(30, 107, 47, 0.29) 32.72%, rgba(51, 69, 49, 0.26) 74.79%);
+    background: linear-gradient(180deg, rgba(141, 161, 128, 0.29) 32.72%, rgba(51, 69, 49, 0.26) 74.79%);
 }
 
 #saibaTexto{
@@ -832,8 +834,8 @@ body {
     height: 100%;
     background-size: cover;
     border-radius: 15px;
-    background-position-y: 50%;
-    background-image: url(./assets/thumb-1920-1065466.webp);
+    background-position-y: 30%;
+    background-image: url(./assets/1299920_1\ \(1\).webp);
 }
 
 .footer {
