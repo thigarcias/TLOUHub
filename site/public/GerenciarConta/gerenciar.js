@@ -84,6 +84,10 @@ function atualizarEmailSenha() {
     var senhaConfirmar = i_senhanovaconfirmar.value
     var idVar = sessionStorage.ID_USUARIO
 
+    if (emailVar == undefined || emailVar == '' || emailVar == null){
+        emailVar = i_emailatual.value
+    }
+
     if (senhaNovaVar.length < 6) {
         msgErro.style.display = "block"
         msgErro.innerHTML = "(A senha deve conter no minimo 6 caracteres)"
