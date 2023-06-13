@@ -1,10 +1,10 @@
-
-
+// Funções que serão executadas ao carregar a página
 window.onload = verificarCurtida()
 window.onload = validarSessao()
 window.onload = ranking()
-// NAVBAR links
 
+
+// NAVBAR links
 const homepagetexto = document.getElementById('homepagetexto');
 const jogostexto = document.getElementById('jogostexto');
 const serietexto = document.getElementById('serietexto');
@@ -116,6 +116,7 @@ menuTLOU2[0].addEventListener("click", function () {
 
 /* ELENCO */
 const elenco = document.querySelectorAll('.integranteElenco')
+
 // Bella Ramsey
 const elencoImagem = elenco[1].querySelector('#elencoImagem')
 const elencoAtor = elenco[1].querySelector('#elencoAtor')
@@ -186,6 +187,46 @@ elencoAtor7.innerHTML = 'STORM REID'
 elencoNome7.innerHTML = 'Riley Abel'
 
 
+// LINK PEDRO PASCAL
+elenco[0].addEventListener("click", function(){
+  window.location.href = 'https://pt.wikipedia.org/wiki/Pedro_Pascal'
+})
+
+// LINK Bella Ramsey
+elenco[1].addEventListener("click", function(){
+  window.location.href = 'https://pt.wikipedia.org/wiki/Bella_Ramseys'
+})
+
+// LINK Anna Torv
+elenco[2].addEventListener("click", function(){
+  window.location.href = 'https://pt.wikipedia.org/wiki/Anna_Torv'
+})
+
+// LINK Gabriel Luna
+elenco[3].addEventListener("click", function(){
+  window.location.href = 'https://pt.wikipedia.org/wiki/Gabriel_Luna'
+})
+
+// LINK Nick Offerman
+elenco[4].addEventListener("click", function(){
+  window.location.href = 'https://pt.wikipedia.org/wiki/Nick_Offerman'
+})
+
+// LINK Murray Bartlett
+elenco[5].addEventListener("click", function(){
+  window.location.href = 'https://pt.wikipedia.org/wiki/Murray_Bartlett'
+})
+
+// LINK Nico Parker
+elenco[6].addEventListener("click", function(){
+  window.location.href = 'https://pt.wikipedia.org/wiki/Nico_Parker'
+})
+
+// LINK PEDRO PASCAL
+elenco[7].addEventListener("click", function(){
+  window.location.href = 'https://en.wikipedia.org/wiki/Storm_Reid'
+})
+
 
 // Carrossel
 const episodioVoltar = document.getElementById("episodioVoltar")
@@ -238,46 +279,46 @@ var jsonEPS = [
 
   jsonEp1 = {
     titulo: 'THE LAST OF US: EPISÓDIO 1',
-    resumo: 'O fungo Cordyceps é um gênero de fungos que infecta insetos e outros artrópodes. O fungo infecta seu hospedeiro através de esporos que entram no corpo do inseto e começam a crescer e se espalhar, eventualmente matando-o. O Cordyceps inspirou a criação do universo de The Last of Us, no qual uma mutação do fungo infecta humanos e transforma-os em criaturas violentas e perigosas. No jogo, o fungo é altamente contagioso e pode ser transmitido através de esporos que se espalham pelo ar, tornando-o extremamente perigoso para a população humana. Ele é fascinante por sua capacidade de infectar e controlar a mente de seu hospedeiro, alterando seu comportamento para atender aos interesses do fungo. Embora a versão fictícia do fungo em The Last of Us seja altamente exagerada e perigosa, a inspiração biológica por trás do fungo é um exemplo interessante de como a natureza pode inspirar a ficção científica.'
+    resumo: 'O primeiro episódio de The Last of Us nos apresenta o mundo da série, um Estados Unidos pós-apocalíptico onde um fungo infectou a população, transformando-a em criaturas carnívoras. Conhecemos Joel Miller (Pedro Pascal), um contrabandista encarregado de escoltar uma garota de 14 anos chamada Ellie (Bella Ramsey) pelo país. Ellie é imune à infecção, e os Fireflies, um grupo rebelde, acreditam que ela pode ser a chave para encontrar a cura. O primeiro episódio de The Last of Us nos apresenta o mundo da série, um Estados Unidos pós-apocalíptico onde um fungo infectou a população, transformando-a em criaturas carnívoras. Conhecemos Joel Miller (Pedro Pascal), um contrabandista encarregado de escoltar uma garota de 14 anos chamada Ellie (Bella Ramsey) pelo país. Ellie é imune à infecção, e os Fireflies, um grupo rebelde, acreditam que ela pode ser a chave para encontrar a cura.'
   },
 
   jsonEp2 = {
     titulo: 'THE LAST OF US: EPISÓDIO 2',
-    resumo: 'O fungo Cordyceps é um gênero de fungos que infecta insetos e outros artrópodes. O fungo infecta seu hospedeiro através de esporos que entram no corpo do inseto e começam a crescer e se espalhar, eventualmente matando-o. O Cordyceps inspirou a criação do universo de The Last of Us, no qual uma mutação do fungo infecta humanos e transforma-os em criaturas violentas e perigosas. No jogo, o fungo é altamente contagioso e pode ser transmitido através de esporos que se espalham pelo ar, tornando-o extremamente perigoso para a população humana. Ele é fascinante por sua capacidade de infectar e controlar a mente de seu hospedeiro, alterando seu comportamento para atender aos interesses do fungo. Embora a versão fictícia do fungo em The Last of Us seja altamente exagerada e perigosa, a inspiração biológica por trás do fungo é um exemplo interessante de como a natureza pode inspirar a ficção científica.'
+    resumo: 'No episódio 2 de The Last of Us, Joel e Ellie continuam sua jornada pelos Estados Unidos pós-apocalípticos. Eles agora estão fora da zona de quarentena e devem navegar por uma Boston há muito abandonada invadida por infectados. O episódio começa com um flashback de 2003, quando um cientista indonésio faz uma descoberta devastadora. Um fungo infectou a população, transformando-os em criaturas carnívoras. A descoberta do cientista desencadeia uma cadeia de eventos que levará ao colapso da sociedade. Nos dias atuais, Joel e Ellie são forçados a fazer um desvio quando encontram um rebanho de infectados. Eles encontram abrigo em um museu abandonado, mas logo são cercados pelas criaturas. Joel e Ellie devem usar todas as suas habilidades para sobreviver.'
   },
 
   jsonEp3 = {
     titulo: 'THE LAST OF US: EPISÓDIO 3',
-    resumo: 'O fungo Cordyceps é um gênero de fungos que infecta insetos e outros artrópodes. O fungo infecta seu hospedeiro através de esporos que entram no corpo do inseto e começam a crescer e se espalhar, eventualmente matando-o. O Cordyceps inspirou a criação do universo de The Last of Us, no qual uma mutação do fungo infecta humanos e transforma-os em criaturas violentas e perigosas. No jogo, o fungo é altamente contagioso e pode ser transmitido através de esporos que se espalham pelo ar, tornando-o extremamente perigoso para a população humana. Ele é fascinante por sua capacidade de infectar e controlar a mente de seu hospedeiro, alterando seu comportamento para atender aos interesses do fungo. Embora a versão fictícia do fungo em The Last of Us seja altamente exagerada e perigosa, a inspiração biológica por trás do fungo é um exemplo interessante de como a natureza pode inspirar a ficção científica.'
+    resumo: 'No episódio 3 de The Last of Us, Joel e Ellie chegam a Pittsburgh, uma cidade que foi invadida por Infectados e bandidos. Eles são forçados a encontrar abrigo em um hotel abandonado, onde conhecem Bill, um sobrevivente que mora na cidade há anos. Bill é um personagem misterioso e inicialmente reluta em ajudar Joel e Ellie. Mas ele finalmente concorda em ajudá-los e fornece-lhes comida, água e armas. Bill também conta a Joel e Ellie sobre seu passado e como ele passou a morar em Pittsburgh. Joel e Ellie descobrem que Bill já foi um empresário de sucesso, mas perdeu tudo quando o surto de infectados começou. Ele agora vive isolado e tornou-se cada vez mais paranóico e desconfiado dos outros. Mas ele ainda tem uma queda por Ellie e concorda em ajudá-la a encontrar Tommy.'
   },
 
   jsonEp4 = {
     titulo: 'THE LAST OF US: EPISÓDIO 4',
-    resumo: 'O fungo Cordyceps é um gênero de fungos que infecta insetos e outros artrópodes. O fungo infecta seu hospedeiro através de esporos que entram no corpo do inseto e começam a crescer e se espalhar, eventualmente matando-o. O Cordyceps inspirou a criação do universo de The Last of Us, no qual uma mutação do fungo infecta humanos e transforma-os em criaturas violentas e perigosas. No jogo, o fungo é altamente contagioso e pode ser transmitido através de esporos que se espalham pelo ar, tornando-o extremamente perigoso para a população humana. Ele é fascinante por sua capacidade de infectar e controlar a mente de seu hospedeiro, alterando seu comportamento para atender aos interesses do fungo. Embora a versão fictícia do fungo em The Last of Us seja altamente exagerada e perigosa, a inspiração biológica por trás do fungo é um exemplo interessante de como a natureza pode inspirar a ficção científica.'
+    resumo: 'Depois de abandonar seu caminhão em Kansas City, Missouri, Joel e Ellie tentam escapar sem chamar a atenção de um líder rebelde vingativo. O episódio começa com Joel e Ellie tentando percorrer a cidade a pé. Eles logo são pegos no fogo cruzado de uma batalha entre os vaga-lumes e uma milícia local. Joel e Ellie são forçados a se abrigar em um prédio abandonado, onde acabam sendo encontrados por Kathleen, a líder da milícia. Kathleen é uma mulher implacável e ambiciosa que está determinada a impedir que os Vaga-lumes coloquem as mãos em Ellie. Ela oferece a Joel um acordo: ele pode entregar Ellie ou ela matará os dois. Joel se recusa e Kathleen ordena que seus homens ataquem. Joel e Ellie lutam para sair do prédio e fogem noite adentro. Eles são perseguidos pelos homens de Kathleen, mas conseguem escapar. Eles finalmente seguem para um rio próximo, onde pegam um barco e partem para a Califórnia.'
   },
 
   jsonEp5 = {
     titulo: 'THE LAST OF US: EPISÓDIO 5',
-    resumo: 'O fungo Cordyceps é um gênero de fungos que infecta insetos e outros artrópodes. O fungo infecta seu hospedeiro através de esporos que entram no corpo do inseto e começam a crescer e se espalhar, eventualmente matando-o. O Cordyceps inspirou a criação do universo de The Last of Us, no qual uma mutação do fungo infecta humanos e transforma-os em criaturas violentas e perigosas. No jogo, o fungo é altamente contagioso e pode ser transmitido através de esporos que se espalham pelo ar, tornando-o extremamente perigoso para a população humana. Ele é fascinante por sua capacidade de infectar e controlar a mente de seu hospedeiro, alterando seu comportamento para atender aos interesses do fungo. Embora a versão fictícia do fungo em The Last of Us seja altamente exagerada e perigosa, a inspiração biológica por trás do fungo é um exemplo interessante de como a natureza pode inspirar a ficção científica.'
+    resumo: 'No episódio 5 de The Last of Us, Joel e Ellie continuam sua jornada para a Califórnia, mas logo se envolvem em um conflito entre duas facções rivais. O episódio começa com Joel e Ellie chegando a uma pequena cidade dividida por uma guerra civil. A cidade é controlada por duas facções rivais: os Fireflies, que estão tentando encontrar uma cura para a infecção, e os Hunters, que são um grupo de bandidos que atacam os fracos e vulneráveis. Joel e Ellie são pegos no fogo cruzado do conflito e são forçados a tomar partido. Eles eventualmente se juntam aos Vaga-lumes e os ajudam a lutar contra os Caçadores. No final, eles conseguem ajudar os Vaga-lumes a assumir o controle da cidade, mas também sofrem uma perda pessoal.'
   },
 
   jsonEp6 = {
     titulo: 'THE LAST OF US: EPISÓDIO 6',
-    resumo: 'O fungo Cordyceps é um gênero de fungos que infecta insetos e outros artrópodes. O fungo infecta seu hospedeiro através de esporos que entram no corpo do inseto e começam a crescer e se espalhar, eventualmente matando-o. O Cordyceps inspirou a criação do universo de The Last of Us, no qual uma mutação do fungo infecta humanos e transforma-os em criaturas violentas e perigosas. No jogo, o fungo é altamente contagioso e pode ser transmitido através de esporos que se espalham pelo ar, tornando-o extremamente perigoso para a população humana. Ele é fascinante por sua capacidade de infectar e controlar a mente de seu hospedeiro, alterando seu comportamento para atender aos interesses do fungo. Embora a versão fictícia do fungo em The Last of Us seja altamente exagerada e perigosa, a inspiração biológica por trás do fungo é um exemplo interessante de como a natureza pode inspirar a ficção científica.'
+    resumo: 'No episódio 6 de The Last of Us, Joel e Ellie finalmente chegam à Califórnia, mas não são recebidos de braços abertos. Em vez disso, eles são recebidos com suspeita e hostilidade. O episódio começa com Joel e Ellie chegando em Jackson, Wyoming, uma pequena cidade que foi reconstruída após o surto. A cidade é administrada por Tommy, irmão de Joel, que agora é o xerife. Tommy inicialmente reluta em ajudar Joel e Ellie, mas acaba concordando em deixá-los ficar na cidade. Joel e Ellie logo descobrem que Jackson não é o porto seguro que eles esperavam. A cidade ainda é atormentada pela infecção e há uma constante ameaça de violência por parte de bandidos e invasores. Joel e Ellie devem usar todas as suas habilidades para sobreviver neste mundo novo e perigoso.'
   },
 
   jsonEp7 = {
     titulo: 'THE LAST OF US: EPISÓDIO 7',
-    resumo: 'O fungo Cordyceps é um gênero de fungos que infecta insetos e outros artrópodes. O fungo infecta seu hospedeiro através de esporos que entram no corpo do inseto e começam a crescer e se espalhar, eventualmente matando-o. O Cordyceps inspirou a criação do universo de The Last of Us, no qual uma mutação do fungo infecta humanos e transforma-os em criaturas violentas e perigosas. No jogo, o fungo é altamente contagioso e pode ser transmitido através de esporos que se espalham pelo ar, tornando-o extremamente perigoso para a população humana. Ele é fascinante por sua capacidade de infectar e controlar a mente de seu hospedeiro, alterando seu comportamento para atender aos interesses do fungo. Embora a versão fictícia do fungo em The Last of Us seja altamente exagerada e perigosa, a inspiração biológica por trás do fungo é um exemplo interessante de como a natureza pode inspirar a ficção científica.'
+    resumo: 'No episódio 7 de The Last of Us, Joel e Ellie fazem um desvio para uma cidade próxima para encontrar suprimentos. Enquanto estava lá, Ellie reflete sobre seu passado e seu relacionamento com Joel. O episódio abre com Joel e Ellie chegando em uma pequena cidade que foi abandonada. Eles estão procurando suprimentos, mas logo percebem que a cidade não é segura. A cidade está invadida por infectados, e Joel e Ellie são forçados a lutar por suas vidas. Enquanto eles abrem caminho pela cidade, Ellie começa a refletir sobre seu passado. Ela se lembra de sua vida antes do surto e de seus amigos e familiares que foram mortos. Ela também se lembra de seu relacionamento com Joel e começa a perceber o quanto ele significa para ela. No final, Joel e Ellie conseguem escapar da cidade, mas não saem ilesos. Joel fica ferido e Ellie fica traumatizada com a experiência. Mas eles têm um ao outro e estão determinados a continuar sua jornada.'
   },
 
   jsonEp8 = {
     titulo: 'THE LAST OF US: EPISÓDIO 8',
-    resumo: 'O fungo Cordyceps é um gênero de fungos que infecta insetos e outros artrópodes. O fungo infecta seu hospedeiro através de esporos que entram no corpo do inseto e começam a crescer e se espalhar, eventualmente matando-o. O Cordyceps inspirou a criação do universo de The Last of Us, no qual uma mutação do fungo infecta humanos e transforma-os em criaturas violentas e perigosas. No jogo, o fungo é altamente contagioso e pode ser transmitido através de esporos que se espalham pelo ar, tornando-o extremamente perigoso para a população humana. Ele é fascinante por sua capacidade de infectar e controlar a mente de seu hospedeiro, alterando seu comportamento para atender aos interesses do fungo. Embora a versão fictícia do fungo em The Last of Us seja altamente exagerada e perigosa, a inspiração biológica por trás do fungo é um exemplo interessante de como a natureza pode inspirar a ficção científica.'
+    resumo: 'No episódio 8 de The Last of Us, Joel e Ellie são forçados a enfrentar um grupo de sobreviventes canibais. O episódio é um thriller tenso e cheio de suspense que explora o lado mais sombrio da humanidade. O episódio começa com Joel e Ellie chegando a um resort que foi tomado por um grupo de canibais. Os canibais são liderados por um homem chamado David, que é um líder carismático e implacável. David está determinado a capturar Ellie e usá-la para seus próprios propósitos. Joel e Ellie são forçados a lutar por suas vidas enquanto tentam escapar da comunidade do resort. Eles são perseguidos por David e seus homens e são forçados a usar todas as suas habilidades para sobreviver. No final, eles conseguem escapar, mas não saem ilesos. Joel fica ferido e Ellie fica traumatizada com a experiência. O episódio termina com Joel e Ellie tomando uma decisão difícil. Eles devem decidir se continuam sua jornada para a Califórnia ou ficam em Jackson e tentam construir uma nova vida.'
   },
   jsonEp9 = {
     titulo: 'THE LAST OF US: EPISÓDIO 9',
-    resumo: 'O fungo Cordyceps é um gênero de fungos que infecta insetos e outros artrópodes. O fungo infecta seu hospedeiro através de esporos que entram no corpo do inseto e começam a crescer e se espalhar, eventualmente matando-o. O Cordyceps inspirou a criação do universo de The Last of Us, no qual uma mutação do fungo infecta humanos e transforma-os em criaturas violentas e perigosas. No jogo, o fungo é altamente contagioso e pode ser transmitido através de esporos que se espalham pelo ar, tornando-o extremamente perigoso para a população humana. Ele é fascinante por sua capacidade de infectar e controlar a mente de seu hospedeiro, alterando seu comportamento para atender aos interesses do fungo. Embora a versão fictícia do fungo em The Last of Us seja altamente exagerada e perigosa, a inspiração biológica por trás do fungo é um exemplo interessante de como a natureza pode inspirar a ficção científica.'
+    resumo: 'No final da temporada de The Last of Us, Joel e Ellie finalmente chegam à sede dos Fireflies na Califórnia. No entanto, eles logo percebem que as coisas não são o que parecem. Os vaga-lumes não são o grupo benevolente que pareciam ser e estão dispostos a fazer o que for preciso para encontrar uma cura para a infecção, mesmo que isso signifique sacrificar Ellie. Joel se depara com uma decisão difícil: ele pode deixar os vaga-lumes matarem Ellie para encontrar uma cura ou pode desafiá-los e salvar sua vida. No final, Joel opta por salvar Ellie, mesmo que isso signifique sacrificar a chance de encontrar uma cura. O episódio termina com Joel e Ellie deixando o quartel-general dos Fireflies e partindo por conta própria. Eles agora são fugitivos, mas estão determinados a encontrar uma nova vida juntos.'
   }
 ]
 
@@ -338,6 +379,10 @@ let listaCurtidas = [
 
 
 curtidaIcon.addEventListener("click", function () {
+if (sessionStorage.ID_USUARIO == null || sessionStorage.ID_USUARIO == undefined || sessionStorage.ID_USUARIO == ''){
+  alert("Você precisa estar logado para curtir um episódio!")
+} else {
+
   if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 1') {
     if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep1 === 0) {
       curtidaIcon.style.color = "red";
@@ -351,6 +396,7 @@ curtidaIcon.addEventListener("click", function () {
       listaCurtidas[0].ep7 = 0;
       listaCurtidas[0].ep8 = 0;
       listaCurtidas[0].ep9 = 0;
+      
     } else {
       curtidaIcon.style.color = "white";
       alert("Você descurtiu o episódio 1");
@@ -366,7 +412,6 @@ curtidaIcon.addEventListener("click", function () {
 
     }
 
-    enviarCurtida()
 
   } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 2') {
     if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep2 === 0) {
@@ -394,7 +439,6 @@ curtidaIcon.addEventListener("click", function () {
       listaCurtidas[0].ep8 = 0;
       listaCurtidas[0].ep9 = 0;
     }
-    enviarCurtida()
 
   } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 3') {
     if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep3 === 0) {
@@ -422,7 +466,6 @@ curtidaIcon.addEventListener("click", function () {
       listaCurtidas[0].ep8 = 0;
       listaCurtidas[0].ep9 = 0;
     }
-    enviarCurtida()
 
   } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 4') {
     if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep4 === 0) {
@@ -451,7 +494,6 @@ curtidaIcon.addEventListener("click", function () {
       listaCurtidas[0].ep9 = 0;
     }
 
-    enviarCurtida()
   } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 5') {
     if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep5 === 0) {
       curtidaIcon.style.color = "red";
@@ -479,7 +521,6 @@ curtidaIcon.addEventListener("click", function () {
       listaCurtidas[0].ep9 = 0;
     }
 
-    enviarCurtida()
   } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 6') {
     if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep6 === 0) {
       curtidaIcon.style.color = "red";
@@ -507,7 +548,6 @@ curtidaIcon.addEventListener("click", function () {
       listaCurtidas[0].ep9 = 0;
     }
 
-    enviarCurtida()
   } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 7') {
     if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep7 === 0) {
       curtidaIcon.style.color = "red";
@@ -535,7 +575,6 @@ curtidaIcon.addEventListener("click", function () {
       listaCurtidas[0].ep9 = 0;
     }
 
-    enviarCurtida()
   } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 8') {
     if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep8 === 0) {
       curtidaIcon.style.color = "red";
@@ -563,7 +602,6 @@ curtidaIcon.addEventListener("click", function () {
       listaCurtidas[0].ep9 = 0;
     }
 
-    enviarCurtida()
   } else if (jsonEpisodioTitulo.innerHTML === 'THE LAST OF US: EPISÓDIO 9') {
     if ((curtidaIcon.style.color === "" || curtidaIcon.style.color === "white") && listaCurtidas[0].ep9 === 0) {
       curtidaIcon.style.color = "red";
@@ -590,8 +628,9 @@ curtidaIcon.addEventListener("click", function () {
       listaCurtidas[0].ep8 = 0;
       listaCurtidas[0].ep9 = 0;
     }
-    enviarCurtida()
   }
+  }
+  enviarCurtida()
   setTimeout(ranking, 1000)
 });
 

@@ -1,5 +1,3 @@
-// Eu deixei comentado pq essa função só serve para caso vc deseja ir para um "dashboard", por exemplo
-
 function validarSessao() {
     const login_botao = document.getElementById("login_botao")
     const cadastro_botao = document.getElementById("cadastro_botao")

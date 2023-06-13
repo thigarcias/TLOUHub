@@ -468,6 +468,12 @@ body {
     height: 100%;
     width: 19%;
     border-radius: 15px;
+    transition: height 0.25s ease;
+    cursor: pointer;
+}
+
+.integranteElenco:hover{
+        height: 98%
 }
 
 #elencoImagem{

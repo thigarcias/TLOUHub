@@ -68,10 +68,6 @@ function entrar() {
     else {
         setInterval(sumirMensagem, 5000)
     }
-
-    // FETCH: Nada mais é que uma "requisição feita pelo servidor com base na interação do usuario"
-    // Antes do fetch de cadastro, existe um fetch de verificação, na qual vai até o banco de dados, pega o que você requisitou, no caso o email e retorna se esse valor existe ou não
-
         fetch("/usuarios/autenticar", {
             method: "POST",
             headers: {
@@ -84,26 +80,21 @@ function entrar() {
         })
 
         .then(function (resposta) {
-
-                    
         if(resposta.status == 204) {
-            msgErro.innerHTML = `O email ainda nao foi cadastrado!`
+            msgErro.innerHTML = `O email ainda não foi cadastrado`
             setInterval(sumirMensagem, 5000)
       }
             console.log("ESTOU NO THEN DO entrar()!")
     
             if (resposta.ok) {
                 console.log(resposta);
-    
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
-    
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.SOBRENOME_USUARIO = json.sobrenome
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
-                    
                     setTimeout(function () {
                        window.location = '../PaginaInicial/home.html';
                     }, 1000); // apenas para exibir o loading
@@ -111,14 +102,10 @@ function entrar() {
                 });
     
             } else {
-    
                 console.log("Houve um erro ao tentar realizar o login!");
-    
-    
-    
+
                 resposta.text().then(texto => {
                     console.error(texto);
-    
                     msgErro.innerHTML = `O login inserido não existe!`
                     setInterval(sumirMensagem, 5000)
                 });

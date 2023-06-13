@@ -16,7 +16,6 @@ CREATE TABLE usuario (
 	email VARCHAR(50),
 	senha VARCHAR(200)
 );
-
 insert into usuario values
 (null, 'Vitor', 'Maciel', 'vitormaciel@gmail.com', sha2('12345678', 256)),
 (null, 'Fernando', 'Brandao', 'fernandobrandao@gmail.com', sha2('12345678', 256)),
@@ -24,8 +23,7 @@ insert into usuario values
 (null, 'Gabriella', 'Roman', 'gabriellaroman@gmail.com', sha2('12345678', 256)),
 (null, 'Gustavo', 'Alcantara', 'gustavo@gmail.com', sha2('12345678', 256)),
 (null, 'Douglas', 'Queiroz', 'douglasqueiroz@gmail.com', sha2('12345678', 256)),
-(null, 'Matheus', 'Santiago', 'matheus@gmail.com', sha2('12345678', 256)),
-(null, 'Marcela', 'Alves', 'marcelaalves@gmail.com', sha2('12345678', 256));
+(null, 'Matheus', 'Santiago', 'matheus@gmail.com', sha2('12345678', 256));
 
 CREATE TABLE respostasGrafico (
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -88,7 +86,7 @@ insert into rankingEP values
     
 select * from rankingEP;
 select * from rankingEP where fkUsuario = 1;
-truncate table rankingEP;
+delete from respostasGrafico where fkUsuario = 16;
 select * from usuario;
 select * from respostasGrafico;
 

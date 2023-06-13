@@ -2,7 +2,7 @@
 var resolucaoAtual = window.innerHeight
 const container = document.querySelectorAll(".container")
 container[2].style.height = "50vh"
-container[1].style.marginTop = "7%"
+container[1].style.marginTop = "4%"
 
 // CARROSSEL
 var personagens = [
@@ -36,8 +36,9 @@ var personagens = [
         url: `url('./assets/tess.jpg')`,
         gradiente: `linear-gradient(89.96deg, rgba(103, 153, 79, 0.25) 18.83%, rgba(70, 253, 6, 0) 84.16%)`,
         corTexto: `#3E9E42`,
-        conteudo: `Joel é um homem de meia-idade que já passou por muitas dificuldades e perdas na vida, o que o tornou desconfiado e cínico em relação aos outros. Ele é contratado para levar Ellie, uma adolescente que pode ser a chave para a cura da pandemia, para um grupo de resistência conhecido como os Vagalumes.
-        Ao longo do jogo, Joel e Ellie criam um forte vínculo emocional, apesar das diferenças de idade e personalidade. Eles enfrentam juntos diversos desafios, incluindo confrontos com humanos hostis e infectados perigosos. Durante sua jornada, Joel revela seu passado sombrio e os eventos traumáticos que o levaram a ser quem é.`,
+        conteudo: `Tess é uma mulher corajosa e determinada, disposta a fazer o que for necessário para sobreviver. Ela possui habilidades de combate impressionantes e é uma estrategista inteligente. Além disso, Tess demonstra empatia e um senso de justiça, mostrando preocupação com o bem-estar de outros sobreviventes.
+        Durante a jornada de Joel e Tess, eles se envolvem em uma missão perigosa para encontrar uma possível cura para a infecção que assola o mundo. No entanto, ao longo da história, Tess contrai a infecção e, em seus momentos finais, sacrifica sua vida para proteger Joel e Ellie.
+        A personagem de Tess é admirada por sua força, determinação e lealdade. Ela desempenha um papel crucial no desenvolvimento da trama e no crescimento dos personagens principais. Sua presença é sentida mesmo depois de sua morte, deixando uma marca duradoura na história do jogo.`,
     }
 ]
 const carrossel = document.querySelectorAll(".carrossel")
@@ -150,13 +151,6 @@ homepagetexto.addEventListener("click", function () {
         window.location = "../PaginaInicial/home.html"
     })
 
-// noticiastexto.addEventListener("click", function () {
-//     window.location = "../Noticias/noticia.html"
-// })
-// noticiastextoInfinito.addEventListener("click", function () {
-//     window.location = "../Noticias/noticia.html"
-// })
-
 
 homepagetexto.addEventListener("mouseover", function () {
     homepagetexto.style.color = "#ffe70c"
@@ -166,12 +160,6 @@ homepagetexto.addEventListener("mouseover", function () {
         homepagetexto.style.color = "#ffffff"
     }),
 
-    // noticiastexto.addEventListener('mouseenter', function () {
-    //     noticiastexto.style.color = '#ffe70c';
-    // }),
-    // noticiastexto.addEventListener('mouseout', function () {
-    //     noticiastexto.style.color = '#ffffff';
-    // }),
     serietexto.addEventListener("mouseover", function () {
         serietexto.style.color = '#ffe70c';
     }),
@@ -193,13 +181,6 @@ homepagetextoInfinito.addEventListener("mouseover", function () {
     homepagetextoInfinito.addEventListener("mouseout", function () {
         homepagetextoInfinito.style.color = "#ffffff"
     }),
-
-    // noticiastextoInfinito.addEventListener('mouseover', function () {
-    //     noticiastextoInfinito.style.color = '#ffe70c';
-    // }),
-    // noticiastextoInfinito.addEventListener('mouseout', function () {
-    //     noticiastextoInfinito.style.color = '#ffffff';
-    // }),
     serietextoInfinito.addEventListener("mouseover", function () {
         serietextoInfinito.style.color = '#ffe70c';
     }),
@@ -226,7 +207,6 @@ for (let elementos = 0; elementos < 2; elementos++) {
     })
 }
 
-
 const menuTLOU1 = document.querySelectorAll(".menuTLOU1")
 menuTLOU1[0].addEventListener("click", function () {
     window.location = "../PaginaTLOU1/tlou1.html"
@@ -243,7 +223,7 @@ menuTLOU2[0].addEventListener("click", function () {
 })
 
 
-// Botão entre do BLUR 
+// Botão ENTRE do BLUR 
 const blurBotao = document.getElementById("blurBotao")
 blurBotao.addEventListener("click", function () {
     window.location = "../Login/login.html"
