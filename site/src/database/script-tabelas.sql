@@ -6,9 +6,7 @@
 comandos para mysql - banco local - ambiente de desenvolvimento
 */
 CREATE DATABASE tlouhub;
-
 USE tlouhub;
-
 CREATE TABLE usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
@@ -23,7 +21,8 @@ insert into usuario values
 (null, 'Gabriella', 'Roman', 'gabriellaroman@gmail.com', sha2('12345678', 256)),
 (null, 'Gustavo', 'Alcantara', 'gustavo@gmail.com', sha2('12345678', 256)),
 (null, 'Douglas', 'Queiroz', 'douglasqueiroz@gmail.com', sha2('12345678', 256)),
-(null, 'Matheus', 'Santiago', 'matheus@gmail.com', sha2('12345678', 256));
+(null, 'Matheus', 'Santiago', 'matheus@gmail.com', sha2('12345678', 256)),
+(null, 'Felipe', 'Andrade', 'felipe@gmail.com', sha2('12345678', 256));
 
 CREATE TABLE respostasGrafico (
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -87,7 +86,6 @@ insert into rankingEP values
 select * from rankingEP;
 select * from rankingEP where fkUsuario = 1;
 delete from respostasGrafico where fkUsuario = 16;
-select * from usuario;
 select * from respostasGrafico;
 
 select
